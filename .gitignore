@@ -1,0 +1,26 @@
+# Local design history and internal research
+/archive/
+/discovery-pack/
+/messaging/
+/SESSION-HANDOFF.md
+/CLAUDE-SLACK-NOTION-RESEARCH-PROMPT.md
+
+# Agent tools and local settings
+/.agents/
+/.hermes/
+/.codex/
+/.impeccable/
+
+# Credentials and environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local caches, dependencies, and system files
+.DS_Store
+__pycache__/
+*.py[cod]
+node_modules/
+*.log

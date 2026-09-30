@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="수업 플랫폼, 교육 콘텐츠, AI 집중캠프와 AI 해커톤. 학교에 맞는 코들의 교육 상품을 만나보세요.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#ffffff">
+  <title>코들 — 우리 학교에 필요한 AI 교육</title>
+  <link rel="icon" href="assets/codle.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="coverflow.css">
+  <link rel="stylesheet" href="official-footer.css">
+  <link rel="stylesheet" href="inquiry.css">
+  <link rel="stylesheet" href="studio.css">
+  <link rel="stylesheet" href="emil.css">
+  <script src="inquiry.js" defer></script>
+  <script src="showroom.js" defer></script>
+</head>
+<body class="coverflow-page studio-page">
+  <a class="skip-link" href="#offerings">상품으로 바로 가기</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="brand" aria-label="코들 교육 상품 홈"><img src="assets/codle.svg" alt="codle" width="101" height="40"><span>교육 허브</span></a>
+      <nav aria-label="주요 메뉴">
+        <a class="nav-link" href="#offerings">상품 둘러보기</a>
+        <a class="nav-link" href="#questions">도입 안내</a>
+        <a class="login-link" href="https://codle.io/" target="_blank" rel="noopener noreferrer">코들 입장 <span aria-hidden="true">↗</span></a>
+        <button class="button small dark" type="button" data-inquiry aria-haspopup="dialog" aria-controls="inquiry-dialog">도입 상담</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="showroom section-width" id="offerings" aria-labelledby="page-title">
+      <div class="showroom-intro">
+        <h1 id="page-title"><span>수업부터 해커톤, 캠프까지,</span><br>우리 학교에 필요한 <em>AI 교육</em>을 살펴보세요.</h1><p class="intro-aside">매일의 수업도, 특별한 경험도.<br>코들과 함께 시작해 보세요.</p>
+      </div>
+      <div class="product-tabs" role="tablist" aria-label="다섯 교육 상품 바로가기">
+        <button class="product-tab" id="tab-license" role="tab" type="button" aria-controls="panel-license" aria-selected="true" tabindex="0" data-flow-tab="0">수업 플랫폼</button>
+        <button class="product-tab" id="tab-original" role="tab" type="button" aria-controls="panel-original" aria-selected="false" tabindex="-1" data-flow-tab="1">오리지널 콘텐츠</button>
+        <button class="product-tab" id="tab-textbook" role="tab" type="button" aria-controls="panel-textbook" aria-selected="false" tabindex="-1" data-flow-tab="2"><img class="name-logo" src="assets/codle.svg" alt="코들"> <span class="brand-cross">×</span> 교과서</button>
+        <button class="product-tab" id="tab-camp" role="tab" type="button" aria-controls="panel-camp" aria-selected="false" tabindex="-1" data-flow-tab="3">AI 집중캠프</button>
+        <button class="product-tab" id="tab-hackathon" role="tab" type="button" aria-controls="panel-hackathon" aria-selected="false" tabindex="-1" data-flow-tab="4">AI 해커톤</button>
+      </div>
+      <div class="showroom-canvas">
+      <div class="cover-stage" id="cover-stage" role="region" aria-roledescription="carousel" aria-label="코들 교육 상품 표지 갤러리" tabindex="0" data-active-index="0">
+        <div class="flow-floor" aria-hidden="true"></div>
+        <div class="cover-track">
+          <button class="album-cover" type="button" data-product="license" data-cover-index="0" aria-label="AI 수업 플랫폼, 코들 선택" aria-current="true" tabindex="-1">
+            <span class="album-face album-license album-art" aria-hidden="true"><img class="card-art" src="assets/generated/codle-platform-v12/frame-laptop.webp" alt=""><span class="card-laptop-screen"><img src="assets/generated/codle-platform-v10/screen-python.webp" alt=""></span></span>
+          </button>
+          <button class="album-cover" type="button" data-product="original" data-cover-index="1" aria-label="코들 오리지널 콘텐츠 선택" aria-current="false" tabindex="-1">
+            <span class="album-face album-original album-art" aria-hidden="true"><img class="card-art" src="assets/cards/content-wall-18-original.webp" alt=""></span>
+          </button>
+          <button class="album-cover" type="button" data-product="textbook" data-cover-index="2" aria-label="코들 × 교과서 선택 — 씨마스, 금성, YBM" aria-current="false" tabindex="-1">
+            <span class="album-face album-textbook album-art" aria-hidden="true"><img class="card-art" src="assets/generated/codle-textbook-logos-v1/publisher-logos.webp" alt=""></span>
+          </button>
+          <button class="album-cover" type="button" data-product="camp" data-cover-index="3" aria-label="코들 AI 집중캠프 선택" aria-current="false" tabindex="-1">
+            <span class="album-face album-camp album-art" aria-hidden="true"><img class="card-art" src="assets/cards/camp-classroom-v6.webp" alt=""></span>
+          </button>
+          <button class="album-cover" type="button" data-product="hackathon" data-cover-index="4" aria-label="짓다 AI 해커톤 선택" aria-current="false" tabindex="-1">
+            <span class="album-face album-hackathon album-art" aria-hidden="true"><img class="card-art" src="assets/cards/hackathon-presentation.webp" alt=""></span>
+          </button>
+        </div>
+      </div>
+      <div class="flow-controls" aria-label="상품 넘기기">
+        <button class="flow-arrow" id="flow-prev" type="button" aria-label="이전 상품">←</button>
+        <span class="flow-counter" aria-hidden="true"><strong id="flow-current">01</strong> / 05</span>
+        <button class="flow-arrow" id="flow-next" type="button" aria-label="다음 상품">→</button>
+      </div>
+      <div class="sr-only" id="flow-status" role="status" aria-live="polite"></div>
+      </div>
+      <div class="product-details">
+        <article class="product-panel offering" id="panel-license" data-product="license" role="tabpanel" aria-labelledby="tab-license">
+          <h2 class="product-name" aria-label="AI 수업 플랫폼, 코들">AI 수업 플랫폼, <img class="name-logo" src="assets/codle.svg" alt="코들"></h2>
+          <p class="panel-description">AI 수업을 준비하고 운영하는 학습 플랫폼.<br> 자료 제작부터 학생 실습·피드백·평가까지 연결합니다.</p>
+          <p class="panel-relation">Basic 무료 · Pro 유료</p>
+          <div class="panel-actions">
+            <a class="button dark" href="https://codle.io/" target="_blank" rel="noopener noreferrer">무료로 시작하기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
+            <button class="product-inquiry" type="button" data-inquiry="license" aria-label="AI 수업 플랫폼, 코들 문의하기" aria-haspopup="dialog" aria-controls="inquiry-dialog">문의하기 <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+        <article class="product-panel offering" id="panel-original" data-product="original" role="tabpanel" aria-labelledby="tab-original" hidden>
+          <h2 class="product-name" aria-label="코들 오리지널 콘텐츠"><img class="name-logo" src="assets/codle.svg" alt="코들"> 오리지널 콘텐츠</h2>
+          <p class="panel-description">AI 수업에 활용하는 코들 자체 제작 콘텐츠.<br> 교과별 수업부터 AI 융합·프로젝트 활동까지 골라보세요.</p>
+          <p class="panel-relation">콘텐츠 이용권 구매 시 Pro 라이선스 필수</p>
+          <div class="panel-actions">
+            <a class="button dark" href="https://ai.codle.io/kr/contents" target="_blank" rel="noopener noreferrer">콘텐츠 살펴보기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
+            <button class="product-inquiry" type="button" data-inquiry="original" aria-label="코들 오리지널 콘텐츠 문의하기" aria-haspopup="dialog" aria-controls="inquiry-dialog">문의하기 <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+        <article class="product-panel offering" id="panel-textbook" data-product="textbook" role="tabpanel" aria-labelledby="tab-textbook" hidden>
+          <h2 class="product-name" aria-label="코들 × 교과서"><img class="name-logo" src="assets/codle.svg" alt="코들"> <span class="brand-cross">×</span> 교과서</h2>
+          <div class="textbook-options">
+            <section class="textbook-option" aria-labelledby="textbook-ai-title">
+              <h3 id="textbook-ai-title" class="textbook-brand-title"><img src="assets/cmass-logo.png" alt="씨마스"> <span>인공지능 기초</span></h3>
+              <p class="panel-description">씨마스 『인공지능 기초』 교과서 연계 콘텐츠.<br>단원별 개념 학습에서 AI·코딩 실습으로 이어집니다.</p>
+              <p class="panel-relation">Pro 라이선스 필수 · 콘텐츠 이용권 별도 구매</p>
+              <div class="panel-actions">
+                <a class="button dark" href="https://cmass-contents.codle.io/cmass-ai-basics/web-exhibition" target="_blank" rel="noopener noreferrer">콘텐츠 체험하기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
+                <button class="product-inquiry" type="button" data-inquiry="cmass" aria-label="씨마스 인공지능 기초 문의하기" aria-haspopup="dialog" aria-controls="inquiry-dialog">문의하기 <span aria-hidden="true">→</span></button>
+              </div>
+            </section>
+            <section class="textbook-option" aria-labelledby="textbook-aidt-title">
+              <h3 id="textbook-aidt-title" class="textbook-publisher-title"><span class="textbook-publisher-stack"><svg viewBox="440 410 190 32" role="img" aria-label="금성"><image href="assets/kumsung-reference.webp" width="1200" height="630"/></svg><img src="assets/ybm-logo.svg" alt="YBM"></span><span>중/고 정보 교육자료</span></h3>
+              <p class="panel-description">중·고등 정보 수업을 위한 AI 디지털 교육자료.<br>학습 자료와 코딩 실습, AI 도우미를 함께 제공합니다.</p>
+              <p class="panel-relation">코들 개발 · 각 출판사 판매</p>
+              <div class="panel-actions">
+                <a class="button dark" href="https://exhibition.codle.io/" target="_blank" rel="noopener noreferrer">교육자료 체험하기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
+              </div>
+            </section>
+          </div>
+        </article>
+        <article class="product-panel offering" id="panel-camp" data-product="camp" role="tabpanel" aria-labelledby="tab-camp" hidden>
+          <h2 class="product-name" aria-label="코들 AI 집중캠프"><img class="name-logo" src="assets/codle.svg" alt="코들"> AI 집중캠프</h2>
+          <p class="panel-description">학년·인원·일정에 맞춰 준비하는 AI 교육.<br> 커리큘럼부터 강사·현장 운영까지 함께합니다.</p>
+          <div class="panel-actions">
+            <a class="button dark" href="https://contents.codle.io/aicamp-landing" target="_blank" rel="noopener noreferrer">프로그램 알아보기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
+            <button class="product-inquiry" type="button" data-inquiry="camp" aria-label="코들 AI 집중캠프 문의하기" aria-haspopup="dialog" aria-controls="inquiry-dialog">문의하기 <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+        <article class="product-panel offering" id="panel-hackathon" data-product="hackathon" role="tabpanel" aria-labelledby="tab-hackathon" hidden>
+          <h2 class="product-name" aria-label="짓다 AI 해커톤"><img class="name-logo name-logo-jitda" src="assets/jitda-logo.svg" alt="짓다"> AI 해커톤</h2>
+          <p class="panel-description">AI와 함께 팀의 아이디어를 웹앱으로 만들고 발표합니다.<br> 행사 기획과 운영을 코들이 함께합니다.</p>
+          <div class="panel-actions">
+            <a class="button dark" href="https://landing.jitda.io/" target="_blank" rel="noopener noreferrer">운영 사례 보러가기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
+            <button class="product-inquiry" type="button" data-inquiry="hackathon" aria-label="짓다 AI 해커톤 문의하기" aria-haspopup="dialog" aria-controls="inquiry-dialog">문의하기 <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+      </div>
+
+      <noscript><style>.product-panel[hidden]{display:block!important}.product-tabs,.flow-controls{display:none}</style><p>아래에서 모든 상품의 소개와 체험 링크를 확인하세요.</p></noscript>
+    </section>
+
+    <section class="consult-section section-width" aria-labelledby="consult-title">
+      <div class="consult-copy"><h2 id="consult-title">어떤 교육이 맞을지 고민되시나요?</h2><p>필요한 AI 교육을 찾는 것부터 도와드릴게요.</p></div>
+      <div class="consult-action"><button class="button dark" type="button" data-inquiry aria-haspopup="dialog" aria-controls="inquiry-dialog">우리 학교에 맞는 교육 상담 <span aria-hidden="true">→</span></button><span>아직 상품을 정하지 않아도 괜찮아요.</span></div>
+    </section>
+
+    <section class="questions-section section-width" id="questions" aria-labelledby="questions-title">
+      <div class="questions-intro"><h2 id="questions-title">도입 전에<br>확인해 보세요.</h2></div>
+      <div class="questions">
+        <details><summary>콘텐츠 이용권만 구매할 수 있나요?<span aria-hidden="true">+</span></summary><p>코들 오리지널 콘텐츠와 씨마스 인공지능 기초 이용권은 <strong>Pro 라이선스가 필요합니다.</strong> Pro 이용 여부와 함께 문의해 주세요.</p></details>
+        <details id="aidt-guide"><summary>AIDT 교육자료는 어디서 구매하나요?<span aria-hidden="true">+</span></summary><p>AIDT 교육자료는 코들이 개발하고 <strong>각 출판사가 판매합니다.</strong> 구매 상담은 해당 출판사로 문의해 주세요. <a href="https://exhibition.codle.io/" target="_blank" rel="noopener noreferrer">웹전시에서 자료와 출판사 정보를 확인하세요 ↗</a></p></details>
+        <details><summary>AI 집중캠프와 AI 해커톤은 어떻게 다른가요?<span aria-hidden="true">+</span></summary><p><strong>AI 집중캠프</strong>는 주제에 맞춰 AI를 배우고 실습하는 집중 교육입니다. <strong>AI 해커톤</strong>은 팀이 문제와 아이디어를 정하고, AI로 웹앱을 만들어 발표하는 행사입니다. 대상·교육 목표·일정에 맞춰 각각 상담할 수 있습니다.</p></details>
+        <details><summary>아직 세부 계획이 없어도 문의할 수 있나요?<span aria-hidden="true">+</span></summary><p>가능합니다. 관심 있는 상품과 정해진 조건만 먼저 알려주세요. 캠프·해커톤은 대상, 인원, 일정과 운영 범위를 함께 검토합니다.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <!-- Official footer reference: https://codle.io → https://ai.codle.io/kr (2026-09-10). -->
+  <footer class="codle-footer" aria-label="코들 사이트 정보">
+    <div class="codle-footer-inner">
+      <div class="codle-footer-top">
+        <img class="codle-footer-logo" src="assets/team-monolith-gray.png" width="129" height="85" alt="TEAM MONOLITH" loading="lazy">
+        <nav class="codle-footer-nav" aria-label="푸터 메뉴">
+          <div class="codle-footer-column">
+            <h3>제품 소개</h3>
+            <div class="codle-footer-group"><p>기능</p><a href="https://ai.codle.io/kr#function">모듈식 코스웨어, 코들</a></div>
+            <div class="codle-footer-group"><p>콘텐츠</p><a href="https://ai.codle.io/kr/contents">수업에 바로 쓰는 코들 콘텐츠</a></div>
+            <div class="codle-footer-group"><p>요금</p><a href="https://ai.codle.io/kr/pricing">요금제</a></div>
+          </div>
+          <div class="codle-footer-column codle-footer-resources">
+            <h3>리소스</h3>
+            <div class="codle-footer-group"><p>가이드</p><div class="codle-footer-inline-links"><a href="https://ai.codle.io/kr/help">사용법 탐색</a><span aria-hidden="true"> | </span><a href="https://ai.codle.io/kr/help">자주 묻는 질문</a></div></div>
+            <div class="codle-footer-group"><p>문의처</p><div class="codle-footer-inline-links"><a href="https://ai.codle.io/kr/help/contact">사용 문의</a><span aria-hidden="true"> | </span><a href="https://ai.codle.io/kr/help/contact">제휴 문의</a><span aria-hidden="true"> | </span><a href="https://ai.codle.io/kr/help/contact">연수 문의</a></div></div>
+          </div>
+          <div class="codle-footer-legal">
+            <a href="https://team-mono.notion.site/ec76db514faf44efa64711afcd4df8fb">서비스 이용약관</a>
+            <a href="https://team-mono.notion.site/1e0d8c385e1f48729ea4ee09d7b599f0">개인정보처리방침</a>
+          </div>
+        </nav>
+      </div>
+      <div class="codle-footer-bottom">
+        <div class="codle-footer-company">
+          <p>(주)팀모노리스 서울특별시 용산구 한강대로52길 17-3, 2층</p>
+          <div class="codle-footer-contacts">
+            <a href="tel:070-7666-9959"><svg class="footer-phone" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>070-7666-9959</span></a>
+            <a href="mailto:codle@team-mono.com"><svg class="footer-email" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>codle@team-mono.com</span></a>
+          </div>
+          <p>©TEAM MONOLITH Inc.</p>
+        </div>
+        <div class="codle-footer-socials" aria-label="코들 소셜 미디어">
+          <a href="https://www.facebook.com/profile.php?id=100087248848002" target="_blank" rel="noopener noreferrer" aria-label="Facebook (새 탭)"><svg width="23" height="23" viewBox="0 0 23 23" aria-hidden="true"><path d="M13.4193 12.9427H15.8151L16.7734 9.10938H13.4193V7.19271C13.4193 6.20563 13.4193 5.27604 15.3359 5.27604H16.7734V2.05604C16.461 2.01483 15.2813 1.92188 14.0355 1.92188C11.4336 1.92188 9.58594 3.50983 9.58594 6.42604V9.10938H6.71094V12.9427H9.58594V21.0885H13.4193V12.9427Z" fill="currentColor"/></svg></a>
+          <a href="https://www.instagram.com/codle.io/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (새 탭)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 7.9C11.1911 7.9 10.4 8.14044 9.72218 8.59152C9.04435 9.0426 8.50911 9.68435 8.18034 10.4403C7.85158 11.1962 7.74376 12.0326 7.86974 12.8417C7.99573 13.6508 8.3499 14.3979 8.88873 14.9941C9.42755 15.5904 10.1277 16.0112 10.8997 16.2007C11.6716 16.3903 12.4813 16.3398 13.2252 16.0558C13.969 15.7718 14.6138 15.2672 15.0795 14.6064C15.5451 13.9456 15.8118 13.1588 15.8118 12.3508C15.8118 11.2684 15.3977 10.2304 14.6614 9.45074C13.9251 8.67113 12.9294 8.22917 11.888 8.22917L12 7.9ZM12 14.9333C11.4882 14.9333 10.9882 14.7778 10.5654 14.4863C10.1426 14.1948 9.81618 13.7805 9.62634 13.2975C9.43651 12.8146 9.39174 12.285 9.49774 11.7745C9.60375 11.2639 9.85565 10.7957 10.2213 10.4306C10.5869 10.0655 11.05 9.81983 11.5536 9.72004C12.0572 9.62024 12.5773 9.67221 13.0516 9.86928C13.526 10.0664 13.9333 10.3995 14.2199 10.8296C14.5066 11.2597 14.6648 11.769 14.6648 12.2908C14.6648 12.9938 14.3941 13.668 13.9049 14.1712C13.4156 14.6744 12.7545 14.9608 12.0625 14.9608L12 14.9333Z" fill="currentColor"/><path d="M15.75 7.6425C16.1642 7.6425 16.5 7.30421 16.5 6.88667C16.5 6.46913 16.1642 6.13083 15.75 6.13083C15.3358 6.13083 15 6.46913 15 6.88667C15 7.30421 15.3358 7.6425 15.75 7.6425Z" fill="currentColor"/><path d="M18.0625 4H5.9375C5.16549 4 4.4251 4.31389 3.87946 4.87259C3.33382 5.43129 3.02734 6.18913 3.02734 6.97917V18.0208C3.02734 18.8109 3.33382 19.5687 3.87946 20.1274C4.4251 20.6861 5.16549 21 5.9375 21H18.0625C18.8345 21 19.5749 20.6861 20.1205 20.1274C20.6662 19.5687 20.9727 18.8109 20.9727 18.0208V6.97917C20.9727 6.18913 20.6662 5.43129 20.1205 4.87259C19.5749 4.31389 18.8345 4 18.0625 4ZM19.6875 18.0208C19.6875 18.4674 19.5128 18.8957 19.2015 19.2103C18.8902 19.525 18.4675 19.7017 18.0273 19.7017H5.97266C5.53248 19.7017 5.10975 19.525 4.79851 19.2103C4.48727 18.8957 4.3125 18.4674 4.3125 18.0208V6.97917C4.3125 6.53254 4.48727 6.10428 4.79851 5.78966C5.10975 5.47504 5.53248 5.29833 5.97266 5.29833H18.0273C18.4675 5.29833 18.8902 5.47504 19.2015 5.78966C19.5128 6.10428 19.6875 6.53254 19.6875 6.97917V18.0208Z" fill="currentColor"/></svg></a>
+          <a href="https://www.youtube.com/@codle7839" target="_blank" rel="noopener noreferrer" aria-label="YouTube (새 탭)"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path d="M12.5 18.75L18.9875 15L12.5 11.25V18.75ZM26.95 8.9625C27.1125 9.55 27.225 10.3375 27.3 11.3375C27.3875 12.3375 27.425 13.2 27.425 13.95L27.5 15C27.5 17.7375 27.3 19.75 26.95 21.0375C26.6375 22.1625 25.9125 22.8875 24.7875 23.2C24.2 23.3625 23.125 23.475 21.475 23.55C19.85 23.6375 18.3625 23.675 16.9875 23.675L15 23.75C9.7625 23.75 6.5 23.55 5.2125 23.2C4.0875 22.8875 3.3625 22.1625 3.05 21.0375C2.8875 20.45 2.775 19.6625 2.7 18.6625C2.6125 17.6625 2.575 16.8 2.575 16.05L2.5 15C2.5 12.2625 2.7 10.25 3.05 8.9625C3.3625 7.8375 4.0875 7.1125 5.2125 6.8C5.8 6.6375 6.875 6.525 8.525 6.45C10.15 6.3625 11.6375 6.325 13.0125 6.325L15 6.25C20.2375 6.25 23.5 6.45 24.7875 6.8C25.9125 7.1125 26.6375 7.8375 26.95 8.9625Z" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="inquiry-dialog" class="inquiry-dialog official-inquiry" aria-labelledby="inquiry-title" aria-describedby="inquiry-description">
+    <header class="inquiry-heading"><div><h2 id="inquiry-title">도입 문의</h2><p id="inquiry-description">학교에 필요한 구성과 운영 조건을 알려주세요.</p></div><button class="close-dialog" type="button" aria-label="문의폼 닫기">×</button></header>
+    <form id="school-inquiry-form" novalidate>
+      <div class="inquiry-scroll">
+        <div class="inquiry-field"><label for="inquiry-school">학교명 <span class="required-mark">*</span></label><input id="inquiry-school" autocomplete="organization" placeholder="학교명을 입력해주세요" maxlength="100" required aria-describedby="inquiry-school-error"><p class="field-error" id="inquiry-school-error" hidden></p></div>
+        <p class="field-hint">미리보기에서는 학교명을 직접 입력해주세요.</p>
+        <div class="inquiry-field"><label for="inquiry-contact">성함 <span class="required-mark">*</span></label><input id="inquiry-contact" autocomplete="name" placeholder="예: 홍길동" maxlength="60" required aria-describedby="inquiry-contact-error"><p class="field-error" id="inquiry-contact-error" hidden></p></div>
+        <div class="inquiry-field"><label for="inquiry-phone">휴대전화번호 <span class="required-mark">*</span></label><input id="inquiry-phone" type="tel" autocomplete="tel" placeholder="010-0000-0000" maxlength="13" required aria-describedby="inquiry-phone-error"><p class="field-error" id="inquiry-phone-error" hidden></p></div>
+        <section class="official-interest" aria-labelledby="interest-label">
+          <h3 id="interest-label">관심 항목 <span class="required-mark">*</span></h3>
+          <select id="inquiry-interest" aria-label="관심 항목">
+            <option value="subscription">코들 구독 (Pro 플랜 + 콘텐츠 이용권)</option>
+            <option value="camp">코들 AI 집중캠프</option>
+            <option value="hackathon">짓다 AI 해커톤</option>
+          </select>
+          <p class="field-hint" id="inquiry-product-name"></p>
+          <div id="subscription-options">
+            <p class="pass-label">콘텐츠 이용권 <span class="optional-mark">선택</span></p>
+            <p class="field-hint">Pro만 이용해도 괜찮아요. 필요한 이용권만 추가하세요.</p>
+            <button type="button" class="pass-option" data-pass="ai" aria-pressed="false"><span>Codle AI</span><span>+ 20,000원</span></button>
+            <button type="button" class="pass-option" data-pass="cmass" aria-pressed="false"><span>씨마스 인기초</span><span>+ 10,000원</span></button>
+            <p id="quote-breakdown" class="official-price" aria-live="polite" aria-atomic="true"></p>
+            <p class="field-hint">학생 1인·1학기 기준. 인원·학기별 할인 및 최종 견적은 상담 후 안내합니다.</p>
+            <details class="official-compare"><summary>Basic·Pro 기능과 요금 확인</summary><p>Basic은 최대 400명 무료, AI 일부 기능과 파이썬 500MB를 제공합니다. Pro는 AI 도구 전체, 실시간 모니터링, 파이썬 1GB를 제공합니다. Codle AI 이용권 추가 시 파이썬 환경은 2GB입니다.</p><a href="https://ai.codle.io/kr/pricing" target="_blank" rel="noopener noreferrer">전체 요금제 비교 ↗</a></details>
+          </div>
+          <div class="inquiry-fields">
+            <div class="inquiry-field"><label for="inquiry-count"><span id="count-label">학생 수</span> <span class="required-mark">*</span></label><input id="inquiry-count" inputmode="numeric" placeholder="예: 100" maxlength="7" required aria-describedby="inquiry-count-error"><p class="field-error" id="inquiry-count-error" hidden></p></div>
+            <div class="inquiry-field"><label for="inquiry-timing"><span id="timing-label">사용 학기</span> <span class="required-mark">*</span></label><input id="inquiry-timing" placeholder="예: 2027년 1학기" maxlength="100" required aria-describedby="inquiry-timing-error"><p class="field-error" id="inquiry-timing-error" hidden></p></div>
+          </div>
+        </section>
+        <div class="inquiry-consent"><label><input id="inquiry-consent" type="checkbox" required aria-describedby="inquiry-consent-error"><span>개인정보 수집·이용에 동의합니다. <span class="required-mark">*</span></span></label><p class="field-hint">디자인 미리보기로 실제 개인정보를 수집하지 않습니다.</p><p class="field-error" id="inquiry-consent-error" hidden></p></div>
+      </div>
+      <footer class="inquiry-submit-row"><div><p id="inquiry-validation" role="alert" hidden></p><p class="inquiry-preview-note">미리보기 · 입력 정보는 저장·전송되지 않습니다.</p></div><button class="inquiry-submit" type="submit">문의 내용 확인하기 →</button></footer>
+    </form>
+    <section id="inquiry-review" class="inquiry-review" hidden><div class="review-heading"><h3 id="inquiry-review-title" tabindex="-1">문의 내용을 확인해주세요.</h3><p>미리보기입니다. 실제 문의는 전송되지 않았습니다.</p></div><dl id="inquiry-review-details"></dl><div class="review-actions"><button class="button secondary" type="button" id="inquiry-edit">다시 수정하기</button><button class="inquiry-submit" type="button" id="inquiry-done">닫기</button></div></section>
+  </dialog>
+</body>
+</html>
