@@ -1,0 +1,513 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-08-24",
+  "policy": {
+    "renderable_status": "approved",
+    "pending_behavior": "internal-only; never render or use as AI copy context",
+    "prohibited_behavior": "exclude from all user-facing and AI-generation surfaces",
+    "legacy_source_pack_role": "reference-only"
+  },
+  "claims": [
+    {
+      "claim_id": "C-001",
+      "exact_copy": "코들 - AI 교육 플랫폼",
+      "status": "pending",
+      "source_path_or_url": "https://ai.codle.io/",
+      "source_locator": "R-001 metadata title; R-003 home/navigation copy",
+      "as_of_date": "2026-08-21",
+      "scope_and_definition": "현재 공개 root metadata의 title; 브랜드 포지셔닝 승인 여부 미확인",
+      "owner": "TBD",
+      "allowed_surfaces": [],
+      "review_due_date": null
+    },
+    {
+      "claim_id": "C-002",
+      "exact_copy": "Pro 22,000원",
+      "status": "pending",
+      "source_path_or_url": "https://github.com/team-monolith-product/jce-landing-react/blob/main/src/app/%5Blocale%5D/pricing/plans.ts",
+      "source_locator": "R-004 PRO_PRICE; student/person/semester unit in source comments",
+      "as_of_date": "2026-08-11",
+      "scope_and_definition": "코드상 Pro 단독 학생 1인·1학기 가격; 세금·최소수량·계약조건 미확인",
+      "owner": "TBD: pricing/finance",
+      "allowed_surfaces": [],
+      "review_due_date": null
+    },
+    {
+      "claim_id": "C-003",
+      "exact_copy": "Codle AI 20,000원",
+      "status": "pending",
+      "source_path_or_url": "https://github.com/team-monolith-product/jce-landing-react/blob/main/src/app/%5Blocale%5D/pricing/plans.ts",
+      "source_locator": "R-004 CONTENT_PASSES key codleAi",
+      "as_of_date": "2026-08-11",
+      "scope_and_definition": "코드상 Pro에 추가되는 학생 1인·1학기 콘텐츠 이용권 가격; 계약조건 미확인",
+      "owner": "TBD: product/pricing",
+      "allowed_surfaces": [],
+      "review_due_date": null
+    },
+    {
+      "claim_id": "C-004",
+      "exact_copy": "씨마스 인공지능 기초 10,000원",
+      "status": "pending",
+      "source_path_or_url": "https://github.com/team-monolith-product/jce-landing-react/blob/main/src/app/%5Blocale%5D/pricing/plans.ts",
+      "source_locator": "R-004 CONTENT_PASSES key cmassAi",
+      "as_of_date": "2026-08-11",
+      "scope_and_definition": "코드상 Pro에 추가되는 학생 1인·1학기 콘텐츠 이용권 가격; 파트너 권리·계약조건 미확인",
+      "owner": "TBD: partnership/pricing",
+      "allowed_surfaces": [],
+      "review_due_date": null
+    },
+    {
+      "claim_id": "C-005",
+      "exact_copy": "클라우드 서비스 보안인증(CSAP SaaS) 표준등급",
+      "status": "pending",
+      "source_path_or_url": "https://github.com/team-monolith-product/jce-landing-react/blob/main/src/messages/kr.json",
+      "source_locator": "R-003 csap section",
+      "as_of_date": "2026-08-11",
+      "scope_and_definition": "현재 구현 문구; 인증서·인증 대상 서비스·유효기간·표현 승인 미확인",
+      "owner": "TBD: security/legal",
+      "allowed_surfaces": [],
+      "review_due_date": null
+    },
+    {
+      "claim_id": "C-006",
+      "exact_copy": "750+ 국내 운영 학교 수(누적)",
+      "status": "pending",
+      "source_path_or_url": "https://github.com/team-monolith-product/jce-landing-react/blob/main/src/messages/kr.json",
+      "source_locator": "R-003 count.stats[0]",
+      "as_of_date": "2026-08-11",
+      "scope_and_definition": "모수·중복 제거·운영 정의·기준일 미확인",
+      "owner": "TBD: data/marketing",
+      "allowed_surfaces": [],
+      "review_due_date": null
+    },
+    {
+      "claim_id": "C-007",
+      "exact_copy": "고등학교 정보 수업 도입 50%",
+      "status": "pending",
+      "source_path_or_url": "https://github.com/team-monolith-product/jce-landing-react/blob/main/src/messages/kr.json",
+      "source_locator": "R-003 count.stats[3]",
+      "as_of_date": "2026-08-11",
+      "scope_and_definition": "분모·학년도·도입 정의·산식 미확인",
+      "owner": "TBD: data/marketing",
+      "allowed_surfaces": [],
+      "review_due_date": null
+    },
+    {
+      "claim_id": "C-008",
+      "exact_copy": "코들 라이선스",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-008 owner product taxonomy confirmation",
+      "as_of_date": "2026-08-21",
+      "scope_and_definition": "Basic과 Pro를 하위 티어로 두는 상품군 명칭과 관계",
+      "owner": "전종현",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ],
+      "review_due_date": "2026-11-21"
+    },
+    {
+      "claim_id": "C-009",
+      "exact_copy": "Basic은 무료 티어",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-008 direct statement: 베이직(무료)",
+      "as_of_date": "2026-08-21",
+      "scope_and_definition": "Basic의 무료 여부만 승인; 사용 범위·인원·기간은 미승인",
+      "owner": "전종현",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ],
+      "review_due_date": "2026-11-21"
+    },
+    {
+      "claim_id": "C-010",
+      "exact_copy": "코들 오리지널 콘텐츠",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-008 owner product taxonomy confirmation",
+      "as_of_date": "2026-08-21",
+      "scope_and_definition": "Codle AI 콘텐츠 이용권을 포함하며 코들 Pro 콘텐츠를 함께 설명·전시할 상품군",
+      "owner": "전종현",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ],
+      "review_due_date": "2026-11-21"
+    },
+    {
+      "claim_id": "C-011",
+      "exact_copy": "씨마스 인공지능 기초",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-008 owner statement; 씨마스 인기초 shorthand normalized",
+      "as_of_date": "2026-08-21",
+      "scope_and_definition": "상품군 존재와 명칭만 승인; 가격·권리·판매 범위는 미승인",
+      "owner": "전종현",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ],
+      "review_due_date": "2026-11-21"
+    },
+    {
+      "claim_id": "C-012",
+      "exact_copy": "AI 집중캠프",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-008 owner statement: 캠프",
+      "as_of_date": "2026-08-21",
+      "scope_and_definition": "상품/프로그램 존재만 승인; 공식 상세명·대상·운영·가격은 미승인",
+      "owner": "전종현",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ],
+      "review_due_date": "2026-11-21"
+    },
+    {
+      "claim_id": "C-013",
+      "exact_copy": "바이브코딩 해커톤 대회",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-008 owner statement: 해커톤",
+      "as_of_date": "2026-08-21",
+      "scope_and_definition": "상품/프로그램 존재만 승인; 공식 상세명·대상·운영·가격은 미승인",
+      "owner": "전종현",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ],
+      "review_due_date": "2026-11-21"
+    },
+    {
+      "claim_id": "C-014",
+      "exact_copy": "AIDT 교육자료",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-020 owner correction: official name is AIDT 교육자료; expanded form is AI 디지털 교육자료",
+      "as_of_date": "2026-08-26",
+      "scope_and_definition": "새 허브의 정식 상품명과 상품군 존재 승인; 풀어쓴 동의어는 AI 디지털 교육자료; 출판사별 가격·구매 URL은 미승인",
+      "owner": "전종현",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ],
+      "review_due_date": "2026-11-21"
+    },
+    {
+      "claim_id": "C-015",
+      "exact_copy": "코들은 단순 소프트웨어가 아니라 AI 교육의 전 범위를 서비스하는 파트너다.",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-011 owner perception-shift goal",
+      "as_of_date": "2026-08-21",
+      "scope_and_definition": "내부 전략·포지셔닝 목표로 승인. `전 범위/모든 범위`를 대외 절대 claim으로 사용하는 것은 미승인",
+      "owner": "전종현",
+      "allowed_surfaces": [
+        "internal-planning"
+      ],
+      "review_due_date": "2026-11-21"
+    },
+    {
+      "claim_id": "C-016",
+      "exact_copy": "코들 라이선스와 코들 오리지널 콘텐츠 이용권은 각각 구매하거나 함께 구매할 수 있습니다.",
+      "status": "prohibited",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-013 owner purchase configuration",
+      "as_of_date": "2026-08-21",
+      "scope_and_definition": "R-014에서 콘텐츠 단독 구매 불가·Pro 필수로 정정됨. 이 문구는 사용 금지.",
+      "owner": "전종현",
+      "allowed_surfaces": [],
+      "review_due_date": null
+    },
+    {
+      "claim_id": "C-017",
+      "exact_copy": "코들 라이선스와 씨마스 인공지능 기초 콘텐츠 이용권은 각각 구매하거나 함께 구매할 수 있습니다.",
+      "status": "prohibited",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-013 owner purchase configuration",
+      "as_of_date": "2026-08-21",
+      "scope_and_definition": "R-014에서 콘텐츠 단독 구매 불가·Pro 필수로 정정됨. 이 문구는 사용 금지.",
+      "owner": "전종현",
+      "allowed_surfaces": [],
+      "review_due_date": null
+    },
+    {
+      "claim_id": "C-018",
+      "exact_copy": "코들 오리지널 콘텐츠 이용권을 구매하려면 Pro 라이선스가 필요합니다.",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-014 owner statement",
+      "as_of_date": "2026-08-24",
+      "scope_and_definition": "콘텐츠 단독 구매 불가와 Pro 필수 관계. 가격·최소수량·계약기간 제외",
+      "owner": "전종현",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ],
+      "review_due_date": "2026-11-24"
+    },
+    {
+      "claim_id": "C-019",
+      "exact_copy": "씨마스 인공지능 기초 콘텐츠 이용권을 구매하려면 Pro 라이선스가 필요합니다.",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-014 owner statement",
+      "as_of_date": "2026-08-24",
+      "scope_and_definition": "콘텐츠 단독 구매 불가와 Pro 필수 관계. 가격·최소수량·계약기간 제외",
+      "owner": "전종현",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ],
+      "review_due_date": "2026-11-24"
+    },
+    {
+      "claim_id": "C-020",
+      "exact_copy": "AI 집중캠프와 바이브코딩 해커톤은 서로 다른 상품입니다.",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-014 owner statement",
+      "as_of_date": "2026-08-24",
+      "scope_and_definition": "두 상품을 최상위에서 분리한다는 taxonomy 결정",
+      "owner": "전종현",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ],
+      "review_due_date": "2026-11-24"
+    },
+    {
+      "claim_id": "C-021",
+      "exact_copy": "짓다 플랫폼은 바이브코딩 해커톤의 하위 구성입니다.",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-014 owner statement",
+      "as_of_date": "2026-08-24",
+      "scope_and_definition": "상품 hierarchy만 승인. 기능·가격·브랜드 표기 방식 제외",
+      "owner": "전종현",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ],
+      "review_due_date": "2026-11-24"
+    },
+    {
+      "claim_id": "C-022",
+      "exact_copy": "코들 라이선스, 코들 오리지널 콘텐츠, 씨마스 인공지능 기초, AI 집중캠프, 바이브코딩 해커톤은 현재 Team Monolith/Codle이 직접 판매합니다.",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-015 owner statement",
+      "as_of_date": "2026-08-24",
+      "scope_and_definition": "다섯 최상위 상품의 현재 판매 가능 여부와 직접 판매 주체. 가격·계약 조건·구체 문의 채널 제외",
+      "owner": "전종현",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ],
+      "review_due_date": "2026-11-24"
+    },
+    {
+      "claim_id": "C-023",
+      "exact_copy": "AIDT 교육자료는 각 출판사가 판매·수납하고 이후 Team Monolith/Codle에 정산하는 구조입니다.",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-015 owner statement",
+      "as_of_date": "2026-08-24",
+      "scope_and_definition": "AIDT 교육자료의 현재 판매 주체와 정산 구조. 출판사별 상품명·가격·구매 URL·정산 조건 제외",
+      "owner": "전종현",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ],
+      "review_due_date": "2026-11-24"
+    },
+    {
+      "claim_id": "C-024",
+      "exact_copy": "여섯 최상위 상품은 현재 각각의 판매 경로를 통해 계약·신청 또는 구매할 수 있습니다.",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-015 owner confirmation of the immediately preceding availability definition",
+      "as_of_date": "2026-08-24",
+      "scope_and_definition": "현재 판매/제공 가능 여부만 승인. 직접 판매 여부는 C-022와 C-023으로 구분하며 구체 문의 채널은 제외",
+      "owner": "전종현",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ],
+      "review_due_date": "2026-11-24"
+    },
+    {
+      "claim_id": "C-025",
+      "exact_copy": "내부 검토용 견적 문의",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-016 approval of internal-evidence-owner-review-packet.md",
+      "as_of_date": "2026-08-24",
+      "owner": "전종현",
+      "review_due_date": "2026-11-24",
+      "scope_and_definition": "직접 판매 5개 상품의 단일 CTA 문구. 실제 공개 폼 URL은 미확정",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ]
+    },
+    {
+      "claim_id": "C-026",
+      "exact_copy": "코들이 만들고 각 출판사가 판매합니다.",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-016 approval of internal-evidence-owner-review-packet.md",
+      "as_of_date": "2026-08-24",
+      "owner": "전종현",
+      "review_due_date": "2026-11-24",
+      "scope_and_definition": "AIDT 카드에 허용된 판매 구조 설명. 출판사별 URL·상품명·장기 제공 안정성은 제외",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ]
+    },
+    {
+      "claim_id": "C-027",
+      "exact_copy": "AI 집중캠프는 AI를 배우고 직접 만들어보는 집중 교육 운영입니다.",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-016 approval of internal-evidence-owner-review-packet.md",
+      "as_of_date": "2026-08-24",
+      "owner": "전종현",
+      "review_due_date": "2026-11-24",
+      "scope_and_definition": "캠프의 허용된 구분 문구. 대상·시간·가격·패키지 범위는 미확정",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ]
+    },
+    {
+      "claim_id": "C-028",
+      "exact_copy": "바이브코딩 해커톤은 문제를 정하고 팀 결과물을 완성·발표하는 프로젝트형 행사 운영입니다.",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-016 approval of internal-evidence-owner-review-packet.md",
+      "as_of_date": "2026-08-24",
+      "owner": "전종현",
+      "review_due_date": "2026-11-24",
+      "scope_and_definition": "해커톤의 허용된 구분 문구. 심사·시상·생기부의 상시 포함을 뜻하지 않음",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ]
+    },
+    {
+      "claim_id": "C-029",
+      "exact_copy": "코들 라이선스, 코들 오리지널 콘텐츠, 씨마스 인공지능 기초, AI 집중캠프, 바이브코딩 해커톤을 한 번에 문의할 수 있습니다.",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-016 approval of internal-evidence-owner-review-packet.md",
+      "as_of_date": "2026-08-24",
+      "owner": "전종현",
+      "review_due_date": "2026-11-24",
+      "scope_and_definition": "직접 판매 5개 상품의 다중 선택 문의 구조. AIDT는 제외",
+      "allowed_surfaces": [
+        "hub",
+        "internal-planning",
+        "ai-generation-context"
+      ]
+    },
+    {
+      "claim_id": "C-030",
+      "exact_copy": "허브에는 가격 숫자와 할인율을 공개하지 않는다.",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-016 approval of internal-evidence-owner-review-packet.md",
+      "as_of_date": "2026-08-24",
+      "owner": "전종현",
+      "review_due_date": "2026-11-24",
+      "scope_and_definition": "가격·할인 비노출 전략 규칙. 견적 과정의 비공개 가격 제시는 제한하지 않음",
+      "allowed_surfaces": [
+        "internal-planning",
+        "ai-generation-context"
+      ]
+    },
+    {
+      "claim_id": "C-031",
+      "exact_copy": "권리 승인 전에는 기관명·로고·사진·성과 수치를 공개 화면에 사용하지 않는다.",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-016 approval of internal-evidence-owner-review-packet.md",
+      "as_of_date": "2026-08-24",
+      "owner": "전종현",
+      "review_due_date": "2026-11-24",
+      "scope_and_definition": "자산·사례 권리 안전 규칙. 익명 정성 사례만 별도 승인 범위 내 사용",
+      "allowed_surfaces": [
+        "internal-planning",
+        "ai-generation-context"
+      ]
+    },
+    {
+      "claim_id": "C-032",
+      "exact_copy": "오리지널 콘텐츠와 씨마스 인공지능 기초는 각각 최상위에서 발견시키고 구매 구성 단계에서 Pro 라이선스 필수를 설명한다.",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-016 approval of internal-evidence-owner-review-packet.md",
+      "as_of_date": "2026-08-24",
+      "owner": "전종현",
+      "review_due_date": "2026-11-24",
+      "scope_and_definition": "노출 hierarchy와 구매 hierarchy를 분리하는 전략 규칙",
+      "allowed_surfaces": [
+        "internal-planning",
+        "ai-generation-context"
+      ]
+    },
+    {
+      "claim_id": "C-033",
+      "exact_copy": "AIDT 교육자료에는 코들 견적 문의가 아니라 출판사 안내 행동을 사용한다.",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-016 approval of internal-evidence-owner-review-packet.md",
+      "as_of_date": "2026-08-24",
+      "owner": "전종현",
+      "review_due_date": "2026-11-24",
+      "scope_and_definition": "AIDT 교육자료 CTA routing 규칙. 최신 출판사 링크 확보 전 외부 URL은 만들지 않음",
+      "allowed_surfaces": [
+        "internal-planning",
+        "ai-generation-context"
+      ]
+    },
+    {
+      "claim_id": "C-034",
+      "exact_copy": "AI 집중캠프와 바이브코딩 해커톤을 학교형·교육청형이라는 공식 패키지명으로 표현하지 않는다.",
+      "status": "approved",
+      "source_path_or_url": "current Hermes conversation",
+      "source_locator": "R-016 approval of internal-evidence-owner-review-packet.md",
+      "as_of_date": "2026-08-24",
+      "owner": "전종현",
+      "review_due_date": "2026-11-24",
+      "scope_and_definition": "기관 규모는 상세에서 학급·학년·전교/다학교 범위로 설명하는 전략 규칙",
+      "allowed_surfaces": [
+        "internal-planning",
+        "ai-generation-context"
+      ]
+    }
+  ]
+}

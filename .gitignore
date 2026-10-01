@@ -1,12 +1,10 @@
-# Local design history and internal research
+# Local design history (planning documents are tracked)
 /archive/
-/discovery-pack/
-/messaging/
-/SESSION-HANDOFF.md
-/CLAUDE-SLACK-NOTION-RESEARCH-PROMPT.md
 
 # Agent tools and local settings
-/.agents/
+/.agents/*
+!/.agents/brand-context.md
+!/.agents/product-marketing.md
 /.hermes/
 /.codex/
 /.impeccable/

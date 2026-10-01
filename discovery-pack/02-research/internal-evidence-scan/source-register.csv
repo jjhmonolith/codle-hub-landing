@@ -1,0 +1,84 @@
+source_id,platform,source_type,title_or_channel,url_or_id,author_or_role,created_at,updated_at,accessed_at,evidence_grade,notes
+S-001,slack,slack-message,#t_고객_국내k12,https://monolith-keb2010.slack.com/archives/C036ELJ7CUA/p1785488545447329,콘텐츠팀 리드,2026-07-31,2026-07-31,2026-08-24,B-near-direct,학교 담당교사에게 들은 캠프 성사 경위를 내부에 전달한 기록
+S-002,slack,slack-message,#t_고객_국내k12_견적서,https://monolith-keb2010.slack.com/archives/C06UVML7EJ2/p1783909395520979,고객팀 영업,2026-07-13,2026-07-13,2026-08-24,A-direct,실제 발행된 견적서 금액·품목 기록
+S-003,slack,slack-thread,#t_고객_국내k12,https://monolith-keb2010.slack.com/archives/C036ELJ7CUA/p1786613553248589,대표,2026-08-13,2026-08-13,2026-08-24,C-internal-summary,캠프 원가 구조 내부 분석
+S-004,slack,slack-thread,#t_고객_국내k12,https://monolith-keb2010.slack.com/archives/C036ELJ7CUA/p1787041964996729,고객팀 영업,2026-08-18,2026-08-18,2026-08-24,C-internal-summary,캠프 원가 재산정 결과 보고
+S-005,notion,notion-page,AI 집중캠프 활성화 및 마케팅 확장 방안,https://app.notion.com/p/3b91cc820da680cd82f8ca17382e159a,고객팀 영업,2026-08-11,2026-08-18,2026-08-24,C-internal-summary,캠프 상품화·구매 의사결정 구조·재구매 전략 내부 기획 문서
+S-006,slack,slack-message,#t_제품_해커톤_문의,https://monolith-keb2010.slack.com/archives/C0B0BR3CY4T/p1781163563825379,고객팀 영업,2026-06-11,2026-06-11,2026-08-24,B-near-direct,학교 상담 직후 예산·행정실 반대 사유 기록
+S-007,slack,slack-thread,#t_고객_해커톤_운영,https://monolith-keb2010.slack.com/archives/C0BCCGH6LG6/p1783584129579779,고객팀 운영,2026-07-09,2026-07-09,2026-08-24,B-near-direct,계약 방식(S2B) 협의 결과 기록
+S-008,slack,slack-thread,#t_고객_해커톤_운영,https://monolith-keb2010.slack.com/archives/C0BCCGH6LG6/p1783769600905949,사업개발,2026-07-11,2026-07-11,2026-08-24,B-near-direct,해커톤 운영보고 및 담당·부장교사 인터뷰 요약
+S-009,slack,slack-thread,#t_제품_해커톤_문의,https://monolith-keb2010.slack.com/archives/C0B0BR3CY4T/p1781849261433559,고객팀 영업,2026-06-19,2026-06-19,2026-08-24,B-near-direct,계약 방식 요구사항 기록
+S-010,slack,slack-thread,#t_고객_국내k12,https://monolith-keb2010.slack.com/archives/C036ELJ7CUA/p1785229420956049,대표,2026-07-28,2026-07-28,2026-08-24,A-direct,파트너 협의 결과 판매 구조 확정 공지
+S-011,slack,slack-thread,#t_콘텐츠,https://monolith-keb2010.slack.com/archives/C03GVC3PBE2/p1786325377451489,대표,2026-08-10,2026-08-10,2026-08-24,A-direct,모델/플랜 용어 정의
+S-012,slack,slack-thread,#t_콘텐츠,https://monolith-keb2010.slack.com/archives/C03GVC3PBE2/p1784625663412789,대표,2026-07-21,2026-07-21,2026-08-24,B-near-direct,파트너 대표 발언과 가격 조정 결정 기록
+S-013,slack,slack-message,#t_고객_국내k12,https://monolith-keb2010.slack.com/archives/C036ELJ7CUA/p1785728573863989,콘텐츠팀 리드,2026-08-03,2026-08-03,2026-08-24,A-direct,씨마스 콘텐츠 오픈·웹전시 URL·상담 신청 폼 안내
+S-014,slack,slack-message,#t_고객_국내k12_씨마스,https://monolith-keb2010.slack.com/archives/C0BMGEL4YQ5/p1786007268691149,콘텐츠팀 리드,2026-08-06,2026-08-06,2026-08-24,A-direct,파트너가 교사에게 발송할 안내 문구 원문
+S-015,slack,slack-message,#t_콘텐츠,https://monolith-keb2010.slack.com/archives/C03GVC3PBE2/p1785910938821009,콘텐츠팀 리드,2026-08-05,2026-08-05,2026-08-24,B-near-direct,교사 인터뷰 직후 예산·수강 규모 기록
+S-016,slack,slack-thread,#t_고객_국내k12,https://monolith-keb2010.slack.com/archives/C036ELJ7CUA/p1785474538761489,고객팀 영업,2026-07-31,2026-07-31,2026-08-24,C-internal-summary,파트너 채택교 리스트 기반 콜드콜 계획
+S-017,slack,slack-message,#t_제품_코들_배포공유,https://monolith-keb2010.slack.com/archives/C099W6T7DRU/p1786451397392419,제품기획,2026-08-11,2026-08-11,2026-08-24,A-direct,가격 페이지 구조 변경 배포 기록
+S-018,slack,slack-thread,#t_제품_코들,https://monolith-keb2010.slack.com/archives/C02F56PACF7/p1786431827862549,제품기획,2026-08-11,2026-08-11,2026-08-24,A-direct,콘텐츠 이용권 분리에 따른 명칭 변경 논의
+S-019,slack,slack-thread,#t_고객_코들_문의,https://monolith-keb2010.slack.com/archives/C0B0Z76KFGF/p1787544620176469,코들 문의 폼(자동 게시),2026-08-24,2026-08-24,2026-08-24,A-direct,고객이 제출한 문의 폼 원문. 개인 연락처 포함되어 인용 시 제거함
+S-020,notion,notion-db-row,소통 DB row: 해커톤 짓다와 코들을 함께 털어 예산 사용 희망함.,https://app.notion.com/p/3c61cc820da6805a9774f5900089f97c,고객팀 영업,2026-08-24,2026-08-24,2026-08-24,B-near-direct,영업 소통 로그. 제목 필드가 소통 요약 본문 역할
+S-021,notion,notion-db-row,딜 DB row: 낭주중학교 26년 2학기,https://app.notion.com/p/26-3c61cc820da680d7ae99c969f9a7b62e,고객팀 영업,2026-08-24,2026-08-24,2026-08-24,A-direct,딜 카드. 견적금액·인원·모델·단계·계약기간 필드 보유
+S-022,slack,slack-thread,#t_고객_코들_문의,https://monolith-keb2010.slack.com/archives/C0B0Z76KFGF/p1787546031143209,고객팀 영업,2026-08-24,2026-08-24,2026-08-24,B-near-direct,고객 통화 직후 예산 상황 기록
+S-023,slack,slack-thread,#t_고객_코들_문의,https://monolith-keb2010.slack.com/archives/C0B0Z76KFGF/p1787285384175219,코들 문의 폼(자동 게시),2026-08-21,2026-08-21,2026-08-24,A-direct,해커톤 패키지 단독 문의 제출 원문
+S-024,slack,slack-thread,#t_고객_코들_문의,https://monolith-keb2010.slack.com/archives/C0B0Z76KFGF/p1787297352585589,고객팀 운영,2026-08-21,2026-08-21,2026-08-24,B-near-direct,고객 요구사항 기록
+S-025,slack,slack-thread,#t_고객_코들_문의,https://monolith-keb2010.slack.com/archives/C0B0Z76KFGF/p1784180097166969,고객팀 영업,2026-07-16,2026-07-16,2026-08-24,B-near-direct,예산 배분 의사 기록
+S-026,slack,slack-thread,#t_고객_코들_문의,https://monolith-keb2010.slack.com/archives/C0B0Z76KFGF/p1784165964707549,코들 문의 폼(자동 게시),2026-07-16,2026-07-16,2026-08-24,A-direct,AI 플랜 + 씨마스/비상 플랜 동시 문의 원문
+S-027,slack,slack-thread,#t_고객_코들_문의,https://monolith-keb2010.slack.com/archives/C0B0Z76KFGF/p1785745370997449,고객팀 영업,2026-08-03,2026-08-03,2026-08-24,B-near-direct,예산 범위 내 상품 선택 기록
+S-028,slack,slack-thread,#t_고객_코들_문의,https://monolith-keb2010.slack.com/archives/C0B0Z76KFGF/p1785728664953889,코들 문의 폼(자동 게시),2026-08-03,2026-08-03,2026-08-24,A-direct,Pro + AI 플랜 동시 문의 원문
+S-029,slack,slack-thread,#t_제품_해커톤_문의,https://monolith-keb2010.slack.com/archives/C0B0BR3CY4T/p1781080716488799,사업개발,2026-06-10,2026-06-10,2026-08-24,B-near-direct,고객 통화 직후 예산·대상·시상 요구 기록
+S-030,slack,slack-thread,#t_제품_해커톤_문의,https://monolith-keb2010.slack.com/archives/C0B0BR3CY4T/p1782435833462629,사업개발,2026-06-26,2026-06-26,2026-08-24,B-near-direct,고객 통화 내용 기록
+S-031,slack,slack-thread,#t_제품_해커톤_문의,https://monolith-keb2010.slack.com/archives/C0B0BR3CY4T/p1780386442637699,고객사 담당자(원문 전달),2026-06-02,2026-06-02,2026-08-24,A-direct,고객사가 보낸 견적 요청 원문. 연락처는 제거함
+S-032,slack,slack-thread,#t_제품_해커톤_문의,https://monolith-keb2010.slack.com/archives/C0B0BR3CY4T/p1780389334864449,사업개발,2026-06-02,2026-06-02,2026-08-24,B-near-direct,고객 통화 직후 기록
+S-033,slack,slack-thread,#t_제품_해커톤_문의,https://monolith-keb2010.slack.com/archives/C0B0BR3CY4T/p1780557467436529,사업개발,2026-06-04,2026-06-04,2026-08-24,B-near-direct,의사결정권 부재 리드 기록
+S-034,slack,slack-thread,#t_제품_해커톤_문의,https://monolith-keb2010.slack.com/archives/C0B0BR3CY4T/p1779869324179939,대표,2026-05-27,2026-05-27,2026-08-24,B-near-direct,상담 직후 교육청 지침·전환 사유 기록
+S-035,slack,slack-thread,#t_고객_해커톤_운영,https://monolith-keb2010.slack.com/archives/C0BCCGH6LG6/p1786338830776609,고객팀 운영,2026-08-10,2026-08-10,2026-08-24,B-near-direct,해커톤 운영 조건·견적 기록
+S-036,slack,slack-thread,#t_고객_해커톤_운영,https://monolith-keb2010.slack.com/archives/C0BCCGH6LG6/p1784683297576049,고객팀 운영,2026-07-22,2026-07-22,2026-08-24,B-near-direct,해커톤 운영보고 및 재실시 의향
+S-037,slack,slack-thread,#t_고객_해커톤_운영,https://monolith-keb2010.slack.com/archives/C0BCCGH6LG6/p1785746637567669,고객팀 운영,2026-08-03,2026-08-03,2026-08-24,B-near-direct,교육청 해커톤 운영보고·개선점
+S-038,slack,slack-thread,#t_제품_해커톤,https://monolith-keb2010.slack.com/archives/C0AP5BQ0L5C/p1778480070570819,고객팀 운영,2026-05-11,2026-05-11,2026-08-24,B-near-direct,교육청 교사자문단 회의 결과 및 반대 의견 기록
+S-039,slack,slack-thread,#t_고객_해커톤_운영,https://monolith-keb2010.slack.com/archives/C0BCCGH6LG6/p1786514724124939,고객팀 운영,2026-08-12,2026-08-12,2026-08-24,B-near-direct,대학 고객 계약·입찰 요건 기록
+S-040,slack,slack-thread,#t_관리,https://monolith-keb2010.slack.com/archives/C02FXR9TNM6/p1783648598297089,경영관리,2026-07-10,2026-07-10,2026-08-24,A-direct,출판사·기관별 실적 금액과 정산 항목 원기록
+S-041,slack,slack-thread,#t_고객_사업개발,https://monolith-keb2010.slack.com/archives/C0B8FL49CDV/p1781166865366639,사업개발,2026-06-11,2026-06-11,2026-08-24,C-internal-summary,AIDT 출판사 계약 성격 재해석 진행 상황
+S-042,slack,slack-thread,#t_데이터,https://monolith-keb2010.slack.com/archives/C02F86WRX8B/p1785834371746969,데이터팀(발행사 메일 원문 인용),2026-08-04,2026-08-04,2026-08-24,A-direct,AIDT 발행사 담당자가 코들에 보낸 메일 원문
+S-043,slack,slack-thread,#t_제품_코들,https://monolith-keb2010.slack.com/archives/C02F56PACF7/p1782196272582719,콘텐츠팀 리드,2026-06-23,2026-06-23,2026-08-24,B-near-direct,발행사 문의를 내부에 전달
+S-044,slack,slack-thread,#t_콘텐츠,https://monolith-keb2010.slack.com/archives/C03GVC3PBE2/p1747112149909529,CTO,2025-05-13,2025-05-13,2026-08-24,A-direct,AIDT 포털 출판사 정보·CS 창구 요구 원문. historical
+S-045,slack,slack-thread,#t_제품_코들,https://monolith-keb2010.slack.com/archives/C02F56PACF7/p1779507588083879,대표,2026-05-23,2026-05-23,2026-08-24,B-near-direct,출판사 담당자 통화 요약. 가격·사업 구조 발언 포함
+S-046,slack,slack-thread,#t_개발_인프라,https://monolith-keb2010.slack.com/archives/C07SA16GWFM/p1781059372640009,대표,2026-06-10,2026-06-10,2026-08-24,A-direct,실제 계약 경로 3종과 수의계약 한도 대응 기록
+S-047,slack,slack-thread,#t_데이터,https://monolith-keb2010.slack.com/archives/C02F86WRX8B/p1778116090560939,데이터팀,2026-05-07,2026-05-07,2026-08-24,C-internal-summary,학교장터 계약·감사 행정 구조 조사 결과
+S-048,slack,slack-thread,#t_고객_국내k12,https://monolith-keb2010.slack.com/archives/C036ELJ7CUA/p1764898580232119,제품기획,2025-12-05,2025-12-05,2026-08-24,C-internal-summary,경쟁사 남은 예산 광고 관찰. historical
+S-049,slack,slack-thread,#t_고객_국내k12,https://monolith-keb2010.slack.com/archives/C036ELJ7CUA/p1763366301432609,고객팀 운영,2025-11-17,2025-11-17,2026-08-24,B-near-direct,교육청 담당자 소통 결과. historical
+S-050,slack,slack-thread,#t_고객_국내k12,https://monolith-keb2010.slack.com/archives/C036ELJ7CUA/p1749532029570649,사업개발,2025-06-10,2025-06-10,2026-08-24,C-internal-summary,교육청 연수 잔여 예산 구매 사례. historical
+S-051,slack,slack-thread,#t_고객_국내k12,https://monolith-keb2010.slack.com/archives/C036ELJ7CUA/p1733810748328439,고객팀,2024-12-10,2024-12-10,2026-08-24,B-near-direct,학교 정보교사 의견 기록. historical
+S-052,slack,slack-thread,#t_제품_코들,https://monolith-keb2010.slack.com/archives/C02F56PACF7/p1786439202001869,제품기획,2026-08-11,2026-08-11,2026-08-24,A-direct,Pro+콘텐츠 이용권 조합 구매 시 구독권 차감 구조 문제
+S-053,slack,slack-thread,#t_고객_국내k12,https://monolith-keb2010.slack.com/archives/C036ELJ7CUA/p1786005542137719,고객팀 운영,2026-08-06,2026-08-06,2026-08-24,B-near-direct,교육청 연구정보원 담당 연구원 소통 결과
+S-054,slack,slack-thread,#t_고객_국내k12,https://monolith-keb2010.slack.com/archives/C036ELJ7CUA/p1786674360719549,콘텐츠팀 리드,2026-08-14,2026-08-14,2026-08-24,B-near-direct,해커톤 상담 중 캠프 존재를 알게 된 고객 사례
+S-055,slack,slack-thread,#t_고객_사업운영,https://monolith-keb2010.slack.com/archives/C092YLJV76J/p1787121122486019,사업운영,2026-08-19,2026-08-19,2026-08-24,C-internal-summary,해커톤 문의 내부 라우팅 질문
+S-056,slack,slack-thread,#t_콘텐츠_제작요청,https://monolith-keb2010.slack.com/archives/C092Z813Z1S/p1777881100056059,마케팅,2026-05-04,2026-05-04,2026-08-24,C-internal-summary,찾아가는 AI 패키지 카드뉴스 카피 초안
+S-057,slack,slack-thread,#t_고객_사업개발,https://monolith-keb2010.slack.com/archives/C0B8FL49CDV/p1787016216625789,사업개발,2026-08-18,2026-08-18,2026-08-24,C-internal-summary,프로그램 3건 매출·원가·투입일수 정리
+S-058,slack,slack-message,#t_고객_해커톤_운영,https://monolith-keb2010.slack.com/archives/C0BCCGH6LG6/p1787035724768779,고객팀 운영,2026-08-18,2026-08-18,2026-08-24,B-near-direct,해커톤 운영 조건·견적 기록
+S-059,slack,slack-thread,#t_고객_해커톤_운영,https://monolith-keb2010.slack.com/archives/C0BCCGH6LG6/p1782961271819199,사업개발,2026-07-02,2026-07-02,2026-08-24,C-internal-summary,상담 학교 공통 패턴과 기안 결재 대기 상황
+S-060,slack,slack-thread,#t_제품_해커톤_문의,https://monolith-keb2010.slack.com/archives/C0B0BR3CY4T/p1786586750238339,코들 해커톤 문의 폼(자동 게시),2026-08-13,2026-08-13,2026-08-24,A-direct,고객이 제출한 무료 상담 신청 원문
+S-061,slack,slack-thread,#t_제품_해커톤_문의,https://monolith-keb2010.slack.com/archives/C0B0BR3CY4T/p1786684201079979,고객팀 운영,2026-08-14,2026-08-14,2026-08-24,C-internal-summary,해커톤 견적 관행과 할인 대응
+S-062,slack,slack-thread,#t_고객_국내k12_견적서,https://monolith-keb2010.slack.com/archives/C06UVML7EJ2/p1779859341837189,고객팀 영업,2026-05-27,2026-05-27,2026-08-24,A-direct,리셀러 경유 세금계산서 발행 기록
+S-063,slack,slack-thread,#t_고객_사업개발,https://monolith-keb2010.slack.com/archives/C0B8FL49CDV/p1785855341506679,사업개발,2026-08-04,2026-08-04,2026-08-24,C-internal-summary,영업대행 수수료율 설계 논의
+S-064,slack,slack-thread,#t_관리_인사_구매요청,https://monolith-keb2010.slack.com/archives/C04GQDK93RU/p1787188219574969,고객팀 운영,2026-08-20,2026-08-20,2026-08-24,B-near-direct,코들 결제 대가로 LLM 계정을 제공하는 변형 거래
+S-065,notion,notion-db-row,소통 DB row: 예산문제로 일단 PRO 계약을 50%할인으로 하고 추후 180만원에 AI 업그레이드 해 주기로,https://app.notion.com/p/3b91cc820da680aab615c110601ed836,고객팀 영업,2026-08-11,2026-08-11,2026-08-24,B-near-direct,영업 소통 로그
+S-066,notion,notion-db-row,소통 DB row: 계약은 ai로 하고 pro 로 내년 2학기까지 2번 사용하는 구두 합의,https://app.notion.com/p/3c31cc820da680e68c06fe4f6b6dde7b,고객팀 영업,2026-08-24,2026-08-24,2026-08-24,B-near-direct,영업 소통 로그
+S-067,notion,notion-db-row,소통 DB row: 120만원 이하의 예산으로 1학기 사용을 원하는 비현실적인 상황.,https://app.notion.com/p/3c31cc820da680779efedd7289d80c0a,고객팀 영업,2026-08-21,2026-08-21,2026-08-24,B-near-direct,영업 소통 로그
+S-068,notion,notion-db-row,소통 DB row: 7월에 추경해서 예산나오면 딜레이 지원 요청,https://app.notion.com/p/3651cc820da680de8d06ef68a1d1f80e,고객팀 영업,2026-05-29,2026-05-29,2026-08-24,B-near-direct,영업 소통 로그
+S-069,notion,notion-db-row,소통 DB row: 인공지능 기초 콘텐츠 확인 필요. 예산 한정됨.,https://app.notion.com/p/35f1cc820da680b09380dbe6b10f6e65,고객팀 영업,2026-05-29,2026-05-29,2026-08-24,B-near-direct,영업 소통 로그
+S-070,notion,notion-db-row,소통 DB row: 학교예산을 확인 중이라고 반복하나 큰 관심이 없는 느낌,https://app.notion.com/p/3721cc820da6803a848cdc9e36260429,고객팀 영업,2026-06-01,2026-06-01,2026-08-24,C-internal-summary,영업 소통 로그. 해석 포함
+S-071,notion,notion-db-row,소통 DB row: 정보예산 50만원,https://app.notion.com/p/35f1cc820da6808893aada12217c016f,고객팀 영업,2026-05-13,2026-05-13,2026-08-24,B-near-direct,영업 소통 로그
+S-072,notion,notion-page,AIDT 출판사 계약변경 - 금성출판사,https://app.notion.com/p/37b1cc820da680efba85faee1481b673,사업개발,2026-06-11,2026-06-11,2026-08-24,C-internal-summary,출판사 계약 변경 작업 문서
+S-073,notion,notion-page,씨마스 상담·도입 문의 인입 스프레드시트 연동 및 공유,https://app.notion.com/p/3c01cc820da681cfb635e5bdcfdbb57f,제품/데이터,2026-08-18,2026-08-18,2026-08-24,C-internal-summary,씨마스 상담 인입 처리 과업
+S-074,notion,notion-page,AI∙디지털 교육자료 서비스 이용약관,https://app.notion.com/p/1a51cc820da6807aad2ef2a71e4d82c4,법무/제품,2026-08-11,2026-08-11,2026-08-24,A-direct,AIDT 교육자료 서비스 약관 문서
+S-075,slack,slack-thread,#t_관리,https://monolith-keb2010.slack.com/archives/C02FXR9TNM6/p1781161699903389,대표,2026-06-11,2026-06-11,2026-08-24,A-direct,출판사 계약 변경 합의서 요청 문안
+S-076,slack,slack-thread,#t_제품_코들,https://monolith-keb2010.slack.com/archives/C02F56PACF7/p1786433391382129,대표,2026-08-11,2026-08-11,2026-08-24,A-direct,학기 중 콘텐츠 이용권 추가 구매 시나리오
+S-077,slack,slack-thread,#t_콘텐츠,https://monolith-keb2010.slack.com/archives/C03GVC3PBE2/p1786325910090509,대표,2026-08-10,2026-08-10,2026-08-24,A-direct,Pro·AI·씨마스 이용권 간 등급 관계 정의
+S-078,slack,slack-message,#t_고객_국내k12,https://monolith-keb2010.slack.com/archives/C036ELJ7CUA/p1781227440932239,고객팀 영업,2026-06-12,2026-06-12,2026-08-24,A-direct,품의·행정실 결재 마감 조건 안내
+S-079,slack,slack-thread,#t_고객_코들_문의,https://monolith-keb2010.slack.com/archives/C0B0Z76KFGF/p1787276535685559,코들 문의 폼(자동 게시),2026-08-21,2026-08-21,2026-08-24,A-direct,Pro + Codle AI 이용권 문의 제출 원문
+S-080,slack,slack-thread,#t_고객_코들_문의,https://monolith-keb2010.slack.com/archives/C0B0Z76KFGF/p1786601244874729,코들 문의 폼(자동 게시),2026-08-13,2026-08-13,2026-08-24,A-direct,Pro + 씨마스 인공지능 기초 이용권 문의 제출 원문
+S-081,slack,slack-thread,#t_제품_코들,https://monolith-keb2010.slack.com/archives/C02F56PACF7/p1785998744899109,대표,2026-08-06,2026-08-06,2026-08-24,C-internal-summary,AIDT 출판사별 포털 체험 계정 확인 요청
+S-082,slack,slack-thread,#t_제품_코들,https://monolith-keb2010.slack.com/archives/C02F56PACF7/p1786524074045879,제품,2026-08-12,2026-08-12,2026-08-24,C-internal-summary,AIDT 포털 명칭 변경에 따른 약관 반영 요청
+S-083,slack,slack-thread,#a_공지_배포,https://monolith-keb2010.slack.com/archives/C02VA2LLXH9/p1724140422048679,개발,2024-08-20,2024-08-20,2026-08-24,A-direct,AIDT 빌드에서 출판사 로그인 버튼 제거 등 배포 기록. historical

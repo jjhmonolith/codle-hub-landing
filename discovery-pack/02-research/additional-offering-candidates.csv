@@ -1,0 +1,6 @@
+candidate_id,candidate_name,observed_as,candidate_type,source_receipts,status,owner_decision,placement
+CAND-001,교사 연수,"교육청 해커톤 운영 전 필수 요소로 요청",program-component,R-012,closed-not-offering,"독립 상품으로 두지 않음","필요 시 캠프/해커톤 제공 범위에서 설명"
+CAND-002,학생 사전교육·체험,"해커톤 전 교육·체험 요소",program-component,R-012,closed-not-offering,"독립 상품으로 두지 않음","필요 시 캠프/해커톤 제공 범위에서 설명"
+CAND-003,짓다 플랫폼 이용,"캠프·해커톤의 개발·공유·심사 환경",enabling-platform,"R-009;R-012;R-014",promoted-as-child,"바이브코딩 해커톤 하위 구성으로 등록","P-006 바이브코딩 해커톤 하위 O-006"
+CAND-004,K-12 풀 운영 대행,"모둠 편성·현장 진행까지 벤더 수행",program-package,R-012,closed-not-offering,"독립 상품으로 두지 않음","필요 시 프로그램 제공 범위에서 설명"
+CAND-005,시상·간식·식사 옵션,"학교 인터뷰에서 선택 옵션으로 제안",program-add-on,R-012,closed-not-offering,"독립 상품으로 두지 않음","필요 시 견적 옵션으로만 검토"

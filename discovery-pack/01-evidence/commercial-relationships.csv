@@ -1,0 +1,12 @@
+relation_id,from_offering,to_offering,relationship,taxonomy_status,commercial_status,approved_scope,receipt_ids,unresolved
+CR-001,P-002,O-002,requires-pro-license,approved,partial,코들 오리지널 콘텐츠 이용권은 단독 구매할 수 없고 Pro 라이선스가 필수,R-014,가격·최소수량·계약기간·Basic 접근 처리
+CR-002,P-003,O-002,requires-pro-license,approved,partial,씨마스 인공지능 기초 콘텐츠 이용권은 단독 구매할 수 없고 Pro 라이선스가 필수,R-014,가격·최소수량·계약기간·Basic 접근 처리
+CR-003,O-005,P-002,display-together,approved,pending,코들 Pro 콘텐츠를 코들 오리지널 콘텐츠 영역에서 함께 설명·전시,R-008,Pro 포함 콘텐츠 목록·오리지널 이용권과의 entitlement 관계
+CR-004,P-005,P-006,separate-top-level-offerings,approved,pending,AI 집중캠프와 바이브코딩 해커톤은 서로 다른 최상위 상품으로 분리,R-009;R-012;R-014,각 상품의 패키지 범위·가격·문의 경로
+CR-005,O-006,P-006,child-enabling-platform,approved,pending,짓다 플랫폼은 바이브코딩 해커톤의 하위 구성,R-009;R-012;R-014,외부 표기명·설명 범위·별도 과금 여부
+CR-006,P-001,Team Monolith/Codle,direct-sold-by,approved,approved,코들 라이선스는 현재 Team Monolith/Codle이 직접 판매,R-015,가격·최소수량·계약기간·구체 문의 채널
+CR-007,P-002,Team Monolith/Codle,direct-sold-by,approved,approved,코들 오리지널 콘텐츠는 현재 Team Monolith/Codle이 직접 판매,R-015,가격·계약 조건·구체 문의 채널
+CR-008,P-003,Team Monolith/Codle,direct-sold-by,approved,approved,씨마스 인공지능 기초는 현재 Team Monolith/Codle이 직접 판매,R-015,가격·계약 조건·구체 문의 채널·파트너 권리
+CR-009,P-005,Team Monolith/Codle,direct-sold-by,approved,approved,AI 집중캠프는 현재 Team Monolith/Codle이 직접 판매,R-015,패키지 범위·견적 변수·구체 문의 채널
+CR-010,P-006,Team Monolith/Codle,direct-sold-by,approved,approved,바이브코딩 해커톤은 현재 Team Monolith/Codle이 직접 판매,R-015,패키지 범위·견적 변수·구체 문의 채널
+CR-011,P-004,각 출판사,publisher-sold-and-settled-to-codle,approved,approved,AIDT 교육자료는 각 출판사가 판매·수납하고 이후 Team Monolith/Codle에 정산,R-015,출판사별 공식 상품명·구매 URL·정산 조건·구체 문의 채널
