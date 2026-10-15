@@ -1,0 +1,19 @@
+Asset study — 2026-10-14
+
+Moon Rock 01 (glTF, 1K textures): https://polyhaven.com/a/moon_rock_01
+Artists: Dario Barresi, Greg Zaal, Jenelle van Heerden, Rico Cilliers.
+Quarry 01 Pure Sky (HDR, 1K): https://polyhaven.com/a/quarry_01_puresky
+License for both: CC0 — https://polyhaven.com/license
+Downloaded via the public Poly Haven API. Originals stored locally in assets/environment/.
+
+Three.js 0.180.0: MIT. Existing core reused; official GLTFLoader, RGBELoader and BufferGeometryUtils added. License in vendor/THREE-LICENSE.txt.
+Codle product video: https://ai.codle.io/motion1.mp4 — existing project media, cached locally for preview. Not a CC0 asset.
+Brand marks, fonts and existing page content reused from the previous local prototype.
+Jitda monitor content is a labelled illustrative mockup, not an actual product capture.
+Monitor mesh is authored for this prototype. Rock meshes and sky lighting are external assets.
+
+This working copy preserves the existing service sections. The first hero is replaced with the 3D asset study.
+
+Aerial Rocks 02 tiling ground textures (1K): https://polyhaven.com/a/aerial_rocks_02 — CC0.
+
+Final ground: Sandy Gravel (1K): https://polyhaven.com/a/sandy_gravel — CC0. Aerial Rocks was evaluated but is not used in the final scene.

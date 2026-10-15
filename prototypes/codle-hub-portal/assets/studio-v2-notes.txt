@@ -1,0 +1,17 @@
+Codle studio concept v2 — 2026-10-14
+
+Reference inspected: https://www.zero.university/
+Observed: tabletop framing, layered paper, foreground stationery, paper moving through a sequence, persistent floating navigation.
+Implementation: original Codle copy, separate DOM layers, paper lift and staggered prop movement, project example beneath the sheet. No Zero assets or source code reused.
+
+Assets generated with the built-in image_gen tool:
+assets/studio-mat-v2.png
+Prompt: Photorealistic-natural, full-bleed substrate for a premium Korean education creative studio. Perfectly overhead macro photograph of a rich dark pine-green self-healing cutting mat on a warm honey oak desk. Landscape 3:2. Mat fills 94%, angled 2 degrees, faint cream 1cm grid and tiny ruler ticks, authentic fine wear, rounded corners. Slim oak border. Empty central 80%, no paper, writing, laptop, mouse, pens, notebooks or stickers. Tiny cropped plant top left, soft detailed afternoon leaf shadows around perimeter, quiet clear center. Premium editorial product photography, tactile materials, no text.
+
+assets/studio-mouse-v2.png
+Prompt: Product-mockup. A single realistic premium translucent dark forest-green and ivory wireless computer mouse, precise overhead top-down view, points toward upper left, full object isolated on transparent background. Vintage inspired industrial design, creamy ivory upper buttons, green rubber scroll wheel, lower half translucent emerald plastic with subtle visible circuitry and tiny screws. Tactile quality, subtle wear, soft upper-left sunlight. No branding, writing, cable or other objects. Tight square composition, soft contact shadow, genuine alpha.
+
+The flower interface is an illustrative interactive coding lesson, not a screenshot of the live Codle product. It is labeled as a lesson example. Existing product, licensing and inquiry information is retained.
+
+Validation: desktop and 390px mobile, two scroll scenes, menu and section links, flower-color interaction, JavaScript syntax check. Reduced-motion fallback is implemented in CSS/JS.
+Preview server: node work/preview-server.cjs (localhost 4188).

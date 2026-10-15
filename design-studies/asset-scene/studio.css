@@ -1,0 +1,113 @@
+/* Codle's established white/blue identity, expanded into a quiet product showroom.
+   DESIGN_VARIANCE 5 / MOTION_INTENSITY 3 / VISUAL_DENSITY 3. */
+:root{--ink:#182b3d;--muted:#526477;--blue:#2859d7;--line:#dce3ea;--page:#fff;--max:1248px}
+::selection{background:#c5dcff;color:#142f67}
+html{scrollbar-color:#a6b9cc #f3f6fa;scroll-padding-top:96px}
+body{font-size:16px;letter-spacing:-.02em}
+button,input,select,textarea{font-family:inherit;caret-color:var(--blue)}
+a{text-underline-offset:5px}
+:focus-visible{outline:3px solid #2859d7;outline-offset:5px}
+.site-header{background:#fff;backdrop-filter:none;border-bottom:1px solid #edf0f3;z-index:200}
+.header-inner{height:82px}
+.brand img{width:101px;height:auto}
+.brand>span{font-size:13px;color:var(--muted);padding-left:20px}
+.header-inner nav{gap:32px}
+.nav-link,.login-link{font-size:14px;color:var(--ink)}
+.button,.button.small{border-radius:8px;min-height:46px;font-size:14px;padding:12px 21px;gap:12px}
+.button.dark{background:var(--blue)}@media (hover: hover) and (pointer: fine) {
+.button.dark:hover{background:#1945b5}}
+.showroom{padding-top:42px;--cover-size:clamp(270px,25vw,340px)}
+.showroom-intro{display:flex;align-items:flex-end;justify-content:space-between;text-align:left;gap:32px;margin-bottom:32px}
+.showroom-intro h1{margin:0;max-width:900px;font-size:clamp(25px,2.65vw,36px);font-weight:650;line-height:1.45;letter-spacing:-.035em;text-wrap:balance}
+.showroom-intro h1>span{font-weight:450;color:#526477;font-size:.78em}
+.showroom-intro em{font-style:normal;color:var(--blue)}
+.intro-aside{flex:none;font-size:14px;line-height:1.7;color:var(--muted);padding-bottom:3px}
+.product-tabs{display:flex;justify-content:flex-start;max-width:none;gap:34px;margin:0;padding:0;border:0;border-bottom:1px solid var(--line);border-radius:0;overflow:visible}
+.product-tabs .product-tab{position:relative;flex:none;min-height:54px;padding:10px 3px 16px;background:transparent!important;border:0;border-radius:0;font-size:15px;font-weight:550;letter-spacing:-.02em;color:#596b7e;white-space:nowrap;display:flex;align-items:center;justify-content:center;gap:7px}@media (hover: hover) and (pointer: fine) {
+.product-tabs .product-tab:hover{color:var(--blue)}}
+.product-tabs .product-tab[aria-selected=true]{color:var(--blue);font-weight:700}
+.product-tabs .product-tab::after{display:block;content:'';position:absolute;bottom:-1px;left:0;right:0;height:3px;background:transparent;border-radius:2px}
+.product-tabs .product-tab[aria-selected=true]::after{background:var(--blue)}
+#tab-textbook .name-logo{height:21px;width:auto;max-width:none}
+.brand-cross{font-weight:400;color:#718194}
+.showroom-canvas{position:relative;margin-top:24px;background:#f1f5fb;border-radius:16px;overflow:hidden;padding:12px 12px 14px}
+.cover-stage{height:calc(var(--cover-size) + 45px);overflow:hidden;outline-offset:-5px}
+.cover-stage::before,.cover-stage::after{display:none}
+.cover-track{perspective:1300px;perspective-origin:50% 50%}
+.album-cover{top:14px}
+.album-face{border-radius:14px;box-shadow:0 14px 22px -16px #20384b55}
+.album-cover[aria-current=true] .album-face{box-shadow:0 18px 26px -17px #183d6766}
+.album-face::after{display:none}
+.album-original .card-art{object-fit:cover}
+.flow-floor{display:none}
+.flow-controls{height:40px;margin:2px 0 0;display:flex;align-items:center;justify-content:center;gap:16px}
+.flow-arrow{width:38px;height:38px;border:1px solid #ced8e6;background:#fff;color:#284767;border-radius:50%;font-size:19px;display:grid;place-items:center;transition:background .15s}@media (hover: hover) and (pointer: fine) {
+.flow-arrow:hover{background:#dce8fa}}
+.flow-counter{font-size:12px;color:#586d85;font-variant-numeric:tabular-nums;letter-spacing:.08em;min-width:49px;text-align:center}
+.flow-counter strong{color:#233d5b;font-weight:650}
+.product-details{margin:0;min-height:188px;padding:30px 5px 24px}
+.product-panel{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:40px;min-height:124px;text-align:left;border:0;border-radius:0;background:transparent;overflow:visible;animation:none}
+.product-panel .product-name{grid-column:1;margin:0;padding:0;display:flex;align-items:center;justify-content:flex-start;gap:9px;font-size:25px;font-weight:650;letter-spacing:-.03em;line-height:1.3}
+.product-name .name-logo{height:28px;width:auto;max-width:100px}
+.product-name .name-logo-jitda{height:32px}
+.product-panel .panel-description{grid-column:1;font-size:15px;line-height:1.65;color:var(--muted);margin-top:10px}
+.panel-relation{grid-column:1;color:#596b7e;font-size:12px;margin:8px 0 0}
+.product-panel .panel-actions{grid-column:2;grid-row:1/4;align-self:center;display:flex;align-items:center;gap:10px;margin:0}
+.product-inquiry{display:inline-flex;align-items:center;justify-content:center;gap:15px;min-height:46px;border:1px solid #c9d4e1;border-radius:8px;background:#fff;color:var(--ink);font-size:14px;padding:12px 20px;font-weight:600}@media (hover: hover) and (pointer: fine) {
+.product-inquiry:hover{background:#f1f5fb}}
+#panel-textbook{grid-template-columns:1fr}
+.textbook-options{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-top:25px}
+.textbook-option{padding:0;border:0;background:none;min-width:0}
+.textbook-option+.textbook-option{border-left:1px solid var(--line);padding-left:42px}
+.textbook-option h3{display:flex;align-items:center;gap:20px;min-height:46px;font-size:20px;font-weight:600;margin:0;letter-spacing:-.025em}
+.textbook-brand-title img{width:70px;height:auto}
+.textbook-publisher-stack{display:flex;flex-direction:column;gap:8px;width:72px;margin-left:8px;flex:none}
+.textbook-publisher-stack svg,.textbook-publisher-stack img{width:100%;height:auto;display:block}
+.textbook-option .panel-actions{margin-top:20px;justify-content:flex-start}
+.studio-page .consult-section{margin-top:25px;padding:38px 42px;display:flex;justify-content:space-between;align-items:center;gap:32px;background:#eaf1ff;border:0;border-radius:14px}
+.consult-copy h2{font-size:25px;font-weight:650;letter-spacing:-.03em;color:#173d80;line-height:1.4;margin:0 0 8px}
+.consult-copy>p:last-child{color:#395783;font-size:15px}
+.consult-action{display:flex;flex-direction:column;align-items:flex-end;gap:9px}
+.consult-action>span{display:block;font-size:12px;color:#395783}
+.questions-section{display:grid;grid-template-columns:1fr 1.8fr;gap:80px;padding-block:82px 90px}
+.questions-intro h2{font-size:29px;font-weight:600;line-height:1.4;letter-spacing:-.03em;margin:0}
+.questions details{padding:0;margin:0;border:0;border-bottom:1px solid var(--line)}
+.questions summary{display:flex;align-items:center;justify-content:space-between;list-style:none;gap:24px;min-height:65px;font-size:16px;font-weight:550;cursor:pointer}
+.questions summary::-webkit-details-marker{display:none}
+.questions summary>span{font-size:24px;font-weight:350;color:#526d8d;transition:transform .18s}
+.questions details[open] summary>span{transform:rotate(45deg)}
+.questions details>p{font-size:14px;line-height:1.8;color:var(--muted);padding-bottom:24px;margin:0;max-width:72ch}
+.questions details a{color:var(--blue);text-decoration:underline}
+.codle-footer{background:#f7f9fb;border-top:1px solid #e8edf3;padding-top:45px}
+.codle-footer-inner{width:min(var(--max),calc(100% - 80px));margin:auto}
+.codle-footer-bottom{border-color:#dce3ea}
+.codle-footer-logo{opacity:.75}
+.official-inquiry{--ink:#182b3d;--muted:#526477;border:0;border-radius:16px;box-shadow:0 24px 70px #13274033;font-family:CodlePretendard,sans-serif}
+.official-inquiry .inquiry-heading{padding:28px 28px 20px;border-bottom:1px solid var(--line)}
+.official-inquiry .inquiry-heading h2{font-size:26px;letter-spacing:-.03em}
+.official-inquiry .inquiry-heading p{color:var(--muted);font-size:14px}
+.official-inquiry input,.official-inquiry select{font-size:16px;min-height:46px}
+.official-inquiry .field-hint,.inquiry-preview-note{color:#526477}
+.official-inquiry .inquiry-field{margin-top:20px}
+.official-inquiry .inquiry-submit{background:var(--blue);border-radius:8px}
+@media(min-width:1500px){.showroom{--cover-size:340px}.cover-stage{height:385px}}
+@media(max-width:1100px){.intro-aside{display:none}.showroom{--cover-size:290px}.product-tabs{justify-content:space-between;gap:18px}.product-panel{column-gap:20px}.product-panel .panel-actions{flex-direction:column;align-items:stretch}.textbook-option .panel-actions{flex-direction:row}.textbook-options{gap:25px}.textbook-option+.textbook-option{padding-left:25px}.questions-section{gap:50px}}
+@media(max-width:767px){.section-width,.header-inner,.codle-footer-inner{width:calc(100% - 40px)}.header-inner{height:70px;gap:14px}.brand img{width:86px}.brand>span{display:none}.header-inner nav{gap:16px}.header-inner .nav-link{display:none}.header-inner .login-link{font-size:13px;margin:0}.button.small{padding:10px 15px;min-height:42px;font-size:13px}.showroom{padding-top:27px;--cover-size:270px}.showroom-intro{margin-bottom:21px}.showroom-intro h1{font-size:27px;line-height:1.42;max-width:540px;text-wrap:pretty}.showroom-intro h1>span{font-size:19px}.product-tabs{gap:24px;overflow-x:auto;scrollbar-width:none;justify-content:flex-start}.product-tabs .product-tab{font-size:14px;min-height:50px;padding-bottom:14px}.showroom-canvas{margin-top:18px;padding:9px 0 14px}.cover-stage{height:315px}.cover-track{perspective:1000px}.product-details{padding:25px 0 18px;min-height:250px}.product-panel{display:block;min-height:207px}.product-panel .product-name{font-size:23px}.product-panel .panel-description{font-size:14px}.product-panel .panel-actions{display:flex;flex-direction:row;justify-content:flex-start;margin-top:20px}.panel-actions .button,.panel-actions .product-inquiry{font-size:13px;min-height:44px;padding:11px 16px}.textbook-options{grid-template-columns:1fr;gap:26px;margin-top:23px}.textbook-option+.textbook-option{padding:24px 0 0;border-left:0;border-top:1px solid var(--line)}.textbook-option h3{font-size:19px}.studio-page .consult-section{margin-top:14px;padding:29px 25px;display:block}.consult-copy h2{font-size:23px;max-width:240px}.consult-copy>p:last-child{font-size:14px;max-width:260px}.consult-action{align-items:flex-start;margin-top:23px}.questions-section{grid-template-columns:1fr;gap:25px;padding-block:50px 60px}.questions-intro h2{font-size:25px}.questions-intro h2 br{display:none}.questions summary{font-size:14px;min-height:64px;gap:14px}.questions details>p{font-size:13px}.codle-footer{padding-top:30px}.official-inquiry .inquiry-heading{padding:22px 20px 18px}}
+@media(max-width:390px){.section-width,.header-inner,.codle-footer-inner{width:calc(100% - 32px)}.showroom-intro h1{font-size:25px}.showroom{--cover-size:245px}.cover-stage{height:290px}.product-tabs{gap:22px}.header-inner nav{gap:12px}.product-panel .product-name{font-size:21px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+/* Inspection fixes: compact laptop viewport and readable secondary form text. */
+.showroom-intro em{white-space:nowrap}
+.codle-footer-company,.codle-footer-company p,.codle-footer-contacts a,.codle-footer-legal a{color:#526477}
+.official-inquiry input::placeholder,.official-inquiry textarea::placeholder{color:#65748a;opacity:1}
+.official-inquiry .optional-mark,.official-inquiry .pass-option span,.official-inquiry .official-compare,.official-inquiry .inquiry-preview-note{color:#526477}
+.official-inquiry .optional-mark,.official-inquiry .field-hint,.official-inquiry .inquiry-preview-note,.official-inquiry .required-mark{font-size:12px}
+.official-inquiry{padding:0;border:0}
+.official-inquiry .pass-option[aria-pressed=true]{box-shadow:none}
+.official-inquiry .inquiry-heading{flex-shrink:0}
+@media(min-width:768px) and (max-height:850px){.header-inner{height:70px}.showroom{padding-top:23px;--cover-size:250px}.showroom-intro{margin-bottom:16px}.showroom-intro h1{font-size:29px}.product-tabs .product-tab{min-height:48px;padding-bottom:12px}.showroom-canvas{margin-top:17px;padding-top:6px;padding-bottom:8px}.cover-stage{height:285px}.product-details{padding-top:23px;min-height:169px}}
+.product-details{max-width:none;width:100%;text-align:left}
+.product-panel.offering{display:grid}
+.product-panel .panel-description{margin-left:0;margin-right:0;max-width:none}
+.product-panel .panel-actions .button,.product-panel .panel-actions .product-inquiry{min-height:46px;font-size:14px;padding:12px 20px}
+.showroom-intro h1{color:var(--ink)}
+@media(max-width:767px){.product-panel.offering{display:block}.product-panel .panel-actions .button,.product-panel .panel-actions .product-inquiry{min-height:44px;font-size:13px;padding:11px 16px}}

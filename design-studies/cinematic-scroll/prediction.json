@@ -1,0 +1,35 @@
+{
+  "id": "enx9qscq1srmr0d179qvr6m6zc",
+  "model": "kwaivgi/kling-v3-video",
+  "version": "hidden",
+  "input": {
+    "duration": 8,
+    "generate_audio": false,
+    "mode": "pro",
+    "negative_prompt": "cuts, scene changes, morphing, melting screen, bending rectangular edges, changing monitor design, desktop monitor stand, people, text, letters, logos, UI, flicker, handheld shake, explosion, new objects, rotating rocks, orbit around screen, camera going behind screen",
+    "prompt": "A single continuous cinematic shot, beginning exactly at the supplied image. The enormous illuminated blue display and all rocks are solid stationary structures. For the first second the low wide camera holds the establishing composition. Then the camera smoothly dollies forward and slightly to the right toward the exact center of the blue display, gently aligning to face its plane straight on. True physical camera translation through the rocky space creates strong foreground parallax as nearby stones pass beyond both frame edges. Preserve the entire original canyon geography, lighting, scale and rigid rectangular screen shape. Subtle thin dust drifts slowly through warm sunbeams, blue light reflects on nearby stone. The camera never orbits around or passes behind the display. During the final two seconds the camera approaches the luminous blue surface until the metal bezel moves completely beyond the frame and the smooth uninterrupted deep blue display fills the entire image. End on this clean blue field. Beautiful controlled commercial dolly move, constant smooth velocity with gentle start and finish, physically plausible perspective, immaculate high-end VFX, silent.",
+    "start_image": "data:image/png;base64,..."
+  },
+  "logs": "Using model: kling-v3 in pro mode\nGenerating video...\nGenerated video in 144.7sec\nGenerated video ID: 939327967136727107\nDownloading 18088669 bytes\nDownloaded 17.25MB in 1.79sec\n",
+  "output": "https://replicate.delivery/xezq/Doce4v8CKpxjICacnTyikEKH7H1bQyesrmiaGUh96LINtSXXA/tmpc2tas2x8.mp4",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-10-14T12:42:34.126Z",
+  "started_at": "2026-10-14T12:42:34.335411258Z",
+  "completed_at": "2026-10-14T12:45:01.710530265Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/enx9qscq1srmr0d179qvr6m6zc/cancel",
+    "get": "https://api.replicate.com/v1/predictions/enx9qscq1srmr0d179qvr6m6zc",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-2bko5zzc3rn3kybrhilqzvjt2pwvndgztg2vp5tg745xyvebbqgq",
+    "web": "https://replicate.com/p/enx9qscq1srmr0d179qvr6m6zc"
+  },
+  "metrics": {
+    "model_variant": "pro",
+    "predict_time": 147.375118997,
+    "total_time": 147.584530265,
+    "video_output_duration_seconds": 8,
+    "with_audio": false
+  }
+}

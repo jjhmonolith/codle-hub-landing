@@ -1,0 +1,14 @@
+CODLE CINEMATIC / 01 — 8-second continuous approach
+
+Goal: monumental illuminated display embedded in a cinematic rocky landscape. Not a desktop monitor, no pedestal, no UI in the generated image. Warm sand and atmospheric light, cool blue display. Left negative space for editable web typography.
+
+01 / Establish / 0–20% scroll
+Low wide camera. Giant tilted display on the right, foreground stones establish depth, distant cliffs dissolve into dusty light. Website headline stays on the left.
+
+02 / Approach / 20–70% scroll
+One continuous forward dolly toward the display. Foreground stones pass outside the frame, perspective changes naturally. Text fades out. Keep geometry solid and lighting consistent.
+
+03 / Enter / 70–100% scroll
+Camera aligns with the display and approaches until the blue screen fills the frame. Transition from this blue field into the real service introduction. Do not generate fake product UI or logos in the footage.
+
+Production: create starting style frame, generate an 8-second silent image-to-video shot via existing Replicate Kling connection, inspect extracted start/middle/end frames, convert approved motion to an image sequence for deterministic scroll playback. Product UI and copy remain separate web layers.

@@ -1,39 +1,27 @@
-# 코들 허브 랜딩
+# 코들 · 짓다 교육 랜딩 허브
 
-현재 메인 홈페이지는 [`prototypes/codle-hub-studio/`](prototypes/codle-hub-studio/)에 있습니다.
+각 교육 서비스의 개별 랜딩으로 안내하는 허브입니다. 아래 두 버전을 별도 경로로 보관합니다.
 
-다섯 교육 상품군을 직접 넘겨 살펴보는 반응형 랜딩 페이지입니다. 상품별 상세 링크·도입 문의·구매 안내를 제공하며, 문의폼은 실제 전송 없는 디자인 미리보기입니다.
+| 버전 | 경로 | 구성 |
+| --- | --- | --- |
+| 기존 랜딩 | `prototypes/codle-hub-studio/` | 최초 커밋 `bc92d18`의 카드 갤러리. 다섯 항목을 넘겨 설명과 상세 링크를 확인합니다. |
+| 로고·물방울 진입형 | `prototypes/codle-hub-portal/` | 코들·짓다의 로고 형태 안에 미디어를 표시하고, 스크롤하면 안으로 들어가는 인트로와 허브 본문입니다. |
 
-## 실행
+## 로컬 실행
 
-설치나 빌드 없이 프로젝트 루트에서 실행합니다.
+저장소 루트에서 아래 명령을 실행합니다. 설치나 빌드는 필요하지 않습니다.
 
 ```sh
-python3 -m http.server 4186 --bind 127.0.0.1
+python -m http.server 4186 --bind 127.0.0.1
 ```
 
-[로컬 홈페이지 열기](http://127.0.0.1:4186/prototypes/codle-hub-studio/)
+- [기존 랜딩](http://127.0.0.1:4186/prototypes/codle-hub-studio/)
+- [로고·물방울 진입형](http://127.0.0.1:4186/prototypes/codle-hub-portal/)
 
-## 주요 파일
+기존 랜딩은 최초 커밋의 파일을 그대로 보존했습니다. 진입형은 2026-10-15 정리 시점의 작업 상태입니다. 각 폴더는 필요한 CSS, JavaScript, 폰트와 에셋을 함께 갖습니다. 문의폼은 저장·전송 없는 디자인 미리보기입니다.
 
-| 경로 | 용도 |
-| --- | --- |
-| `prototypes/codle-hub-studio/index.html` | 페이지와 상품 구성 |
-| `prototypes/codle-hub-studio/studio.css` | 반응형 디자인 |
-| `prototypes/codle-hub-studio/emil.css` | 버튼·포커스·입력 방식별 인터랙션 |
-| `prototypes/codle-hub-studio/showroom.js` | 갤러리·탭·드래그·키보드 탐색 |
-| `prototypes/codle-hub-studio/inquiry.js` | 로컬 문의폼·검증·모달 |
-| `prototypes/codle-hub-studio/assets/` | 이미지·로고·폰트 |
+## 작업 기록
 
-[구현과 검증 기록](prototypes/codle-hub-studio/README.md)
+`design-studies/`에는 별도로 제작한 장면·영상·그리드 시안, 스토리보드와 이미지 실험을 보관했습니다. 이 기록들은 확정 디자인이 아니며, 위 두 랜딩에서 로드하지 않습니다. 자세한 목록과 참고 자료 출처는 [작업 기록](design-studies/README.md)에 있습니다.
 
-## 로컬 작업 자료
-
-기존 작업 폴더의 `archive/design-history-2026-09-30/`, `discovery-pack/`, `messaging/`, `SESSION-HANDOFF.md`와 에이전트 설정은 로컬에 보존하며 Git에서 제외합니다. 저장소에는 현재 홈페이지와 실행 안내만 포함합니다. 과거 디자인의 원본 자산 출처 기록도 로컬 보관함에 있습니다.
-
-## 범위
-
-- 정적 HTML/CSS/JavaScript, 폰트와 이미지 포함
-- 다섯 상품군: 수업 플랫폼, 오리지널 콘텐츠, 코들 × 교과서, AI 집중캠프, AI 해커톤
-- 문의 내용은 페이지 메모리에서만 처리하며 서버에 저장하거나 전송하지 않음
-- 공개 배포 설정과 실제 문의 백엔드는 포함하지 않음
+공개 배포와 원격 푸시는 포함하지 않았습니다.

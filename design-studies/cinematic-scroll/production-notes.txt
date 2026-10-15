@@ -1,0 +1,18 @@
+CODLE CINEMATIC STUDY — 2026-10-14
+
+Image method: built-in image_gen. Output opening.png.
+Image brief: 16:9 photoreal cinematic sandstone canyon, giant tilted cobalt-blue illuminated display integrated into cliffs on the right, low 28mm camera, large foreground stones, golden volumetric sunlight, cool screen spill, left negative space for HTML copy. No monitor stand, text, logo, people or UI. Design for a continuous forward camera approach.
+Video method: existing Replicate account, kwaivgi/kling-v3-video, pro, 8 seconds, no audio. Full motion prompt and negative prompt are in video-config.json.
+Prediction ID: enx9qscq1srmr0d179qvr6m6zc. Completed successfully. Only one video generation was submitted.
+
+Delivered:
+- storyboard.txt: three-beat shot plan.
+- opening.png: generated opening style frame.
+- approach.mp4: original generated video.
+- boards/start.jpg, middle.jpg, end.jpg: actual generated-video frames.
+- frames/: 161 WebP frames sampled at 20 fps, 1280px wide.
+- index.html, style.css, scroll.js: local review page with scroll playback, reverse playback and video dialog.
+
+The generated motion reaches the blue display but retains a sliver of its bezel at the end. The web prototype fades the last 8% into a matching blue introduction section to finish the transition. Product imagery is shown in that next section; it is not tracked/composited into the moving display yet. Jitda variation is not included in this first Codle-only study.
+The film is AI generated and is a visual study, not an assertion of real product footage. Existing Codle branding/font/product screenshot reused from the user's prior project.
+Reduced-motion preference keeps the hero static and skips the extended scroll section.

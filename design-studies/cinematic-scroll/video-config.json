@@ -1,0 +1,10 @@
+{
+  "model": "kwaivgi/kling-v3-video",
+  "input": {
+    "mode": "pro",
+    "duration": 8,
+    "generate_audio": false,
+    "prompt": "A single continuous cinematic shot, beginning exactly at the supplied image. The enormous illuminated blue display and all rocks are solid stationary structures. For the first second the low wide camera holds the establishing composition. Then the camera smoothly dollies forward and slightly to the right toward the exact center of the blue display, gently aligning to face its plane straight on. True physical camera translation through the rocky space creates strong foreground parallax as nearby stones pass beyond both frame edges. Preserve the entire original canyon geography, lighting, scale and rigid rectangular screen shape. Subtle thin dust drifts slowly through warm sunbeams, blue light reflects on nearby stone. The camera never orbits around or passes behind the display. During the final two seconds the camera approaches the luminous blue surface until the metal bezel moves completely beyond the frame and the smooth uninterrupted deep blue display fills the entire image. End on this clean blue field. Beautiful controlled commercial dolly move, constant smooth velocity with gentle start and finish, physically plausible perspective, immaculate high-end VFX, silent.",
+    "negative_prompt": "cuts, scene changes, morphing, melting screen, bending rectangular edges, changing monitor design, desktop monitor stand, people, text, letters, logos, UI, flicker, handheld shake, explosion, new objects, rotating rocks, orbit around screen, camera going behind screen"
+  }
+}

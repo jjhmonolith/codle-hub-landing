@@ -1,0 +1,45 @@
+/* Matches the Korean footer at https://ai.codle.io/kr, checked 2026-09-10. */
+.codle-footer{background:#f4f6f9;color:#333d4b;padding:80px 0;font-size:16px;line-height:1.5;word-break:normal}
+.codle-footer-inner{max-width:1280px;margin:0 auto}
+.codle-footer-top{display:flex;justify-content:space-between;align-items:flex-start;gap:48px;padding-bottom:80px;border-bottom:1px solid #cecece}
+.codle-footer-logo{width:129px;height:85px;object-fit:contain;flex:none}
+.codle-footer-nav{display:grid;grid-template-columns:minmax(0,320px) minmax(0,320px) max-content;gap:30px;min-width:0}
+.codle-footer-column{display:flex;flex-direction:column;gap:12px;min-width:0}
+.codle-footer-column h3{font-size:16px;line-height:1;font-weight:700;color:#6b7684;margin:0 0 40px}
+.codle-footer-group{margin-bottom:20px;font-size:18px;line-height:1.5}
+.codle-footer-group>p{font-weight:700;color:#363636}
+.codle-footer-inline-links{display:flex;align-items:baseline;flex-wrap:wrap;column-gap:4px}
+.codle-footer-legal{display:flex;flex-direction:column;gap:28px;color:#363636;font-size:18px;font-weight:700;line-height:1.5}
+.codle-footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:80px 0}
+.codle-footer-company{display:flex;flex-direction:column;gap:8px}
+.codle-footer-contacts{display:flex;flex-wrap:wrap;gap:8px 20px}
+.codle-footer-contacts a{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.codle-footer-contacts svg{flex:none;transform:translateY(.5px)}
+.codle-footer-socials{display:flex;align-items:center;gap:16px;color:#666;flex:none}
+.codle-footer-socials a{display:flex;align-items:center;justify-content:center}@media (hover: hover) and (pointer: fine) {
+.codle-footer a:hover{color:#5087f8}}
+.codle-footer-socials svg{display:block;flex:none}
+@media(min-width:1024px) and (max-width:1279px){.codle-footer-inner{margin-inline:16px}.codle-footer-top{gap:16px}.codle-footer-nav{grid-template-columns:minmax(0,1fr) minmax(0,1fr) max-content;gap:30px}}
+@media(max-width:1023px){
+  .codle-footer{padding:40px 20px;color:#6b7684;font-size:12px}
+  .codle-footer-top{display:block;padding-bottom:20px}
+  .codle-footer-logo{width:72px;height:auto;margin-bottom:32px}
+  .codle-footer-nav{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:16px;row-gap:32px}
+  .codle-footer-column{gap:8px}
+  .codle-footer-column h3{font-size:10px;line-height:1;letter-spacing:-.025px;margin-bottom:16px}
+  .codle-footer-group{font-size:12px;font-weight:500;letter-spacing:-.3px;margin-bottom:12px}
+  .codle-footer-group>p{font-weight:500;margin-bottom:4px}
+  .codle-footer-inline-links{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+  .codle-footer-inline-links>span{display:none}
+  .codle-footer-resources .codle-footer-group{margin-bottom:8px}
+  .codle-footer-legal{gap:8px;font-size:12px;letter-spacing:-.3px}
+  .codle-footer-bottom{flex-direction:column;align-items:stretch;gap:24px;padding:20px 0 0}
+  .codle-footer-company{gap:4px}
+  .codle-footer-contacts{gap:4px 16px}
+  .codle-footer-contacts a{gap:4px}
+  .codle-footer-contacts .footer-phone{width:11px;height:11px}
+  .codle-footer-contacts .footer-email{width:12px;height:12px}
+  .codle-footer-socials{justify-content:flex-end;gap:0;margin-bottom:40px}
+  .codle-footer-socials a+a::before{content:'';width:1px;height:8px;background:#cecece;margin-inline:12px}
+  .codle-footer-socials svg{width:17px;height:17px}
+}

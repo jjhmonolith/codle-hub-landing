@@ -1,0 +1,122 @@
+/* A local-only form concept. No endpoint, database, or school lookup dependency. */
+.inquiry-dialog.official-inquiry{width:min(550px,calc(100vw - 24px))}
+.official-inquiry[open]{display:flex;flex-direction:column}
+.official-inquiry .inquiry-heading{padding:24px 28px 18px;background:white}
+.official-inquiry .inquiry-heading h2{font-size:23px;margin:0 0 6px}
+.official-inquiry .inquiry-scroll{padding:0 28px 24px}
+.official-inquiry .inquiry-field{margin-top:16px}
+.official-inquiry select{width:100%;border:1px solid #dfe5ee;border-radius:10px;padding:12px;font:inherit;font-size:13px;background:white;color:#405371}
+.official-inquiry select:focus-visible{outline:3px solid #a7bff2;outline-offset:2px}
+.official-inquiry select:disabled{opacity:1;background:#f2f6ff;color:#315bdc;-webkit-text-fill-color:#315bdc}
+.official-interest{margin-top:20px}
+.official-interest h3{font-size:12px;margin-bottom:8px}
+.official-interest>.field-hint{margin:5px 0}
+#subscription-options{background:#f5f8ff;border-radius:12px;padding:14px;margin-top:10px}
+.pass-label{font-size:12px;font-weight:600;margin-bottom:5px}
+.pass-option{display:flex;width:100%;align-items:center;justify-content:space-between;gap:8px;text-align:left;padding:11px;border:1px solid #e0e5ed;border-radius:9px;background:white;margin:7px 0;font:inherit;font-size:12px;color:#63738b}
+.pass-option::before{content:'+';font-size:16px}
+.pass-option>span:first-child{flex:1}
+.pass-option[aria-pressed=true]{border-color:#3869e8;color:#315bdc;background:#edf3ff}
+.pass-option[aria-pressed=true]::before{content:'✓'}
+.official-price{font-size:12px;line-height:1.8;color:#315bdc;margin:12px 0 6px;font-weight:600}
+.official-compare{font-size:11px;line-height:1.8;color:#687991;margin-top:10px}
+.official-compare summary{cursor:pointer}
+.official-compare p{margin:8px 0}
+.official-compare a{color:#315bdc;text-decoration:underline}
+.official-inquiry .inquiry-consent{padding:14px;border:1px solid #e0e5ed;border-radius:10px;margin-top:20px}
+.official-inquiry .inquiry-consent .field-hint{margin:6px 0 0 24px}
+.official-inquiry .inquiry-submit-row{padding:16px 28px;flex-direction:column;gap:10px}
+.official-inquiry .inquiry-submit{width:100%}
+@media(max-width:600px){.official-inquiry .inquiry-heading{padding:20px}.official-inquiry .inquiry-scroll{padding:0 20px 20px}.official-inquiry select{font-size:16px}.official-inquiry .inquiry-fields{grid-template-columns:1fr 1fr;gap:10px}}
+.quote-builder{margin-top:20px;border:1px solid #dce6f7;border-radius:16px;padding:22px;background:#f6f9ff}
+.quote-intro>span{font-size:10px;color:#4875ca;font-weight:600}
+.quote-intro h4{font-size:20px;letter-spacing:-.6px;margin:6px 0}
+.quote-intro p,.quote-benefit,.quote-disclaimer{font-size:12px;line-height:1.75;color:#687990}
+.quote-label{display:block;font-size:12px;font-weight:600;margin:18px 0 7px}
+.quote-builder select{width:100%;padding:13px 10px;border:1px solid #c9d8ef;border-radius:9px;background:#fff;font:inherit;font-size:13px;color:#283b5e}
+.quote-builder select:focus-visible{outline:3px solid #90b1f0;outline-offset:2px}
+.quote-price{padding:20px 0 13px}
+.quote-price>span{display:block;font-size:11px;color:#6e819f}
+.quote-price strong{display:block;font-size:32px;letter-spacing:-1px;margin:3px 0;color:#2d5ecc}
+.quote-price p{font-size:12px;line-height:1.7;color:#60728d}
+.quote-benefit{background:white;border-radius:9px;padding:12px;margin:0}
+.quote-compare{margin:16px 0;border-block:1px solid #dce6f7;padding:13px 0}
+.quote-compare summary{font-size:12px;font-weight:600;cursor:pointer;color:#425678}
+.quote-compare table{width:100%;border-collapse:collapse;margin:14px 0;font-size:11px;text-align:left}
+.quote-compare th,.quote-compare td{padding:9px 4px;border-bottom:1px solid #e1e8f3}
+.quote-compare th{font-weight:550}.quote-compare td{color:#65768d}
+.quote-source,.quote-compare a{font-size:11px;color:#315bdc;text-decoration:underline;text-underline-offset:3px}
+.quote-disclaimer{font-size:11px;margin-bottom:8px}
+@media(max-width:600px){.quote-builder{padding:16px}.quote-builder select{font-size:16px}.quote-intro h4{font-size:18px}.quote-price strong{font-size:29px}}
+.inquiry-dialog{width:min(720px,calc(100vw - 32px));max-height:calc(100dvh - 48px);border:0;border-radius:24px;overflow:hidden;box-shadow:0 24px 100px #14213c33}
+.inquiry-dialog::backdrop{background:#14213966;backdrop-filter:blur(5px)}
+.inquiry-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:28px 34px 22px;background:linear-gradient(120deg,#f3f7ff,#fff 78%);flex:none}
+.inquiry-kicker{font-size:10px;font-weight:650;letter-spacing:.1em;color:#3869e8;display:flex;align-items:center;gap:10px}
+.inquiry-kicker>span{font-size:10px;letter-spacing:0;font-weight:500;padding:2px 7px;border:1px solid #dce4f3;color:#71809b;border-radius:5px}
+.inquiry-heading h2{font-size:28px;font-weight:600;line-height:1.35;letter-spacing:-.9px;margin:10px 0 8px}
+.inquiry-heading p{font-size:13px;color:#68768b}
+.inquiry-dialog .close-dialog{width:32px;height:32px;background:#fff;box-shadow:0 0 0 1px #e6ebf3;color:#69788e;margin-top:2px}
+#school-inquiry-form{display:flex;flex-direction:column;min-height:0;overflow:hidden}
+.inquiry-scroll{padding:2px 34px 24px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#cdd6e5 transparent;scroll-padding-block:18px}
+.inquiry-section{padding:24px 0 0;margin:0;border:0;min-width:0}
+.inquiry-section+.inquiry-section{margin-top:24px;border-top:1px solid #edf0f5}
+.inquiry-section legend{float:left;width:100%;padding:0;font-size:15px;font-weight:600;letter-spacing:-.25px;margin-bottom:7px}
+.inquiry-section legend+.field-hint{clear:both}
+.inquiry-step{display:inline-block;font-size:11px;font-weight:600;color:#5f80bd;letter-spacing:0;margin-right:10px;vertical-align:2px}
+.field-hint{font-size:11px;line-height:1.65;color:#7c8799;margin:0 0 15px}
+.inquiry-product-summary{display:flex;align-items:center;gap:15px;border:1px solid #e4eaf3;border-radius:12px;background:#f8faff;padding:16px 18px}
+.inquiry-product-dot{flex:none;width:12px;height:12px;border-radius:4px;background:#315bdc;box-shadow:0 0 0 7px #fff}
+.inquiry-product-summary[data-product=original] .inquiry-product-dot{background:#d39a5e}
+.inquiry-product-summary[data-product=cmass] .inquiry-product-dot{background:#789769}
+.inquiry-product-summary[data-product=camp] .inquiry-product-dot{background:#f4774e}
+.inquiry-product-summary[data-product=hackathon] .inquiry-product-dot{background:#d3ab36}
+.inquiry-product-summary[data-product=general] .inquiry-product-dot{background:#8b9bb6}
+.inquiry-product-label{font-size:10px;color:#8995a8;margin-bottom:3px}
+.inquiry-product-summary h3{margin:0;font-size:17px;line-height:1.5;font-weight:600;letter-spacing:-.3px}
+#inquiry-product-hint{font-size:11px;color:#78869b;line-height:1.7;margin-top:3px}
+.prerequisite-note{font-size:11px;line-height:1.7;color:#4d6b9b;background:#f4f7fd;padding:10px 12px;border-radius:8px;margin-top:12px}
+.inquiry-fields{display:grid;grid-template-columns:1fr 1fr;gap:17px 16px}
+.inquiry-field{min-width:0}.inquiry-field-wide{grid-column:1/-1}
+.inquiry-field>label{display:block;font-size:12px;font-weight:550;margin-bottom:7px;color:#4c576a}
+.required-mark{color:#3869e8;font-weight:500}.optional-mark{font-size:10px;color:#8c96a5;font-weight:400;margin-left:4px}
+.inquiry-field input,.inquiry-field textarea{width:100%;border:1px solid #dfe5ee;border-radius:8px;padding:11px 12px;font:inherit;font-size:13px;line-height:1.5;background:#fff;color:var(--ink);transition:border-color .15s,box-shadow .15s}
+.inquiry-field input::placeholder,.inquiry-field textarea::placeholder{color:#a0a9b8;font-size:12px}
+.inquiry-field input:focus,.inquiry-field textarea:focus{outline:0;border-color:#6e96e8;box-shadow:0 0 0 3px #3869e811}
+.inquiry-field textarea{resize:vertical;min-height:90px;max-height:220px}
+.inquiry-field [aria-invalid=true]{border-color:#d86161;background:#fffafa}
+.field-error{font-size:11px;color:#bd4545;line-height:1.6;margin-top:6px}
+.inquiry-plan{padding-top:21px}
+.inquiry-plan summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px;cursor:pointer;font-size:15px;font-weight:600;letter-spacing:-.25px}
+.inquiry-plan summary::-webkit-details-marker{display:none}
+.plan-chevron{font-size:19px;color:#8d9bb0;font-weight:400;transition:transform .15s}
+.inquiry-plan[open] .plan-chevron{transform:rotate(180deg)}
+.inquiry-plan>.field-hint{margin-top:9px}
+.input-with-unit{position:relative}.input-with-unit input{padding-right:38px}.input-with-unit>span{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:12px;color:#94a0b2;pointer-events:none}
+.inquiry-consent{margin-top:24px;border-top:1px solid #edf0f5;padding-top:21px}
+.inquiry-consent>label{display:flex;align-items:flex-start;gap:9px;font-size:12px;color:#657084;cursor:pointer}
+.inquiry-consent input{accent-color:#3869e8;width:15px;height:15px;margin:3px 0 0;flex:none}
+.inquiry-consent details{margin:5px 0 0 24px;font-size:10px;color:#8c96a5}
+.inquiry-consent summary{width:max-content;cursor:pointer;text-decoration:underline;text-underline-offset:3px;list-style:none}
+.inquiry-consent details p{background:#f7f9fc;border-radius:7px;padding:10px 12px;line-height:1.75;margin-top:8px;color:#758298}
+.inquiry-submit-row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex:none;padding:18px 34px 22px;border-top:1px solid #e9edf4;background:#fff}
+.inquiry-preview-note{font-size:10px;line-height:1.7;color:#8792a4}
+.inquiry-submit{border:0;border-radius:9px;background:#3869e8;color:#fff;padding:13px 19px;min-height:46px;font:inherit;font-size:13px;font-weight:600;display:inline-flex;justify-content:center;align-items:center;gap:22px;white-space:nowrap;cursor:pointer}@media (hover: hover) and (pointer: fine) {
+.inquiry-submit:hover{background:#2b59ce}}.inquiry-submit:disabled{opacity:.5;cursor:wait}.inquiry-submit>span{font-size:18px}
+#inquiry-validation{font-size:11px;color:#bd4545;line-height:1.6;margin-bottom:4px}
+.inquiry-review{padding:26px 34px 30px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.review-heading{text-align:center;padding-bottom:20px}.review-icon{display:grid;place-items:center;width:40px;height:40px;background:#edf4ff;color:#3869e8;border-radius:50%;margin:0 auto 12px;font-size:20px}
+.review-heading h3{font-size:20px;font-weight:600;margin:0 0 8px;letter-spacing:-.5px}.review-heading p{font-size:12px;color:#7c889b;line-height:1.7}
+#inquiry-review-details{margin:0;padding:18px 20px;border:1px solid #e6ecf4;border-radius:12px;background:#f9fbfe;display:grid;grid-template-columns:90px 1fr;gap:11px 14px;font-size:12px;line-height:1.7}
+#inquiry-review-details dt{color:#7e8b9f}#inquiry-review-details dd{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;min-width:0}
+.review-actions{display:flex;justify-content:center;gap:10px;margin-top:24px}.review-actions .button{font-size:13px;min-height:46px}
+@media(max-width:600px){
+  .inquiry-dialog{width:calc(100vw - 16px);max-height:calc(100dvh - 20px);border-radius:18px}
+  .inquiry-heading{padding:22px 22px 20px}.inquiry-heading h2{font-size:25px}.inquiry-heading p{font-size:12px}
+  .inquiry-scroll{padding:0 22px 22px}.inquiry-section{padding-top:20px}.inquiry-section+.inquiry-section{margin-top:21px}
+  .inquiry-section legend,.inquiry-plan summary{font-size:14px}.inquiry-step{margin-right:7px}
+  .inquiry-product-summary{padding:14px;gap:13px}.inquiry-product-summary h3{font-size:16px}
+  .inquiry-fields{gap:15px;grid-template-columns:1fr}.inquiry-field input,.inquiry-field textarea{font-size:16px;min-height:44px}
+  .inquiry-submit-row{padding:15px 22px 19px;gap:12px;align-items:stretch;flex-direction:column}.inquiry-preview-note br{display:none}.inquiry-preview-note{text-align:center;font-size:10px}.inquiry-submit{min-height:46px;width:100%}
+  .inquiry-review{padding:20px 22px 24px}#inquiry-review-details{grid-template-columns:70px 1fr;padding:15px;gap:10px}.review-actions{display:grid;grid-template-columns:1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){.inquiry-dialog *{transition:none!important}}

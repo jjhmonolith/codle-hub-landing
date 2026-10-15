@@ -1,0 +1,56 @@
+/* Emil design engineering: immediate input, purposeful motion, generous targets. */
+:root{--ease-out-ui:cubic-bezier(.23,1,.32,1);--ease-move-ui:cubic-bezier(.22,.8,.24,1)}
+html{scrollbar-gutter:stable}
+.album-cover{transition:transform 260ms var(--ease-out-ui),opacity 180ms ease}
+.cover-stage.is-dragging .album-cover,.cover-stage.is-resizing .album-cover,.album-cover.is-repositioning{transition:none}
+.product-tabs{position:relative;isolation:isolate}
+.product-tabs .product-tab{font-weight:600;transition:color 140ms ease}
+.product-tabs .product-tab[aria-selected=true]{font-weight:600}
+.product-tabs:has(.tab-indicator) .product-tab::after{display:none}
+.tab-indicator{position:absolute;left:0;bottom:0;width:1px;height:3px;background:var(--blue);transform-origin:left center;pointer-events:none;transition:transform 220ms var(--ease-out-ui)}
+.flow-controls{height:44px;gap:14px}
+.flow-arrow{width:44px;height:44px;flex:none;font-size:20px}
+.flow-counter{font-variant-numeric:tabular-nums;font-feature-settings:'tnum';min-width:52px}
+.button,.product-inquiry,.flow-arrow,.inquiry-submit,.close-dialog,.pass-option{transition:transform 140ms var(--ease-out-ui),background-color 140ms ease,border-color 140ms ease;transform-origin:center}
+html:not([data-input-mode=keyboard]) :is(.button,.product-inquiry,.flow-arrow,.inquiry-submit,.close-dialog,.pass-option):active{transform:scale(.97)}
+.product-tabs .product-tab:focus-visible{outline-offset:-3px;border-radius:4px}
+.flow-arrow:focus-visible,.button:focus-visible,.product-inquiry:focus-visible{outline:3px solid #2859d7;outline-offset:4px}
+.official-inquiry .close-dialog{width:44px;height:44px;min-width:44px;flex-shrink:0;display:grid;place-items:center;margin-top:-6px;margin-right:-6px;font-size:25px;border-radius:50%;box-shadow:none;color:#526477;background:#f2f5f9}
+.official-inquiry{transform-origin:center;will-change:auto}
+.official-inquiry::backdrop{backdrop-filter:none;background:#14213966}
+.official-inquiry .inquiry-field>label,.official-inquiry .official-interest h3,.official-inquiry .pass-label{font-size:14px;line-height:1.5}
+.official-inquiry .inquiry-field input::placeholder{font-size:14px}
+.official-inquiry .inquiry-field input,.official-inquiry select{min-height:48px}
+.official-inquiry .inquiry-field input:focus-visible{border-color:#2859d7;outline:2px solid #2859d7;outline-offset:2px;box-shadow:none}
+.official-inquiry .field-error,#inquiry-validation{font-size:13px;color:#a92c35}
+.official-inquiry .pass-option{min-height:46px;font-size:14px}
+.official-inquiry .official-price{font-variant-numeric:tabular-nums;font-size:13px}
+.official-inquiry .inquiry-consent{padding:10px 14px}
+.official-inquiry .inquiry-consent>label{align-items:center;min-height:44px;font-size:13px}
+.official-inquiry .inquiry-consent input{width:18px;height:18px;min-height:18px;margin:0;accent-color:var(--blue)}
+.official-inquiry .inquiry-consent .field-hint{margin-left:27px}
+.official-inquiry .inquiry-review{scrollbar-gutter:stable}
+.questions summary:focus-visible{outline-offset:3px;border-radius:4px}
+@media (hover:hover) and (pointer:fine){
+  .official-inquiry .close-dialog:hover{background:#e5ebf4;color:#183c70}
+  .official-inquiry .pass-option:hover{border-color:#7e9bd0;background:#f1f5fc}
+  .official-inquiry .inquiry-submit:hover{background:#1945b5}
+}
+@media (hover:none){
+  .inquiry-submit:hover{background:var(--blue)}
+}
+@media(max-width:767px){
+  .product-tabs{scrollbar-width:thin;scrollbar-color:#c2d1e7 transparent;padding-bottom:4px}
+  .product-tabs::-webkit-scrollbar{height:3px}
+  .product-tabs::-webkit-scrollbar-thumb{background:#c2d1e7;border-radius:2px}
+  .tab-indicator{bottom:4px}
+  .product-details{padding-top:24px}
+  .product-panel .panel-actions{gap:10px;flex-wrap:wrap}
+  .product-panel .panel-actions .button,.product-panel .panel-actions .product-inquiry{min-height:46px}
+}
+html[data-input-mode=keyboard]{scroll-behavior:auto}
+html[data-input-mode=keyboard] *,html[data-input-mode=keyboard] *::before,html[data-input-mode=keyboard] *::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+@media(max-width:600px){
+  .official-inquiry .inquiry-fields{grid-template-columns:1fr;gap:0}
+}
