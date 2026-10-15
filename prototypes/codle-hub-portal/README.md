@@ -1,9 +1,9 @@
 # 로고·물방울 진입형 랜딩
 
-2026-10-15 두 버전 정리 시점의 로고 인트로를 보존했습니다.
+2026-10-15: `flat-intro-before-dual-platform` 백업에서 사용자가 지정한 로고 선그리기 인트로를 복원했습니다. 코들 로고 윤곽선이 그려지고 색이 채워진 뒤, 스크롤에 따라 파란 물방울이 확대되어 안으로 들어갑니다.
 
 - 실행 경로: `/prototypes/codle-hub-portal/`
-- `platform-opening.css` / `platform-opening.js`: 코들·짓다 심볼 선택, 심볼 안의 미디어와 레이어, 스크롤 진입 동작.
+- `portal-intro.css` / `portal-intro.js`: 로고 윤곽선 그리기, 컬러 채우기, 파란 물방울을 중심으로 확대/진입하는 스크롤 동작. 코들·짓다 심볼을 선택하던 `platform-opening` 파일은 현재 페이지에서 로드하지 않습니다.
 - `brand-hub.css` / `brand-hub.js`, `hub.css` / `showroom.js`: 인트로 다음의 허브 본문과 항목 선택.
 - `inquiry.js`: 실제 전송 없는 문의 미리보기.
 - 기존 카드 갤러리 버전은 `/prototypes/codle-hub-studio/`에 별도로 보존했습니다.
