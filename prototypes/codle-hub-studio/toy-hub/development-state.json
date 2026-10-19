@@ -1,0 +1,81 @@
+{
+  "updated": "2026-10-19",
+  "status": "jitda-desktop-review-ready",
+  "currentPass": "Jitda desktop shared-workstation refinement. App78. Read jitda-shared-desk-review-2026-10-19.json first; previous broad review is historical.",
+  "budget": {
+    "weeklyUsedAtStart": 26,
+    "weeklyUsedAfterReview": 28,
+    "stopNewWorkAtUsedPercent": 58,
+    "userMaximumUsedPercent": 60,
+    "creditsOrResetsUsed": false
+  },
+  "versions": {
+    "app": 78,
+    "toys": 24,
+    "catalog": 4,
+    "landingSurface": 50,
+    "volumeWorlds": 49,
+    "studioScenes": 14,
+    "sceneAtmosphere": 3,
+    "spatialSceneMotion": 15,
+    "spatialChoreography": 8,
+    "preservedSpatialActions": 6,
+    "storyCSS": 9,
+    "productMotionStudy": 34
+  },
+  "backup": "revisions/before-coherent-studio",
+  "latestUserDirection": "Jitda desktop only. User explicitly deferred mobile work/testing and requested shorter focused iterations.",
+  "completed": [
+    "Original logo models and platform factory retained byte-for-byte; platform tools keep their spatial spread and camera passage.",
+    "Removed five WebGL website-poster planes. Native product scenes remain present during their usable portal interval.",
+    "A current-scene WebGL capture expands into the already-mounted real iframe; closing restores the captured scene and focus.",
+    "24 authentic covers keep their large diagonal foreground passes, then open into three staggered shallow arcs. Final outer covers fit the frame; the fan holds instead of clearing for a website rectangle.",
+    "Contents recedes outward/upward into depth before the next book arrives; the book remains opaque once readable so its internal page cannot ghost through the closed cover.",
+    "Textbook uses a neutral Codle cover, authentic printed page 33, curved leaf and two raised river banks. Original activity characters ride ceramic pieces and a modeled boat. Publisher artwork is not the chapter hero.",
+    "Camp replaces the globe with a continuous physical route through learning, code and an assembling project; upright flag, paper plane and polished tools. Portrait uses a diagonal route. The arch is attached to its base.",
+    "Camp portal uses projected 3D bounds, including the raised flag and plinths; its button sits clear of the foreground objects.",
+    "Jitda uses its authentic official public prompt/result demo. Four cropped original UI quadrants assemble after two strikes. Original side-character contours have rounded volumes, readable reflective dark features, separated pickaxe and visible contact.",
+    "Different continuous lighting rooms: violet content corridor, blue/ivory textbook aperture, teal camp horizon and warm charcoal Jitda workspace. Corrected last-room clamp that left half of camp lighting in Jitda.",
+    "Each mesh gets independent local fading; river-piece opacity no longer affects shared book material. Mobile clipping and portrait UI emphasis corrected."
+  ],
+  "verified": [
+    "Actual localhost browser: original logo opening, full hero hold, preserved platform, content foreground passage/fan and all three rebuilt product holds at the normal 1280x720 browser viewport.",
+    "Actual forward/reverse wheel positions at contents/book, book/camp and camp/Jitda boundaries. Before/after evidence saved for thumbnail overlap. No active page link remains at departing boundaries.",
+    "All five real destinations opened in the actual browser during this redesign. Final Jitda desktop and final camp mobile open/capture/close were rechecked after their respective refinements.",
+    "Current-scene captures are nonempty WebP images. Final camp mobile capture 351x264; Jitda desktop capture 701x404. Real external iframe headings verified.",
+    "Five persistent iframes retain loadCount=1. Close restores the same product-link focus, stage.scrollTop=0, scroll position and non-inert main. No horizontal overflow.",
+    "390x844 actual browser: contents fan, textbook activity, camp route, Jitda strike/result and book/camp boundary. Mobile camp button clears the objects; current 3D bounds and open/close verified.",
+    "320x570 actual Jitda hold inspected before later face-material, transition and camp-bounds refinements. Current pure motion checks additionally cover 320x570, 390x844, 768x600, 1265x720, 1440x600 and 1920x1080.",
+    "check-coherent-studio.mjs passes: finite camera-safe poses, persistent native features at page opening, 24 large readable cover passes, >3x near/far size ratio, contained final fan, departing link gating, and exact unchanged logo/platform source hashes.",
+    "Eight runtime JavaScript files pass Node syntax checks. Actual main/mobile browser recorded error logs empty. git diff --check passed using read-only elevated repository access; existing catalog/style LF-to-CRLF notices only.",
+    "Reduced-motion and WebGL failure paths preserved and source-reviewed. System motion preference and WebGL failure were not emulated in this pass. No cold-network or frame-rate claim."
+  ],
+  "pending": [
+    "High-resolution original content covers will be supplied later by the user; existing authentic files were not replaced, fabricated or upscaled.",
+    "This is a reviewable implemented direction. Visual taste remains for user review; functional validation does not imply user approval of final art direction."
+  ],
+  "constraints": [
+    "sources read-only",
+    "Preserve user changes",
+    "No commit/push/PR/deploy",
+    "Preserve logos, hero and five destinations",
+    "Preserve iframe preload/open/close",
+    "Preserve mobile and reduced-motion alternatives",
+    "No subagents"
+  ],
+  "latestReview": "jitda-shared-desk-review-2026-10-19.json",
+  "automationNote": "Existing automation was not resumed by this direct user-requested pass. Before any future automated work, follow this record and the latest human feedback; do not restore the old globe/poster renderer.",
+  "latestChanges": [
+    "Character and UI now share the same bench parent and its depth/orientation.",
+    "Continuous worktop extends beneath both, with contact shadows on its actual top surface.",
+    "Removed final character drift/raise away from the UI; character stays beside its interface.",
+    "Pickaxe lower tip meets the shared work edge at both strikes; dust position follows that contact.",
+    "UI and character respond subtly to the same impact as authentic result quadrants assemble.",
+    "Desktop composition resized for caption clearance. Expansion captures the whole shared workstation."
+  ],
+  "latestVerification": [
+    "Actual desktop browser at strike phase .165 and settled phase .78.",
+    "Actual main page final Jitda scene and real iframe expansion/close. Current-scene capture 1058x404, all five iframe load counts remain one, focus restored, recorded error log empty.",
+    "Changed JS syntax and current motion contract pass. No mobile browser inspection or responsive development was performed."
+  ]
+}

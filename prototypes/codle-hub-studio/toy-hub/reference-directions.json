@@ -1,0 +1,61 @@
+{
+  "reviewed": "2026-10-19",
+  "method": "Unseen의 무음 진입·드래그와 Lusion 첫 화면을 실제 브라우저에서 검토했습니다. 공식 교과서와 짓다의 공개 자료를 찾아 실제 제품 장면으로 적용했습니다. 아래 이미지는 이 프로토타입의 적용 화면입니다.",
+  "items": [
+    {
+      "id": "platform",
+      "product": "수업 플랫폼",
+      "reference": "Unseen World",
+      "url": "https://unseen.co/world/",
+      "image": "../spatial-development/platform-desktop.png",
+      "gesture": "도구가 머무는 하나의 공간",
+      "observed": "검정 공간의 이미지가 앞뒤로 겹치고, 드래그하면 시점에 따라 배치가 달라집니다.",
+      "implementation": "공식 도구 아이콘이 실제 수업 화면의 앞뒤에 머물고, 화면을 스쳐 콘텐츠 공간으로 이어집니다.",
+      "difference": "세로 목록을 없앴습니다. 자유 탐색 대신 제품 순서에 맞춘 스크롤 경로를 적용했습니다."
+    },
+    {
+      "id": "contents",
+      "product": "오리지널 콘텐츠",
+      "reference": "사용자 스케치 × Unseen World",
+      "url": "https://unseen.co/world/",
+      "image": "../spatial-development/contents-fan-desktop.png",
+      "gesture": "겹친 뭉치에서, 넓게 펼쳐지는 배움",
+      "observed": "사용자 스케치는 큰 카드들이 대각선으로 겹친 뭉치입니다. Unseen에서는 이미지가 서로 다른 깊이에 놓입니다.",
+      "implementation": "실제 표지 24개가 대각선 뭉치로 시작해 크게 스쳐 지나가고, 두 겹의 굽은 부채꼴로 펼쳐집니다.",
+      "difference": "원본 썸네일 해상도는 그대로입니다. 커진 근경에서 흐려지는 원본은 사용자가 추후 교체할 예정입니다."
+    },
+    {
+      "id": "textbook",
+      "product": "코들 × 교과서",
+      "reference": "Codrops Book Showcase × 실제 디지털 교과서",
+      "url": "https://cmass-contents.codle.io/cmass-ai-basics/web-exhibition",
+      "image": "../spatial-development/textbook-digital-desktop.png",
+      "gesture": "종이의 같은 문제가, 직접 해보는 활동으로",
+      "observed": "공식 전시 페이지는 실제 교과서 33쪽과 강 건너기 체험을 연결해 보여줍니다.",
+      "implementation": "중립적인 서책에서 실제 페이지가 들리고, 같은 활동의 원본 그림으로 만든 디지털 퍼즐이 움직입니다.",
+      "difference": "하나의 실제 콘텐츠 사례입니다. 출판사 표지는 도입의 주인공으로 사용하지 않습니다. 시연 모션이며 실제 랜딩은 별도로 열립니다."
+    },
+    {
+      "id": "camp",
+      "product": "AI 집중캠프",
+      "reference": "Lusion · 재질과 입체 공간",
+      "url": "https://lusion.co/",
+      "image": "../spatial-development/camp-desktop.png",
+      "gesture": "배움의 세계를 따라가는 탐험",
+      "observed": "첫 화면에서 넓은 반사가 파랑·검정 입체 오브젝트의 형태를 드러냅니다.",
+      "implementation": "파랑·검정 지구와 수업 도구, 끊기지 않는 비행 경로로 탐험과 연결을 표현합니다.",
+      "difference": "참고 사이트의 모델을 복제한 것이 아니라, 캠프용으로 구성한 입체 메타포입니다. 실제 활동 사진은 사용하지 않습니다."
+    },
+    {
+      "id": "jitda",
+      "product": "짓다 · AI 해커톤",
+      "reference": "짓다 공식 캐릭터와 UI",
+      "url": "https://jitda.io/participant/sign-in",
+      "image": "../spatial-development/jitda-desktop.png",
+      "gesture": "직접 짓는 캐릭터, 열리는 결과물",
+      "observed": "공식 앱의 공개 자료에는 측면 캐릭터와 곡괭이질 동작이 들어 있습니다.",
+      "implementation": "공식 형태를 곡면 볼륨으로 만들고, 두 번의 작업 동작과 실제 데모 UI의 결과를 연결했습니다.",
+      "difference": "캐릭터 원형과 UI는 공식 자료입니다. 입체 재질·동작은 이 프로토타입에서 제작했습니다. 실시간 생성이나 학생 작품은 아닙니다."
+    }
+  ]
+}

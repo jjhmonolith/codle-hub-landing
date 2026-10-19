@@ -1,0 +1,48 @@
+{
+  "retrieved": "2026-10-19",
+  "assets": [
+    {
+      "file": "cmass-cover.png",
+      "url": "https://cmass-contents.codle.io/web-exhibition/bookcover.png",
+      "use": "Actual textbook cover on modeled hardcover"
+    },
+    {
+      "file": "cmass-page33.png",
+      "url": "https://cmass-contents.codle.io/hj-test/web-exhibition/textbook-p33.png",
+      "use": "Actual page 33"
+    },
+    {
+      "file": "camp-team.png",
+      "url": "https://contents.codle.io/aicamp-landing/cases/photo1.png",
+      "use": "Official camp activity photo"
+    },
+    {
+      "file": "camp-code.png",
+      "url": "https://contents.codle.io/aicamp-landing/cases/photo2.png",
+      "use": "Official camp activity photo"
+    },
+    {
+      "file": "camp-robot.png",
+      "url": "https://contents.codle.io/aicamp-landing/cases/photo3.png",
+      "use": "Official camp activity photo"
+    }
+  ],
+  "jitda": {
+    "reference": "https://landing.jitda.io/",
+    "type": "Exact official marketing-demo DOM rendered locally at 2x, not a student artifact or live generation.",
+    "file": "jitda-official-demo.png",
+    "captureSource": "references/product-direction/jitda-public-demo.json",
+    "motionReference": "https://www.figma.com/make/",
+    "motion": "Official character rebuilt as rounded volumes with two bounded mining strikes alongside its actual public marketing-demo UI; portrait pan on mobile. Not live generation or student work.",
+    "characterSource": "jitda-worker.sources.json",
+    "landingPoster": "../actual-jitda-current.png — actual official school homepage captured 2026-10-19."
+  },
+  "contentCovers": "24 existing authentic PDF-extracted covers unchanged; high-resolution files deferred by user",
+  "platform": "Official tool marks and actual content-ai.png lesson UI; spatial orbit, no vertical list.",
+  "campMotion": {
+    "type": "Modeled exploration metaphor, no photo assets used in the active factory.",
+    "motion": "Glossy globe with Natural Earth land, official learning tools and continuous closed flight path.",
+    "landSource": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_land.geojson"
+  },
+  "textbookMotion": "Neutral modeled book, one authentic page 33 bends into its real river-crossing activity. Original official game graphics animate an illustrative valid first move. Publisher branding is not the feature focus. Not a live embedded game; the actual landing remains accessible."
+}

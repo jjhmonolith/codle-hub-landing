@@ -1,153 +1,191 @@
-import { products } from './catalog.js';
-import { createToyStage } from './toys.js?v=5';
+import { products } from './catalog.js?v=4';
+import { createToyStage } from './toys.js?v=24';
+import { createLandingSurface } from './landing-surface.js?v=50';
+import { surfaceAt } from './surface-timeline.js?v=2';
+import { createProductWorlds } from './product-worlds.js?v=3';
+import { clamp,mix,ease,storyAt,productProgress,REEL_START } from './story-timeline.js?v=2';
 
-const root=document.documentElement;
-const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-const journey=document.querySelector('.journey');
-const hero=document.querySelector('.hero');
-const gallery=document.querySelector('.experiences');
-const grid=document.querySelector('.product-grid');
-const main=document.querySelector('main');
-const header=document.querySelector('.site-header');
-const preview=document.querySelector('.preview');
-const previewContent=document.querySelector('.preview-content');
-const previewFallback=document.querySelector('.preview-fallback');
-const closeButton=document.querySelector('.preview-close');
-const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
-const lerp=(a,b,t)=>a+(b-a)*t;
-const smooth=(a,b,v)=>{const t=clamp((v-a)/(b-a));return t*t*(3-2*t)};
-const state={progress:0,target:0,active:null,entry:0,webgl:false};
+const $=selector=>document.querySelector(selector);
+history.scrollRestoration='manual';
+if(!location.hash)window.scrollTo({top:0,behavior:'instant'});
+const root=document.documentElement,reduced=matchMedia('(prefers-reduced-motion: reduce)'),fine=matchMedia('(hover:hover) and (pointer:fine)');
+const journey=$('.journey'),stage=$('.stage'),hero=$('.hero'),gallery=$('.experiences'),grid=$('.product-grid');
+const main=$('main'),header=$('.site-header'),preview=$('.preview'),previewContent=$('.preview-content'),fallback=$('.preview-fallback'),closeButton=$('.preview-close');
+const state={p:0,target:0,active:null,webgl:'loading',index:0,entry:0};
 const frames=new Map();
-let returnFocus=null,openTimer=0,loadTimeout=0,extraLink=null;
+let toys=null,surface=null,loading=false,warming=false,returnFocus=null,loadTimer=0,extraLink=null,animation=null,closing=false,finishClose=null;
+let lastPaint=-1,dirty=true,restoringFocus=false,captureAnimation=null;
+const captureImage=$('.preview-capture');
+const staticMode=()=>reduced.matches||state.webgl==='fallback';
+const worlds=createProductWorlds($('.product-worlds'),products);
+worlds.render(0,0,0);
 
-document.querySelector('.experience-count').textContent=String(products.length).padStart(2,'0')+' EXPERIENCES';
 const cards=products.map((product,i)=>{
-  const article=document.createElement('article');article.className='product';
-  const link=document.createElement('a');link.className='product-link';link.href=product.url;
-  link.setAttribute('aria-label',product.name+' 실제 랜딩 열기');
+  const article=document.createElement('article');article.className='product';article.id='product-'+product.id;
+  const copy=document.createElement('div');copy.className='product-copy';
+  const title=document.createElement('h2');title.textContent=product.name;copy.append(title);
+  const link=document.createElement('a');link.className='product-link';link.href=product.url;link.setAttribute('aria-label',product.name+' 랜딩 열기');
   const windowEl=document.createElement('div');windowEl.className='product-window';
-  const img=new Image();img.src='assets/'+product.image;img.alt=product.name+' 랜딩 첫 화면';img.decoding='async';
-  const num=document.createElement('span');num.className='product-number';num.textContent=String(i+1).padStart(2,'0');
-  windowEl.append(img,num);
-  const meta=document.createElement('div');meta.className='product-meta';
-  const title=document.createElement('h3');title.textContent=product.name;
-  const arrow=document.createElement('span');arrow.textContent='↗';arrow.setAttribute('aria-hidden','true');
-  meta.append(title,arrow);
+  const img=new Image();img.src='assets/'+product.image;img.alt=product.name+' 실제 랜딩 미리보기';img.decoding='async';img.draggable=false;
+  const visit=document.createElement('span');visit.className='product-visit';visit.innerHTML='사이트 살펴보기 <b aria-hidden="true">↗</b>';
+  windowEl.append(img,visit);link.append(windowEl);
   const description=document.createElement('p');description.className='product-description';description.textContent=product.description;
-  link.append(windowEl,meta,description);article.append(link);grid.append(article);
-  link.addEventListener('click',event=>{if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();openProduct(product,link,windowEl)});
+  article.append(copy,link,description);grid.append(article);
+  link.addEventListener('click',event=>{
+    if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+    event.preventDefault();
+    // Use the same rendered state that exposes this link. Product-specific
+    // landing holds no longer share the old surface timeline's reveal window.
+    if(!staticMode()&&link.getAttribute('aria-hidden')!=='false')return;
+    openProduct(product,link,windowEl);
+  });
+  link.addEventListener('pointerenter',()=>warmProduct(product),{once:true});
+  link.addEventListener('focus',()=>{
+    if(staticMode()||restoringFocus||!link.matches(':focus-visible'))return;
+    if(article.dataset.active!=='true'||link.getAttribute('aria-hidden')!=='false')goToProduct(i,.82);
+  });
   return {article,link,windowEl};
 });
 
+function measure(){readScroll();dirty=true}
+function readScroll(){state.target=clamp((scrollY-journey.offsetTop)/Math.max(1,journey.offsetHeight-innerHeight))}
+function goToProduct(i,phase){
+  phase??=[.36,.27,.37,.37,.44][clamp(i,0,products.length-1)]??.30;
+  i=clamp(i,0,products.length-1);
+  if(staticMode()){cards[i].article.scrollIntoView({block:'center'});return}
+  window.scrollTo({top:journey.offsetTop+productProgress(i,products.length,phase)*(journey.offsetHeight-innerHeight),behavior:'smooth'});
+}
+function resetJourney(){window.scrollTo({top:0,behavior:staticMode()?'instant':'smooth'});toys?.setPointer()}
+$('.explore-button').addEventListener('click',()=>goToProduct(0));
+$('.wordmark').addEventListener('click',event=>{event.preventDefault();resetJourney()});
+$('.skip-link').addEventListener('click',event=>{event.preventDefault();goToProduct(0,.80);setTimeout(()=>cards[0].link.focus({preventScroll:true}),staticMode()?0:850)});
+
 function warmProduct(product){
   if(frames.has(product.id))return frames.get(product.id);
-  const frame=document.createElement('iframe');frame.title=product.name+' 실제 랜딩';frame.referrerPolicy='strict-origin-when-cross-origin';frame.tabIndex=-1;frame.inert=true;
-  const record={frame,loaded:false};frames.set(product.id,record);frame.hidden=true;frame.dataset.product=product.id;frame.dataset.loadCount='0';
-  frame.addEventListener('load',()=>{record.loaded=true;frame.dataset.loadCount=String(Number(frame.dataset.loadCount)+1);if(state.active?.id===product.id){previewFallback.hidden=true;clearTimeout(loadTimeout)}});
+  const frame=document.createElement('iframe');frame.title=product.name+' 실제 랜딩';frame.referrerPolicy='strict-origin-when-cross-origin';frame.tabIndex=-1;frame.inert=true;frame.hidden=true;
+  frame.dataset.product=product.id;frame.dataset.loadCount='0';
+  const record={frame,loaded:false};frames.set(product.id,record);
+  frame.addEventListener('load',()=>{record.loaded=true;frame.dataset.loaded='true';frame.dataset.loadCount=String(Number(frame.dataset.loadCount)+1);if(state.active?.id===product.id){fallback.hidden=true;clearTimeout(loadTimer)}});
+  // Iframes stay in this parent: moving them would reload the live page.
   frame.src=product.url;previewContent.append(frame);return record;
 }
-function warmAll(){products.forEach((product,i)=>setTimeout(()=>warmProduct(product),i*350))}
-if('requestIdleCallback' in window)requestIdleCallback(warmAll,{timeout:2500});else setTimeout(warmAll,1400);
-
+function scheduleProducts(){
+  if(warming)return;warming=true;
+  const warm=()=>products.forEach((product,i)=>setTimeout(()=>warmProduct(product),i*450));
+  if('requestIdleCallback' in window)requestIdleCallback(warm,{timeout:2000});else setTimeout(warm,300);
+}
 function openProduct(product,link,windowEl){
   if(state.active)return;
-  const rect=windowEl.getBoundingClientRect();
-  const record=warmProduct(product);state.active=product;returnFocus=link;
-  main.inert=true;header.inert=true;document.body.style.overflow='hidden';
-  preview.hidden=false;previewFallback.hidden=true;
-  document.querySelector('#preview-title').textContent=product.name;
-  document.querySelector('.preview-direct').href=product.url;previewFallback.querySelector('a').href=product.url;
+  const rect=windowEl.getBoundingClientRect(),record=warmProduct(product);
+  state.active=product;returnFocus=link;toys?.setPointer();main.inert=true;header.inert=true;$('.skip-link').inert=true;document.body.style.overflow='hidden';
+  $('.preview-poster').src='assets/'+product.image;preview.hidden=false;fallback.hidden=true;
+  $('#preview-title').textContent=product.name;$('.preview-direct').href=product.url;fallback.querySelector('a').href=product.url;
   extraLink?.remove();extraLink=null;
-  if(product.extra){extraLink=document.createElement('a');extraLink.href=product.extra.url;extraLink.textContent=product.extra.label;extraLink.target='_blank';extraLink.rel='noopener';document.querySelector('.preview-bar').insertBefore(extraLink,closeButton)}
-  // Keep every preloaded iframe in the same parent for its entire lifetime.
-  // Reparenting an iframe reloads it in browsers without moveBefore support.
-  record.frame.inert=false;record.frame.removeAttribute('tabindex');
-  record.frame.hidden=false;
-  if(!reduced.matches){preview.animate([{transform:`translate(${rect.left}px,${rect.top}px) scale(${rect.width/innerWidth},${rect.height/innerHeight})`,borderRadius:'12px',opacity:.75},{transform:'none',borderRadius:'0',opacity:1}],{duration:720,easing:'cubic-bezier(.22,1,.36,1)'})}
-  closeButton.focus({preventScroll:true});
-  if(!record.loaded)loadTimeout=setTimeout(()=>{if(state.active?.id===product.id)previewFallback.hidden=false},8000);
-  document.body.dataset.preview=product.id;
+  if(product.extra){extraLink=document.createElement('a');extraLink.href=product.extra.url;extraLink.textContent=product.extra.label;extraLink.target='_blank';extraLink.rel='noopener noreferrer';$('.preview-bar').insertBefore(extraLink,closeButton)}
+  record.frame.inert=false;record.frame.removeAttribute('tabindex');record.frame.hidden=false;
+  captureAnimation?.cancel();captureImage.hidden=true;
+  if(!staticMode()){
+    const source=surface?.capture(rect);
+    if(source){captureImage.src=source;captureImage.hidden=false;captureAnimation=captureImage.animate([{opacity:1,offset:0},{opacity:1,offset:.38},{opacity:0,offset:1}],{duration:820,easing:'ease-in-out',fill:'forwards'});captureAnimation.onfinish=()=>{captureImage.hidden=true;captureAnimation?.cancel();captureAnimation=null}}
+    animation=preview.animate([{transform:`translate(${rect.left}px,${rect.top}px) scale(${rect.width/innerWidth},${rect.height/innerHeight})`,borderRadius:'7px'},{transform:'none',borderRadius:'0'}],{duration:820,easing:'cubic-bezier(.2,.8,.2,1)'});
+  }
+  closeButton.focus({preventScroll:true});document.body.dataset.preview=product.id;
+  if(!record.loaded)loadTimer=setTimeout(()=>{if(state.active?.id===product.id)fallback.hidden=false},8000);
 }
 function closeProduct(){
-  if(!state.active)return;
-  const record=frames.get(state.active.id);clearTimeout(loadTimeout);clearTimeout(openTimer);
-  record.frame.inert=true;record.frame.tabIndex=-1;
-  record.frame.hidden=true;
-  preview.hidden=true;state.active=null;main.inert=false;header.inert=false;document.body.style.overflow='';
-  delete document.body.dataset.preview;returnFocus?.focus({preventScroll:true});
+  if(!state.active||closing)return;
+  closing=true;clearTimeout(loadTimer);
+  const start={transform:getComputedStyle(preview).transform,borderRadius:getComputedStyle(preview).borderRadius};animation?.cancel();
+  const record=frames.get(state.active.id),rect=returnFocus?.querySelector('.product-window')?.getBoundingClientRect();
+  finishClose=()=>{
+    record.frame.inert=true;record.frame.tabIndex=-1;record.frame.hidden=true;preview.hidden=true;animation?.cancel();animation=null;
+    captureAnimation?.cancel();captureAnimation=null;captureImage.hidden=true;
+    state.active=null;closing=false;finishClose=null;main.inert=false;header.inert=false;$('.skip-link').inert=false;document.body.style.overflow='';delete document.body.dataset.preview;
+    restoringFocus=true;returnFocus?.focus({preventScroll:true});restoringFocus=false;dirty=true;
+  };
+  if(staticMode()||!rect?.width){finishClose();return}
+  const source=surface?.capture(rect),captureOpacity=captureImage.hidden?0:Number(getComputedStyle(captureImage).opacity);
+  captureAnimation?.cancel();
+  if(source){captureImage.src=source;captureImage.hidden=false;captureAnimation=captureImage.animate([{opacity:captureOpacity},{opacity:1,offset:.72},{opacity:1}],{duration:470,easing:'ease-out',fill:'forwards'})}
+  animation=preview.animate([start,{transform:`translate(${rect.left}px,${rect.top}px) scale(${rect.width/innerWidth},${rect.height/innerHeight})`,borderRadius:'7px',opacity:.35}],{duration:470,easing:'cubic-bezier(.4,0,.2,1)',fill:'forwards'});
+  animation.onfinish=()=>finishClose?.();
 }
 closeButton.addEventListener('click',closeProduct);
 document.addEventListener('keydown',event=>{
-  if(!state.active)return;
-  if(event.key==='Escape'){event.preventDefault();closeProduct()}
-  if(event.key==='Tab'){
-    const controls=[...preview.querySelectorAll('a[href],button,iframe')].filter(el=>!el.hidden&&!el.inert&&el.getClientRects().length>0);
-    const first=controls[0],last=controls.at(-1);
-    if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus()}
-    if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus()}
+  if(state.active){
+    if(event.key==='Escape'){event.preventDefault();closeProduct()}
+    if(event.key==='Tab'){
+      const controls=[...preview.querySelectorAll('a[href],button,iframe')].filter(el=>!el.hidden&&!el.inert&&el.getClientRects().length);
+      const first=controls[0],last=controls.at(-1);
+      if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus()}
+      else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus()}
+    }
+    return;
   }
+  if(!staticMode()&&state.p>REEL_START&&(event.key==='ArrowRight'||event.key==='ArrowLeft')){event.preventDefault();goToProduct(state.index+(event.key==='ArrowRight'?1:-1))}
 });
 
-function goToProducts(){
-  const end=journey.offsetHeight-innerHeight;
-  window.scrollTo({top:end,behavior:reduced.matches?'instant':'smooth'});
-  if(reduced.matches){gallery.inert=false;gallery.setAttribute('aria-hidden','false')}
-}
-document.querySelector('.explore-button').addEventListener('click',goToProducts);
-document.querySelector('.skip-link').addEventListener('click',event=>{event.preventDefault();goToProducts();setTimeout(()=>cards[0]?.link.focus({preventScroll:true}),reduced.matches?0:700)});
-document.querySelector('.replay').addEventListener('click',()=>window.scrollTo({top:0,behavior:reduced.matches?'instant':'smooth'}));
-document.querySelector('.wordmark').addEventListener('click',event=>{event.preventDefault();window.scrollTo({top:0,behavior:reduced.matches?'instant':'smooth'})});
-function readScroll(){state.target=reduced.matches?1:clamp(scrollY/Math.max(1,journey.offsetHeight-innerHeight))}
-addEventListener('scroll',readScroll,{passive:true});addEventListener('resize',readScroll);reduced.addEventListener('change',readScroll);readScroll();
-
-const introCaption=document.querySelector('.intro-caption');
-const chapterName=document.querySelector('.chapter-name');
-const chapterHint=document.querySelector('.chapter-hint');
-const replay=document.querySelector('.replay');
-const explore=document.querySelector('.explore-button');
-function paintUI(p){
-  const intro=1-smooth(.025,.15,p);
-  const heroIn=smooth(.23,.34,p)*(1-smooth(.59,.68,p));
-  const galleryIn=smooth(.65,.73,p);
-  root.style.setProperty('--p',p.toFixed(4));root.style.setProperty('--intro',intro.toFixed(4));
-  root.style.setProperty('--hero',heroIn.toFixed(4));root.style.setProperty('--gallery',galleryIn.toFixed(4));
-  introCaption.setAttribute('aria-hidden',String(intro<.05));
-  hero.inert=heroIn<.2;hero.setAttribute('aria-hidden',String(heroIn<.2));
-  gallery.inert=galleryIn<.95;gallery.setAttribute('aria-hidden',String(galleryIn<.95));
+function paint(){
+  const p=state.p,s=storyAt(p,products.length),plain=staticMode();
+  const pass=plain?0:ease(.875,.95,s.reel)*(1-ease(1.37,1.48,s.reel));
+  header.style.opacity=String(1-pass);if(!state.active)header.inert=pass>.9;
+  const vars={'--p':p,'--intro':s.signature,'--title':s.title,'--second':s.second,'--title-out':s.titleOut,'--collection':s.collection,'--gold':s.gold};
+  for(const [key,value]of Object.entries(vars))root.style.setProperty(key,value.toFixed(4));
+  hero.inert=!plain&&(s.title*s.titleOut<.1);hero.setAttribute('aria-hidden',String(hero.inert));
+  gallery.inert=!plain&&s.collection<.92;gallery.setAttribute('aria-hidden',String(gallery.inert));
+  const scene=surface&&!plain?surface.render(s.reel,s.collection,ambientTime/1000):surfaceAt(s.reel,products.length);
+  const active=scene.active;
+  root.style.setProperty('--surface-surge',scene.surge.toFixed(4));
+  root.style.setProperty('--surface-clarity',scene.copy.toFixed(4));
+  gallery.dataset.stage=scene.reveal>.85?'landing':scene.spread>.05?'reveal':'features';
   cards.forEach(({article,link},i)=>{
-    const start=.70+i*(.23/Math.max(1,cards.length-1));
-    const reveal=reduced.matches?1:smooth(start,start+.055,p);
-    article.style.setProperty('--reveal',reveal.toFixed(4));link.tabIndex=reveal>.95?0:-1;
+    const copyVisible=plain||(!gallery.inert&&i===active&&scene.copy>.1);
+    const visible=plain||(!gallery.inert&&i===active&&scene.reveal>.85);
+    article.style.setProperty('--focus',plain?1:i===active?scene.copy:0);
+    article.style.setProperty('--copy-y',((1-scene.copy)*24)+'px');
+    if(scene.rect&&i===active){
+      const rect=scene.rect;
+      for(const [key,value]of Object.entries({'--surface-left':rect.left,'--surface-top':rect.top,'--surface-width':rect.width,'--surface-height':rect.height}))article.style.setProperty(key,value+'px');
+    }
+    article.dataset.visible=String(visible);article.dataset.active=String(i===active);article.inert=!copyVisible;article.setAttribute('aria-hidden',String(!copyVisible));
+    link.inert=!visible;link.setAttribute('aria-hidden',String(!visible));link.tabIndex=visible?0:-1;
   });
-  chapterName.textContent=p<.24?'01 / HELLO':p<.65?'02 / POSSIBILITIES':'03 / YOUR NEXT';
-  chapterHint.firstChild.textContent=p<.24?'스크롤해서 만나보세요 ':p<.65?'다음 재미를 만나보세요 ':'마음에 드는 시작을 골라보세요 ';
-  chapterHint.hidden=p>.96;replay.hidden=p<=.96||reduced.matches;explore.hidden=p>.76;
-  document.body.dataset.chapter=p<.24?'opening':p<.65?'hero':'products';
+  if(state.index!==active){state.index=active;$('.current-product').textContent=`${active+1} / ${products.length}, ${products[active].name}`}
+  const chapter=s.opening<.105?'opening':s.opening<.33?'hero':'products';document.body.dataset.chapter=chapter;
+  $('.explore-button').hidden=s.opening>.39&&!plain;
 }
-
-let toys=null,readyAt=0,lastPaint=-1,lastRender=-1,lastTime=performance.now(),dirty=true;
-if(!reduced.matches){
-  createToyStage(document.querySelector('#scene')).then(api=>{
-    toys=api;readyAt=performance.now();document.body.classList.add('webgl-ready');
-    document.body.dataset.webgl='ready';dirty=true;
-  }).catch(error=>{document.body.dataset.webgl='fallback';console.warn('Static brand visual displayed.',error)});
+function setMode(){document.body.dataset.motion=staticMode()?'reduced':'full';dirty=true;measure();if(staticMode()){scheduleProducts();finishClose?.()}else ensureStage()}
+async function ensureStage(){
+  if(toys||loading||staticMode())return;loading=true;const started=performance.now();
+  try{
+    const api=await createToyStage($('#scene'));api.render(state.p,0,0);toys=api;
+    surface=await createLandingSurface($('.landing-surface'),products,()=>{state.webgl='fallback';document.body.dataset.webgl='fallback';setMode()});
+    stageTime=0;lastTime=performance.now();state.webgl='ready';document.body.dataset.webgl='ready';document.body.classList.add('webgl-ready');document.body.dataset.sceneLoadMs=String(Math.round(performance.now()-started));dirty=true;
+  }catch(error){state.webgl='fallback';document.body.dataset.webgl='fallback';setMode();console.warn('3D unavailable; all destinations remain accessible.',error)}
 }
+let stageTime=0,ambientTime=0,lastTime=performance.now(),lastRenderAt=0;
 function frame(now){
-  requestAnimationFrame(frame);
-  if(document.hidden||state.active){lastTime=now;return}
-  const dt=Math.min(64,now-lastTime);lastTime=now;
-  state.progress=reduced.matches?1:lerp(state.progress,state.target,1-Math.exp(-dt/90));
-  if(Math.abs(state.progress-state.target)<.0001)state.progress=state.target;
-  state.entry=reduced.matches?1:clamp((now-readyAt)/1750);
-  if(Math.abs(state.progress-lastPaint)>.00005||dirty){paintUI(state.progress);lastPaint=state.progress}
-  if(toys&&(state.progress<.80||state.entry<1||Math.abs(state.progress-lastRender)>.00003||dirty)){
-    toys.render(state.progress,state.entry,reduced.matches?0:Math.max(0,(now-readyAt-1750)/1000));lastRender=state.progress;dirty=false;
+  requestAnimationFrame(frame);const dt=Math.min(64,now-lastTime);lastTime=now;
+  if(document.hidden||state.active)return;
+  const plain=staticMode();
+  state.p=mix(state.p,state.target,1-Math.exp(-dt/75));if(Math.abs(state.p-state.target)<.00002)state.p=state.target;
+  if(toys&&!plain){stageTime+=dt;ambientTime+=dt;state.entry=clamp(stageTime/950);root.style.setProperty('--scene-entry',ease(0,.7,state.entry).toFixed(4))}
+  if(state.entry>.75||storyAt(state.p).opening>.12)scheduleProducts();
+  const changed=Math.abs(lastPaint-state.p)>.00002||dirty;
+  if(changed){paint();lastPaint=state.p}
+  if(toys&&!plain&&(state.p<REEL_START||changed||now-lastRenderAt>1000/30)){
+    toys.render(state.p,state.entry,stageTime/1000,dt/1000,ambientTime/1000);
+    const story=storyAt(state.p,products.length);worlds.render(story.reel,story.collection,ambientTime/1000);
+    if(surface&&!changed&&story.collection>.001)surface.render(story.reel,story.collection,ambientTime/1000);
+    lastRenderAt=now;
   }
+  dirty=false;
 }
-addEventListener('resize',()=>{toys?.resize();dirty=true});
-document.addEventListener('visibilitychange',()=>{if(!document.hidden)dirty=true});
-reduced.addEventListener('change',()=>{dirty=true});
-document.querySelector('.replay').addEventListener('click',()=>{readyAt=performance.now();dirty=true});
-paintUI(state.target);requestAnimationFrame(frame);
-
+addEventListener('scroll',readScroll,{passive:true});addEventListener('resize',()=>{toys?.resize();surface?.resize();worlds.resize();measure()});
+addEventListener('pointermove',event=>{if(fine.matches&&!staticMode()&&!state.active&&event.pointerType==='mouse'){const x=event.clientX/innerWidth*2-1,y=event.clientY/innerHeight*2-1;toys?.setPointer(x,y);surface?.setPointer(x,y)}},{passive:true});
+const clearPointer=()=>{toys?.setPointer();surface?.setPointer()};
+addEventListener('blur',clearPointer);document.addEventListener('pointerleave',clearPointer);
+document.addEventListener('visibilitychange',()=>{lastTime=performance.now();if(!document.hidden)dirty=true});
+reduced.addEventListener('change',setMode);document.fonts.ready.then(measure);
+setMode();paint();requestAnimationFrame(frame);
 

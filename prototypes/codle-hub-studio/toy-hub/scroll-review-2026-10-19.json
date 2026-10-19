@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-19",
+  "status": "reviewed-with-available-assets",
+  "automationId": "3d",
+  "automationStatus": "PAUSED",
+  "budget": {
+    "weeklyUsedAtStart": 20,
+    "weeklyUsedAtEnd": 21,
+    "remainingPercent": 79,
+    "stopNewWorkAtUsedPercent": 58
+  },
+  "changes": [
+    "Fixed a reproduced dead click: at scrollY 7289 the camp landing link was exposed but the old generic surface reveal rejected it. Activation and focus now use the exact rendered DOM visibility. Final app63 at scrollY7284 successfully opens and closes the actual camp page.",
+    "Replacement landing planes remain ahead of their source screen during reveal. Camera-ray depth adjustment scales by the same ratio, preserving projected corners and the actual click rectangle. The textbook activity no longer covers the emerging destination.",
+    "The camp iris is anchored to the near side of the globe, so its flight routes remain behind the emerging landing instead of crossing through its text.",
+    "Jitda has a smaller separate working screen during the strikes, then grows to the full actual result UI. The work surface fades before it could float over that UI.",
+    "Removed duplicate entry opacity. Incoming physical features become solid before the chapter boundary; outgoing destinations recede upward into depth, clearing the next feature rather than remaining as a full-size ghost over it. Receding links become inert.",
+    "Jitda width is capped against mobile viewport height to leave clear space around the UI at320x570.390x844 retains its large result view."
+  ],
+  "verification": [
+    "Actual main page forward sequence and reverse chapter boundaries reviewed at828x884 and390x844; content deck, close pass, pullback, fan and landing also inspected in the main page.",
+    "Desktop Jitda strike composition and mobile33/51percent stages reviewed. Actual320x570 Jitda frame spacing reviewed after height cap.",
+    "Actual desktop and mobile camp handoff reviewed. Actual textbook wipe checked at58and64percent mobile.",
+    "Latest app63 confirmed on user preview at828x884 with WebGLready. Late camp link opens the real iframe; closing restores the camp link focus. All five iframe load counts remain1, no horizontal overflow, stage.scrollTop0 and no captured error logs.",
+    "Actual390x844 Jitda expansion fills the viewport at0,0 with transform none; all five frames load once. Closing works.",
+    "check-spatial-journey.mjs passes six viewports, all24 authentic readable cover passes, foreground depth, camera clearance, final destination bounds, retreating link states, worker contact and continuous puzzle movement. Feature sequence and JavaScript syntax checks passed.",
+    "Reduced-motion and WebGL fallback source preserved. This pass did not emulate the system motion preference. No cold-network performance claim."
+  ],
+  "proofs": [
+    "references/spatial-development/camp-late-hold-expanded.png",
+    "references/spatial-development/contents-main-mobile.png",
+    "references/spatial-development/textbook-landing-wipe-mobile.png",
+    "references/spatial-development/jitda-unfold-mobile.png",
+    "references/spatial-development/camp-handoff-mobile.png",
+    "references/spatial-development/jitda-main-mobile.png",
+    "references/spatial-development/mobile-expanded-current.png",
+    "references/spatial-development/boundary-before-mobile.png",
+    "references/spatial-development/boundary-after-mobile.png",
+    "references/spatial-development/jitda-work-desktop.png",
+    "references/spatial-development/jitda-small-mobile.png",
+    "references/spatial-development/camp-handoff-desktop.png"
+  ],
+  "deferred": [
+    "User will provide high-resolution content thumbnail originals later. Existing authentic sources retained without fabricated replacements or upscaling."
+  ],
+  "constraints": [
+    "sources read-only",
+    "No commit/push/PR/deployment",
+    "Original logos and five destinations retained",
+    "Mounted iframe preload retained",
+    "No subagents"
+  ],
+  "stopReason": "The concrete issues identified during this implementation/review pass have been corrected and checked. Pause repeated development until new feedback or original thumbnails arrive; do not consume the allowance without a specific remaining issue."
+}

@@ -1,0 +1,31 @@
+{
+  "source": "https://cmass-contents.codle.io/cmass-ai-basics/web-exhibition",
+  "actualActivity": "https://cmass-contents.codle.io/test/test-sa/activity/river-crossing?phase=game",
+  "use": "One authentic example of print becoming digital learning. Not a claim that CMASS is the only textbook partner.",
+  "assets": [
+    {
+      "file": "textbook-river-board.png",
+      "url": "https://cmass-contents.codle.io/cmass/cmass-sa/p33_1.png"
+    },
+    {
+      "file": "textbook-farmer.png",
+      "url": "https://cmass-contents.codle.io/cmass/cmass-sa/p33_1_1.png"
+    },
+    {
+      "file": "textbook-cabbage.png",
+      "url": "https://cmass-contents.codle.io/cmass/cmass-sa/p33_1_2.png"
+    },
+    {
+      "file": "textbook-wolf.png",
+      "url": "https://cmass-contents.codle.io/cmass/cmass-sa/p33_1_3.png"
+    },
+    {
+      "file": "textbook-sheep.png",
+      "url": "https://cmass-contents.codle.io/cmass/cmass-sa/p33_1_4.png"
+    },
+    {
+      "file": "textbook-boat.png",
+      "url": "https://cmass-contents.codle.io/cmass/cmass-sa/p33_1_5.png"
+    }
+  ]
+}

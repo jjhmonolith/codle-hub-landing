@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>콘텐츠 장면 — 움직임 스케치</title>
+  <link rel="stylesheet" href="content-composition-study.css?v=5">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
+  <script type="module" src="content-composition-study.js?v=16"></script>
+</head>
+<body>
+  <header class="study-bar">
+    <div class="study-title">콘텐츠 장면 <span>움직임 스케치</span></div>
+    <nav aria-label="구도 선택">
+      <button type="button" data-mode="stream" aria-pressed="true">대각선 흐름</button>
+      <button type="button" data-mode="stack" aria-pressed="false">이전 펼침</button>
+    </nav>
+    <button type="button" class="play">재생 ↗</button>
+  </header>
+  <main>
+    <section class="study-scene" aria-label="코들 콘텐츠 카드가 대각선으로 이어지는 장면" data-mode="stream">
+      <div class="wash" aria-hidden="true"></div>
+      <div class="canvas-host" aria-hidden="true"></div>
+      <div class="cover-fallback" hidden aria-label="코들 콘텐츠 썸네일"></div>
+      <header class="scene-header"><img src="assets/codle-clean-mark.svg" alt="코들"><span>CODLE ORIGINALS</span><span>02 / 05</span></header>
+      <div class="destination" aria-hidden="true"><img src="assets/actual-contents.jpg" alt="오리지널 콘텐츠 랜딩 미리보기"></div>
+      <div class="scene-copy"><span>새로운 배움의 발견</span><h1>오리지널 콘텐츠</h1></div>
+      <span class="scroll-hint">스크롤해서 움직임 보기 ↓</span>
+      <p class="load-status" role="status">콘텐츠를 불러오는 중</p>
+    </section>
+    <footer class="study-controls">
+      <p class="direction-copy">콘텐츠 한 장이, 새로운 배움의 입구로</p>
+      <div class="phase-buttons" aria-label="전환 단계">
+        <button type="button" data-progress="0" aria-pressed="true">뭉치</button>
+        <button type="button" data-progress="0.36" aria-pressed="false">흐름</button>
+        <button type="button" data-progress="1" aria-pressed="false">랜딩</button>
+      </div>
+      <label class="scrubber"><span class="sr-only">장면 진행</span><input type="range" min="0" max="100" step="1" value="0" aria-label="장면 진행"></label>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "updated": "2026-10-19",
+  "status": "jitda-desktop-review-ready",
+  "scope": "Jitda desktop only. User explicitly deferred mobile work/testing and requested shorter focused iterations.",
+  "versions": {
+    "app": 78,
+    "studioScenes": 14,
+    "spatialSceneMotion": 15,
+    "volumeWorlds": 49,
+    "landingSurface": 50,
+    "productMotionStudy": 34
+  },
+  "weeklyUsedAfterReview": 28,
+  "changes": [
+    "Character and UI now share the same bench parent and its depth/orientation.",
+    "Continuous worktop extends beneath both, with contact shadows on its actual top surface.",
+    "Removed final character drift/raise away from the UI; character stays beside its interface.",
+    "Pickaxe lower tip meets the shared work edge at both strikes; dust position follows that contact.",
+    "UI and character respond subtly to the same impact as authentic result quadrants assemble.",
+    "Desktop composition resized for caption clearance. Expansion captures the whole shared workstation."
+  ],
+  "verified": [
+    "Actual desktop browser at strike phase .165 and settled phase .78.",
+    "Actual main page final Jitda scene and real iframe expansion/close. Current-scene capture 1058x404, all five iframe load counts remain one, focus restored, recorded error log empty.",
+    "Changed JS syntax and current motion contract pass. No mobile browser inspection or responsive development was performed."
+  ],
+  "proofs": [
+    "references/coherent-studio/jitda-shared-desk-strike.png",
+    "references/coherent-studio/jitda-shared-desk-study.png",
+    "references/coherent-studio/jitda-shared-desk-main.png"
+  ],
+  "constraints": [
+    "sources read-only",
+    "No commit/push/PR/deploy",
+    "No subagents",
+    "Keep later passes focused and short; mobile deferred by latest user instruction"
+  ]
+}

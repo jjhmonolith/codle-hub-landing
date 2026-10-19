@@ -1,0 +1,259 @@
+{
+  "source": "https://drive.google.com/file/d/1PoacPWs5EcSAixzl2jclMkol2uuWUr-W/view",
+  "sourceLinkedFrom": "https://ai.codle.io/kr/contents",
+  "note": "24 authentic embedded content covers. Lossless extraction; sideways PDF images rotated to match the printed page. No repainting, cropping, generative replacement or upscaling.",
+  "items": [
+    {
+      "file": "thumbnail-p8-im1.webp",
+      "pdfPage": 8,
+      "embeddedImage": "Im1.jp2",
+      "dimensions": [
+        125,
+        72
+      ],
+      "rotationDegreesClockwise": 90
+    },
+    {
+      "file": "thumbnail-p8-im2.webp",
+      "pdfPage": 8,
+      "embeddedImage": "Im2.jp2",
+      "dimensions": [
+        125,
+        72
+      ],
+      "rotationDegreesClockwise": 90
+    },
+    {
+      "file": "thumbnail-p8-im3.webp",
+      "pdfPage": 8,
+      "embeddedImage": "Im3.jp2",
+      "dimensions": [
+        123,
+        72
+      ],
+      "rotationDegreesClockwise": 90
+    },
+    {
+      "file": "thumbnail-p8-im4.webp",
+      "pdfPage": 8,
+      "embeddedImage": "Im4.jp2",
+      "dimensions": [
+        123,
+        72
+      ],
+      "rotationDegreesClockwise": 90
+    },
+    {
+      "file": "thumbnail-p8-im5.webp",
+      "pdfPage": 8,
+      "embeddedImage": "Im5.jp2",
+      "dimensions": [
+        126,
+        75
+      ],
+      "rotationDegreesClockwise": 90
+    },
+    {
+      "file": "thumbnail-p8-im6.webp",
+      "pdfPage": 8,
+      "embeddedImage": "Im6.jp2",
+      "dimensions": [
+        126,
+        75
+      ],
+      "rotationDegreesClockwise": 90
+    },
+    {
+      "file": "thumbnail-p8-im7.webp",
+      "pdfPage": 8,
+      "embeddedImage": "Im7.jp2",
+      "dimensions": [
+        125,
+        72
+      ],
+      "rotationDegreesClockwise": 90
+    },
+    {
+      "file": "thumbnail-p8-im8.webp",
+      "pdfPage": 8,
+      "embeddedImage": "Im8.jp2",
+      "dimensions": [
+        125,
+        72
+      ],
+      "rotationDegreesClockwise": 90
+    },
+    {
+      "file": "thumbnail-p8-im9.webp",
+      "pdfPage": 8,
+      "embeddedImage": "Im9.jp2",
+      "dimensions": [
+        125,
+        72
+      ],
+      "rotationDegreesClockwise": 90
+    },
+    {
+      "file": "thumbnail-p9-im0.webp",
+      "pdfPage": 9,
+      "embeddedImage": "Im0.jpg",
+      "dimensions": [
+        279,
+        148
+      ],
+      "rotationDegreesClockwise": 0
+    },
+    {
+      "file": "thumbnail-climate-data.webp",
+      "title": "기후 위기, 데이터를 열어봐!",
+      "pdfPage": 9,
+      "printedPage": 16,
+      "embeddedImage": "Im1.jpg",
+      "dimensions": [
+        279,
+        148
+      ],
+      "rotationDegreesClockwise": 0
+    },
+    {
+      "file": "thumbnail-microbit.webp",
+      "title": "마이크로비트 첫걸음",
+      "pdfPage": 9,
+      "printedPage": 17,
+      "embeddedImage": "Im10.jpg",
+      "dimensions": [
+        279,
+        149
+      ],
+      "rotationDegreesClockwise": 0
+    },
+    {
+      "file": "thumbnail-python-data.webp",
+      "title": "파이썬 데이터 분석가 맛보기",
+      "pdfPage": 9,
+      "printedPage": 16,
+      "embeddedImage": "Im2.jpg",
+      "dimensions": [
+        279,
+        148
+      ],
+      "rotationDegreesClockwise": 0
+    },
+    {
+      "file": "thumbnail-ocean-data.webp",
+      "title": "바다를 지키는 데이터 분석",
+      "pdfPage": 9,
+      "printedPage": 16,
+      "embeddedImage": "Im3.jpg",
+      "dimensions": [
+        279,
+        148
+      ],
+      "rotationDegreesClockwise": 0
+    },
+    {
+      "file": "thumbnail-p9-im4.webp",
+      "pdfPage": 9,
+      "embeddedImage": "Im4.jp2",
+      "dimensions": [
+        126,
+        73
+      ],
+      "rotationDegreesClockwise": 90
+    },
+    {
+      "file": "thumbnail-esg.webp",
+      "title": "생성형 AI와 ESG 챌린지",
+      "pdfPage": 9,
+      "printedPage": 17,
+      "embeddedImage": "Im6.jpg",
+      "dimensions": [
+        279,
+        149
+      ],
+      "rotationDegreesClockwise": 0
+    },
+    {
+      "file": "thumbnail-p9-im7.webp",
+      "pdfPage": 9,
+      "embeddedImage": "Im7.jp2",
+      "dimensions": [
+        126,
+        73
+      ],
+      "rotationDegreesClockwise": 90
+    },
+    {
+      "file": "thumbnail-everyday-ai.webp",
+      "title": "실생활 예제로 처음 만나는 AI",
+      "pdfPage": 9,
+      "printedPage": 17,
+      "embeddedImage": "Im8.jpg",
+      "dimensions": [
+        279,
+        148
+      ],
+      "rotationDegreesClockwise": 0
+    },
+    {
+      "file": "thumbnail-p9-im9.webp",
+      "pdfPage": 9,
+      "embeddedImage": "Im9.jp2",
+      "dimensions": [
+        126,
+        73
+      ],
+      "rotationDegreesClockwise": 90
+    },
+    {
+      "file": "thumbnail-p27-im0.webp",
+      "pdfPage": 27,
+      "embeddedImage": "Im0.jp2",
+      "dimensions": [
+        125,
+        72
+      ],
+      "rotationDegreesClockwise": 90
+    },
+    {
+      "file": "thumbnail-p27-im1.webp",
+      "pdfPage": 27,
+      "embeddedImage": "Im1.jp2",
+      "dimensions": [
+        125,
+        72
+      ],
+      "rotationDegreesClockwise": 90
+    },
+    {
+      "file": "thumbnail-p27-im2.webp",
+      "pdfPage": 27,
+      "embeddedImage": "Im2.jp2",
+      "dimensions": [
+        125,
+        72
+      ],
+      "rotationDegreesClockwise": 90
+    },
+    {
+      "file": "thumbnail-p27-im3.webp",
+      "pdfPage": 27,
+      "embeddedImage": "Im3.jp2",
+      "dimensions": [
+        125,
+        72
+      ],
+      "rotationDegreesClockwise": 90
+    },
+    {
+      "file": "thumbnail-p27-im4.webp",
+      "pdfPage": 27,
+      "embeddedImage": "Im4.jp2",
+      "dimensions": [
+        125,
+        72
+      ],
+      "rotationDegreesClockwise": 90
+    }
+  ]
+}
