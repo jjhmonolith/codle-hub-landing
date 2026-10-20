@@ -195,11 +195,11 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
  .mosaic-core,.opening-seal,.board .tile::before{background:#f5f3ed}
  .board{background:rgba(245,243,237,var(--grid-reveal))}
  .board .tile.platform{background:#e1e8f5;color:#253144}
- .board .tile.contents{background:#eee7d9;color:#293649}
- .board .tile.textbook{background:#cad9ee;color:#293649}
+ .board .tile.contents{background:#efd2bd;color:#493c35}
+ .board .tile.textbook{background:#e3dce6;color:#3f3544}
  .board .tile.aidt{background:#dce6de;color:#293f3c}
  .board .tile.camp{background:#253955;color:#fffdf5}
- .board .tile.jitda{background:#ded9ed;color:#38334b}
+ .board .tile.jitda{background:#f1ede2;color:#493b2e}
  .board .tile-label{left:24px;right:24px;top:22px;font-size:clamp(17px,1.45vw,24px);font-weight:580;letter-spacing:-.035em}
  .board .tile-arrow{border:0;flex-basis:24px;width:24px;height:24px;font-size:18px;opacity:.7}
  .board .tile-caption{left:24px;right:24px;bottom:22px;font-size:12px;letter-spacing:-.015em}
@@ -258,3 +258,14 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
  .editorial-art [class*="motion-"],.tile.art-active .editorial-art [class*="motion-"]{transform:none!important;transition:none!important}
  .editorial-art .art-color,.editorial-art .art-surface,.editorial-art .art-glyph-fill{transition:none!important}
 }
+
+/* On interaction, colour silhouettes take over from the outlines. */
+.editorial-art :is(path,rect,circle,ellipse){stroke-opacity:1;transition:fill 360ms ease,fill-opacity 360ms ease,stroke-opacity 260ms ease,transform 380ms cubic-bezier(.2,.7,.25,1)}
+.editorial-art .art-outline{transition:opacity 260ms ease}
+.tile.art-active .editorial-art :is(path,rect,circle,ellipse){stroke-opacity:0}
+.tile.art-active .art-outline{opacity:0}
+.tile.art-active .art-glyph-fill{fill:#fffaf1}
+@media(prefers-reduced-motion:reduce){.editorial-art :is(path,rect,circle,ellipse),.editorial-art .art-outline{transition:none!important}}
+
+/* Preserve the approved camp contour: filling its open shoulders changes the scene. */
+.tile.camp.art-active .editorial-art path{stroke-opacity:1}
