@@ -1,53 +1,50 @@
-// Product-specific flat compositions; opening and grid geometry are unchanged.
-const ink='#253144',paper='#fffaf1',blue='#2853ed';
-const svg=(body,box)=>`<svg class="editorial-art" xmlns="http://www.w3.org/2000/svg" viewBox="${box}" fill="none">${body}</svg>`;
-const line=(d,color=ink,w=2)=>`<path d="${d}" stroke="${color}" stroke-width="${w}" stroke-linecap="round"/>`;
-function tool(x,y,sx,sy,label,i){return `<g transform="translate(${x} ${y})"><g data-motion="tool"><defs><clipPath id="tool-crop-${i}" clipPathUnits="userSpaceOnUse"><rect width="78" height="78" rx="15"/></clipPath></defs><g clip-path="url(#tool-crop-${i})"><svg width="78" height="78" overflow="hidden" viewBox="${sx} ${sy} 166 166"><image href="assets/worlds/codle-tools-ui.png" width="2048" height="1152"/></svg></g></g></g>`}
+// Flat illustration system: 8-unit grid, 8/16-unit clearances, solid fills, regular arcs.
+const ink='#253144',paper='#fffaf1',blue='#2853ed',pale='#b8caf4';
+const svg=(body,box='0 0 320 320')=>`<svg class="editorial-art" xmlns="http://www.w3.org/2000/svg" viewBox="${box}" font-family="Pretendard, Apple SD Gothic Neo, sans-serif" fill="none" stroke-linecap="round" stroke-linejoin="round">${body}</svg>`;
+// One recognisable silhouette per service; no captions, mock UI or decorative scenes.
 function platform(){
- const route='M188 99h52M338 99h52M488 99Q520 99 520 164Q520 229 488 229M390 229h-52M240 229h-52';
- return svg(`<path d="${route}" stroke="#8faeff" stroke-width="3"/><path class="network-signals" d="${route}" stroke="${paper}" stroke-width="3" pathLength="222" stroke-dasharray="12 210"/>
- ${tool(100,60,68,68,'',0)}${tool(250,60,700,68,'',1)}${tool(400,60,700,635,'',2)}${tool(400,190,980,352,'',3)}${tool(250,190,349,352,'',4)}${tool(100,190,68,635,'',5)}`, '65 35 470 265');
+ // The original white marks supply the alpha mask; their outlines are never redrawn.
+ const tools=[['python',68,68,'#1686ff'],['entry',700,68,'#00ce82'],['quiz',700,635,'#ff7caf'],['pdf',980,352,'#ff414a'],['board',68,635,'#00ce82'],['video',1611,918,'#3535ed']];
+ const filter=`<defs><filter id="codle-original-mark" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  2 2 2 0 -5"/></filter></defs>`;
+ return svg(filter+tools.map(([name,sx,sy,color],i)=>{
+  const x=24+(i%3)*104,y=24+Math.floor(i/3)*104;
+  return `<g transform="translate(${x} ${y})"><defs><clipPath id="mark-bounds-${name}"><rect x="10" y="10" width="68" height="68"/></clipPath><mask id="original-${name}" maskUnits="userSpaceOnUse" x="0" y="0" width="88" height="88" style="mask-type:alpha"><g clip-path="url(#mark-bounds-${name})"><svg width="88" height="88" viewBox="${sx} ${sy} 166 166"><image href="assets/worlds/codle-tools-ui.png" width="2048" height="1152" filter="url(#codle-original-mark)"/></svg></g></mask></defs><rect width="88" height="88" rx="8" fill="${color}"/><rect width="88" height="88" fill="#ffffff" mask="url(#original-${name})"/></g>`;
+ }).join(''), '0 0 344 240');
 }
-// The service action stays readable at rest; hover develops it without resetting.
-function contents(){return svg(`<g transform="translate(25 55)">
- <path d="M14 245V82h98l24 24h166v245H14Z" fill="#c5d2f4"/>
- <g transform="translate(32 52)"><g data-motion="lesson-left"><rect width="142" height="218" rx="5" fill="${ink}"/><path d="M33 150V119m37 31V83m37 67V99" stroke="${paper}" stroke-width="16"/><text x="23" y="37" fill="${paper}" font-size="17" font-weight="550">데이터</text></g></g>
- <g transform="translate(108 20)"><g data-motion="lesson-right"><rect width="142" height="218" rx="5" fill="${blue}"/><path d="m48 94-24 29 24 29m46-58 24 29-24 29m-14-70-18 83" stroke="${paper}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><text x="23" y="37" fill="${paper}" font-size="17" font-weight="550">AI · 코딩</text></g></g>
- <g data-motion="library-cover"><path d="M14 245h115l21-22h162l-26 134H14Z" fill="${paper}" stroke="${blue}" stroke-width="3" stroke-linejoin="round"/><path d="M44 282h56m-56 17h91" stroke="${blue}" stroke-width="4" stroke-linecap="round"/><path d="m243 263 24 16-24 16Z" fill="${blue}"/></g>
- </g>`, '0 0 355 450')}
-function textbook(){return svg(`<g transform="translate(22 48)">
- <path d="M24 25Q93 8 144 40Q197 8 268 25V235Q196 219 144 249Q92 219 24 235Z" fill="${paper}" stroke="${ink}" stroke-width="3" stroke-linejoin="round"/>
- <path d="M144 40v209" stroke="#b9c9e9" stroke-width="3"/>
- <path d="M47 70q35-4 71 8m-71 17q35-4 71 8m-71 17q35-4 52 3" stroke="${ink}" stroke-width="3" stroke-linecap="round"/>
- <g data-motion="ai-page"><path d="M151 40Q204 10 278 24V229Q205 215 151 245Z" fill="${blue}"/>
- <path d="M211 88v34m-34 0h68m-68 0v42m68-42v42" stroke="${paper}" stroke-width="4"/><circle cx="211" cy="77" r="12" fill="${paper}"/>
- <g data-motion="ai-nodes"><circle cx="177" cy="175" r="13" fill="${paper}"/><circle cx="245" cy="175" r="13" fill="${paper}"/></g>
- </g><path d="m230 214 3 34 9-8 10 13 8-7-10-13 13-4Z" fill="${ink}" stroke="${paper}" stroke-width="3" stroke-linejoin="round"/>
- </g>`, '0 25 335 330')}
-function aidt(){return svg(`<g transform="translate(15 48)">
- <g data-motion="course-sheets"><path d="M42 28h230v160H42Z" fill="#a7bce9"/><path d="M28 45h247v164H28Z" fill="${paper}" stroke="${ink}" stroke-width="3"/></g>
- <rect x="11" y="76" width="282" height="189" rx="5" fill="${paper}" stroke="${ink}" stroke-width="3"/>
- <path d="M11 106h282" stroke="${ink}" stroke-width="3"/><path d="M29 92h44" stroke="${blue}" stroke-width="4"/>
- <path d="m60 143-20 25 20 25m36-50 20 25-20 25" stroke="${blue}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
- <path d="M38 225h85" stroke="#b8c7e8" stroke-width="5" stroke-linecap="round"/>
- <path d="M151 130v108" stroke="#b8c7e8" stroke-width="2"/>
- <g data-motion="exercise-result"><circle cx="221" cy="180" r="40" fill="${blue}"/><path d="m201 180 14 14 27-29" stroke="${paper}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>
- </g>`, '0 15 335 345')}
-function camp(){
- const windows=[[87,152],[126,152],[87,204],[126,204],[314,152],[353,152],[314,204],[353,204]];
- return svg(`<path d="M58 123h131v154H58Zm223 0h131v154H281Z" fill="#c9d7f4"/>
- <path d="M47 115h144v13H47Zm232 0h144v13H279Z" fill="#8da7df"/>
- <path d="M180 85h110v192H180Z" fill="${paper}"/>
- <path d="m163 90 72-58 72 58Z" fill="${blue}"/>
- <circle cx="235" cy="116" r="19" fill="${blue}"/><path d="M235 103v13l10 6" stroke="${paper}" stroke-width="3" stroke-linecap="round"/>
- ${windows.map(([x,y],i)=>`<g data-motion="school-window" data-order="${i}"><path d="M${x} ${y}h25v31h-25Z" fill="#85a3ee"/><path d="M${x+12.5} ${y}v31" stroke="#c9d7f4" stroke-width="2"/></g>`).join('')}
- <path d="M210 223a25 25 0 0 1 50 0v54h-50Z" fill="${blue}"/><path d="M235 222v55" stroke="#aec3ff" stroke-width="2"/>
- <path d="M215 165h40m-40 13h40" stroke="${blue}" stroke-width="4" stroke-linecap="round"/>
- <path d="M45 278h380" stroke="${paper}" stroke-width="4" stroke-linecap="round"/>`, '20 0 430 320')}
-function jitda(){return svg(`<svg x="94" y="8" width="152" height="152" viewBox="0 25 235 235" overflow="hidden"><image href="assets/jitda-logo.svg" width="774.61" height="304.29"/></svg>
- <rect x="34" y="178" width="272" height="170" rx="7" fill="${ink}"/><path d="M34 209h272" stroke="#627592" stroke-width="2"/><path d="M53 194h45" stroke="#8ca7ff" stroke-width="4"/>
- <text class="code-prompt" x="55" y="250" fill="#8ca7ff" font-size="24">&gt;_</text>
- <g class="typed-code" fill="${paper}" font-size="15"><text data-code="idea = &quot;hello&quot;" x="54" y="239"></text><text data-code="app = build(idea)" x="54" y="269"></text><text data-code="app.run()" x="54" y="299"></text><text class="typing-caret" x="54" y="239" fill="#ffce2c">▌</text></g>`, '0 0 340 390')}
+function contents(){return svg(`
+ <g stroke="${ink}" stroke-width="4">
+  <path d="M80 48h168v224H80a16 16 0 0 1-16-16V64a16 16 0 0 1 16-16ZM80 48v224"/>
+  <rect x="104" y="80" width="120" height="88" rx="2"/>
+  <path d="m156 104 24 20-24 20Z" stroke="#398c9d"/>
+  <path d="m104 204 8 8 16-20m16 8h72m-72 16h48"/>
+ </g>
+ `)}
+function textbook(){return svg(`
+ <g stroke="${ink}" stroke-width="4">
+  <path d="M88 48h152v200H88a16 16 0 0 0 0 32h152M72 264V64a16 16 0 0 1 16-16M88 264h152v-16"/>
+  <path d="M104 80h56m-56 16h32"/>
+  <rect x="128" y="128" width="64" height="64" rx="2" stroke="#238f95"/>
+  <path d="M144 116v12m32-12v12m-32 64v12m32-12v12m-60-60h12m-12 32h12m64-32h12m-12 32h12" stroke="#238f95"/>
+ </g>
+ <text x="160" y="169" text-anchor="middle" fill="#238f95" font-size="24" font-weight="500" font-family="Arial, sans-serif">AI</text>
+ `)}
+function aidt(){return svg(`<circle cx="104" cy="104" r="48" fill="#a99bd0"/><path d="m224 56 48 96h-96Z" fill="#e8b65b"/><path d="M56 176h96v96H56Z" fill="#66aaa2"/><path d="M224 176a24 24 0 0 1 24 24 24 24 0 0 1 0 48 24 24 0 0 1-48 0 24 24 0 0 1 0-48 24 24 0 0 1 24-24Z" fill="${paper}"/>`)}
+function camp(){return svg(`
+ <rect x="64" y="48" width="256" height="120" rx="4" fill="#a9bfe8"/>
+ <g stroke="#253955" stroke-width="4">
+  <path d="m120 88-20 20 20 20m48-40 20 20-20 20m-16-48-16 56"/>
+  <path d="M224 96h56m-56 24h32"/>
+ </g>
+ <g stroke="${paper}" stroke-width="4">
+  <path d="M56 180h272"/>
+  <circle cx="120" cy="224" r="16"/>
+  <path d="M88 280v-8a32 32 0 0 1 64 0v8"/>
+  <circle cx="248" cy="216" r="16"/>
+  <path d="M216 280v-16a32 32 0 0 1 32-32h8c16 0 28-12 28-28v-4a10 10 0 0 1 20 0v8c0 20-8 36-24 44v28"/>
+  <path d="M72 292h240"/>
+ </g>
+ `, '0 0 384 336')}
+function jitda(){return svg(`<svg x="76" y="64" width="168" height="192" viewBox="0 25 235 269" overflow="hidden"><image href="assets/jitda-logo.svg" width="774.61" height="304.29"/></svg>`)}
 const artists={platform,contents,textbook,aidt,camp,jitda};
 const tracks={
  tool:[{transform:'scale(1)'},{transform:'scale(1.035)'}],

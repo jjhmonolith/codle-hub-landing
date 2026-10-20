@@ -1,6 +1,6 @@
 import {products as originalProducts} from './catalog.js?v=4';
 const products=originalProducts.flatMap(p=>p.id==='textbook'?[{...p,name:'씨마스 인공지능 기초',extra:null},{id:'aidt',name:'금성·YBM 정보 교육자료',url:'https://exhibition.codle.io/',image:'actual-textbook.jpg'}]:[p]);
-import {createMosaicObject} from './mosaic-service-art.js?v=6';
+import {createMosaicObject} from './mosaic-service-art.js?v=36';
 const $=s=>document.querySelector(s),reduced=matchMedia('(prefers-reduced-motion: reduce)'),hub=$('.hub'),board=$('.board'),preview=$('.preview');
 const modalContent=$('.preview-content'),closeButton=$('.preview-close'),cover=$('.transition-image');
 const tiles=new Map(),frames=new Map(),volumes=new Map();
@@ -14,29 +14,30 @@ for(const p of products){const [name,image,caption]=visual[p.id],a=document.crea
  a.addEventListener('click',e=>{if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;e.preventDefault();open(p,a)});
 }
 const opening=$('.opening'),copy=$('.opening-copy'),seal=$('.opening-seal'),brand=$('.opening-brand');
-let openingProgress=0,openingFrame=0;
+let openingProgress=0,openingFrame=0,openingSkipped=false;
 const clamp=v=>Math.max(0,Math.min(1,v));
 const ease=v=>v*v*(3-2*v);
 // The central cell and all six neighbouring cells share one changing grid.
 const outline=$('.opening-grid');
 for(const p of products){const cell=document.createElement('span');cell.className='outline-cell '+p.id;outline.append(cell)}
-const core=document.createElement('div');core.className='mosaic-core';board.append(core);const composition=document.createElement('div');composition.className='opening-composition';core.append(composition);composition.append(brand,copy);outline.hidden=true;seal.hidden=true;
+const core=document.createElement('div');core.className='mosaic-core';board.append(core);const composition=document.createElement('div');composition.className='opening-composition';core.append(composition);composition.append(brand,copy);const coreOutline=document.createElement('span');coreOutline.className='outline-cell core';outline.append(coreOutline);outline.hidden=false;seal.hidden=true;
 const finalSizes={platform:[.40,.42],contents:[.34,.58],textbook:[.26,.42],aidt:[.26,.58],camp:[.51,.42],jitda:[.23,.58]};
 const entryStarted=performance.now(),logoLines=[...brand.querySelectorAll('.logo-line')],logoSolid=brand.querySelector('.logo-solid');
-let layoutWidth=0,layoutHeight=0,drawnProgress=null,lastOpeningTime=0;
+let layoutWidth=0,layoutHeight=0,drawnProgress=null;
+// One continuous unfold: logo compression, card colour and seams share progress.
+function openingTimeline(age,instant=false){return instant?1:.9*ease(clamp((age-3540)/2100))}
 function updateOpening(now=performance.now()){
- openingFrame=0;const rect=opening.getBoundingClientRect(),distance=opening.offsetHeight-innerHeight;
- openingProgress=reduced.matches?1:clamp(-rect.top/Math.max(1,distance));
+ openingFrame=0;
+ openingProgress=openingTimeline(now-entryStarted,openingSkipped||reduced.matches||innerWidth<=600);
  const desktop=innerWidth>600;
  const gutter=desktop?Math.max(6,Math.min(12,innerWidth*.0075)):0;
- if(desktop)board.style.gap=gutter+'px';
- const delta=Math.min(64,Math.max(1,now-lastOpeningTime));lastOpeningTime=now;
- if(drawnProgress===null||reduced.matches)drawnProgress=openingProgress;
- else drawnProgress+=(openingProgress-drawnProgress)*(1-Math.exp(-delta/55));
- if(Math.abs(drawnProgress-openingProgress)<.0001)drawnProgress=openingProgress;
+ if(desktop){board.style.gap=gutter+'px';outline.style.gap=gutter+'px'}
+ drawnProgress=openingProgress;
  const intro=reduced.matches?1:clamp((now-entryStarted)/1900);
- // Only scrolling changes the grid; the entry clock draws the logo without moving its cell.
+ const copyReveal=reduced.matches?1:ease(clamp((now-entryStarted-2020)/520));
+ // A single entry clock draws the logo, reveals the copy, then unfolds the hub.
  const t=clamp(drawnProgress/.9);
+ outline.hidden=true;
  const drawing=Math.max(intro,clamp(drawnProgress/.16));
  const stroke=ease(clamp(drawing/.82));
  for(const line of logoLines)line.style.strokeDashoffset=1.01*(1-stroke);
@@ -44,13 +45,13 @@ function updateOpening(now=performance.now()){
  const columns=[17+6*t,66-49*t,10+24*t,7+19*t];
  const rows=[8+24*t,6+4*t,72-56*t,14+28*t];
  if(desktop){
-  for(const grid of [board]){grid.style.gridTemplateColumns=columns.map(v=>v+'fr').join(' ');grid.style.gridTemplateRows=rows.map(v=>v+'fr').join(' ')}
+  for(const grid of [board,outline]){grid.style.gridTemplateColumns=columns.map(v=>v+'fr').join(' ');grid.style.gridTemplateRows=rows.map(v=>v+'fr').join(' ')}
  }
  const bw=board.clientWidth,bh=board.clientHeight;
  if(bw!==layoutWidth||bh!==layoutHeight){
   layoutWidth=bw;layoutHeight=bh;
   for(const product of products){const stage=tiles.get(product.id).querySelector('.object-stage'),[w,h]=finalSizes[product.id];
-   if(desktop){stage.style.width=bw*w*(product.id==='contents'?1.12:.94)+'px';stage.style.height=Math.max(60,bh*h-74)+'px'}
+   if(desktop){stage.style.width=bw*w*(product.id==='contents'?1.12:.94)+'px';stage.style.height=Math.max(60,bh*h-106)+'px'}
   }
   for(const stage of volumes.values()){stage.resize();stage.render(elapsed,.033,true)}
  }
@@ -61,10 +62,10 @@ function updateOpening(now=performance.now()){
  const copyWidth=Math.min(780,bw*.64);
  copy.style.width=copyWidth+'px';
  const copyHeight=copy.offsetHeight;
- const gap=Math.max(30,Math.min(52,bh*.065));
- const padding=Math.min(28,baseHeight*.08);
+ const gap=Math.max(22,Math.min(36,bh*.045));
+ const padding=Math.min(16,baseHeight*.04);
  const ratio=304.29/774.61;
- const desiredWidth=desktop?Math.min(680,baseWidth*.85):Math.min(280,bw*.6);
+ const desiredWidth=desktop?Math.min(820,baseWidth*.96):Math.min(280,bw*.6);
  const reserve=copyHeight+gap;
  const logoHeight=Math.max(1,Math.min(desiredWidth*ratio,baseHeight-padding*2-reserve));
  // The entire composition shares the cell's physical compression, not separate scale curves.
@@ -76,24 +77,29 @@ function updateOpening(now=performance.now()){
  brand.style.left='50%';brand.style.top=logoY+'px';
  brand.style.transform='translate(-50%,-50%)';brand.style.opacity=desktop?1:1-t;
  copy.style.left='50%';copy.style.top=(logoY+logoHeight/2+gap+copyHeight/2)+'px';
- copy.style.opacity=(1-fade)*ease(clamp(drawing/.27));
- copy.style.transform='translate(-50%,-50%)';copy.inert=fade>.98;
- board.style.setProperty('--paper-cover',1-ease(clamp((t-.025)/.48)));
- board.style.setProperty('--grid-reveal',ease(clamp(t/.38)));
- $('.masthead > a').style.opacity=ease(clamp((t-.15)/.5));
+ copy.style.opacity=(1-fade)*copyReveal;
+ copy.style.transform=`translate(-50%,calc(-50% + ${(1-copyReveal)*10}px))`;copy.inert=fade>.98||copyReveal===0;
+ board.style.setProperty('--paper-cover',1-t);
+ board.style.setProperty('--grid-reveal',t);
+ const headerReveal=desktop&&!reduced.matches?ease(clamp((t-.8)/.2)):1;
+ $('.masthead').style.opacity=headerReveal;
+ $('.masthead').inert=headerReveal<.98;
+ $('.explore-link').style.opacity=(1-fade)*copyReveal;
+ $('.explore-link').inert=fade>.98||copyReveal===0;
+ board.classList.toggle('is-revealed',t>.95);
  for(const product of products){const tile=tiles.get(product.id),stage=tile.querySelector('.object-stage');
   tile.style.opacity=1;tile.inert=t<.98;tile.classList.toggle('art-arrived',t>.82);volumes.get(product.id)?.setProgress(t);
   tile.querySelector('.tile-label').style.opacity=ease(clamp((t-.65)/.30));
-  const fit=desktop?Math.max(.01,Math.min(1,(tile.clientWidth-24)/stage.offsetWidth,(tile.clientHeight-70)/stage.offsetHeight)):1;
-  stage.style.opacity=ease(clamp(t/.12));
+  const fit=desktop?Math.max(.01,Math.min(1,(tile.clientWidth-24)/stage.offsetWidth,(tile.clientHeight-106)/stage.offsetHeight)):1;
+  stage.style.opacity=ease(clamp((t-.12)/.76));
   stage.style.transform=`translate(-50%,-50%) scale(${fit})`;
 
  }
- if(drawnProgress!==openingProgress||intro<1)queueOpening();
+ if(openingProgress<.9||intro<1||copyReveal<1)queueOpening();
 }
 function queueOpening(){if(!openingFrame)openingFrame=requestAnimationFrame(updateOpening)}
-addEventListener('scroll',queueOpening,{passive:true});addEventListener('resize',queueOpening);reduced.addEventListener('change',queueOpening);
-$('.skip-link').addEventListener('click',e=>{e.preventDefault();scrollTo({top:opening.offsetTop+opening.offsetHeight-innerHeight,behavior:'instant'});requestAnimationFrame(()=>{drawnProgress=null;updateOpening();tiles.values().next().value.focus({preventScroll:true})})});
+addEventListener('resize',queueOpening);reduced.addEventListener('change',queueOpening);
+$('.skip-link').addEventListener('click',e=>{e.preventDefault();openingSkipped=true;scrollTo({top:opening.offsetTop,behavior:'instant'});requestAnimationFrame(()=>{updateOpening();tiles.values().next().value.focus({preventScroll:true})})});
 updateOpening();
 document.fonts.ready.then(queueOpening);
 
