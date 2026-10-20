@@ -196,7 +196,7 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
  .board{background:rgba(245,243,237,var(--grid-reveal))}
  .board .tile.platform{background:#e1e8f5;color:#253144}
  .board .tile.contents{background:#efd2bd;color:#493c35}
- .board .tile.textbook{background:#e3dce6;color:#3f3544}
+ .board .tile.textbook{background:#dfbfd2;color:#65314f}
  .board .tile.aidt{background:#dce6de;color:#293f3c}
  .board .tile.camp{background:#253955;color:#fffdf5}
  .board .tile.jitda{background:#f1ede2;color:#493b2e}
@@ -246,8 +246,8 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 .tile.art-active .motion-tool{transform:translateY(-3px);transition-delay:var(--tool-delay,0ms)}
 .tile.art-active .motion-card-back{transform:translate(-5px,-5px) rotate(-3deg)}
 .tile.art-active .motion-card-front{transform:translate(5px,4px) rotate(2deg)}
-.tile.art-active .motion-page-left{transform:rotate(-2deg)}
-.tile.art-active .motion-page-right{transform:rotate(2deg)}
+.tile.art-active .motion-page-left{transform:none}
+.tile.art-active .motion-page-right{transform:none}
 .tile.art-active .motion-shape-a{transform:translateY(-4px)}
 .tile.art-active .motion-shape-b{transform:rotate(4deg)}
 .tile.art-active .motion-student-left{transform:translate(3px,1px) rotate(2deg)}
@@ -269,3 +269,15 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 
 /* Preserve the approved camp contour: filling its open shoulders changes the scene. */
 .tile.camp.art-active .editorial-art path{stroke-opacity:1}
+
+/* Desktop hub fills the viewport; service navigation remains in the sections below. */
+@media(min-width:601px){
+ .masthead{display:none}
+ .opening-grid,.board{inset:0}
+ .service-detail,#service-guide,#questions{scroll-margin-top:24px}
+}
+
+/* The face peeks out only when the helmet is engaged. */
+.editorial-art .jitda-face{opacity:0;transform-box:fill-box;transform-origin:center top;transform:translateY(-12px) scale(.78);transition:opacity 140ms ease,transform 200ms ease}
+.tile.art-active .jitda-face{opacity:1;transform:translateY(0) scale(1);transition:opacity 180ms ease 70ms,transform 380ms cubic-bezier(.18,1.5,.38,1) 50ms}
+@media(prefers-reduced-motion:reduce){.editorial-art .jitda-face,.tile.art-active .jitda-face{transform:none;transition:none}}

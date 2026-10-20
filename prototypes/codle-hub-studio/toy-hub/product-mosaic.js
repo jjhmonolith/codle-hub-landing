@@ -1,6 +1,6 @@
 import {products as originalProducts} from './catalog.js?v=4';
 const products=originalProducts.flatMap(p=>p.id==='textbook'?[{...p,name:'씨마스 인공지능 기초',extra:null},{id:'aidt',name:'금성·YBM 정보 교육자료',url:'https://exhibition.codle.io/',image:'actual-textbook.jpg'}]:[p]);
-import {createMosaicObject} from './mosaic-service-art.js?v=56';
+import {createMosaicObject} from './mosaic-service-art.js?v=59';
 const $=s=>document.querySelector(s),reduced=matchMedia('(prefers-reduced-motion: reduce)'),hub=$('.hub'),board=$('.board'),preview=$('.preview');
 const modalContent=$('.preview-content'),closeButton=$('.preview-close'),cover=$('.transition-image');
 const tiles=new Map(),frames=new Map(),volumes=new Map();
@@ -86,7 +86,7 @@ function updateOpening(now=performance.now()){
  const logoY=(baseHeight-reserve*(1-recenter))/2;
  brand.style.width=logoHeight/ratio+'px';brand.style.height=logoHeight+'px';
  brand.style.left='50%';brand.style.top=logoY+'px';
- brand.style.transform='translate(-50%,-50%)';brand.style.opacity=desktop?1:1-t;
+ brand.style.transform=`translate(-50%,-50%) scale(${desktop?1-.2*recenter:1})`;brand.style.opacity=desktop?1:1-t;
  copy.style.left='50%';copy.style.top=(logoY+logoHeight/2+gap+copyHeight/2)+'px';
  copy.style.opacity=(1-fade)*copyReveal;
  copy.style.transform=`translate(-50%,calc(-50% + ${(1-copyReveal)*10}px))`;copy.inert=fade>.98||copyReveal===0;
