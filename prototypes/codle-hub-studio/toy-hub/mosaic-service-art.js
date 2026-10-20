@@ -60,3 +60,8 @@ export async function createMosaicObject(mount,id){
   sync();
  }};
 }
+
+// Reuse the same artwork in the service directory, with isolated SVG references.
+export function serviceIllustration(id){
+ return artists[id]().replace(/id="([^"]+)"/g,(_,key)=>`id="guide-${key}"`).replace(/url\(#([^)]+)\)/g,(_,key)=>`url(#guide-${key})`);
+}

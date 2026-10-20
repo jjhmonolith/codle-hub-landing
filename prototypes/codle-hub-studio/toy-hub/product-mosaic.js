@@ -1,6 +1,6 @@
 import {products as originalProducts} from './catalog.js?v=4';
 const products=originalProducts.flatMap(p=>p.id==='textbook'?[{...p,name:'씨마스 인공지능 기초',extra:null},{id:'aidt',name:'금성·YBM 정보 교육자료',url:'https://exhibition.codle.io/',image:'actual-textbook.jpg'}]:[p]);
-import {createMosaicObject} from './mosaic-service-art.js?v=59';
+import {createMosaicObject,serviceIllustration} from './mosaic-service-art.js?v=60';
 const $=s=>document.querySelector(s),reduced=matchMedia('(prefers-reduced-motion: reduce)'),hub=$('.hub'),board=$('.board'),preview=$('.preview');
 const modalContent=$('.preview-content'),closeButton=$('.preview-close'),cover=$('.transition-image');
 const tiles=new Map(),frames=new Map(),volumes=new Map();
@@ -135,3 +135,8 @@ closeButton.addEventListener('click',close);document.addEventListener('keydown',
 addEventListener('resize',()=>{for(const stage of volumes.values()){stage.resize();stage.render(elapsed,.033,true)}});reduced.addEventListener('change',()=>{for(const stage of volumes.values()){stage.setPointer();stage.render(0,.033,true)}});
 
 $('.preview-info').addEventListener('click',e=>{e.preventDefault();const id=opened?.id;close();setTimeout(()=>$('#service-'+id)?.scrollIntoView({behavior:reduced.matches?'instant':'smooth',block:'start'}),reduced.matches?0:900)});
+
+for(const id of ['platform','contents','textbook','aidt','camp','jitda']){
+ const article=document.getElementById(`service-${id}`);
+ const art=document.createElement('div');art.className=`service-art ${id}`;art.setAttribute('aria-hidden','true');art.innerHTML=serviceIllustration(id);article.prepend(art);
+}
