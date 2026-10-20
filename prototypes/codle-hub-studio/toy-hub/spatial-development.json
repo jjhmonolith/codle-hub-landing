@@ -1,87 +1,570 @@
 {
   "updated": "2026-10-19",
-  "status": "jitda-desktop-review-ready",
-  "currentPass": "Jitda desktop shared-workstation refinement. App78. Read jitda-shared-desk-review-2026-10-19.json first; previous broad review is historical.",
+  "status": "spaced-layers-desktop-review-ready",
+  "currentPass": "Reduced crowded overlapping planes: increased world depth spacing, reduced main landing size, moved supporting content to opposing edges and limited far visibility through distance fog. User visual acceptance remains pending.",
   "budget": {
-    "weeklyUsedAtStart": 26,
-    "weeklyUsedAfterReview": 28,
+    "weeklyUsedAtStart": 42,
+    "weeklyUsedAfterReview": 43,
     "stopNewWorkAtUsedPercent": 58,
     "userMaximumUsedPercent": 60,
-    "creditsOrResetsUsed": false
+    "creditsOrResetsUsed": false,
+    "weeklyUsedAtResume": 41
   },
   "versions": {
-    "app": 78,
-    "toys": 24,
+    "activeEntry": "hub.js?v=13",
+    "hub": 13,
+    "hubCSS": 10,
+    "toys": 25,
     "catalog": 4,
-    "landingSurface": 50,
-    "volumeWorlds": 49,
-    "studioScenes": 14,
-    "sceneAtmosphere": 3,
-    "spatialSceneMotion": 15,
-    "spatialChoreography": 8,
-    "preservedSpatialActions": 6,
-    "storyCSS": 9,
-    "productMotionStudy": 34
+    "historicalApp": 78,
+    "portalTools": 1,
+    "depthGallery": 4,
+    "depthFlight": 2,
+    "inkCurtain": 3
   },
-  "backup": "revisions/before-coherent-studio",
-  "latestUserDirection": "Jitda desktop only. User explicitly deferred mobile work/testing and requested shorter focused iterations.",
+  "backup": "revisions/before-spaced-layers",
+  "latestUserDirection": "Everything overlaps and distances are too close. Give the layers breathing room.",
   "completed": [
-    "Original logo models and platform factory retained byte-for-byte; platform tools keep their spatial spread and camera passage.",
-    "Removed five WebGL website-poster planes. Native product scenes remain present during their usable portal interval.",
-    "A current-scene WebGL capture expands into the already-mounted real iframe; closing restores the captured scene and focus.",
-    "24 authentic covers keep their large diagonal foreground passes, then open into three staggered shallow arcs. Final outer covers fit the frame; the fan holds instead of clearing for a website rectangle.",
-    "Contents recedes outward/upward into depth before the next book arrives; the book remains opaque once readable so its internal page cannot ghost through the closed cover.",
-    "Textbook uses a neutral Codle cover, authentic printed page 33, curved leaf and two raised river banks. Original activity characters ride ceramic pieces and a modeled boat. Publisher artwork is not the chapter hero.",
-    "Camp replaces the globe with a continuous physical route through learning, code and an assembling project; upright flag, paper plane and polished tools. Portrait uses a diagonal route. The arch is attached to its base.",
-    "Camp portal uses projected 3D bounds, including the raised flag and plinths; its button sits clear of the foreground objects.",
-    "Jitda uses its authentic official public prompt/result demo. Four cropped original UI quadrants assemble after two strikes. Original side-character contours have rounded volumes, readable reflective dark features, separated pickaxe and visible contact.",
-    "Different continuous lighting rooms: violet content corridor, blue/ivory textbook aperture, teal camp horizon and warm charcoal Jitda workspace. Corrected last-room clamp that left half of camp lighting in Jitda.",
-    "Each mesh gets independent local fading; river-piece opacity no longer affects shared book material. Mobile clipping and portrait UI emphasis corrected."
+    "Simplified the opening to the two original logo models. Reduced and repositioned their shared plane so both fit inside the Codle aperture. Screens and tool solids emerge later as the aperture opens.",
+    "Removed grain and high-frequency displacement from the ink edge, reduced feather width and increased the vector distance field to 1024 pixels for a smoother expanding contour.",
+    "Used the existing scene fog to reveal depth imagery from the background rather than multiplying images to black. Adjusted opening header contrast timing.",
+    "Actual browser inspection found WebP planes uploading as black rectangles. Explicit decoded ImageBitmap textures restored their colours. Native image dimensions are retained; SVG bitmap conversion specifies its natural display dimensions. No assets were upscaled or replaced.",
+    "Preserved the five destinations, original model geometry, camera flight and existing landing expansion/close. No mobile work, commit, push, PR or deployment."
   ],
   "verified": [
-    "Actual localhost browser: original logo opening, full hero hold, preserved platform, content foreground passage/fan and all three rebuilt product holds at the normal 1280x720 browser viewport.",
-    "Actual forward/reverse wheel positions at contents/book, book/camp and camp/Jitda boundaries. Before/after evidence saved for thumbnail overlap. No active page link remains at departing boundaries.",
-    "All five real destinations opened in the actual browser during this redesign. Final Jitda desktop and final camp mobile open/capture/close were rechecked after their respective refinements.",
-    "Current-scene captures are nonempty WebP images. Final camp mobile capture 351x264; Jitda desktop capture 701x404. Real external iframe headings verified.",
-    "Five persistent iframes retain loadCount=1. Close restores the same product-link focus, stage.scrollTop=0, scroll position and non-inert main. No horizontal overflow.",
-    "390x844 actual browser: contents fan, textbook activity, camp route, Jitda strike/result and book/camp boundary. Mobile camp button clears the objects; current 3D bounds and open/close verified.",
-    "320x570 actual Jitda hold inspected before later face-material, transition and camp-bounds refinements. Current pure motion checks additionally cover 320x570, 390x844, 768x600, 1265x720, 1440x600 and 1920x1080.",
-    "check-coherent-studio.mjs passes: finite camera-safe poses, persistent native features at page opening, 24 large readable cover passes, >3x near/far size ratio, contained final fan, departing link gating, and exact unchanged logo/platform source hashes.",
-    "Eight runtime JavaScript files pass Node syntax checks. Actual main/mobile browser recorded error logs empty. git diff --check passed using read-only elevated repository access; existing catalog/style LF-to-CRLF notices only.",
-    "Reduced-motion and WebGL failure paths preserved and source-reviewed. System motion preference and WebGL failure were not emulated in this pass. No cold-network or frame-rate claim."
+    "Actual 1280x720 browser: original two-logo opening, expanded aperture, central hero and first platform entrance reviewed. Screenshots saved for the opening and hero.",
+    "All five destination controls reached their named interactive links in order after the texture correction. All 17 source images loaded and original WebGL was ready.",
+    "No new browser errors recorded after the current build was written. A retained error from the preceding SVG bitmap attempt is explicitly separated in calm-opening-review-2026-10-19.json.",
+    "Changed JavaScript syntax checks passed. Mobile, measured frame rate and cold-network testing were not performed."
   ],
   "pending": [
-    "High-resolution original content covers will be supplied later by the user; existing authentic files were not replaced, fabricated or upscaled.",
-    "This is a reviewable implemented direction. Visual taste remains for user review; functional validation does not imply user approval of final art direction."
+    "User visual review of the quieter opening and overall layer direction.",
+    "High-resolution content originals later.",
+    "Mobile remains deferred."
   ],
   "constraints": [
     "sources read-only",
     "Preserve user changes",
-    "No commit/push/PR/deploy",
-    "Preserve logos, hero and five destinations",
-    "Preserve iframe preload/open/close",
-    "Preserve mobile and reduced-motion alternatives",
+    "One local checkpoint authorized and completed; subsequent hub edits remain uncommitted",
+    "No push, PR or deploy",
+    "Preserve original logos and five actual destinations",
+    "Preserve iframe preload/open/close and static alternatives",
+    "Mobile development deferred",
     "No subagents"
   ],
-  "latestReview": "jitda-shared-desk-review-2026-10-19.json",
-  "automationNote": "Existing automation was not resumed by this direct user-requested pass. Before any future automated work, follow this record and the latest human feedback; do not restore the old globe/poster renderer.",
+  "latestReview": "proof-spaced-platform-2026-10-19.png",
+  "automationNote": "Automation 3d remains PAUSED. Current hub v13 reduces overlap and increases depth spacing; overall visual direction awaits user feedback.",
   "historicalScripts": [
     "scripts/update-product-feedback.py",
     "scripts/finalize-product-feedback.py",
     "scripts/record-spatial-development.py"
   ],
-  "currentMotionChecks": "check-spatial-journey.mjs describes the historical poster-plane architecture. check-coherent-studio.mjs is the current spatial contract.",
+  "currentMotionChecks": "Current runtime hub.js?v=7. See layered-depth-review-2026-10-19.json. Earlier portal/stack reviews describe superseded versions.",
   "latestChanges": [
-    "Character and UI now share the same bench parent and its depth/orientation.",
-    "Continuous worktop extends beneath both, with contact shadows on its actual top surface.",
-    "Removed final character drift/raise away from the UI; character stays beside its interface.",
-    "Pickaxe lower tip meets the shared work edge at both strikes; dust position follows that contact.",
-    "UI and character respond subtly to the same impact as authentic result quadrants assemble.",
-    "Desktop composition resized for caption clearance. Expansion captures the whole shared workstation."
+    "Product depth separation 1800 to 3000; first plane 1800 to 2600. Main widths reduced from .70-.80 to .60-.66.",
+    "Side imagery spread across different heights and depth intervals. Distance fog hides distant clutter while approaching planes remain bright.",
+    "Camera clears all 14 supporting planes and 5 product stops. Existing original models and modal logic retained."
   ],
   "latestVerification": [
-    "Actual desktop browser at strike phase .165 and settled phase .78.",
-    "Actual main page final Jitda scene and real iframe expansion/close. Current-scene capture 1058x404, all five iframe load counts remain one, focus restored, recorded error log empty.",
-    "Changed JS syntax and current motion contract pass. No mobile browser inspection or responsive development was performed."
-  ]
+    "Actual browser: all five landing compositions inspected at current 900x940 panel; native scroll reviewed between platform and content.",
+    "Jitda real landing expansion verified.",
+    "Changed JS syntax passes. Camera clearance checks pass at viewport aspects 1, 16/9, 2.4; maximum continuous normalized step .00171.",
+    "No mobile or measured FPS testing; no commit/push/deploy."
+  ],
+  "history": [
+    {
+      "updated": "2026-10-19",
+      "status": "three-product-scenes-rejected-concept-review",
+      "currentPass": "Produced an image-generated preview-only concept storyboard in this conversation: continuous paper-to-learning transformation; one immersive camp studio; mascot working within the authentic Jitda UI. This is conceptual artwork, not implemented software or production assets. Main runtime remains App78. Use subsequent human feedback before treating this art direction as accepted.",
+      "versions": {
+        "app": 78,
+        "toys": 24,
+        "catalog": 4,
+        "landingSurface": 50,
+        "volumeWorlds": 49,
+        "studioScenes": 14,
+        "sceneAtmosphere": 3,
+        "spatialSceneMotion": 15,
+        "spatialChoreography": 8,
+        "preservedSpatialActions": 6,
+        "storyCSS": 9,
+        "productMotionStudy": 34
+      },
+      "latestReview": "jitda-shared-desk-review-2026-10-19.json",
+      "latestChanges": [
+        "Character and UI now share the same bench parent and its depth/orientation.",
+        "Continuous worktop extends beneath both, with contact shadows on its actual top surface.",
+        "Removed final character drift/raise away from the UI; character stays beside its interface.",
+        "Pickaxe lower tip meets the shared work edge at both strikes; dust position follows that contact.",
+        "UI and character respond subtly to the same impact as authentic result quadrants assemble.",
+        "Desktop composition resized for caption clearance. Expansion captures the whole shared workstation."
+      ],
+      "latestVerification": [
+        "Actual desktop browser at strike phase .165 and settled phase .78.",
+        "Actual main page final Jitda scene and real iframe expansion/close. Current-scene capture 1058x404, all five iframe load counts remain one, focus restored, recorded error log empty.",
+        "Changed JS syntax and current motion contract pass. No mobile browser inspection or responsive development was performed."
+      ]
+    },
+    {
+      "updated": "2026-10-19",
+      "status": "short-hub-desktop-review-ready",
+      "currentPass": "Checkpointed the prior spatial prototype locally, then replaced the long five-product presentation with a short original-logo opening and one shared hero/selection composition. This is an implemented direction for user review, not a claim of final visual approval.",
+      "versions": {
+        "activeEntry": "hub.js?v=3",
+        "hub": 3,
+        "hubCSS": 3,
+        "toys": 24,
+        "catalog": 4,
+        "historicalApp": 78
+      },
+      "latestReview": "hub-review-2026-10-19.json",
+      "latestChanges": [
+        "index.html now loads hub.js and hub.css only, plus the original logo module and catalog.",
+        "Removed active worker preload and all five-product 3D-world imports from the main runtime.",
+        "Added shared choice composition and source-image expansion with stable focus/scroll return."
+      ],
+      "latestVerification": [
+        "proof-hub-opening-2026-10-19.png",
+        "proof-hub-selection-2026-10-19.png",
+        "proof-hub-platform-open-2026-10-19.png",
+        "hub-review-2026-10-19.json"
+      ]
+    },
+    {
+      "updated": "2026-10-19",
+      "status": "shared-fan-hub-desktop-review-ready",
+      "currentPass": "Replaced five disconnected positions and alternating side entries with one shared deck and continuous elliptical fan. The platform anchors the front centre; inner and outer pairs unfold along the same arc with a short release delay. Hero makes room as the fan opens. Final composition has one slight shared lean and restrained overlap.",
+      "versions": {
+        "activeEntry": "hub.js?v=4",
+        "hub": 4,
+        "hubCSS": 4,
+        "toys": 24,
+        "catalog": 4,
+        "historicalApp": 78
+      },
+      "latestReview": "fan-hub-review-2026-10-19.json",
+      "latestChanges": [
+        "All five cards begin in a small shared deck below the hero. Platform is in front; four supporting destinations release outward in paired succession.",
+        "Desktop positions are derived from one ellipse with one shared lean, replacing five separately chosen coordinates and alternating slide directions.",
+        "Hero moves gently upward as the deck opens. No idle floating animation and no extra product chapters.",
+        "Selected card rises and straightens slightly; its neighbours make a small amount of room. Product names and arrows stay together in visible areas below the fan.",
+        "Card size and horizontal arc radius share a height cap to avoid clipping on short desktop screens. Existing compact alternative retained without mobile design work."
+      ],
+      "latestVerification": [
+        "Actual 1280x720 browser wheel positions: shared deck at scrollY=504, partially opened fan at 662 and complete composition at 936. Screenshots saved for all three phases.",
+        "Final default-desktop view: all five product bounds inside the viewport, all source images loaded, no horizontal overflow and recorded error log empty.",
+        "Five native Tab presses reach all five products with scrollY=936 and gallery ready. Enter opens real Jitda; Escape restores source focus.",
+        "Outer textbook card clicked and its actual live landing opened; close restores its source focus. All five persistent iframe load counts remain 1.",
+        "New hub JavaScript passes Node syntax check; tracked repository diff check passed.",
+        "No browser viewport override was applied. Shorter desktop size cap was source-reviewed; no mobile browser QA or responsive art-direction work in this pass."
+      ]
+    },
+    {
+      "updated": "2026-10-19",
+      "status": "sequential-dropping-hub-review-ready",
+      "currentPass": "Adapted the public Osmo Dropping Cards Loading Animation preview: a front card peels down and briefly towards the viewer, exposing the next card. Five genuine landing previews leave the common bank in product order, then remain together as selectable entrances. This is a short timed entry gesture, not five long product chapters or an exact copy of the gated resource.",
+      "versions": {
+        "activeEntry": "hub.js?v=5",
+        "hub": 5,
+        "hubCSS": 5,
+        "toys": 24,
+        "catalog": 4,
+        "historicalApp": 78
+      },
+      "completed": [
+        "Original logo source/models retained unchanged. Old app and product scenes remain available in the checkpoint and on disk.",
+        "Active journey reduced from 1100svh to 230svh. All five destinations appear together around the same central hero; no per-product chapters or scene props are loaded by the new entry.",
+        "Five genuine landing screenshots use a restrained asymmetric composition, brief shared entry and hover/focus response. No ambient card-floating animation.",
+        "Five actual pages retain staggered preload and persistent iframes. Expanding source imagery straightens into the live page; closing restores the source choice and focus.",
+        "Native focus settles the shared selection view so browser automatic scrolling cannot move an off-centre choice back into the intro.",
+        "Existing reduced-motion/WebGL-failure alternatives retain all five links. No new mobile art-direction or mobile browser QA in this pass."
+      ],
+      "latestReview": "dropping-hub-review-2026-10-19.json",
+      "latestChanges": [
+        "Viewed the actual public Osmo preview video in the browser. No gated source code accessed.",
+        "Replaced simultaneous scroll-scrubbed fan opening with a single 2.16-second desktop sequence triggered after the hero. New card release every .34 seconds; each fall lasts .64 seconds.",
+        "The front card gains scale and a small X-axis pitch as it drops from the bank, then settles into its final entrance. Departing fronts expose later previews in platform/content/textbook/camp/Jitda order.",
+        "Unreleased bank cards advance continuously instead of jumping between stack ranks. Captions appear after each card lands.",
+        "Hero makes room before the bank appears. Returning near the intro resets the sequence; settled cards remain still and retain hover/focus and live landing expansion.",
+        "Original logos and final five-choice hub retained. No extra product chapters, commit, push, PR, deployment or mobile art-direction work."
+      ],
+      "latestVerification": [
+        "Actual 1280x720 browser: seven consecutive wheel-driven screenshots sampled the timed sequence. Moving card pairs progressed platform -> content -> textbook -> camp -> Jitda, as recorded in dropping-hub-review-2026-10-19.json.",
+        "Final settled browser view: all five product bounds remain within the viewport, all five links available, no horizontal overflow and recorded error log empty.",
+        "After the pitch/scale entry, the outer textbook card expanded into its real external landing. Closing restored its original link focus. Five persistent iframe load counts stayed one.",
+        "Final JavaScript syntax and tracked repository diff checks passed.",
+        "No mobile browser QA, viewport override, cold-network or frame-rate claim in this pass."
+      ]
+    },
+    {
+      "updated": "2026-10-19",
+      "status": "large-peeling-deck-review-ready",
+      "currentPass": "Removed the final fan and the timed dealing sequence. After the original logos and central hero, one large landing preview fills most of the viewport. Scroll peels that front card fully down and out, revealing the next card in the same place. The final Jitda card stays large; there is no overview spread.",
+      "versions": {
+        "activeEntry": "hub.js?v=6",
+        "hub": 6,
+        "hubCSS": 6,
+        "toys": 24,
+        "catalog": 4,
+        "historicalApp": 78,
+        "portalTools": 1
+      },
+      "latestReview": "full-stack-review-2026-10-19.json",
+      "latestUserDirection": "No final unfolding of all five cards. Follow the reference: front card exits below, next card is revealed behind. Cards should fill the view."
+    },
+    {
+      "updated": "2026-10-19",
+      "status": "logo-portal-mosaic-desktop-review-ready",
+      "currentPass": "Podium-inspired authentic Codle silhouette opens into one product mosaic. The camera visits fixed product rectangles one at a time rather than gathering them into a stack.",
+      "versions": {
+        "activeEntry": "hub.js?v=7",
+        "hub": 7,
+        "hubCSS": 7,
+        "toys": 25,
+        "catalog": 4,
+        "historicalApp": 78,
+        "portalTools": 1
+      },
+      "latestReview": "portal-mosaic-review-2026-10-19.json",
+      "latestUserDirection": "Use Podium: show product screens, original 3D tools, content and Jitda through the Codle logo, enter that logo and continue to the five landings one by one."
+    },
+    {
+      "updated": "2026-10-19",
+      "status": "layered-depth-flow-desktop-review-ready",
+      "currentPass": "Corrected the Podium interpretation: a shared forward journey through overlapping planes, replacing the rejected planar mosaic tour.",
+      "budget": {
+        "weeklyUsedAtStart": 33,
+        "weeklyUsedAfterReview": 34,
+        "stopNewWorkAtUsedPercent": 58,
+        "userMaximumUsedPercent": 60,
+        "creditsOrResetsUsed": false
+      },
+      "versions": {
+        "activeEntry": "hub.js?v=7",
+        "hub": 7,
+        "hubCSS": 7,
+        "toys": 25,
+        "catalog": 4,
+        "historicalApp": 78,
+        "portalTools": 1
+      },
+      "backup": "revisions/before-coherent-studio",
+      "latestUserDirection": "Podium-like flow with overlapping layers. Do not interpret this as a flat collage and a camera visiting each rectangle.",
+      "completed": [
+        "Replaced the rejected planar mosaic camera with a common perspective volume. Every image has a real Z position and is projected through the same 1000px perspective.",
+        "The camera travels forward. Close planes expand faster, leave toward the viewport edges and uncover the next layers; no lateral tour of five isolated large posters.",
+        "Original logo meshes/materials preserved. Added an optional transparent canvas mode that removes the rectangular backdrop and floor shadows only in this layered composition.",
+        "Official 3D tools, six real content covers, book/activity source imagery, camp source imagery, official Jitda mark and UI are placed between the five real landing planes.",
+        "Distant tiny layers fade outside the active depth range. Content covers enlarged; each has an independent depth and overlap.",
+        "Persistent iframe preload/open/close, keyboard destinations and static alternatives retained. No mobile work, commit, push, PR or deployment."
+      ],
+      "verified": [
+        "Actual browser: revisited Podium from the logo through its overlapping image layers to correct the interpretation.",
+        "Actual desktop browser: approved logo geometry with transparent canvas; tool foreground and product background overlap visibly.",
+        "Native wheel verified the first product approach and its large edge exit, revealing the separate overlapping content planes.",
+        "Syntax checks passed for hub.js, toys.js and portal-tools.js.",
+        "Final browser review: last Jitda source is unobstructed after the preceding UI plane clears sideways.",
+        "Actual Jitda iframe document opened from the last source. Close returns to the same product and source focus.",
+        "Final changed JavaScript syntax checks and tracked repository diff check passed. No source assets upscaled."
+      ],
+      "pending": [
+        "User review of the depth-layer movement and its overlap.",
+        "High-resolution content originals remain to be supplied later.",
+        "Mobile remains deferred."
+      ],
+      "constraints": [
+        "sources read-only",
+        "Preserve user changes",
+        "One local checkpoint authorized and completed; subsequent hub edits remain uncommitted",
+        "No push, PR or deploy",
+        "Preserve original logos and five actual destinations",
+        "Preserve iframe preload/open/close and static alternatives",
+        "Mobile development deferred",
+        "No subagents"
+      ],
+      "latestReview": "layered-depth-review-2026-10-19.json",
+      "automationNote": "Automation 3d remains PAUSED. Latest human correction is Podium-style overlapping depth layers. Do not restore a lateral planar mosaic tour or the peeling stack.",
+      "historicalScripts": [
+        "scripts/update-product-feedback.py",
+        "scripts/finalize-product-feedback.py",
+        "scripts/record-spatial-development.py"
+      ],
+      "currentMotionChecks": "Current runtime hub.js?v=7. See layered-depth-review-2026-10-19.json. Earlier portal/stack reviews describe superseded versions.",
+      "latestChanges": [
+        "Replaced the rejected planar mosaic camera with a common perspective volume. Every image has a real Z position and is projected through the same 1000px perspective.",
+        "The camera travels forward. Close planes expand faster, leave toward the viewport edges and uncover the next layers; no lateral tour of five isolated large posters.",
+        "Original logo meshes/materials preserved. Added an optional transparent canvas mode that removes the rectangular backdrop and floor shadows only in this layered composition.",
+        "Official 3D tools, six real content covers, book/activity source imagery, camp source imagery, official Jitda mark and UI are placed between the five real landing planes.",
+        "Distant tiny layers fade outside the active depth range. Content covers enlarged; each has an independent depth and overlap.",
+        "Persistent iframe preload/open/close, keyboard destinations and static alternatives retained. No mobile work, commit, push, PR or deployment.",
+        "Supporting planes clear sideways before the associated landing settles, preserving an unobstructed readable source."
+      ],
+      "latestVerification": [
+        "Actual browser: revisited Podium from the logo through its overlapping image layers to correct the interpretation.",
+        "Actual desktop browser: approved logo geometry with transparent canvas; tool foreground and product background overlap visibly.",
+        "Native wheel verified the first product approach and its large edge exit, revealing the separate overlapping content planes.",
+        "Syntax checks passed for hub.js, toys.js and portal-tools.js.",
+        "Final browser review: last Jitda source is unobstructed after the preceding UI plane clears sideways.",
+        "Actual Jitda iframe document opened from the last source. Close returns to the same product and source focus.",
+        "Final changed JavaScript syntax checks and tracked repository diff check passed. No source assets upscaled."
+      ],
+      "checkpoint": {
+        "commit": "ee4c167",
+        "branch": "codex/landing-tiles",
+        "message": "chore: checkpoint spatial landing prototype before hub simplification",
+        "pushed": false
+      }
+    },
+    {
+      "updated": "2026-10-19",
+      "status": "stable-layer-cluster-desktop-review-ready",
+      "currentPass": "Addressed the latest disconnected-image and flickering report: one tightly overlapping forward journey with bounded projection and stable compositing. Implemented and desktop reviewed; visual approval remains with the user.",
+      "budget": {
+        "weeklyUsedAtStart": 35,
+        "weeklyUsedAfterReview": 36,
+        "stopNewWorkAtUsedPercent": 58,
+        "userMaximumUsedPercent": 60,
+        "creditsOrResetsUsed": false
+      },
+      "versions": {
+        "activeEntry": "hub.js?v=8",
+        "hub": 8,
+        "hubCSS": 8,
+        "toys": 25,
+        "catalog": 4,
+        "historicalApp": 78,
+        "portalTools": 1,
+        "layerProjection": 2
+      },
+      "backup": "revisions/before-stable-layer-cluster",
+      "latestUserDirection": "Make images overlap closely like Podium and pass naturally; fix the reported flickering. Preserve logo, hero and actual five destinations. Mobile remains deferred.",
+      "completed": [
+        "Tightened all product and content layers into a shared overlapping cluster with larger content covers and small common offsets.",
+        "Replaced nested CSS perspective with bounded explicit projection and a fixed paint order. Passed planes sweep out sideways; opacity remains stable at one.",
+        "Moved the Codle silhouette reveal to a separate inverse-mask curtain, removing the mask and changing filters from the moving image world.",
+        "Preserved original logo meshes and official 3D tools. Warm actual persistent landing frames near the product stage instead of during the logo opening.",
+        "Fixed the final Jitda stop at rounded scroll coordinates so all five destinations become interactive.",
+        "Restored the existing camp-block asset missing from the served preview. No source assets regenerated or upscaled."
+      ],
+      "verified": [
+        "Actual desktop browser: opening, dense overlapping passage and repeated forward/backward scroll reviewed; no CSS perspective or whole-world mask remains.",
+        "All five destinations reached in order with the next control. Actual Jitda page opened, closed and restored source focus; five persistent iframe load counts stayed one.",
+        "Final reload: all 17 source images loaded, original WebGL logos ready and initial iframe count zero. Recorded browser error log empty.",
+        "Projection checks passed across 32,004 samples at two desktop sizes: finite coordinates, maximum scale 2.45, maximum one-depth-unit step 4.822 pixels and rounded final stop verified.",
+        "Changed JavaScript syntax checks passed. No mobile, cold-network or measured frame-rate claim in this pass."
+      ],
+      "pending": [
+        "User review of the tighter composition and motion.",
+        "High-resolution content originals remain to be supplied later.",
+        "Mobile remains deferred."
+      ],
+      "constraints": [
+        "sources read-only",
+        "Preserve user changes",
+        "One local checkpoint authorized and completed; subsequent hub edits remain uncommitted",
+        "No push, PR or deploy",
+        "Preserve original logos and five actual destinations",
+        "Preserve iframe preload/open/close and static alternatives",
+        "Mobile development deferred",
+        "No subagents"
+      ],
+      "latestReview": "stable-layer-browser-review-2026-10-19.json",
+      "automationNote": "Automation 3d remains PAUSED. Continue from v8 stable layer cluster when requested; do not restore nested CSS perspective, alpha culling or scattered screen offsets.",
+      "historicalScripts": [
+        "scripts/update-product-feedback.py",
+        "scripts/finalize-product-feedback.py",
+        "scripts/record-spatial-development.py"
+      ],
+      "currentMotionChecks": "Current runtime hub.js?v=7. See layered-depth-review-2026-10-19.json. Earlier portal/stack reviews describe superseded versions.",
+      "latestChanges": [
+        "Tightened all product and content layers into a shared overlapping cluster with larger content covers and small common offsets.",
+        "Replaced nested CSS perspective with bounded explicit projection and a fixed paint order. Passed planes sweep out sideways; opacity remains stable at one.",
+        "Moved the Codle silhouette reveal to a separate inverse-mask curtain, removing the mask and changing filters from the moving image world.",
+        "Preserved original logo meshes and official 3D tools. Warm actual persistent landing frames near the product stage instead of during the logo opening.",
+        "Fixed the final Jitda stop at rounded scroll coordinates so all five destinations become interactive.",
+        "Restored the existing camp-block asset missing from the served preview. No source assets regenerated or upscaled."
+      ],
+      "latestVerification": [
+        "Actual desktop browser: opening, dense overlapping passage and repeated forward/backward scroll reviewed; no CSS perspective or whole-world mask remains.",
+        "All five destinations reached in order with the next control. Actual Jitda page opened, closed and restored source focus; five persistent iframe load counts stayed one.",
+        "Final reload: all 17 source images loaded, original WebGL logos ready and initial iframe count zero. Recorded browser error log empty.",
+        "Projection checks passed across 32,004 samples at two desktop sizes: finite coordinates, maximum scale 2.45, maximum one-depth-unit step 4.822 pixels and rounded final stop verified.",
+        "Changed JavaScript syntax checks passed. No mobile, cold-network or measured frame-rate claim in this pass."
+      ],
+      "checkpoint": {
+        "commit": "ee4c167",
+        "branch": "codex/landing-tiles",
+        "message": "chore: checkpoint spatial landing prototype before hub simplification",
+        "pushed": false
+      }
+    },
+    {
+      "updated": "2026-10-19",
+      "status": "asymmetric-layer-field-desktop-review-ready",
+      "currentPass": "Reworked the central deck into a diagonal, off-centre image field after the user rejected the centred composition.",
+      "budget": {
+        "weeklyUsedAtStart": 36,
+        "weeklyUsedAfterReview": 37,
+        "stopNewWorkAtUsedPercent": 58,
+        "userMaximumUsedPercent": 60,
+        "creditsOrResetsUsed": false
+      },
+      "versions": {
+        "activeEntry": "hub.js?v=9",
+        "hub": 9,
+        "hubCSS": 8,
+        "toys": 25,
+        "catalog": 4,
+        "historicalApp": 78,
+        "portalTools": 1,
+        "layerProjection": 3
+      },
+      "backup": "revisions/before-asymmetric-layer-field",
+      "latestUserDirection": "The composition feels awkward because everything is centred. Broaden the placement and the passage through overlapping layers.",
+      "completed": [
+        "Removed the implicit main-plane centering. Landings keep individual resting X/Y offsets, widths and approach angles, rather than returning to one shared middle position.",
+        "Content covers now overlap across unequal upper/lower edges of a diagonal corridor. Several supporting layers extend beyond the viewport, instead of forming a central deck.",
+        "Book, activity and camp source planes follow the same off-centre field. Actual Jitda UI remains behind the final landing so the journey does not end in a blank field.",
+        "Original logos, bounded stable projection, actual landing expansion/close and existing static alternatives preserved. No mobile work, asset generation, commit, push or deployment."
+      ],
+      "verified": [
+        "Actual current desktop panel reviewed: logo entry, platform/content passage, all five landing destinations with different measured resting positions and sizes.",
+        "Actual platform landing opened from the off-centre source; closing restored the source focus and product position.",
+        "Final Jitda composition reviewed after removing a dark trailing logo wordmark. Browser error log empty.",
+        "Projection regression check: 32,004 finite samples, scale capped at 2.45, maximum step 4.783 pixels and retained off-centre resting position. Changed JavaScript syntax passed.",
+        "Mobile remains deferred. No measured frame-rate or cold-network claim."
+      ],
+      "pending": [
+        "User visual review of asymmetric field and passage.",
+        "High-resolution content originals later.",
+        "Mobile remains deferred."
+      ],
+      "constraints": [
+        "sources read-only",
+        "Preserve user changes",
+        "One local checkpoint authorized and completed; subsequent hub edits remain uncommitted",
+        "No push, PR or deploy",
+        "Preserve original logos and five actual destinations",
+        "Preserve iframe preload/open/close and static alternatives",
+        "Mobile development deferred",
+        "No subagents"
+      ],
+      "latestReview": "asymmetric-layer-review-2026-10-19.json",
+      "automationNote": "Automation 3d remains PAUSED. Current entry is hub v9: asymmetric field, off-centre resting landings and stable bounded projection.",
+      "historicalScripts": [
+        "scripts/update-product-feedback.py",
+        "scripts/finalize-product-feedback.py",
+        "scripts/record-spatial-development.py"
+      ],
+      "currentMotionChecks": "Current runtime hub.js?v=7. See layered-depth-review-2026-10-19.json. Earlier portal/stack reviews describe superseded versions.",
+      "latestChanges": [
+        "Removed the implicit main-plane centering. Landings keep individual resting X/Y offsets, widths and approach angles, rather than returning to one shared middle position.",
+        "Content covers now overlap across unequal upper/lower edges of a diagonal corridor. Several supporting layers extend beyond the viewport, instead of forming a central deck.",
+        "Book, activity and camp source planes follow the same off-centre field. Actual Jitda UI remains behind the final landing so the journey does not end in a blank field.",
+        "Original logos, bounded stable projection, actual landing expansion/close and existing static alternatives preserved. No mobile work, asset generation, commit, push or deployment."
+      ],
+      "latestVerification": [
+        "Actual current desktop panel reviewed: logo entry, platform/content passage, all five landing destinations with different measured resting positions and sizes.",
+        "Actual platform landing opened from the off-centre source; closing restored the source focus and product position.",
+        "Final Jitda composition reviewed after removing a dark trailing logo wordmark. Browser error log empty.",
+        "Projection regression check: 32,004 finite samples, scale capped at 2.45, maximum step 4.783 pixels and retained off-centre resting position. Changed JavaScript syntax passed.",
+        "Mobile remains deferred. No measured frame-rate or cold-network claim."
+      ],
+      "checkpoint": {
+        "commit": "ee4c167",
+        "branch": "codex/landing-tiles",
+        "message": "chore: checkpoint spatial landing prototype before hub simplification",
+        "pushed": false
+      }
+    },
+    {
+      "updated": "2026-10-19",
+      "status": "camera-flight-ink-opening-desktop-review-ready",
+      "currentPass": "Implemented a real perspective-camera journey through fixed layers and the newly requested Podium-like ink diffusion at the Codle opening. This is desktop-reviewed work awaiting visual feedback, not final user acceptance.",
+      "budget": {
+        "weeklyUsedAtStart": 38,
+        "weeklyUsedAfterReview": 40,
+        "stopNewWorkAtUsedPercent": 58,
+        "userMaximumUsedPercent": 60,
+        "creditsOrResetsUsed": false
+      },
+      "versions": {
+        "activeEntry": "hub.js?v=10",
+        "hub": 10,
+        "hubCSS": 10,
+        "toys": 25,
+        "catalog": 4,
+        "historicalApp": 78,
+        "portalTools": 1,
+        "depthGallery": 1,
+        "depthFlight": 1,
+        "inkCurtain": 1
+      },
+      "backup": "revisions/before-camera-flight",
+      "latestUserDirection": "Pass between layered images like Podium rather than translating pasted images. At entry, add the softly spreading paint/ink edge shown in the three supplied screenshots while keeping the original logos.",
+      "completed": [
+        "Replaced the flat CSS image projection with one Three.js scene containing fixed textured planes and a perspective camera travelling between them. Original logo and tool canvases feed live textures without changing their models.",
+        "Removed per-card approach/recentering and side-exit animations. The continuous camera clears foreground image edges before crossing their depth; actual 3D clipping and depth testing own occlusion.",
+        "Added an ink-like opening from the authentic Codle vector contour: a signed-distance mask with a soft, locally displaced edge and restrained grain. Inside logos and images stay sharp. Fixed a faint mask-texture rectangle found during actual review.",
+        "Kept the five real destinations, persistent preload, source expansion/close and static alternatives. Reduced overlay labels and removed the heavy gradient over each landing.",
+        "No mobile work, new asset generation, commit, push, PR or deployment."
+      ],
+      "verified": [
+        "Actual Podium browser review: logo opening, overlapping image volume and foreground passage. User-provided three screenshots guided the soft ink edge.",
+        "Actual browser: final ink entry with original live logos; native wheel forward/backward reviewed through camera depths approximately 2263 to 2730 and back to 2270.",
+        "All five destinations reached in order. Actual platform iframe opened; close restored source focus and product position. Five persistent iframe load counts remained one.",
+        "Final browser: all 17 source images loaded, original WebGL ready and recorded error log empty. Desktop panel reviewed; mobile and measured frame-rate testing deferred.",
+        "Changed JavaScript syntax passed. Flight checks verify finite continuous coordinates, five viewing stops, 12 foreground planes clearing the camera path and the rounded final scroll stop."
+      ],
+      "pending": [
+        "User visual review of camera passage and ink edge.",
+        "High-resolution content originals later.",
+        "Mobile remains deferred."
+      ],
+      "constraints": [
+        "sources read-only",
+        "Preserve user changes",
+        "One local checkpoint authorized and completed; subsequent hub edits remain uncommitted",
+        "No push, PR or deploy",
+        "Preserve original logos and five actual destinations",
+        "Preserve iframe preload/open/close and static alternatives",
+        "Mobile development deferred",
+        "No subagents"
+      ],
+      "latestReview": "camera-ink-review-2026-10-19.json",
+      "automationNote": "Automation 3d remains PAUSED. Current hub v10 uses a real camera and fixed Three.js planes plus a signed-distance ink curtain. Do not restore the old CSS plane projector or per-card sweeps.",
+      "historicalScripts": [
+        "scripts/update-product-feedback.py",
+        "scripts/finalize-product-feedback.py",
+        "scripts/record-spatial-development.py"
+      ],
+      "currentMotionChecks": "Current runtime hub.js?v=7. See layered-depth-review-2026-10-19.json. Earlier portal/stack reviews describe superseded versions.",
+      "latestChanges": [
+        "Replaced the flat CSS image projection with one Three.js scene containing fixed textured planes and a perspective camera travelling between them. Original logo and tool canvases feed live textures without changing their models.",
+        "Removed per-card approach/recentering and side-exit animations. The continuous camera clears foreground image edges before crossing their depth; actual 3D clipping and depth testing own occlusion.",
+        "Added an ink-like opening from the authentic Codle vector contour: a signed-distance mask with a soft, locally displaced edge and restrained grain. Inside logos and images stay sharp. Fixed a faint mask-texture rectangle found during actual review.",
+        "Kept the five real destinations, persistent preload, source expansion/close and static alternatives. Reduced overlay labels and removed the heavy gradient over each landing.",
+        "No mobile work, new asset generation, commit, push, PR or deployment."
+      ],
+      "latestVerification": [
+        "Actual Podium browser review: logo opening, overlapping image volume and foreground passage. User-provided three screenshots guided the soft ink edge.",
+        "Actual browser: final ink entry with original live logos; native wheel forward/backward reviewed through camera depths approximately 2263 to 2730 and back to 2270.",
+        "All five destinations reached in order. Actual platform iframe opened; close restored source focus and product position. Five persistent iframe load counts remained one.",
+        "Final browser: all 17 source images loaded, original WebGL ready and recorded error log empty. Desktop panel reviewed; mobile and measured frame-rate testing deferred.",
+        "Changed JavaScript syntax passed. Flight checks verify finite continuous coordinates, five viewing stops, 12 foreground planes clearing the camera path and the rounded final scroll stop."
+      ],
+      "checkpoint": {
+        "commit": "ee4c167",
+        "branch": "codex/landing-tiles",
+        "message": "chore: checkpoint spatial landing prototype before hub simplification",
+        "pushed": false
+      }
+    }
+  ],
+  "checkpoint": {
+    "commit": "ee4c167",
+    "branch": "codex/landing-tiles",
+    "message": "chore: checkpoint spatial landing prototype before hub simplification",
+    "pushed": false
+  }
 }

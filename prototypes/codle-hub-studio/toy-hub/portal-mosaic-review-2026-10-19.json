@@ -1,0 +1,30 @@
+{
+  "runtime": "hub.js?v=6",
+  "reference": "https://podium.global/",
+  "changes": [
+    "Replaced separate full-screen 3D opening with one masked image space on a warm light ground. The actual Codle droplet outline enlarges beyond the viewport.",
+    "Original Codle/Jitda meshes and materials remain unchanged inside a rectangular mosaic tile. A lightweight second renderer uses the same official tool artwork and rounded extruded solids.",
+    "A common camera moves across five fixed image positions, replacing the rejected full-size peeling stack. Art and landing rectangles share the same camera transform.",
+    "Large hero overlays the revealed space briefly before the first product is approached. All five actual links, persistent iframe preload and reduced-motion fallback remain.",
+    "Expansion captures use the transformed visible size. Closing restores the viewed product and focus. Original assets were not upscaled or repainted.",
+    "Source backup saved to revisions/before-podium-portal. No commit, push, PR or deployment."
+  ],
+  "verified": [
+    "Actual desktop browser: the authentic Codle drop silhouette reveals genuine landing imagery, original 3D logo pair, real tool-mark solids and content thumbnails.",
+    "Wheel input verified aperture expansion, full image-space view, hero overlay, then first product focus.",
+    "Next controls verified platform, contents, textbook, camp and Jitda in order. Only the current product is exposed as an interactive link.",
+    "Actual Jitda iframe document opened from the focused image and close restored the same source link and scene.",
+    "Node syntax checks passed for hub.js and portal-tools.js. No mobile QA or measured frame-rate claim."
+  ],
+  "proofs": [
+    "proof-portal-opening-2026-10-19.png",
+    "proof-portal-platform-2026-10-19.png",
+    "proof-portal-jitda-return-2026-10-19.png"
+  ],
+  "notVerified": [
+    "Mobile (deferred by user)",
+    "Measured performance",
+    "Cold-network iframe behavior"
+  ],
+  "weeklyUsedPercent": 33
+}

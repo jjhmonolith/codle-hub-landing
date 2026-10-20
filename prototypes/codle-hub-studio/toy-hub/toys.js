@@ -74,13 +74,13 @@ function shadowTexture(tint='77,73,61',strength=.30){
   return new THREE.CanvasTexture(canvas);
 }
 
-export async function createToyStage(mount){
+export async function createToyStage(mount,{transparent=false,introDock=false}={}){
   const parts=await loadToyParts();
-  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});
+  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:transparent,powerPreference:'high-performance'});
   renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));renderer.toneMapping=THREE.NeutralToneMapping;renderer.toneMappingExposure=1;
-  renderer.setClearColor('#08090d');mount.append(renderer.domElement);
-  const scene=new THREE.Scene();scene.background=new THREE.Color('#08090d');
-  const backdrop=studioBackdrop();scene.add(backdrop);
+  renderer.setClearColor('#08090d',transparent?0:1);mount.append(renderer.domElement);
+  const scene=new THREE.Scene();scene.background=transparent?null:new THREE.Color('#08090d');
+  const backdrop=studioBackdrop();backdrop.visible=!transparent;scene.add(backdrop);
   const camera=new THREE.OrthographicCamera(-5,5,4,-4,.1,100);camera.position.set(0,0,20);
   const environment=studioEnvironment(renderer),glassEnvironment=studioEnvironment(renderer,true);scene.environment=environment.texture;scene.environmentIntensity=.85;
   const ambient=new THREE.HemisphereLight('#ffffff','#c1bba9',.7);scene.add(ambient);
@@ -140,7 +140,8 @@ export async function createToyStage(mount){
   const shadows=[0,1].map(()=>{const mesh=new THREE.Mesh(new THREE.PlaneGeometry(1,.25),new THREE.MeshBasicMaterial({map:texture,transparent:true,depthWrite:false,toneMapped:false}));mesh.position.z=-1;scene.add(mesh);return mesh});
   const contacts=[0,1].map(()=>{const mesh=new THREE.Mesh(new THREE.PlaneGeometry(1,.25),new THREE.MeshBasicMaterial({map:texture,transparent:true,depthWrite:false,toneMapped:false}));mesh.position.z=-.99;scene.add(mesh);return mesh});
   const spills=['33,139,255','235,180,35'].map(tint=>{const mesh=new THREE.Mesh(new THREE.PlaneGeometry(1,.25),new THREE.MeshBasicMaterial({map:shadowTexture(tint,.36),transparent:true,depthWrite:false,toneMapped:false}));mesh.position.z=-.98;scene.add(mesh);return mesh});
-  let w=0,h=0;
+  let w=0,h=0,dockProgress=0,dockTargets=[];
+  function setDock(progress=0,targets=[]){dockProgress=clamp(progress);dockTargets=targets}
   function resize(){w=mount.clientWidth;h=mount.clientHeight;renderer.setSize(w,h);backdrop.scale.set(w/100,h/100,1);camera.left=-w/200;camera.right=w/200;camera.top=h/200;camera.bottom=-h/200;camera.updateProjectionMatrix()}
   resize();
   let lost=false;
@@ -155,14 +156,14 @@ export async function createToyStage(mount){
     lastP=p;lastEntry=entry;lastSeconds=seconds;lastAmbient=ambientSeconds;if(lost)return;
     const follow=1-Math.exp(-Math.min(dt,.064)*5.5);
     pointer.easedX=mix(pointer.easedX,pointer.x,follow);pointer.easedY=mix(pointer.easedY,pointer.y,follow);
-    const mobile=w<700,unit=Math.min(w*(mobile?.68:.42),h*(mobile?.42:.54),560);
+    const mobile=w<700,unit=introDock?Math.min(w*.36,h*.34,420):Math.min(w*(mobile?.68:.42),h*(mobile?.42:.54),560);
     const story=storyAt(p);
     const uniforms=backdrop.material.uniforms;
     uniforms.time.value=ambientSeconds;uniforms.focus.value=story.title;uniforms.gold.value=story.gold;
     uniforms.poolSize.value.set(unit/w*1.30,unit/h*.82);
     uniforms.poolStrength.value=mix(1,.28,story.release)*smooth(0,.5,entry);
     key.position.set(-4+pointer.easedX*.7,7-pointer.easedY*.5,8);
-    const initial=[{x:mobile?w*.34:w/2-unit*.44,y:h*(mobile?.40:.445)},
+    const initial=introDock?[{x:w/2-unit*.44,y:h*.31},{x:w/2+unit*.46,y:h*.38}]:[{x:mobile?w*.34:w/2-unit*.44,y:h*(mobile?.40:.445)},
       {x:mobile?w*.65:w/2+unit*.46,y:h*(mobile?.56:.54)}];
     const parked=[{x:w*(mobile?.08:.055),y:h*(mobile?.23:.23)},
       {x:w*(mobile?.94:.95),y:h*(mobile?.72:.77)}];
@@ -191,9 +192,18 @@ export async function createToyStage(mount){
         mix(i===0?-.16:.12,i===0?.55:-.44,travel)+pointer.easedX*.10*look+direction*macro*.5+direction*.55*revealTurn,
         mix(i===0?.12:-.13,i===0?-.28:.23,travel)-pointer.easedX*.025*look);
       rotation.setFromAxisAngle(turnAxes[i],direction*Math.sin(phase)*idle*(i===0?.14:.12));group.quaternion.premultiply(rotation);
+      if(introDock&&dockProgress>0&&dockTargets[i]){
+        const target=dockTargets[i],q=smoother(0,1,dockProgress);
+        const x=bezier(px,px+direction*unit*.28,target.x,target.x,q);
+        const y=bezier(py,py-unit*.23,target.y+unit*.18,target.y,q);
+        group.position.set((x-w/2)/100,(h/2-y)/100,i===0?0:.36);
+        group.scale.setScalar(mix(scale,target.size/100,q));
+        group.quaternion.slerp(new THREE.Quaternion(),q*.85);
+      }
+
       const pool=i===0?uniforms.bluePool:uniforms.goldPool;pool.value.set(px/w,1-(py+unit*.35)/h);
       const grounded=(1-smooth(.0,.85,travel))*arrive;
-      shadows[i].visible=contacts[i].visible=spills[i].visible=grounded>.001;
+      shadows[i].visible=contacts[i].visible=spills[i].visible=!transparent&&grounded>.001;
       const shadow=shadows[i];shadow.position.x=(px-w/2)/100;
       shadow.position.y=(h/2-(start.y+unit*poseScale*(i===0?.56:.46)))/100;
       shadow.scale.set(unit/100*poseScale*1.08,unit/100*.72,1);shadow.material.opacity=grounded*.46;
@@ -204,5 +214,5 @@ export async function createToyStage(mount){
     });
     renderer.render(scene,camera);
   }
-  return {render,resize,setPointer};
+  return {render,resize,setPointer,setDock};
 }

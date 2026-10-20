@@ -1,0 +1,25 @@
+{
+  "version": 12,
+  "destinations": [
+    "platform",
+    "contents",
+    "textbook",
+    "camp",
+    "jitda"
+  ],
+  "errors": [],
+  "assets": {
+    "imagesLoaded": true,
+    "product": "jitda",
+    "ready": "true",
+    "webgl": "ready"
+  },
+  "proofs": [
+    "proof-calm-opening-2026-10-19.png",
+    "proof-calm-entry-2026-10-19.png",
+    "proof-calm-hero-2026-10-19.png"
+  ],
+  "mobileTested": false,
+  "priorBuildErrorCount": 1,
+  "priorBuildErrorResolved": "SVG bitmap conversion now specifies natural display dimensions; no new errors recorded after the current build was written."
+}

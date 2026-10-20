@@ -1,0 +1,197 @@
+{
+  "cards": [
+    {
+      "bounds": {
+        "bottom": 308.63812255859375,
+        "height": 242.9012451171875,
+        "left": 97.35409545898438,
+        "right": 433.9271545410156,
+        "top": 65.73687744140625,
+        "width": 336.57305908203125,
+        "x": 97.35409545898438,
+        "y": 65.73687744140625
+      },
+      "imageLoaded": true,
+      "name": "수업 플랫폼",
+      "tabIndex": 0,
+      "url": "https://ai.codle.io/kr"
+    },
+    {
+      "bounds": {
+        "bottom": 278.6329879760742,
+        "height": 226.080322265625,
+        "left": 831.7335815429688,
+        "right": 1141.641357421875,
+        "top": 52.55266571044922,
+        "width": 309.90777587890625,
+        "x": 831.7335815429688,
+        "y": 52.55266571044922
+      },
+      "imageLoaded": true,
+      "name": "오리지널 콘텐츠",
+      "tabIndex": 0,
+      "url": "https://ai.codle.io/kr/contents"
+    },
+    {
+      "bounds": {
+        "bottom": 628.0725708007812,
+        "height": 204.9576416015625,
+        "left": 36.825897216796875,
+        "right": 317.3616027832031,
+        "top": 423.1149291992187,
+        "width": 280.53570556640625,
+        "x": 36.825897216796875,
+        "y": 423.1149291992187
+      },
+      "imageLoaded": true,
+      "name": "코들 × 교과서",
+      "tabIndex": 0,
+      "url": "https://cmass-contents.codle.io/cmass-ai-basics/web-exhibition"
+    },
+    {
+      "bounds": {
+        "bottom": 685.1525268554688,
+        "height": 203.9300537109375,
+        "left": 475.9239196777344,
+        "right": 763.7636108398438,
+        "top": 481.2224731445313,
+        "width": 287.8396911621094,
+        "x": 475.9239196777344,
+        "y": 481.2224731445313
+      },
+      "imageLoaded": true,
+      "name": "AI 집중캠프",
+      "tabIndex": 0,
+      "url": "https://contents.codle.io/aicamp-landing"
+    },
+    {
+      "bounds": {
+        "bottom": 638.6251220703125,
+        "height": 226.078857421875,
+        "left": 932.9286499023438,
+        "right": 1242.8526611328125,
+        "top": 412.5462646484375,
+        "width": 309.92401123046875,
+        "x": 932.9286499023438,
+        "y": 412.5462646484375
+      },
+      "imageLoaded": true,
+      "name": "AI 해커톤",
+      "tabIndex": 0,
+      "url": "https://landing.jitda.io/"
+    }
+  ],
+  "documentWidth": 1265,
+  "entry": "hub.js?v=2",
+  "frames": [
+    {
+      "hidden": true,
+      "id": "platform",
+      "loads": "1"
+    },
+    {
+      "hidden": true,
+      "id": "contents",
+      "loads": "1"
+    },
+    {
+      "hidden": true,
+      "id": "textbook",
+      "loads": "1"
+    },
+    {
+      "hidden": true,
+      "id": "camp",
+      "loads": "1"
+    },
+    {
+      "hidden": true,
+      "id": "jitda",
+      "loads": "1"
+    }
+  ],
+  "hero": "AI를 배우고,직접 만드는 즐거움.",
+  "heroBounds": {
+    "bottom": 437.265625,
+    "height": 168.9375,
+    "left": 392.3125,
+    "right": 872.671875,
+    "top": 268.328125,
+    "width": 480.359375,
+    "x": 392.3125,
+    "y": 268.328125
+  },
+  "previewHidden": true,
+  "ready": "true",
+  "scrollY": 936,
+  "stageScroll": 0,
+  "viewport": [
+    1280,
+    720
+  ],
+  "keyboard": [
+    {
+      "focus": "The focused UI element is 12 link Description: 수업 플랫폼 랜딩 열기, URL: ai.codle.io/kr",
+      "state": {
+        "ready": "true",
+        "scrollY": 936
+      }
+    },
+    {
+      "focus": "The focused UI element is 13 link Description: 오리지널 콘텐츠 랜딩 열기, URL: ai.codle.io/kr/contents",
+      "state": {
+        "ready": "true",
+        "scrollY": 936
+      }
+    },
+    {
+      "focus": "The focused UI element is 14 link Description: 코들 × 교과서 랜딩 열기, URL: cmass-contents.codle.io/cmass-ai-basics/web-exhibition",
+      "state": {
+        "ready": "true",
+        "scrollY": 936
+      }
+    },
+    {
+      "focus": "The focused UI element is 15 link Description: AI 집중캠프 랜딩 열기, URL: contents.codle.io/aicamp-landing",
+      "state": {
+        "ready": "true",
+        "scrollY": 936
+      }
+    },
+    {
+      "focus": "The focused UI element is 16 link Description: AI 해커톤 랜딩 열기, URL: landing.jitda.io/",
+      "state": {
+        "ready": "true",
+        "scrollY": 936
+      }
+    }
+  ],
+  "opened": [
+    {
+      "product": "코들 × 교과서",
+      "opened": [
+        "1 AXWebArea AI를 배우고, 직접 만드는 즐거움 — 코들 × 짓다, URL: 127.0.0.1:4187/prototypes/codle-hub-studio/toy-hub/index.html",
+        "\t\t\t9 AXWebArea Codle 교육 콘텐츠, URL: cmass-contents.codle.io/cmass-ai-basics/web-exhibition",
+        "\t\t\t\t\t\t\t\t\t44 AXWebArea about:blank"
+      ],
+      "focus": "The focused UI element is 14 link Description: 코들 × 교과서 랜딩 열기, URL: cmass-contents.codle.io/cmass-ai-basics/web-exhibition"
+    },
+    {
+      "product": "AI 집중캠프",
+      "opened": [
+        "1 AXWebArea AI를 배우고, 직접 만드는 즐거움 — 코들 × 짓다, URL: 127.0.0.1:4187/prototypes/codle-hub-studio/toy-hub/index.html",
+        "\t\t\t8 AXWebArea 코들 AI 캠프, URL: contents.codle.io/aicamp-landing"
+      ],
+      "focus": "The focused UI element is 15 link Description: AI 집중캠프 랜딩 열기, URL: contents.codle.io/aicamp-landing"
+    },
+    {
+      "product": "AI 해커톤",
+      "opened": [
+        "1 AXWebArea AI를 배우고, 직접 만드는 즐거움 — 코들 × 짓다, URL: 127.0.0.1:4187/prototypes/codle-hub-studio/toy-hub/index.html",
+        "\t\t\t8 AXWebArea 짓다 · AI 해커톤 — 학교·교육청·기업, URL: landing.jitda.io/"
+      ],
+      "focus": "The focused UI element is 16 link Description: AI 해커톤 랜딩 열기, URL: landing.jitda.io/"
+    }
+  ],
+  "errors": []
+}

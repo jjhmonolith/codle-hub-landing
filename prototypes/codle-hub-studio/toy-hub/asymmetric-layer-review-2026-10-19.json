@@ -1,0 +1,51 @@
+{
+  "version": 9,
+  "stops": [
+    {
+      "centerX": 0.39343544899504346,
+      "centerY": 0.5149999961693417,
+      "product": "platform",
+      "width": 0.7278446389496718
+    },
+    {
+      "centerX": 0.5950711540372419,
+      "centerY": 0.5750000127688611,
+      "product": "contents",
+      "width": 0.7081783636915344
+    },
+    {
+      "centerX": 0.43277901163247273,
+      "centerY": 0.5149999961693417,
+      "product": "textbook",
+      "width": 0.7868709105109751
+    },
+    {
+      "centerX": 0.6196608428621188,
+      "centerY": 0.4750000063844306,
+      "product": "camp",
+      "width": 0.6885120216553269
+    },
+    {
+      "centerX": 0.40327131826455015,
+      "centerY": 0.5549999859542527,
+      "product": "jitda",
+      "width": 0.7475246037122196
+    }
+  ],
+  "returnState": {
+    "focus": "수업 플랫폼 랜딩 열기",
+    "frames": [
+      {
+        "id": "platform",
+        "loads": "1"
+      },
+      {
+        "id": "contents",
+        "loads": "1"
+      }
+    ],
+    "product": "platform"
+  },
+  "errorLogs": [],
+  "mobileTested": false
+}

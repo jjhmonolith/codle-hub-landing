@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-19",
+  "runtime": "hub.js?v=8",
+  "latestUserFeedback": "Images still feel separate; make them overlap tightly like Podium and pass naturally. User reports severe flickering.",
+  "status": "resolved-by-stable-layer-pass",
+  "blocker": null,
+  "budgetRule": "Do not estimate usage and continue when the current weekly usage cannot be verified. Automation 3d configuration was read and confirmed PAUSED.",
+  "requiredNextWork": [
+    "User visual review; current implementation and actual browser results are in stable-layer-browser-review-2026-10-19.json."
+  ],
+  "runtimeFilesChanged": true,
+  "previousBlockedPass": {
+    "date": "2026-10-19",
+    "runtime": "hub.js?v=7 (unchanged in this pass)",
+    "latestUserFeedback": "Images still feel separate; make them overlap tightly like Podium and pass naturally. User reports severe flickering.",
+    "status": "not-implemented-tool-connection-unavailable",
+    "blocker": "Account usage lookup did not respond; browser transport closed and browser inventory returned no browsers. Session reset did not restore the browser connection.",
+    "budgetRule": "Do not estimate usage and continue when the current weekly usage cannot be verified. Automation 3d configuration was read and confirmed PAUSED.",
+    "requiredNextWork": [
+      "Restore current usage lookup before further development.",
+      "Review the flickering in the real browser; do not claim a cause or fix from static screenshots.",
+      "Replace scattered screen-anchored offsets with a tighter shared layered composition.",
+      "Investigate nested CSS perspective, mask, filter and opacity compositing and the large near-camera raster bounds; these are hypotheses, not verified causes.",
+      "Preserve logos, actual product links, preload/open/close, and deferred mobile work."
+    ],
+    "runtimeFilesChanged": false
+  },
+  "resolution": "Account lookup and browser connection recovered. Weekly used 36%; v8 implemented, projection checked and actual desktop flow reviewed. Automation remains PAUSED."
+}

@@ -1,0 +1,167 @@
+{
+  "cards": [
+    {
+      "bounds": {
+        "bottom": 604.6329345703125,
+        "height": 215.67208862304688,
+        "left": 477.1830139160156,
+        "right": 787.8170166015625,
+        "top": 388.9608459472656,
+        "width": 310.6340026855469,
+        "x": 477.1830139160156,
+        "y": 388.9608459472656
+      },
+      "imageLoaded": true,
+      "name": "수업 플랫폼",
+      "slot": "0",
+      "tabIndex": 0
+    },
+    {
+      "bounds": {
+        "bottom": 639.5313110351562,
+        "height": 235.1876220703125,
+        "left": 245.4547576904297,
+        "right": 566.1702117919922,
+        "top": 404.34368896484375,
+        "width": 320.7154541015625,
+        "x": 245.4547576904297,
+        "y": 404.34368896484375
+      },
+      "imageLoaded": true,
+      "name": "오리지널 콘텐츠",
+      "slot": "-1",
+      "tabIndex": 0
+    },
+    {
+      "bounds": {
+        "bottom": 701.6481323242188,
+        "height": 252.7337951660156,
+        "left": 43.51150131225586,
+        "right": 372.0197410583496,
+        "top": 448.9143371582031,
+        "width": 328.50823974609375,
+        "x": 43.51150131225586,
+        "y": 448.9143371582031
+      },
+      "imageLoaded": true,
+      "name": "코들 × 교과서",
+      "slot": "-2",
+      "tabIndex": 0
+    },
+    {
+      "bounds": {
+        "bottom": 608.6560668945312,
+        "height": 211.56216430664065,
+        "left": 707.525634765625,
+        "right": 1013.443115234375,
+        "top": 397.0939025878906,
+        "width": 305.91748046875,
+        "x": 707.525634765625,
+        "y": 397.0939025878906
+      },
+      "imageLoaded": true,
+      "name": "AI 집중캠프",
+      "slot": "1",
+      "tabIndex": 0
+    },
+    {
+      "bounds": {
+        "bottom": 654.9280395507812,
+        "height": 230.9185485839844,
+        "left": 904.3115844726562,
+        "right": 1220.2822265625,
+        "top": 424.0094909667969,
+        "width": 315.97064208984375,
+        "x": 904.3115844726562,
+        "y": 424.0094909667969
+      },
+      "imageLoaded": true,
+      "name": "AI 해커톤",
+      "slot": "2",
+      "tabIndex": 0
+    }
+  ],
+  "documentWidth": 1265,
+  "entry": "hub.js?v=3",
+  "frames": [
+    {
+      "id": "platform",
+      "loads": "1"
+    },
+    {
+      "id": "contents",
+      "loads": "1"
+    },
+    {
+      "id": "textbook",
+      "loads": "1"
+    },
+    {
+      "id": "camp",
+      "loads": "1"
+    },
+    {
+      "id": "jitda",
+      "loads": "1"
+    }
+  ],
+  "hero": {
+    "bottom": 350.8656311035156,
+    "height": 168.9375,
+    "left": 392.3125,
+    "right": 872.671875,
+    "top": 181.9281311035156,
+    "width": 480.359375,
+    "x": 392.3125,
+    "y": 181.9281311035156
+  },
+  "ready": "true",
+  "scrollY": 936,
+  "stageScroll": 0,
+  "view": [
+    1280,
+    720
+  ],
+  "keyboard": [
+    {
+      "focus": "The focused UI element is 12 link Description: 수업 플랫폼 랜딩 열기, URL: ai.codle.io/kr",
+      "state": {
+        "ready": "true",
+        "scrollY": 936
+      }
+    },
+    {
+      "focus": "The focused UI element is 13 link Description: 오리지널 콘텐츠 랜딩 열기, URL: ai.codle.io/kr/contents",
+      "state": {
+        "ready": "true",
+        "scrollY": 936
+      }
+    },
+    {
+      "focus": "The focused UI element is 14 link Description: 코들 × 교과서 랜딩 열기, URL: cmass-contents.codle.io/cmass-ai-basics/web-exhibition",
+      "state": {
+        "ready": "true",
+        "scrollY": 936
+      }
+    },
+    {
+      "focus": "The focused UI element is 15 link Description: AI 집중캠프 랜딩 열기, URL: contents.codle.io/aicamp-landing",
+      "state": {
+        "ready": "true",
+        "scrollY": 936
+      }
+    },
+    {
+      "focus": "The focused UI element is 16 link Description: AI 해커톤 랜딩 열기, URL: landing.jitda.io/",
+      "state": {
+        "ready": "true",
+        "scrollY": 936
+      }
+    }
+  ],
+  "errors": [],
+  "checkedDestinations": [
+    "Jitda real page open with Enter / close with Escape; source focus restored",
+    "Textbook outer card clicked / real page opened / source focus restored"
+  ]
+}

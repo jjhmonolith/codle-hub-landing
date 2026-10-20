@@ -1,0 +1,200 @@
+{
+  "cards": [
+    {
+      "ariaHidden": "true",
+      "bounds": {
+        "bottom": 2458.5,
+        "height": 597,
+        "left": 50.6015625,
+        "right": 1214.3984375,
+        "top": 1861.5,
+        "width": 1163.796875,
+        "x": 50.6015625,
+        "y": 1861.5
+      },
+      "front": "false",
+      "name": "수업 플랫폼",
+      "opacity": "0",
+      "visible": "false",
+      "windowBounds": {
+        "bottom": 2421.5,
+        "height": 560,
+        "left": 50.6015625,
+        "right": 1214.3984375,
+        "top": 1861.5,
+        "width": 1163.796875,
+        "x": 50.6015625,
+        "y": 1861.5
+      }
+    },
+    {
+      "ariaHidden": "true",
+      "bounds": {
+        "bottom": 2458.5,
+        "height": 597,
+        "left": 50.6015625,
+        "right": 1214.3984375,
+        "top": 1861.5,
+        "width": 1163.796875,
+        "x": 50.6015625,
+        "y": 1861.5
+      },
+      "front": "false",
+      "name": "오리지널 콘텐츠",
+      "opacity": "0",
+      "visible": "false",
+      "windowBounds": {
+        "bottom": 2421.5,
+        "height": 560,
+        "left": 50.6015625,
+        "right": 1214.3984375,
+        "top": 1861.5,
+        "width": 1163.796875,
+        "x": 50.6015625,
+        "y": 1861.5
+      }
+    },
+    {
+      "ariaHidden": "true",
+      "bounds": {
+        "bottom": 2458.5,
+        "height": 597,
+        "left": 50.6015625,
+        "right": 1214.3984375,
+        "top": 1861.5,
+        "width": 1163.796875,
+        "x": 50.6015625,
+        "y": 1861.5
+      },
+      "front": "false",
+      "name": "코들 × 교과서",
+      "opacity": "0",
+      "visible": "false",
+      "windowBounds": {
+        "bottom": 2421.5,
+        "height": 560,
+        "left": 50.6015625,
+        "right": 1214.3984375,
+        "top": 1861.5,
+        "width": 1163.796875,
+        "x": 50.6015625,
+        "y": 1861.5
+      }
+    },
+    {
+      "ariaHidden": "true",
+      "bounds": {
+        "bottom": 2508.079833984375,
+        "height": 696.1597900390625,
+        "left": 26.79987335205078,
+        "right": 1238.2000198364258,
+        "top": 1811.9200439453125,
+        "width": 1211.400146484375,
+        "x": 26.79987335205078,
+        "y": 1811.9200439453125
+      },
+      "front": "false",
+      "name": "AI 집중캠프",
+      "opacity": "0",
+      "visible": "false",
+      "windowBounds": {
+        "bottom": 2471.220703125,
+        "height": 659.3006591796875,
+        "left": 30.024635314941406,
+        "right": 1238.200050354004,
+        "top": 1811.9200439453125,
+        "width": 1208.1754150390625,
+        "x": 30.024635314941406,
+        "y": 1811.9200439453125
+      }
+    },
+    {
+      "ariaHidden": "false",
+      "bounds": {
+        "bottom": 683.6875,
+        "height": 597,
+        "left": 50.6015625,
+        "right": 1214.3984375,
+        "top": 86.6875,
+        "width": 1163.796875,
+        "x": 50.6015625,
+        "y": 86.6875
+      },
+      "front": "true",
+      "name": "AI 해커톤",
+      "opacity": "1",
+      "visible": "true",
+      "windowBounds": {
+        "bottom": 646.6875,
+        "height": 560,
+        "left": 50.6015625,
+        "right": 1214.3984375,
+        "top": 86.6875,
+        "width": 1163.796875,
+        "x": 50.6015625,
+        "y": 86.6875
+      }
+    }
+  ],
+  "documentWidth": 1265,
+  "entry": "hub.js?v=5",
+  "frames": [
+    {
+      "id": "platform",
+      "loads": "1"
+    },
+    {
+      "id": "contents",
+      "loads": "1"
+    },
+    {
+      "id": "textbook",
+      "loads": "1"
+    },
+    {
+      "id": "camp",
+      "loads": "1"
+    },
+    {
+      "id": "jitda",
+      "loads": "1"
+    }
+  ],
+  "nextDisabled": true,
+  "previousDisabled": false,
+  "product": "jitda",
+  "scrollY": 917,
+  "view": [
+    1280,
+    720
+  ],
+  "checkedNavigation": [
+    {
+      "frontCount": 1,
+      "nextDisabled": false,
+      "product": "textbook",
+      "scrollY": 717
+    },
+    {
+      "frontCount": 1,
+      "nextDisabled": false,
+      "product": "camp",
+      "scrollY": 823
+    },
+    {
+      "frontCount": 1,
+      "nextDisabled": true,
+      "product": "jitda",
+      "scrollY": 917
+    }
+  ],
+  "errors": [],
+  "verified": [
+    "Platform first, contents second, then textbook/camp/Jitda through controls.",
+    "Actual wheel intermediate: outgoing platform top263/bottom882, next contents top75.",
+    "Last Jitda remains full size; next is disabled and previous cards opacity zero.",
+    "Real Jitda iframe opened and closed; original source focus restored, cropped source capture1164x560, all iframe load counts one.",
+    "Native Up key returns to camp; Down returns to Jitda.",
+    "Final rounded scroll target917: previous four opacities zero and aria-hidden true, exactly one exposed Jitda product link."
+  ]
+}

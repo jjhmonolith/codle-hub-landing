@@ -1,45 +1,144 @@
-<!doctype html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#08090d">
-  <meta name="description" content="AI를 배우고, 직접 만드는 즐거움. 코들과 짓다의 다섯 가지 배움을 만나보세요.">
-  <title>AI를 배우고, 직접 만드는 즐거움 — 코들 × 짓다</title>
-  <style>html,body{margin:0;background:#08090d;color:#f5f3ed;color-scheme:dark}</style>
-  <link rel="preload" href="assets/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/toy-models-v1.bin.gz" as="fetch" crossorigin>
-  <link rel="preload" href="assets/worlds/jitda-worker-v1.json.gz" as="fetch" crossorigin>
-  <link rel="stylesheet" href="story.css?v=9">
-  <link rel="stylesheet" href="product-worlds.css?v=4">
-  <script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
-<script type="module" src="app.js?v=78"></script>
-</head>
-<body data-motion="full" data-chapter="opening">
-  <a class="skip-link" href="#experiences">제품 바로 보기</a>
-  <header class="site-header">
-    <a class="wordmark" href="#" aria-label="코들, 처음부터 보기"><img src="assets/codle-clean-mark.svg" alt="코들"></a>
-    <button class="explore-button" type="button">둘러보기 <span aria-hidden="true">↗</span></button>
-  </header>
-  <main>
-    <section class="journey" aria-label="코들과 짓다를 만나는 여정">
-      <div class="stage">
-        <div class="stage-light" aria-hidden="true"></div><div id="scene" aria-hidden="true"></div>
-        <div class="scene-loading" role="status"><span></span><p>코들과 짓다를 만나는 중</p></div>
-        <section class="hero" aria-hidden="true" inert><h1><span class="hero-line"><span>AI를 배우고,</span></span><span class="hero-line"><span>직접 만드는<br class="mobile-break"> 즐거움.</span></span></h1></section>
-        <section class="experiences" id="experiences" aria-label="다섯 가지 배움" aria-hidden="true" inert>
-          <div class="product-worlds" aria-hidden="true"></div>
-          <div class="landing-surface" aria-hidden="true"></div>
-          <div class="product-grid"></div>
-          <p class="sr-only current-product" aria-live="polite"></p>
-        </section>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f4f2ec"><title>코들 × 짓다 — 여섯 가지 배움</title><link rel="preload" href="assets/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="product-mosaic.css?v=21"><script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script><script type="module" src="product-mosaic.js?v=23"></script><link rel="stylesheet" href="preserved-inquiry.css"><link rel="stylesheet" href="preserved-footer.css"><script src="preserved-inquiry.js" defer></script></head><body>
+<a class="skip-link" href="#destinations">서비스 선택으로 바로 가기</a>
+<header class="masthead"><a href="./index.html" aria-label="코들 홈"><img src="assets/codle-clean-mark.svg" alt="코들"></a></header>
+<main class="hub"><section class="opening" aria-label="코들 교육 서비스"><div class="opening-sticky"><div class="opening-grid" aria-hidden="true"></div><nav class="board" id="destinations" aria-label="여섯 서비스"></nav><div class="opening-brand"><svg class="drawn-codle" viewBox="0 0 774.61 304.29" role="img" aria-label="코들"><g><path class="logo-line logo-drop" pathLength="1" d="M252.42 137.71V137.72C293.16 137.72 326.19 169.39 326.19 208.44C326.19 228.94 319.59 252.58 295.37 274.85C274.58 293.96 248.98 301.38 234.81 304.17C229.85 305.14 225.62 300.49 227.04 295.63L230.03 285.34C231.42 280.57 228.86 275.61 224.24 273.78C197.48 263.17 178.65 237.92 178.65 208.43C178.65 169.37 211.68 137.71 252.42 137.71Z"/><path class="logo-line " pathLength="1" d="M252.69 0.76C298.96 0.76 336.47 38.26 336.47 84.54C336.47 107.23 327.43 127.8 312.78 142.89C300.54 132.38 285.28 125.04 268.41 122.19C281.53 115.79 290.67 101.68 290.67 85.25C290.67 62.82 273.67 44.64 252.69 44.64C231.71 44.64 214.71 62.82 214.71 85.25C214.71 101.68 223.85 115.79 236.97 122.19C220.1 125.04 204.84 132.38 192.6 142.89C177.95 127.8 168.91 107.23 168.91 84.54C168.91 38.27 206.42 0.76 252.69 0.76Z"/><path class="logo-line " pathLength="1" d="M86.22 215.56Q61.215 215.56 41.67 205.36C28.64 198.56 18.44 189.12 11.06 177.05C3.68 164.98 0 151.28 0 135.95C0 120.62 3.69 106.68 11.06 94.71C18.43 82.74 28.64 73.35 41.67 66.54C54.7 59.74 69.55 56.34 86.22 56.34C102.89 56.34 116.69 59.75 128.76 66.54C140.83 73.35 149.74 83.07 155.49 95.71L120.72 114.39C116.7 107.11 111.67 101.74 105.63 98.3C99.59 94.85 93.03 93.13 85.94 93.13C78.27 93.13 71.38 94.85 65.25 98.3C59.12 101.75 54.28 106.63 50.74 112.96C47.19 119.28 45.42 126.95 45.42 135.95C45.42 144.95 47.19 152.62 50.74 158.94C54.28 165.27 59.12 170.15 65.25 173.6C71.38 177.05 78.28 178.77 85.94 178.77C93.03 178.77 99.59 177.09 105.63 173.74C111.67 170.39 116.69 164.97 120.72 157.5L155.49 176.47C149.74 188.93 140.83 198.56 128.76 205.35C116.69 212.16 102.51 215.55 86.22 215.55V215.56Z"/><path class="logo-line " pathLength="1" d="M469.58 0H514.42V213.26H471.6V195.407C467.764 200.08 463.31 203.925 458.24 206.94C448.56 212.69 436.92 215.56 423.32 215.56C408.76 215.56 395.63 212.25 383.95 205.65C372.26 199.04 363.01 189.8 356.22 177.91C349.42 166.03 346.02 152.04 346.02 135.95C346.02 119.86 349.42 105.58 356.22 93.7C363.02 81.82 372.26 72.63 383.95 66.11C395.63 59.6 408.76 56.34 423.32 56.34C436.35 56.34 447.75 59.22 457.52 64.96C462.004 67.599 466.024 70.863 469.58 74.752V0Z"/><path class="logo-line " pathLength="1" d="M431.08 93.13C423.8 93.13 416.9 94.85 410.96 98.3C405.02 101.75 400.27 106.63 396.73 112.96C393.18 119.28 391.41 126.95 391.41 135.95C391.41 144.95 393.18 152.38 396.73 158.8C400.27 165.22 405.02 170.15 410.96 173.6C416.9 177.05 423.61 178.77 431.08 178.77C438.36 178.77 444.97 177.04 450.91 173.6C456.85 170.15 461.59 165.22 465.14 158.8C468.68 152.38 470.46 144.77 470.46 135.95C470.46 127.13 468.69 119.28 465.14 112.96C461.59 106.64 456.85 101.75 450.91 98.3C444.97 94.85 438.36 93.13 431.08 93.13Z"/><path class="logo-line " pathLength="1" d="M545.38 0H590.22V213.26H545.38V0Z"/><path class="logo-line " pathLength="1" d="M773.73 148.6H656.781C657.708 152.679 659.185 156.46 661.21 159.94C664.95 166.36 670.21 171.25 677.02 174.6C683.82 177.95 691.82 179.63 701.02 179.63C709.25 179.63 716.49 178.39 722.72 175.89C728.94 173.41 734.65 169.67 739.82 164.68L763.68 190.55C756.59 198.6 747.68 204.78 736.95 209.09C726.225 213.398 713.872 215.558 699.89 215.56H699.87C682.248 215.557 666.785 212.107 653.47 205.21C640.15 198.31 629.85 188.88 622.57 176.9C615.29 164.93 611.65 151.28 611.65 135.95C611.65 120.62 615.24 106.68 622.43 94.71Q633.2 76.755 651.89 66.54C664.34 59.74 678.43 56.34 694.14 56.34C709.85 56.34 722.93 59.55 735.09 65.97C747.26 72.39 756.88 81.59 763.97 93.56C771.06 105.54 774.6 119.86 774.6 136.53C774.6 138.25 774.5 140.22 774.31 142.42C774.12 144.62 773.92 146.69 773.73 148.6Z"/><path class="logo-line " pathLength="1" d="M732.368 122.44C731.641 117.569 730.197 113.163 728.04 109.22C724.78 103.28 720.28 98.64 714.53 95.28C708.78 91.93 702.07 90.25 694.41 90.25C686.75 90.25 679.99 91.93 674.15 95.28C668.3 98.63 663.75 103.33 660.5 109.36C658.394 113.262 656.968 117.623 656.223 122.44H732.368Z"/></g><g class="logo-solid" fill-rule="evenodd"><path d="M252.69 0.76C298.96 0.76 336.47 38.26 336.47 84.54C336.47 107.23 327.43 127.8 312.78 142.89C300.54 132.38 285.28 125.04 268.41 122.19C281.53 115.79 290.67 101.68 290.67 85.25C290.67 62.82 273.67 44.64 252.69 44.64C231.71 44.64 214.71 62.82 214.71 85.25C214.71 101.68 223.85 115.79 236.97 122.19C220.1 125.04 204.84 132.38 192.6 142.89C177.95 127.8 168.91 107.23 168.91 84.54C168.91 38.27 206.42 0.76 252.69 0.76Z M86.22 215.56Q61.215 215.56 41.67 205.36C28.64 198.56 18.44 189.12 11.06 177.05C3.68 164.98 0 151.28 0 135.95C0 120.62 3.69 106.68 11.06 94.71C18.43 82.74 28.64 73.35 41.67 66.54C54.7 59.74 69.55 56.34 86.22 56.34C102.89 56.34 116.69 59.75 128.76 66.54C140.83 73.35 149.74 83.07 155.49 95.71L120.72 114.39C116.7 107.11 111.67 101.74 105.63 98.3C99.59 94.85 93.03 93.13 85.94 93.13C78.27 93.13 71.38 94.85 65.25 98.3C59.12 101.75 54.28 106.63 50.74 112.96C47.19 119.28 45.42 126.95 45.42 135.95C45.42 144.95 47.19 152.62 50.74 158.94C54.28 165.27 59.12 170.15 65.25 173.6C71.38 177.05 78.28 178.77 85.94 178.77C93.03 178.77 99.59 177.09 105.63 173.74C111.67 170.39 116.69 164.97 120.72 157.5L155.49 176.47C149.74 188.93 140.83 198.56 128.76 205.35C116.69 212.16 102.51 215.55 86.22 215.55V215.56Z M469.58 0H514.42V213.26H471.6V195.407C467.764 200.08 463.31 203.925 458.24 206.94C448.56 212.69 436.92 215.56 423.32 215.56C408.76 215.56 395.63 212.25 383.95 205.65C372.26 199.04 363.01 189.8 356.22 177.91C349.42 166.03 346.02 152.04 346.02 135.95C346.02 119.86 349.42 105.58 356.22 93.7C363.02 81.82 372.26 72.63 383.95 66.11C395.63 59.6 408.76 56.34 423.32 56.34C436.35 56.34 447.75 59.22 457.52 64.96C462.004 67.599 466.024 70.863 469.58 74.752V0Z M431.08 93.13C423.8 93.13 416.9 94.85 410.96 98.3C405.02 101.75 400.27 106.63 396.73 112.96C393.18 119.28 391.41 126.95 391.41 135.95C391.41 144.95 393.18 152.38 396.73 158.8C400.27 165.22 405.02 170.15 410.96 173.6C416.9 177.05 423.61 178.77 431.08 178.77C438.36 178.77 444.97 177.04 450.91 173.6C456.85 170.15 461.59 165.22 465.14 158.8C468.68 152.38 470.46 144.77 470.46 135.95C470.46 127.13 468.69 119.28 465.14 112.96C461.59 106.64 456.85 101.75 450.91 98.3C444.97 94.85 438.36 93.13 431.08 93.13Z M545.38 0H590.22V213.26H545.38V0Z M773.73 148.6H656.781C657.708 152.679 659.185 156.46 661.21 159.94C664.95 166.36 670.21 171.25 677.02 174.6C683.82 177.95 691.82 179.63 701.02 179.63C709.25 179.63 716.49 178.39 722.72 175.89C728.94 173.41 734.65 169.67 739.82 164.68L763.68 190.55C756.59 198.6 747.68 204.78 736.95 209.09C726.225 213.398 713.872 215.558 699.89 215.56H699.87C682.248 215.557 666.785 212.107 653.47 205.21C640.15 198.31 629.85 188.88 622.57 176.9C615.29 164.93 611.65 151.28 611.65 135.95C611.65 120.62 615.24 106.68 622.43 94.71Q633.2 76.755 651.89 66.54C664.34 59.74 678.43 56.34 694.14 56.34C709.85 56.34 722.93 59.55 735.09 65.97C747.26 72.39 756.88 81.59 763.97 93.56C771.06 105.54 774.6 119.86 774.6 136.53C774.6 138.25 774.5 140.22 774.31 142.42C774.12 144.62 773.92 146.69 773.73 148.6Z M732.368 122.44C731.641 117.569 730.197 113.163 728.04 109.22C724.78 103.28 720.28 98.64 714.53 95.28C708.78 91.93 702.07 90.25 694.41 90.25C686.75 90.25 679.99 91.93 674.15 95.28C668.3 98.63 663.75 103.33 660.5 109.36C658.394 113.262 656.968 117.623 656.223 122.44H732.368Z" fill="#202733" stroke="#101b2b" stroke-opacity=".12" stroke-width=".6"/><path d="M252.42 137.71V137.72C293.16 137.72 326.19 169.39 326.19 208.44C326.19 228.94 319.59 252.58 295.37 274.85C274.58 293.96 248.98 301.38 234.81 304.17C229.85 305.14 225.62 300.49 227.04 295.63L230.03 285.34C231.42 280.57 228.86 275.61 224.24 273.78C197.48 263.17 178.65 237.92 178.65 208.43C178.65 169.37 211.68 137.71 252.42 137.71Z" class="logo-drop" fill="#3e88ff" stroke="#377bea" stroke-opacity=".15" stroke-width=".5"/></g></svg></div><div class="opening-copy"><h1>우리 학교에 필요한 <em>AI 교육.</em></h1><p class="opening-context">수업부터 해커톤, 캠프까지.</p></div><div class="opening-seal" aria-hidden="true"></div></div></section>
+<section class="service-guide" id="service-guide"><div class="guide-heading"><h2>우리 학교에 맞는 배움.</h2><p>여섯 가지 서비스의 구성과 이용 방법을 살펴보세요.</p></div><div class="service-details"><article class="service-detail" id="service-platform">
+          <h2 class="product-name" aria-label="AI 수업 플랫폼, 코들">AI 수업 플랫폼, <img class="name-logo" src="assets/codle.svg" alt="코들"></h2>
+          <p class="panel-description">AI 수업을 준비하고 운영하는 학습 플랫폼.<br> 자료 제작부터 학생 실습·피드백·평가까지 연결합니다.</p>
+          <p class="panel-relation">Basic 무료 · Pro 유료</p>
+          <div class="panel-actions">
+            <a class="button dark" href="https://codle.io/" target="_blank" rel="noopener noreferrer">무료로 시작하기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
+            <button class="product-inquiry" type="button" data-inquiry="license" aria-label="AI 수업 플랫폼, 코들 문의하기" aria-haspopup="dialog" aria-controls="inquiry-dialog">문의하기 <span aria-hidden="true">→</span></button>
+          </div>
+        </article><article class="service-detail" id="service-contents">
+          <h2 class="product-name" aria-label="코들 오리지널 콘텐츠"><img class="name-logo" src="assets/codle.svg" alt="코들"> 오리지널 콘텐츠</h2>
+          <p class="panel-description">AI 수업에 활용하는 코들 자체 제작 콘텐츠.<br> 교과별 수업부터 AI 융합·프로젝트 활동까지 골라보세요.</p>
+          <p class="panel-relation">콘텐츠 이용권 구매 시 Pro 라이선스 필수</p>
+          <div class="panel-actions">
+            <a class="button dark" href="https://ai.codle.io/kr/contents" target="_blank" rel="noopener noreferrer">콘텐츠 살펴보기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
+            <button class="product-inquiry" type="button" data-inquiry="original" aria-label="코들 오리지널 콘텐츠 문의하기" aria-haspopup="dialog" aria-controls="inquiry-dialog">문의하기 <span aria-hidden="true">→</span></button>
+          </div>
+        </article><article class="service-detail" id="service-textbook">
+              <h3 id="textbook-ai-title" class="textbook-brand-title"><img src="assets/cmass-logo.png" alt="씨마스"> <span>인공지능 기초</span></h3>
+              <p class="panel-description">씨마스 『인공지능 기초』 교과서 연계 콘텐츠.<br>단원별 개념 학습에서 AI·코딩 실습으로 이어집니다.</p>
+              <p class="panel-relation">Pro 라이선스 필수 · 콘텐츠 이용권 별도 구매</p>
+              <div class="panel-actions">
+                <a class="button dark" href="https://cmass-contents.codle.io/cmass-ai-basics/web-exhibition" target="_blank" rel="noopener noreferrer">콘텐츠 체험하기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
+                <button class="product-inquiry" type="button" data-inquiry="cmass" aria-label="씨마스 인공지능 기초 문의하기" aria-haspopup="dialog" aria-controls="inquiry-dialog">문의하기 <span aria-hidden="true">→</span></button>
+              </div>
+            </article><article class="service-detail" id="service-aidt">
+              <h3 id="textbook-aidt-title" class="textbook-publisher-title"><span class="textbook-publisher-stack"><svg viewBox="440 410 190 32" role="img" aria-label="금성"><image href="assets/kumsung-reference.webp" width="1200" height="630"/></svg><img src="assets/ybm-logo.svg" alt="YBM"></span><span>중/고 정보 교육자료</span></h3>
+              <p class="panel-description">중·고등 정보 수업을 위한 AI 디지털 교육자료.<br>학습 자료와 코딩 실습, AI 도우미를 함께 제공합니다.</p>
+              <p class="panel-relation">코들 개발 · 각 출판사 판매</p>
+              <div class="panel-actions">
+                <a class="button dark" href="https://exhibition.codle.io/" target="_blank" rel="noopener noreferrer">교육자료 체험하기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
+              </div>
+            </article><article class="service-detail" id="service-camp">
+          <h2 class="product-name" aria-label="코들 AI 집중캠프"><img class="name-logo" src="assets/codle.svg" alt="코들"> AI 집중캠프</h2>
+          <p class="panel-description">학년·인원·일정에 맞춰 준비하는 AI 교육.<br> 커리큘럼부터 강사·현장 운영까지 함께합니다.</p>
+          <div class="panel-actions">
+            <a class="button dark" href="https://contents.codle.io/aicamp-landing" target="_blank" rel="noopener noreferrer">프로그램 알아보기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
+            <button class="product-inquiry" type="button" data-inquiry="camp" aria-label="코들 AI 집중캠프 문의하기" aria-haspopup="dialog" aria-controls="inquiry-dialog">문의하기 <span aria-hidden="true">→</span></button>
+          </div>
+        </article><article class="service-detail" id="service-jitda">
+          <h2 class="product-name" aria-label="짓다 AI 해커톤"><img class="name-logo name-logo-jitda" src="assets/jitda-logo.svg" alt="짓다"> AI 해커톤</h2>
+          <p class="panel-description">AI와 함께 팀의 아이디어를 웹앱으로 만들고 발표합니다.<br> 행사 기획과 운영을 코들이 함께합니다.</p>
+          <div class="panel-actions">
+            <a class="button dark" href="https://landing.jitda.io/" target="_blank" rel="noopener noreferrer">운영 사례 보러가기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a>
+            <button class="product-inquiry" type="button" data-inquiry="hackathon" aria-label="짓다 AI 해커톤 문의하기" aria-haspopup="dialog" aria-controls="inquiry-dialog">문의하기 <span aria-hidden="true">→</span></button>
+          </div>
+        </article></div></section>    <section class="consult-section section-width" aria-labelledby="consult-title">
+      <div class="consult-copy"><h2 id="consult-title">어떤 교육이 맞을지 고민되시나요?</h2><p>필요한 AI 교육을 찾는 것부터 도와드릴게요.</p></div>
+      <div class="consult-action"><button class="button dark" type="button" data-inquiry aria-haspopup="dialog" aria-controls="inquiry-dialog">우리 학교에 맞는 교육 상담 <span aria-hidden="true">→</span></button><span>아직 상품을 정하지 않아도 괜찮아요.</span></div>
+    </section>
+
+    <section class="questions-section section-width" id="questions" aria-labelledby="questions-title">
+      <div class="questions-intro"><h2 id="questions-title">도입 전에<br>확인해 보세요.</h2></div>
+      <div class="questions">
+        <details><summary>콘텐츠 이용권만 구매할 수 있나요?<span aria-hidden="true">+</span></summary><p>코들 오리지널 콘텐츠와 씨마스 인공지능 기초 이용권은 <strong>Pro 라이선스가 필요합니다.</strong> Pro 이용 여부와 함께 문의해 주세요.</p></details>
+        <details id="aidt-guide"><summary>AIDT 교육자료는 어디서 구매하나요?<span aria-hidden="true">+</span></summary><p>AIDT 교육자료는 코들이 개발하고 <strong>각 출판사가 판매합니다.</strong> 구매 상담은 해당 출판사로 문의해 주세요. <a href="https://exhibition.codle.io/" target="_blank" rel="noopener noreferrer">웹전시에서 자료와 출판사 정보를 확인하세요 ↗</a></p></details>
+        <details><summary>AI 집중캠프와 AI 해커톤은 어떻게 다른가요?<span aria-hidden="true">+</span></summary><p><strong>AI 집중캠프</strong>는 주제에 맞춰 AI를 배우고 실습하는 집중 교육입니다. <strong>AI 해커톤</strong>은 팀이 문제와 아이디어를 정하고, AI로 웹앱을 만들어 발표하는 행사입니다. 대상·교육 목표·일정에 맞춰 각각 상담할 수 있습니다.</p></details>
+        <details><summary>아직 세부 계획이 없어도 문의할 수 있나요?<span aria-hidden="true">+</span></summary><p>가능합니다. 관심 있는 상품과 정해진 조건만 먼저 알려주세요. 캠프·해커톤은 대상, 인원, 일정과 운영 범위를 함께 검토합니다.</p></details>
       </div>
     </section>
-    <noscript><div class="noscript-note">AI를 배우고, 직접 만드는 즐거움.<br><a href="https://ai.codle.io/kr">수업 플랫폼 ↗</a><a href="https://ai.codle.io/kr/contents">오리지널 콘텐츠 ↗</a><a href="https://cmass-contents.codle.io/cmass-ai-basics/web-exhibition">코들 × 교과서 ↗</a><a href="https://contents.codle.io/aicamp-landing">AI 집중캠프 ↗</a><a href="https://landing.jitda.io/">AI 해커톤 ↗</a></div></noscript>
-  </main>
-  <div class="preview" role="dialog" aria-modal="true" aria-labelledby="preview-title" hidden>
-    <img class="preview-capture" alt="" aria-hidden="true" hidden>
-    <div class="preview-bar"><span id="preview-title"></span><a class="preview-direct" target="_blank" rel="noopener noreferrer">새 탭에서 열기 ↗</a><button class="preview-close" type="button" aria-label="랜딩 닫기">닫기 ×</button></div>
-    <div class="preview-content"><img class="preview-poster" alt="" aria-hidden="true"></div><p class="preview-fallback" hidden>연결이 늦어지고 있어요. <a target="_blank" rel="noopener noreferrer">새 탭에서 열기 ↗</a></p>
-  </div>
-</body>
-</html>
+</main>  <footer class="codle-footer" aria-label="코들 사이트 정보">
+    <div class="codle-footer-inner">
+      <div class="codle-footer-top">
+        <img class="codle-footer-logo" src="assets/team-monolith-gray.png" width="129" height="85" alt="TEAM MONOLITH" loading="lazy">
+        <nav class="codle-footer-nav" aria-label="푸터 메뉴">
+          <div class="codle-footer-column">
+            <h3>제품 소개</h3>
+            <div class="codle-footer-group"><p>기능</p><a href="https://ai.codle.io/kr#function">모듈식 코스웨어, 코들</a></div>
+            <div class="codle-footer-group"><p>콘텐츠</p><a href="https://ai.codle.io/kr/contents">수업에 바로 쓰는 코들 콘텐츠</a></div>
+            <div class="codle-footer-group"><p>요금</p><a href="https://ai.codle.io/kr/pricing">요금제</a></div>
+          </div>
+          <div class="codle-footer-column codle-footer-resources">
+            <h3>리소스</h3>
+            <div class="codle-footer-group"><p>가이드</p><div class="codle-footer-inline-links"><a href="https://ai.codle.io/kr/help">사용법 탐색</a><span aria-hidden="true"> | </span><a href="https://ai.codle.io/kr/help">자주 묻는 질문</a></div></div>
+            <div class="codle-footer-group"><p>문의처</p><div class="codle-footer-inline-links"><a href="https://ai.codle.io/kr/help/contact">사용 문의</a><span aria-hidden="true"> | </span><a href="https://ai.codle.io/kr/help/contact">제휴 문의</a><span aria-hidden="true"> | </span><a href="https://ai.codle.io/kr/help/contact">연수 문의</a></div></div>
+          </div>
+          <div class="codle-footer-legal">
+            <a href="https://team-mono.notion.site/ec76db514faf44efa64711afcd4df8fb">서비스 이용약관</a>
+            <a href="https://team-mono.notion.site/1e0d8c385e1f48729ea4ee09d7b599f0">개인정보처리방침</a>
+          </div>
+        </nav>
+      </div>
+      <div class="codle-footer-bottom">
+        <div class="codle-footer-company">
+          <p>(주)팀모노리스 서울특별시 용산구 한강대로52길 17-3, 2층</p>
+          <div class="codle-footer-contacts">
+            <a href="tel:070-7666-9959"><svg class="footer-phone" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>070-7666-9959</span></a>
+            <a href="mailto:codle@team-mono.com"><svg class="footer-email" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>codle@team-mono.com</span></a>
+          </div>
+          <p>©TEAM MONOLITH Inc.</p>
+        </div>
+        <div class="codle-footer-socials" aria-label="코들 소셜 미디어">
+          <a href="https://www.facebook.com/profile.php?id=100087248848002" target="_blank" rel="noopener noreferrer" aria-label="Facebook (새 탭)"><svg width="23" height="23" viewBox="0 0 23 23" aria-hidden="true"><path d="M13.4193 12.9427H15.8151L16.7734 9.10938H13.4193V7.19271C13.4193 6.20563 13.4193 5.27604 15.3359 5.27604H16.7734V2.05604C16.461 2.01483 15.2813 1.92188 14.0355 1.92188C11.4336 1.92188 9.58594 3.50983 9.58594 6.42604V9.10938H6.71094V12.9427H9.58594V21.0885H13.4193V12.9427Z" fill="currentColor"/></svg></a>
+          <a href="https://www.instagram.com/codle.io/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (새 탭)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 7.9C11.1911 7.9 10.4 8.14044 9.72218 8.59152C9.04435 9.0426 8.50911 9.68435 8.18034 10.4403C7.85158 11.1962 7.74376 12.0326 7.86974 12.8417C7.99573 13.6508 8.3499 14.3979 8.88873 14.9941C9.42755 15.5904 10.1277 16.0112 10.8997 16.2007C11.6716 16.3903 12.4813 16.3398 13.2252 16.0558C13.969 15.7718 14.6138 15.2672 15.0795 14.6064C15.5451 13.9456 15.8118 13.1588 15.8118 12.3508C15.8118 11.2684 15.3977 10.2304 14.6614 9.45074C13.9251 8.67113 12.9294 8.22917 11.888 8.22917L12 7.9ZM12 14.9333C11.4882 14.9333 10.9882 14.7778 10.5654 14.4863C10.1426 14.1948 9.81618 13.7805 9.62634 13.2975C9.43651 12.8146 9.39174 12.285 9.49774 11.7745C9.60375 11.2639 9.85565 10.7957 10.2213 10.4306C10.5869 10.0655 11.05 9.81983 11.5536 9.72004C12.0572 9.62024 12.5773 9.67221 13.0516 9.86928C13.526 10.0664 13.9333 10.3995 14.2199 10.8296C14.5066 11.2597 14.6648 11.769 14.6648 12.2908C14.6648 12.9938 14.3941 13.668 13.9049 14.1712C13.4156 14.6744 12.7545 14.9608 12.0625 14.9608L12 14.9333Z" fill="currentColor"/><path d="M15.75 7.6425C16.1642 7.6425 16.5 7.30421 16.5 6.88667C16.5 6.46913 16.1642 6.13083 15.75 6.13083C15.3358 6.13083 15 6.46913 15 6.88667C15 7.30421 15.3358 7.6425 15.75 7.6425Z" fill="currentColor"/><path d="M18.0625 4H5.9375C5.16549 4 4.4251 4.31389 3.87946 4.87259C3.33382 5.43129 3.02734 6.18913 3.02734 6.97917V18.0208C3.02734 18.8109 3.33382 19.5687 3.87946 20.1274C4.4251 20.6861 5.16549 21 5.9375 21H18.0625C18.8345 21 19.5749 20.6861 20.1205 20.1274C20.6662 19.5687 20.9727 18.8109 20.9727 18.0208V6.97917C20.9727 6.18913 20.6662 5.43129 20.1205 4.87259C19.5749 4.31389 18.8345 4 18.0625 4ZM19.6875 18.0208C19.6875 18.4674 19.5128 18.8957 19.2015 19.2103C18.8902 19.525 18.4675 19.7017 18.0273 19.7017H5.97266C5.53248 19.7017 5.10975 19.525 4.79851 19.2103C4.48727 18.8957 4.3125 18.4674 4.3125 18.0208V6.97917C4.3125 6.53254 4.48727 6.10428 4.79851 5.78966C5.10975 5.47504 5.53248 5.29833 5.97266 5.29833H18.0273C18.4675 5.29833 18.8902 5.47504 19.2015 5.78966C19.5128 6.10428 19.6875 6.53254 19.6875 6.97917V18.0208Z" fill="currentColor"/></svg></a>
+          <a href="https://www.youtube.com/@codle7839" target="_blank" rel="noopener noreferrer" aria-label="YouTube (새 탭)"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path d="M12.5 18.75L18.9875 15L12.5 11.25V18.75ZM26.95 8.9625C27.1125 9.55 27.225 10.3375 27.3 11.3375C27.3875 12.3375 27.425 13.2 27.425 13.95L27.5 15C27.5 17.7375 27.3 19.75 26.95 21.0375C26.6375 22.1625 25.9125 22.8875 24.7875 23.2C24.2 23.3625 23.125 23.475 21.475 23.55C19.85 23.6375 18.3625 23.675 16.9875 23.675L15 23.75C9.7625 23.75 6.5 23.55 5.2125 23.2C4.0875 22.8875 3.3625 22.1625 3.05 21.0375C2.8875 20.45 2.775 19.6625 2.7 18.6625C2.6125 17.6625 2.575 16.8 2.575 16.05L2.5 15C2.5 12.2625 2.7 10.25 3.05 8.9625C3.3625 7.8375 4.0875 7.1125 5.2125 6.8C5.8 6.6375 6.875 6.525 8.525 6.45C10.15 6.3625 11.6375 6.325 13.0125 6.325L15 6.25C20.2375 6.25 23.5 6.45 24.7875 6.8C25.9125 7.1125 26.6375 7.8375 26.95 8.9625Z" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="inquiry-dialog" class="inquiry-dialog official-inquiry" aria-labelledby="inquiry-title" aria-describedby="inquiry-description">
+    <header class="inquiry-heading"><div><h2 id="inquiry-title">도입 문의</h2><p id="inquiry-description">학교에 필요한 구성과 운영 조건을 알려주세요.</p></div><button class="close-dialog" type="button" aria-label="문의폼 닫기">×</button></header>
+    <form id="school-inquiry-form" novalidate>
+      <div class="inquiry-scroll">
+        <div class="inquiry-field"><label for="inquiry-school">학교명 <span class="required-mark">*</span></label><input id="inquiry-school" autocomplete="organization" placeholder="학교명을 입력해주세요" maxlength="100" required aria-describedby="inquiry-school-error"><p class="field-error" id="inquiry-school-error" hidden></p></div>
+        <p class="field-hint">미리보기에서는 학교명을 직접 입력해주세요.</p>
+        <div class="inquiry-field"><label for="inquiry-contact">성함 <span class="required-mark">*</span></label><input id="inquiry-contact" autocomplete="name" placeholder="예: 홍길동" maxlength="60" required aria-describedby="inquiry-contact-error"><p class="field-error" id="inquiry-contact-error" hidden></p></div>
+        <div class="inquiry-field"><label for="inquiry-phone">휴대전화번호 <span class="required-mark">*</span></label><input id="inquiry-phone" type="tel" autocomplete="tel" placeholder="010-0000-0000" maxlength="13" required aria-describedby="inquiry-phone-error"><p class="field-error" id="inquiry-phone-error" hidden></p></div>
+        <section class="official-interest" aria-labelledby="interest-label">
+          <h3 id="interest-label">관심 항목 <span class="required-mark">*</span></h3>
+          <select id="inquiry-interest" aria-label="관심 항목">
+            <option value="subscription">코들 구독 (Pro 플랜 + 콘텐츠 이용권)</option>
+            <option value="camp">코들 AI 집중캠프</option>
+            <option value="hackathon">짓다 AI 해커톤</option>
+          </select>
+          <p class="field-hint" id="inquiry-product-name"></p>
+          <div id="subscription-options">
+            <p class="pass-label">콘텐츠 이용권 <span class="optional-mark">선택</span></p>
+            <p class="field-hint">Pro만 이용해도 괜찮아요. 필요한 이용권만 추가하세요.</p>
+            <button type="button" class="pass-option" data-pass="ai" aria-pressed="false"><span>Codle AI</span><span>+ 20,000원</span></button>
+            <button type="button" class="pass-option" data-pass="cmass" aria-pressed="false"><span>씨마스 인기초</span><span>+ 10,000원</span></button>
+            <p id="quote-breakdown" class="official-price" aria-live="polite" aria-atomic="true"></p>
+            <p class="field-hint">학생 1인·1학기 기준. 인원·학기별 할인 및 최종 견적은 상담 후 안내합니다.</p>
+            <details class="official-compare"><summary>Basic·Pro 기능과 요금 확인</summary><p>Basic은 최대 400명 무료, AI 일부 기능과 파이썬 500MB를 제공합니다. Pro는 AI 도구 전체, 실시간 모니터링, 파이썬 1GB를 제공합니다. Codle AI 이용권 추가 시 파이썬 환경은 2GB입니다.</p><a href="https://ai.codle.io/kr/pricing" target="_blank" rel="noopener noreferrer">전체 요금제 비교 ↗</a></details>
+          </div>
+          <div class="inquiry-fields">
+            <div class="inquiry-field"><label for="inquiry-count"><span id="count-label">학생 수</span> <span class="required-mark">*</span></label><input id="inquiry-count" inputmode="numeric" placeholder="예: 100" maxlength="7" required aria-describedby="inquiry-count-error"><p class="field-error" id="inquiry-count-error" hidden></p></div>
+            <div class="inquiry-field"><label for="inquiry-timing"><span id="timing-label">사용 학기</span> <span class="required-mark">*</span></label><input id="inquiry-timing" placeholder="예: 2027년 1학기" maxlength="100" required aria-describedby="inquiry-timing-error"><p class="field-error" id="inquiry-timing-error" hidden></p></div>
+          </div>
+        </section>
+        <div class="inquiry-consent"><label><input id="inquiry-consent" type="checkbox" required aria-describedby="inquiry-consent-error"><span>개인정보 수집·이용에 동의합니다. <span class="required-mark">*</span></span></label><p class="field-hint">디자인 미리보기로 실제 개인정보를 수집하지 않습니다.</p><p class="field-error" id="inquiry-consent-error" hidden></p></div>
+      </div>
+      <footer class="inquiry-submit-row"><div><p id="inquiry-validation" role="alert" hidden></p><p class="inquiry-preview-note">미리보기 · 입력 정보는 저장·전송되지 않습니다.</p></div><button class="inquiry-submit" type="submit">문의 내용 확인하기 →</button></footer>
+    </form>
+    <section id="inquiry-review" class="inquiry-review" hidden><div class="review-heading"><h3 id="inquiry-review-title" tabindex="-1">문의 내용을 확인해주세요.</h3><p>미리보기입니다. 실제 문의는 전송되지 않았습니다.</p></div><dl id="inquiry-review-details"></dl><div class="review-actions"><button class="button secondary" type="button" id="inquiry-edit">다시 수정하기</button><button class="inquiry-submit" type="button" id="inquiry-done">닫기</button></div></section>
+  </dialog>
+<div class="preview" role="dialog" aria-modal="true" aria-labelledby="preview-title" hidden>
+<div class="preview-bar"><span id="preview-title"></span><a class="preview-info">서비스 안내</a><a class="preview-direct" target="_blank" rel="noopener noreferrer">새 탭에서 열기 ↗</a><button class="preview-close" type="button" aria-label="랜딩 닫기">닫기 ×</button></div>
+<div class="preview-content"><img class="preview-poster" alt=""></div><img class="transition-image" alt="" aria-hidden="true" hidden>
+<p class="preview-fallback" hidden>연결이 늦어지고 있어요. <a target="_blank" rel="noopener noreferrer">새 탭에서 열기 ↗</a></p>
+</div></body></html>

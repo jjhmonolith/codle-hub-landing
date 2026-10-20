@@ -1,0 +1,75 @@
+{
+  "version": 10,
+  "ink": true,
+  "samples": [
+    {
+      "depth": "324.97",
+      "scroll": 191.1999969482422,
+      "stage": "opening",
+      "x": "0.0108",
+      "y": "0.0016"
+    },
+    {
+      "depth": "2263.48",
+      "scroll": 1240.800048828125,
+      "stage": "hero",
+      "x": "0.1456",
+      "y": "0.0338"
+    },
+    {
+      "depth": "2729.88",
+      "scroll": 1356,
+      "stage": "hero",
+      "x": "0.5439",
+      "y": "0.1263"
+    },
+    {
+      "depth": "2269.60",
+      "scroll": 1240.800048828125,
+      "stage": "hero",
+      "x": "0.1514",
+      "y": "0.0351"
+    }
+  ],
+  "destinations": [
+    "platform",
+    "contents",
+    "textbook",
+    "camp",
+    "jitda"
+  ],
+  "returnState": {
+    "focus": "수업 플랫폼 랜딩 열기",
+    "product": "platform",
+    "ready": "true"
+  },
+  "finalState": {
+    "frames": [
+      {
+        "id": "platform",
+        "loads": "1"
+      },
+      {
+        "id": "contents",
+        "loads": "1"
+      },
+      {
+        "id": "textbook",
+        "loads": "1"
+      },
+      {
+        "id": "camp",
+        "loads": "1"
+      },
+      {
+        "id": "jitda",
+        "loads": "1"
+      }
+    ],
+    "imagesLoaded": true,
+    "product": "jitda",
+    "ready": "true",
+    "webgl": "ready"
+  },
+  "errorLogs": []
+}

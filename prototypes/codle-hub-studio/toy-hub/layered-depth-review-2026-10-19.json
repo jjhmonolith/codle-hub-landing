@@ -1,0 +1,31 @@
+{
+  "runtime": "hub.js?v=7",
+  "reference": "https://podium.global/",
+  "changes": [
+    "Replaced the rejected planar mosaic camera with a common perspective volume. Every image has a real Z position and is projected through the same 1000px perspective.",
+    "The camera travels forward. Close planes expand faster, leave toward the viewport edges and uncover the next layers; no lateral tour of five isolated large posters.",
+    "Original logo meshes/materials preserved. Added an optional transparent canvas mode that removes the rectangular backdrop and floor shadows only in this layered composition.",
+    "Official 3D tools, six real content covers, book/activity source imagery, camp source imagery, official Jitda mark and UI are placed between the five real landing planes.",
+    "Distant tiny layers fade outside the active depth range. Content covers enlarged; each has an independent depth and overlap.",
+    "Persistent iframe preload/open/close, keyboard destinations and static alternatives retained. No mobile work, commit, push, PR or deployment."
+  ],
+  "verified": [
+    "Actual browser: revisited Podium from the logo through its overlapping image layers to correct the interpretation.",
+    "Actual desktop browser: approved logo geometry with transparent canvas; tool foreground and product background overlap visibly.",
+    "Native wheel verified the first product approach and its large edge exit, revealing the separate overlapping content planes.",
+    "Syntax checks passed for hub.js, toys.js and portal-tools.js.",
+    "Final browser review: last Jitda source is unobstructed after the preceding UI plane clears sideways.",
+    "Actual Jitda iframe document opened from the last source. Close returns to the same product and source focus.",
+    "Final changed JavaScript syntax checks and tracked repository diff check passed. No source assets upscaled."
+  ],
+  "proofs": [
+    "proof-layers-entry-2026-10-19.png",
+    "proof-layers-platform-pass-2026-10-19.png"
+  ],
+  "limitations": [
+    "No mobile work or QA",
+    "No measured performance claim",
+    "Original content cover resolution remains limited"
+  ],
+  "weeklyUsedPercent": 34
+}

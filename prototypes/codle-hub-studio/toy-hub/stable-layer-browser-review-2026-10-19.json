@@ -1,0 +1,165 @@
+{
+  "version": 8,
+  "scrollSamples": [
+    {
+      "chapter": "hero",
+      "iframeCount": 0,
+      "maxScale": 2.45,
+      "maxWidth": 2503.061767578125,
+      "opacityValues": [
+        "1"
+      ],
+      "scroll": 590.4000244140625,
+      "visible": 14
+    },
+    {
+      "chapter": "hero",
+      "iframeCount": 2,
+      "maxScale": 2.45,
+      "maxWidth": 2503.061767578125,
+      "opacityValues": [
+        "1"
+      ],
+      "scroll": 820.7999877929688,
+      "visible": 15
+    },
+    {
+      "chapter": "hero",
+      "iframeCount": 2,
+      "maxScale": 2.45,
+      "maxWidth": 2503.061767578125,
+      "opacityValues": [
+        "1"
+      ],
+      "scroll": 691.2000122070312,
+      "visible": 14
+    },
+    {
+      "chapter": "hero",
+      "iframeCount": 2,
+      "maxScale": 2.45,
+      "maxWidth": 2503.061767578125,
+      "opacityValues": [
+        "1"
+      ],
+      "scroll": 820.7999877929688,
+      "visible": 15
+    }
+  ],
+  "destinations": [
+    "platform",
+    "contents",
+    "textbook",
+    "camp",
+    "jitda"
+  ],
+  "returnState": {
+    "focus": "AI 해커톤 랜딩 열기",
+    "frames": [
+      {
+        "id": "platform",
+        "loads": "1"
+      },
+      {
+        "id": "contents",
+        "loads": "1"
+      },
+      {
+        "id": "textbook",
+        "loads": "1"
+      },
+      {
+        "id": "camp",
+        "loads": "1"
+      },
+      {
+        "id": "jitda",
+        "loads": "1"
+      }
+    ],
+    "product": "jitda",
+    "ready": "true"
+  },
+  "assets": {
+    "iframeCount": 0,
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/worlds/thumbnail-everyday-ai.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/worlds/thumbnail-python-data.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/worlds/thumbnail-climate-data.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/worlds/thumbnail-microbit.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/worlds/thumbnail-esg.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/worlds/thumbnail-ocean-data.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/worlds/cmass-page33.png"
+      },
+      {
+        "loaded": true,
+        "src": "assets/worlds/textbook-river-board.png"
+      },
+      {
+        "loaded": true,
+        "src": "assets/worlds/camp-code.png"
+      },
+      {
+        "loaded": true,
+        "src": "assets/worlds/camp-block.png"
+      },
+      {
+        "loaded": true,
+        "src": "assets/jitda-logo.svg"
+      },
+      {
+        "loaded": true,
+        "src": "assets/worlds/jitda-official-demo.png"
+      },
+      {
+        "loaded": true,
+        "src": "assets/actual-platform.jpg"
+      },
+      {
+        "loaded": true,
+        "src": "assets/actual-contents.jpg"
+      },
+      {
+        "loaded": true,
+        "src": "assets/actual-cmass.png"
+      },
+      {
+        "loaded": true,
+        "src": "assets/actual-camp.jpg"
+      },
+      {
+        "loaded": true,
+        "src": "assets/actual-jitda-current.png"
+      }
+    ],
+    "ready": "true",
+    "version": "http://127.0.0.1:4187/prototypes/codle-hub-studio/toy-hub/hub.js?v=8",
+    "webgl": "ready"
+  },
+  "errorLogs": [],
+  "proofs": [
+    "proof-stable-layer-opening-2026-10-19.png",
+    "proof-stable-layer-stack-2026-10-19.png",
+    "proof-stable-layer-return-2026-10-19.png"
+  ]
+}
