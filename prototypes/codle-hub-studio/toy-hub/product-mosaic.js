@@ -1,6 +1,6 @@
 import {products as originalProducts} from './catalog.js?v=4';
 const products=originalProducts.flatMap(p=>p.id==='textbook'?[{...p,name:'씨마스 인공지능 기초',extra:null},{id:'aidt',name:'금성·YBM 정보 교육자료',url:'https://exhibition.codle.io/',image:'actual-textbook.jpg'}]:[p]);
-import {createMosaicObject} from './mosaic-service-art.js?v=36';
+import {createMosaicObject} from './mosaic-service-art.js?v=50';
 const $=s=>document.querySelector(s),reduced=matchMedia('(prefers-reduced-motion: reduce)'),hub=$('.hub'),board=$('.board'),preview=$('.preview');
 const modalContent=$('.preview-content'),closeButton=$('.preview-close'),cover=$('.transition-image');
 const tiles=new Map(),frames=new Map(),volumes=new Map();
@@ -25,7 +25,18 @@ const finalSizes={platform:[.40,.42],contents:[.34,.58],textbook:[.26,.42],aidt:
 const entryStarted=performance.now(),logoLines=[...brand.querySelectorAll('.logo-line')],logoSolid=brand.querySelector('.logo-solid');
 let layoutWidth=0,layoutHeight=0,drawnProgress=null;
 // One continuous unfold: logo compression, card colour and seams share progress.
-function openingTimeline(age,instant=false){return instant?1:.9*ease(clamp((age-3540)/2100))}
+// Cubic-bezier(.72, 0, .14, 1): restrained start, a quick expansion, soft landing.
+function unfoldEase(progress){
+ if(progress<=0)return 0;if(progress>=1)return 1;
+ let low=0,high=1;
+ for(let i=0;i<18;i++){
+  const u=(low+high)/2,v=1-u;
+  const x=3*v*v*u*.72+3*v*u*u*.14+u*u*u;
+  if(x<progress)low=u;else high=u;
+ }
+ const u=(low+high)/2;return u*u*(3-2*u);
+}
+function openingTimeline(age,instant=false){return instant?1:.9*unfoldEase(clamp((age-3700)/1800))}
 function updateOpening(now=performance.now()){
  openingFrame=0;
  openingProgress=openingTimeline(now-entryStarted,openingSkipped||reduced.matches||innerWidth<=600);

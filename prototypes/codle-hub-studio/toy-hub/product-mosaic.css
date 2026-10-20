@@ -214,7 +214,7 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 @media(min-width:601px){
  .board .tile.platform .editorial-art{transform:scale(1.04)}
  .board .tile.contents .editorial-art{transform:scale(.94)}
- .board .tile.textbook .editorial-art{transform:scale(.88)}
+ .board .tile.textbook .editorial-art{transform:scale(1.35)}
  .board .tile.aidt .editorial-art{transform:scale(.84)}
  .board .tile.camp .editorial-art{transform:scale(1.02)}
  .board .tile.jitda .editorial-art{transform:scale(.88)}
@@ -232,3 +232,29 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 /* Intro unfolds on its own clock; no scroll runway is needed. */
 @media(min-width:601px){.opening{height:100svh}.opening-sticky{position:relative}.scroll-cue{display:none}}
 
+
+/* Line drawings gain restrained colour and a single small gesture on interaction. */
+.editorial-art .art-color{fill:var(--art-fill,#a9bfe8);fill-opacity:var(--rest-opacity,0);transition:fill-opacity 360ms ease}
+.editorial-art .art-surface{fill:var(--art-base,transparent);transition:fill 360ms ease}
+.editorial-art .art-glyph-fill{opacity:.7;transition:opacity 360ms ease}
+.tile.art-active .art-color{fill-opacity:var(--fill-opacity,1)}
+.tile.art-active .art-surface{fill:var(--art-fill,#a9bfe8)}
+.tile.art-active .art-glyph-fill{opacity:1}
+.editorial-art [class*="motion-"]{transform-box:fill-box;transform-origin:center;transition:transform 380ms cubic-bezier(.2,.7,.25,1)}
+.editorial-art .motion-page-left{transform-origin:right center}
+.editorial-art .motion-page-right{transform-origin:left center}
+.tile.art-active .motion-tool{transform:translateY(-3px);transition-delay:var(--tool-delay,0ms)}
+.tile.art-active .motion-card-back{transform:translate(-5px,-5px) rotate(-3deg)}
+.tile.art-active .motion-card-front{transform:translate(5px,4px) rotate(2deg)}
+.tile.art-active .motion-page-left{transform:rotate(-2deg)}
+.tile.art-active .motion-page-right{transform:rotate(2deg)}
+.tile.art-active .motion-shape-a{transform:translateY(-4px)}
+.tile.art-active .motion-shape-b{transform:rotate(4deg)}
+.tile.art-active .motion-student-left{transform:translate(3px,1px) rotate(2deg)}
+.tile.art-active .motion-student-right{transform:translate(-3px,1px) rotate(-2deg)}
+.tile.art-active .motion-student-center{transform:translateY(2px)}
+.tile.art-active .motion-helmet{transform:translateY(-3px) rotate(-2deg)}
+@media(prefers-reduced-motion:reduce){
+ .editorial-art [class*="motion-"],.tile.art-active .editorial-art [class*="motion-"]{transform:none!important;transition:none!important}
+ .editorial-art .art-color,.editorial-art .art-surface,.editorial-art .art-glyph-fill{transition:none!important}
+}
