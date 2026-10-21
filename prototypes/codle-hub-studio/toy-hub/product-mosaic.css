@@ -404,3 +404,12 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
  .service-details .service-art.camp path{stroke-width:5;stroke:#253955}
  .service-details .service-art.camp .art-surface{fill:#9eb3d2}
 }
+
+/* A small route below the hub; one shared consultation action follows the guide. */
+.guide-cue{display:none}
+@media(min-width:601px){
+ .guide-cue{display:flex;position:absolute;left:50%;bottom:3px;transform:translateX(-50%);width:32px;height:28px;align-items:center;justify-content:center;color:#747970;visibility:hidden;z-index:9}
+ .board.is-revealed .guide-cue{visibility:visible}
+ .guide-cue:hover{color:#253955}
+ .guide-cue:focus-visible{outline:2px solid #5786bc;outline-offset:1px;border-radius:3px}
+}

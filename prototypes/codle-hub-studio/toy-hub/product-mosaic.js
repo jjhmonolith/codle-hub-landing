@@ -21,6 +21,10 @@ const ease=v=>v*v*(3-2*v);
 const outline=$('.opening-grid');
 for(const p of products){const cell=document.createElement('span');cell.className='outline-cell '+p.id;outline.append(cell)}
 const core=document.createElement('div');core.className='mosaic-core';board.append(core);const composition=document.createElement('div');composition.className='opening-composition';core.append(composition);composition.append(brand,copy);const coreOutline=document.createElement('span');coreOutline.className='outline-cell core';outline.append(coreOutline);outline.hidden=false;seal.hidden=true;
+const guideCue=document.createElement('a');
+guideCue.className='guide-cue';guideCue.href='#service-guide';guideCue.setAttribute('aria-label','아래 서비스 안내 보기');guideCue.title='서비스 안내';
+guideCue.innerHTML='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v15m-5-5 5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+core.append(guideCue);
 const finalSizes={platform:[.40,.42],contents:[.34,.58],textbook:[.26,.42],aidt:[.26,.58],camp:[.51,.42],jitda:[.23,.58]};
 const entryStarted=performance.now(),logoLines=[...brand.querySelectorAll('.logo-line')],logoSolid=brand.querySelector('.logo-solid');
 let layoutWidth=0,layoutHeight=0,drawnProgress=null;
@@ -97,7 +101,7 @@ function updateOpening(now=performance.now()){
  $('.masthead').inert=headerReveal<.98;
  $('.explore-link').style.opacity=(1-fade)*copyReveal;
  $('.explore-link').inert=fade>.98||copyReveal===0;
- board.classList.toggle('is-revealed',t>.95);
+ board.classList.toggle('is-revealed',t>.95);guideCue.inert=t<.98;
  for(const product of products){const tile=tiles.get(product.id),stage=tile.querySelector('.object-stage');
   tile.style.opacity=1;tile.inert=t<.98;tile.classList.toggle('art-arrived',t>.82);volumes.get(product.id)?.setProgress(t);
   tile.querySelector('.tile-label').style.opacity=ease(clamp((t-.65)/.30));
