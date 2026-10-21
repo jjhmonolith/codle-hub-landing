@@ -1,6 +1,6 @@
 import {products as originalProducts} from './catalog.js?v=4';
 const products=originalProducts.flatMap(p=>p.id==='textbook'?[{...p,name:'씨마스 인공지능 기초',extra:null},{id:'aidt',name:'금성·YBM 정보 교육자료',url:'https://exhibition.codle.io/',image:'actual-textbook.jpg'}]:[p]);
-import {createMosaicObject,serviceIllustration} from './mosaic-service-art.js?v=60';
+import {createMosaicObject,serviceIllustration} from './mosaic-service-art.js?v=87';
 const $=s=>document.querySelector(s),reduced=matchMedia('(prefers-reduced-motion: reduce)'),hub=$('.hub'),board=$('.board'),preview=$('.preview');
 const modalContent=$('.preview-content'),closeButton=$('.preview-close'),cover=$('.transition-image');
 const tiles=new Map(),frames=new Map(),volumes=new Map();

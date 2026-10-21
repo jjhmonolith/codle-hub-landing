@@ -213,7 +213,7 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 /* Optical sizing for the different silhouettes; desktop only. */
 @media(min-width:601px){
  .board .tile.platform .editorial-art{transform:scale(1.04)}
- .board .tile.contents .editorial-art{transform:scale(.94)}
+ .board .tile.contents .editorial-art{transform:scale(1.08)}
  .board .tile.textbook .editorial-art{transform:scale(1.35)}
  .board .tile.aidt .editorial-art{transform:scale(.84)}
  .board .tile.camp .editorial-art{transform:scale(1.02)}
@@ -233,19 +233,43 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 @media(min-width:601px){.opening{height:100svh}.opening-sticky{position:relative}.scroll-cue{display:none}}
 
 
-/* Line drawings gain restrained colour and a single small gesture on interaction. */
-.editorial-art .art-color{fill:var(--art-fill,#a9bfe8);fill-opacity:var(--rest-opacity,0);transition:fill-opacity 360ms ease}
-.editorial-art .art-surface{fill:var(--art-base,transparent);transition:fill 360ms ease}
-.editorial-art .art-glyph-fill{opacity:.7;transition:opacity 360ms ease}
+/* Restrained colour is the resting state; interaction only changes the pose. */
+.editorial-art .art-color{fill:var(--art-fill,#a9bfe8);fill-opacity:var(--fill-opacity,1);transition:fill-opacity 360ms ease}
+.editorial-art .art-surface{fill:var(--art-fill,#a9bfe8);transition:fill 360ms ease}
+.editorial-art .art-glyph-fill{opacity:1;fill:#fffaf1;transition:opacity 360ms ease}
 .tile.art-active .art-color{fill-opacity:var(--fill-opacity,1)}
 .tile.art-active .art-surface{fill:var(--art-fill,#a9bfe8)}
 .tile.art-active .art-glyph-fill{opacity:1}
 .editorial-art [class*="motion-"]{transform-box:fill-box;transform-origin:center;transition:transform 380ms cubic-bezier(.2,.7,.25,1)}
 .editorial-art .motion-page-left{transform-origin:right center}
 .editorial-art .motion-page-right{transform-origin:left center}
-.tile.art-active .motion-tool{transform:translateY(-3px);transition-delay:var(--tool-delay,0ms)}
-.tile.art-active .motion-card-back{transform:translate(-5px,-5px) rotate(-3deg)}
-.tile.art-active .motion-card-front{transform:translate(5px,4px) rotate(2deg)}
+/* One reversible playhead links the gathering activities to the opening workspace. */
+@property --platform-progress{syntax:"<number>";inherits:true;initial-value:0}
+.tile.platform .editorial-art{--platform-progress:0;--gather:clamp(0,calc(var(--platform-progress)*1.15),1);--unfold:clamp(0,calc((var(--platform-progress) - .12)/.88),1);transition:--platform-progress 1000ms cubic-bezier(.65,0,.22,1)}
+.tile.platform.art-active .editorial-art{--platform-progress:1}
+.tile.platform .motion-tool{transform:translate(calc(var(--move-x)*var(--gather)),calc(var(--move-y)*var(--gather))) scale(calc(1 - .78*var(--gather)));transition:none}
+.tile.platform .tool-python{--move-x:-37px;--move-y:-11px}
+.tile.platform .tool-entry{--move-x:-141px;--move-y:17px}
+.tile.platform .tool-quiz{--move-x:-245px;--move-y:45px}
+.tile.platform .tool-pdf{--move-x:-37px;--move-y:-31px}
+.tile.platform .tool-board{--move-x:-141px;--move-y:-3px}
+.tile.platform .tool-video{--move-x:-245px;--move-y:25px}
+.editorial-art .codle-classroom{clip-path:inset(0 100% 0 0)}
+.tile.platform .codle-classroom{clip-path:inset(0 calc((1 - var(--unfold))*100%) 0 0);transform:translateX(calc((1 - var(--gather))*56px));transition:none}
+/* Contents travel with their frame, with no independent fade or late pop-in. */
+.tile.platform .codle-panel,.tile.platform .codle-result{opacity:1;transform:none;transition:none}
+@media(prefers-reduced-motion:reduce){.tile.platform .editorial-art{transition:none!important}}
+/* A reversible cover reveal keeps the collection distinct from the platform grid. */
+@property --contents-progress{syntax:"<number>";inherits:true;initial-value:0}
+.tile.contents .editorial-art{--contents-progress:0;--fold-first:clamp(0,calc(var(--contents-progress)/.7),1);--fold-last:clamp(0,calc((var(--contents-progress) - .25)/.75),1);transition:--contents-progress 1250ms cubic-bezier(.55,0,.2,1)}
+.tile.contents.art-active .editorial-art{--contents-progress:1}
+.content-fold{transform:translate(67px,102px) scale(1.5)}
+.tile.contents .content-fold{transform:translate(calc(67px - 55px*var(--contents-progress)),calc(102px + 18px*var(--contents-progress))) scale(calc(1.5 - .7*var(--contents-progress)))}
+.tile.contents .content-leaf-middle{transform:translateX(calc(124px*var(--fold-first)))}
+.tile.contents .content-leaf-last{transform:translateX(calc(124px*var(--fold-first) + 124px*var(--fold-last)))}
+.tile.contents .content-sheet-edges{opacity:calc(1 - var(--fold-first))}
+.game-ice-goal{opacity:0}
+@media(prefers-reduced-motion:reduce){.tile.contents .editorial-art{transition:none!important}}
 .tile.art-active .motion-page-left{transform:none}
 .tile.art-active .motion-page-right{transform:none}
 .tile.art-active .motion-shape-a{transform:translateY(-4px)}
@@ -255,20 +279,19 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 .tile.art-active .motion-student-center{transform:translateY(2px)}
 .tile.art-active .motion-helmet{transform:translateY(-3px) rotate(-2deg)}
 @media(prefers-reduced-motion:reduce){
- .editorial-art [class*="motion-"],.tile.art-active .editorial-art [class*="motion-"]{transform:none!important;transition:none!important}
+ .editorial-art [class*="motion-"]:not(.motion-tool),.tile.art-active .editorial-art [class*="motion-"]:not(.motion-tool){transform:none!important;transition:none!important;animation:none!important}
  .editorial-art .art-color,.editorial-art .art-surface,.editorial-art .art-glyph-fill{transition:none!important}
 }
 
-/* On interaction, colour silhouettes take over from the outlines. */
-.editorial-art :is(path,rect,circle,ellipse){stroke-opacity:1;transition:fill 360ms ease,fill-opacity 360ms ease,stroke-opacity 260ms ease,transform 380ms cubic-bezier(.2,.7,.25,1)}
-.editorial-art .art-outline{transition:opacity 260ms ease}
+/* Filled silhouettes remain visible before and during interaction. */
+.editorial-art :is(path,rect,circle,ellipse){stroke-opacity:0;transition:fill 360ms ease,fill-opacity 360ms ease,stroke-opacity 260ms ease,transform 380ms cubic-bezier(.2,.7,.25,1)}
+.editorial-art .art-outline{opacity:0;transition:opacity 260ms ease}
 .tile.art-active .editorial-art :is(path,rect,circle,ellipse){stroke-opacity:0}
 .tile.art-active .art-outline{opacity:0}
 .tile.art-active .art-glyph-fill{fill:#fffaf1}
 @media(prefers-reduced-motion:reduce){.editorial-art :is(path,rect,circle,ellipse),.editorial-art .art-outline{transition:none!important}}
 
-/* Preserve the approved camp contour: filling its open shoulders changes the scene. */
-.tile.camp.art-active .editorial-art path{stroke-opacity:1}
+/* The camp shares the same solid silhouette treatment as the other services. */
 
 /* Desktop hub fills the viewport; service navigation remains in the sections below. */
 @media(min-width:601px){
@@ -359,10 +382,6 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 }
 
 @media(min-width:901px){
- .service-art.camp :is(path,circle){stroke:#253955}
- .service-art.camp circle.art-color{fill:#253955}
-}
-@media(min-width:901px){
  .service-art.textbook .motion-page-right>.art-surface:first-child{fill:#e6d3df}
  .service-art.aidt .motion-shape-a:is(path){fill:#ddd1b4}
  .service-art.contents .motion-card-front>.art-surface{fill:#efdfc4}
@@ -397,13 +416,6 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 }
 
 @media(min-width:1200px){.service-details .service-detail .panel-description br{display:initial}}
-
-/* Give the line-based camp scene the same optical weight as its neighbours. */
-@media(min-width:901px){
- .service-details .service-art.camp>.editorial-art{width:112px;height:77px;flex-shrink:0}
- .service-details .service-art.camp path{stroke-width:5;stroke:#253955}
- .service-details .service-art.camp .art-surface{fill:#9eb3d2}
-}
 
 /* A small route below the hub; one shared consultation action follows the guide. */
 .guide-cue{display:none}
