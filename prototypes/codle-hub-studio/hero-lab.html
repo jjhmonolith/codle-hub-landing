@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f4f4f0">
+  <title>코들 × 짓다 — 만져보는 AI 교육</title>
+  <link rel="icon" href="assets/codle.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="hero-lab.css">
+  <script type="module" src="hero-lab.js"></script>
+</head>
+<body>
+  <a class="skip" href="#experiments">체험으로 바로 가기</a>
+  <header class="header">
+    <a class="brands" href="index.html" aria-label="코들·짓다 교육 허브 홈"><img src="assets/codle.svg" alt="코들"><span>×</span><img src="assets/jitda-logo.svg" alt="짓다"></a>
+    <span class="hub-label">EDUCATION HUB</span>
+    <nav aria-label="주요 메뉴"><a href="index.html#offerings">교육 프로그램 <span>↗</span></a><a class="inquiry" href="index.html#consult-title">우리 학교 도입 상담 <span>↗</span></a></nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="intro">
+        <h1 id="hero-title">수업부터 해커톤, 캠프까지,<br>우리 학교에 필요한 <em>AI 교육</em>을 살펴보세요.</h1>
+        <p>배우고, 만들고, 경험하며.<br>가능성을 직접 움직여 보세요.</p>
+      </div>
+      <div id="experiments" class="experiment" data-mode="class">
+        <div class="stage-top">
+          <span class="experiment-label"><i></i> PLAY TO DISCOVER</span>
+          <div class="modes" role="group" aria-label="교육 체험 모드">
+            <button type="button" data-mode="class" aria-pressed="true"><span>01</span> 수업</button>
+            <button type="button" data-mode="build" aria-pressed="false"><span>02</span> 해커톤</button>
+            <button type="button" data-mode="wave" aria-pressed="false"><span>03</span> 캠프</button>
+          </div>
+          <button type="button" id="pause" class="icon-button" aria-label="자동 움직임 멈추기" aria-pressed="false">Ⅱ</button>
+        </div>
+        <canvas id="lab-canvas" tabindex="0" aria-label="입체 작품. 드래그 또는 방향키로 돌려 보세요. 캠프 모드에서는 클릭 또는 스페이스 키로 파동을 만들 수 있습니다."></canvas>
+        <div class="fallback" id="status" role="status">실험 공간을 준비하고 있어요…</div>
+        <div class="stage-copy" aria-hidden="true"><span id="mode-kicker">01 / CHANGE A VARIABLE</span><h2 id="mode-title">내가 바꾼 값이,<br>새로운 형태로.</h2></div>
+        <div id="pointer-hint" class="pointer-hint" aria-hidden="true">DRAG</div>
+        <div class="coordinate" aria-hidden="true"><span id="coord">x 0.00&nbsp;&nbsp; y 0.00</span><span>INPUT → POSSIBILITY</span></div>
+        <div class="controls">
+          <div class="instruction"><span id="instruction">드래그해서 돌리고, 아래 값으로 형태를 바꿔 보세요.</span><small id="formula">form = sin(angle × frequency)</small></div>
+          <div class="mode-control" id="class-controls"><label for="frequency">주파수 <output id="frequency-output" for="frequency">2.4</output></label><input type="range" id="frequency" min="1" max="6" step="0.1" value="2.4" aria-label="형태의 주파수"></div>
+          <div class="mode-control" id="build-controls" hidden><span class="build-progress" id="build-progress">0 / 4 조립됨</span><button type="button" id="connect" class="action">조각 연결하기 <span>＋</span></button></div>
+          <div class="mode-control" id="wave-controls" hidden><span class="build-progress" id="wave-count">직접 파동을 만들어 보세요</span><button type="button" id="pulse" class="action">파동 보내기 <span>↗</span></button></div>
+          <button type="button" id="reset" class="reset">↺ <span>처음으로</span></button>
+        </div>
+      </div>
+      <div class="below-stage"><span>작은 조작에서 시작되는, 새로운 가능성.</span><a id="program-link" href="index.html#panel-license">코들 수업 플랫폼 살펴보기 <span>↗</span></a></div>
+      <p class="prototype-note">인터랙션 콘셉트 시안 · 실제 코들·짓다 제품 기능을 재현한 데모는 아닙니다.</p>
+      <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,31 @@
+/* Labs-style introduction; the original six-service mosaic remains intact. */
+.product-labs .masthead{position:fixed;inset:0 0 auto;height:86px;padding:22px 36px;opacity:1!important;z-index:30;color:#fff;background:transparent;display:flex;align-items:center;justify-content:space-between}.product-labs .masthead>a img{width:95px;filter:brightness(0) invert(1)}.product-labs .masthead nav{display:flex;align-items:center;gap:25px}.product-labs .masthead a,.product-labs .masthead button{color:inherit}.product-labs .masthead .product-login{order:5;display:inline-flex;background:#f7f5ef;color:#18242b;border-radius:40px;padding:13px 21px;font-size:13px;min-height:44px;align-items:center}.product-labs .masthead.is-scrolled{background:#f4f2ecf5;color:#202733;border-bottom:1px solid #dce0d5}.product-labs .masthead.is-scrolled>a img{filter:none}.product-labs .masthead.is-scrolled .product-login{background:#2855ed;color:white}.product-labs .labs-hero{width:100%;margin:0}.product-labs .labs-copy{font-family:inherit}.product-labs .labs-copy h2{font-weight:450}.product-labs .opening{height:100svh;min-height:660px}.product-labs .opening-sticky{height:100%;position:relative}.product-labs .service-guide{scroll-margin-top:85px}.product-labs #destinations{scroll-margin-top:100px}.product-labs .service-detail{scroll-margin-top:100px}.product-labs .labs-scroll{text-decoration:none}.product-labs .labs-copy .labs-description{line-height:1.7}.product-labs .labs-hero button{font-family:inherit}.product-labs .labs-hero a{text-decoration:none}.product-labs .labs-hero [hidden]{display:none!important}
+@media(max-width:600px){.product-labs .masthead{height:74px;padding:15px 18px}.product-labs .masthead>a img{width:79px}.product-labs .masthead nav{gap:12px}.product-labs .masthead .nav-faq,.product-labs .masthead .nav-inquiry{display:none}.product-labs .masthead nav>a:not(.product-login){font-size:11px}.product-labs .masthead .product-login{font-size:12px;padding:10px 14px}.product-labs .opening{height:100svh;min-height:720px}.product-labs .labs-copy h2{font-size:46px}}
+
+/* Preserve the original logo drawing and grid-unfold choreography inside slide one. */
+.product-labs .mosaic-hero-art{inset:0;transform:none;background:#f8faff}
+.product-labs .mosaic-hero-art .opening{position:absolute;inset:0;height:100%;min-height:0}
+.product-labs .mosaic-hero-art .opening-sticky{height:100%;overflow:hidden}
+.product-labs .mosaic-hero-art .board{inset:90px 24px 24px;display:grid;grid-template-areas:"platform platform contents textbook" "platform platform contents textbook" "jitda core contents aidt" "jitda camp camp aidt";pointer-events:none}
+.product-labs .mosaic-hero-art .tile{min-height:0;transform-origin:top left}
+.product-labs .mosaic-hero-art .tile.platform{grid-area:platform}.product-labs .mosaic-hero-art .tile.contents{grid-area:contents}.product-labs .mosaic-hero-art .tile.textbook{grid-area:textbook}.product-labs .mosaic-hero-art .tile.aidt{grid-area:aidt}.product-labs .mosaic-hero-art .tile.camp{grid-area:camp}.product-labs .mosaic-hero-art .tile.jitda{grid-area:jitda}
+.product-labs .mosaic-hero-art .mosaic-core{display:block;visibility:visible;position:relative;inset:auto;grid-area:core;overflow:visible}
+.product-labs .mosaic-hero-art .board .tile .object-stage{inset:auto;left:50%;top:50%}
+.product-labs .mosaic-hero-art .opening-grid,.product-labs .mosaic-hero-art .explore-link,.product-labs .mosaic-hero-art .core-login{display:none}
+.product-labs .labs-platform .labs-veil{background:radial-gradient(ellipse at center,#061421e8,#06142166);opacity:0;transition:opacity 650ms ease}
+.product-labs .labs-platform .labs-copy{opacity:0;visibility:hidden;transition:opacity 650ms ease,visibility 650ms}
+.product-labs .intro-complete .labs-platform .labs-veil,.product-labs .intro-complete .labs-platform .labs-copy{opacity:1;visibility:visible}
+.product-labs:has(.labs-platform:not([hidden])) .masthead:not(.is-scrolled)>a img{filter:none}
+.product-labs:has(.labs-platform:not([hidden])) .masthead:not(.is-scrolled){color:#202733}
+.product-labs:has(.intro-complete .labs-platform:not([hidden])) .masthead:not(.is-scrolled){color:#fff}
+.product-labs:has(.intro-complete .labs-platform:not([hidden])) .masthead:not(.is-scrolled)>a img{filter:brightness(0) invert(1)}
+.product-labs .labs-hero:not(.intro-complete):has(.labs-platform:not([hidden])) .labs-controls,.product-labs .labs-hero:not(.intro-complete):has(.labs-platform:not([hidden])) .labs-scroll,.product-labs .labs-hero:not(.intro-complete):has(.labs-platform:not([hidden])) .labs-count{color:#202733}
+.product-labs .labs-hero:not(.intro-complete) .labs-arrow{color:#202733;border-color:#20273355}
+.product-labs .labs-hero:not(.intro-complete) .labs-dots span{background:#20273366}
+.product-labs .labs-hero:not(.intro-complete) .labs-dots button[aria-pressed=true] span{background:#202733}
+.mosaic-replay{position:absolute;right:36px;bottom:65px;z-index:5;border:1px solid #ffffff66;background:#12212c;color:white;border-radius:30px;min-height:44px;padding:10px 16px;cursor:pointer;font:inherit;font-size:12px}
+.product-labs .labs-hero:has(.labs-platform[hidden]) .mosaic-replay{display:none}
+@media(max-width:600px){.product-labs .mosaic-hero-art{inset:auto;width:900px;height:1100px;left:50%;top:50%;transform:translate(-50%,-50%) scale(.65)}.product-labs .mosaic-hero-art .board{inset:30px 12px 15px}.product-labs .mosaic-hero-art .opening-brand{display:block}.product-labs .mosaic-hero-art .opening-copy{display:flex}.product-labs .mosaic-hero-art .opening-copy h1{font-size:28px;white-space:nowrap}.mosaic-replay{bottom:20px;right:20px;font-size:10px;padding:8px 12px}.product-labs .labs-count{display:none}}
+@media(prefers-reduced-motion:reduce){.product-labs .labs-platform .labs-veil,.product-labs .labs-platform .labs-copy{transition:none}}
+.product-labs .mosaic-hero-art .opening-sticky .board{position:absolute!important;top:90px!important;bottom:24px!important;left:24px!important;right:24px!important;width:auto!important;height:auto!important;min-height:0!important;max-height:none!important}
+@media(max-width:600px){.product-labs .mosaic-hero-art{height:1250px}.product-labs .mosaic-hero-art .opening-sticky .board{top:90px!important;bottom:30px!important}}

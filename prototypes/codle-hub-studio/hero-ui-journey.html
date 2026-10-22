@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>배움에서 만들기로 — 코들 × 짓다</title><link rel="stylesheet" href="hero-spaces.css"><link rel="stylesheet" href="hero-ui-journey.css"></head>
+<body>
+<header class="header"><a class="identity" href="./" aria-label="코들 교육 허브 홈"><img src="assets/codle.svg" alt="코들"><span>교육 허브</span></a><nav aria-label="주요 메뉴"><a href="./#offerings">교육 프로그램</a><a href="./#questions">도입 안내</a></nav><a class="header-cta" href="./#questions">우리 학교에 도입하기 <span>↗</span></a></header>
+<main>
+<section class="hero journey-hero" aria-labelledby="hero-title">
+  <div class="copy"><p class="eyebrow"><span></span> 배움의 가능성을 넓히다</p><h1 id="hero-title">수업부터<br>해커톤, 캠프까지,<br><span class="second">우리 학교에 필요한<br><em>AI 교육</em>을 살펴보세요.</span></h1><p class="intro">매일의 수업에서, 함께 만드는 특별한 경험까지.<br>학교에 맞는 배움이 여기서 시작됩니다.</p><a class="primary" href="./#offerings">교육 프로그램 둘러보기 <span>↗</span></a><div class="brands"><img src="assets/codle.svg" alt="코들"><span>×</span><img src="assets/jitda-logo.svg" alt="짓다"></div></div>
+  <div class="journey-visual" id="journey-visual" aria-label="책상에서 코들 수업 UI로 들어가고, 활동 카드에서 짓다 제작 데모와 결과물로 이어지는 모션 시안">
+    <div class="stage" id="stage" aria-hidden="true">
+      <div id="desk-layer"><img class="desk-photo" src="assets/hero-desk-styleframe-v1.png" alt=""></div>
+      <div id="course-window"><img src="assets/hero-sequence/course.jpg" alt=""></div>
+      <div id="activity-field">
+        <div class="activity-card" id="python-card"><div class="activity-crop python-crop"></div></div>
+        <div class="activity-card" id="ai-card"><div class="activity-crop ai-crop"></div></div>
+        <div class="activity-card" id="board-card"><div class="activity-crop board-crop"></div></div>
+        <div id="selection-ring"></div>
+      </div>
+      <div id="jitda-window">
+        <div class="studio-top"><img src="assets/jitda-logo.svg" alt=""><span>ENK 해커톤</span><b>해커톤 진행</b><span class="studio-right">터미널 사파리</span></div>
+        <div class="studio-body">
+          <div class="conversation"><div class="request" id="request">코딩 단계마다 어울리는 음료를 추천해주는 한 페이지 앱을 만들어줘. 카드 4개로.</div><div class="response" id="response"><span>✦</span><small>탐색됨 · 1개 읽음 · 3개 검색</small><p>좋아요. 음료 카드 4개를 만들었어요.</p><div class="diff">수정됨 · 3 파일 <b>+69</b><em>−6</em><hr>src/App.tsx <b>+18</b></div></div><div class="composer">무엇이든 만들어 달라고 말해보세요…<span>↑</span></div></div>
+          <div class="preview-space"><div class="preview-bar">◉ <span>sapari.jitda.run</span> ↗</div></div>
+        </div>
+      </div>
+      <div id="result-panel"><div class="app-heading"><small>MADE WITH JITDA</small><h2>오늘의 음료</h2><p>지금 작업에 어울리는 한 잔</p></div><div class="drink-grid"><article><i>01</i><h3>에스프레소</h3><p>집중 디버깅 시간에</p></article><article><i>02</i><h3>카페라떼</h3><p>느긋한 페어 코딩에</p></article><article><i>03</i><h3>아메리카노</h3><p>긴 코드 리뷰에</p></article><article><i>04</i><h3>콜드브루</h3><p>산뜻한 리팩터에</p></article></div></div>
+      <div id="scene-heading"><img id="scene-logo" src="assets/codle.svg" alt=""><p id="scene-line">수업에서 시작된 가능성.</p></div>
+      <div id="scene-footnote">공식 화면 기반 모션 연출</div>
+    </div>
+  </div>
+  <div class="journey-controls"><div class="chapter-nav" aria-label="장면 선택"><button data-time="0" aria-pressed="true">01 책상</button><button data-time="3.6" aria-pressed="false">02 코들 UI</button><button data-time="6.7" aria-pressed="false">03 활동</button><button data-time="12.5" aria-pressed="false">04 짓다</button><button data-time="15.8" aria-pressed="false">05 결과물</button></div><div class="transport"><button id="replay" aria-label="처음부터 재생">↺</button><button id="pause" aria-label="일시정지" aria-pressed="false">Ⅱ</button><input id="seek" aria-label="모션 탐색" type="range" min="0" max="18.5" step="0.01" value="0"><output id="time">0.0 / 18.5</output></div></div>
+</section>
+<footer class="preview-footer"><span>수업에서, 직접 만드는 경험으로.</span><p>코들 공식 캡처 · 짓다 공식 소개 데모 재구성 · 서비스 간 자동 연동을 뜻하지 않습니다.</p><a href="hero-styleframe.html">정지 시안 ↗</a></footer>
+<details class="source-notes"><summary>화면 출처와 연출 범위</summary><p>코들 수업 에디터는 <a href="https://ai.codle.io/help/JdCDQlXTPNeOZ1ahIR9dKOwqk.jpg">공식 가이드 캡처</a>, 활동 카드는 <a href="https://ai.codle.io/kr/create_lessons">공식 수업 자료 제작 소개</a>의 이미지입니다. 오류도우미 화면은 사용하지 않았습니다.</p><p>짓다는 <a href="https://landing.jitda.io/">공식 소개 페이지</a>의 ‘오늘의 음료’ 공개 데모 구성을 로컬 HTML로 재구성했습니다. 실제 로그인 세션 녹화나 학생 결과물은 아닙니다. 카드 분리·확대와 서비스 사이의 이동은 교육 경험을 설명하는 연출입니다.</p></details>
+</main><script type="module" src="hero-ui-journey.js"></script>
+</body></html>

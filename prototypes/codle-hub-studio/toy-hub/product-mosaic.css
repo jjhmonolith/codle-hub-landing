@@ -7,14 +7,14 @@
 @media(max-width:900px){h1{font-size:40px}h1 br{display:block}.board{grid-template-columns:1fr 1fr 1fr;grid-template-rows:1.1fr 1fr;height:calc(100svh - 255px)}.tile.platform{grid-column:1;grid-row:1}.tile.contents{grid-column:2/4;grid-row:1}.tile.textbook{grid-column:1;grid-row:2}.tile.camp{grid-column:2;grid-row:2}.tile.jitda{grid-column:3;grid-row:2}.tile-label{left:16px;right:16px;font-size:20px}.tile-caption{left:16px;right:16px;font-size:11px}}
 @media(max-width:600px){.masthead{height:66px}.hub{padding:0 16px 20px}h1{font-size:34px;margin:20px 0 26px}.board{height:auto;min-height:0;grid-template-columns:1fr 1fr;grid-template-rows:260px 240px 260px}.tile.platform{grid-column:1;grid-row:1}.tile.contents{grid-column:2;grid-row:1}.tile.textbook{grid-column:1;grid-row:2}.tile.camp{grid-column:2;grid-row:2}.tile.jitda{grid-column:1/3;grid-row:3}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
-.preview{position:fixed;z-index:100;inset:0;overflow:hidden;background:white;color:#242521;box-shadow:0 22px 100px #0003}.preview-bar{position:absolute;z-index:3;inset:0 0 auto;height:56px;display:flex;align-items:center;gap:22px;padding:0 24px;background:#faf9f6;border-bottom:1px solid #2221;font-size:12px}.preview-bar>span{margin-right:auto;font-weight:650}.preview-bar a{color:#62645e;font-size:11px}.preview-close{border:1px solid #3333;border-radius:24px;background:none;padding:8px 16px}.preview-content{position:absolute;inset:56px 0 0}.preview iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:white;opacity:0;transition:opacity .35s}.preview iframe[data-loaded=true]{opacity:1}.preview-poster{width:100%;height:100%;object-fit:cover;object-position:top}.transition-image{position:absolute;z-index:4;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;pointer-events:none}.preview-fallback{position:absolute;z-index:5;bottom:24px;left:50%;transform:translateX(-50%);padding:14px 22px;background:#fff6d8;border-radius:8px;font-size:13px;box-shadow:0 5px 30px #0002}.preview-fallback a{margin-left:12px;color:#2859e5}
+.preview{position:fixed;z-index:100;inset:0;overflow:hidden;background:white;color:#242521;box-shadow:0 22px 100px #0003}.preview-bar{position:absolute;z-index:3;inset:0 0 auto;height:56px;display:flex;align-items:center;gap:22px;padding:0 24px;background:#f8faff;border-bottom:1px solid #2221;font-size:12px}.preview-bar>span{margin-right:auto;font-weight:650}.preview-bar a{color:#62645e;font-size:11px}.preview-close{border:1px solid #3333;border-radius:24px;background:none;padding:8px 16px}.preview-content{position:absolute;inset:56px 0 0}.preview iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:white;opacity:0;transition:opacity .35s}.preview iframe[data-loaded=true]{opacity:1}.preview-poster{width:100%;height:100%;object-fit:cover;object-position:top}.transition-image{position:absolute;z-index:4;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;pointer-events:none}.preview-fallback{position:absolute;z-index:5;bottom:24px;left:50%;transform:translateX(-50%);padding:14px 22px;background:#fff6d8;border-radius:8px;font-size:13px;box-shadow:0 5px 30px #0002}.preview-fallback a{margin-left:12px;color:#2859e5}
 
 
 .preview{background:#f4f2ec;box-shadow:none}.preview-bar{background:#f4f2ec}.preview-poster{opacity:1}.transition-image{display:none!important}
 
 .tile-caption{display:none}
 /* Six services, one shared opening. */
-:root{--ink:#20201e;--muted:#62645e;--line:#deded9;--blue:#2855ed;background:#faf9f6}
+:root{--ink:#20201e;--muted:#62645e;--line:#deded9;--blue:#2855ed;background:#f8faff}
 body{overflow-x:hidden}.masthead{position:absolute;z-index:30;top:0;left:0;right:0;height:74px;padding:21px 30px}.masthead nav{display:flex;align-items:center;gap:24px;font-size:13px}.masthead button{border:0;background:transparent;padding:8px;color:inherit}.hub{padding:0;min-height:0}.opening{height:230svh;position:relative}.opening-sticky{position:sticky;top:0;height:100svh;overflow:hidden}.opening-grid,.board{position:absolute;inset:82px 24px 24px;width:auto;height:auto;min-height:0;max-height:none}.opening-grid{background:linear-gradient(to right,transparent calc(30% - 1px),#e7e7e2 30%,transparent calc(30% + 1px),transparent calc(66% - 1px),#e7e7e2 66%,transparent calc(66% + 1px)),linear-gradient(to bottom,transparent calc(52% - 1px),#e7e7e2 52%,transparent calc(52% + 1px));border:1px solid #e7e7e2}.board{grid-template-columns:30fr 36fr 34fr;grid-template-rows:52fr 48fr;gap:3px;perspective:none}.tile.platform{grid-column:1;grid-row:1}.tile.contents{grid-column:2;grid-row:1}.tile.textbook{grid-column:1;grid-row:2}.tile.aidt{grid-column:3;grid-row:1;background:#c4e7de;color:#174a40}.tile.camp{grid-column:2;grid-row:2;background:#fd8f48;color:#6d290e}.tile.jitda{grid-column:3;grid-row:2;background:#472b73;color:#fff1bd}.tile-label{left:22px;right:22px;top:20px;font-size:clamp(17px,1.65vw,28px);letter-spacing:-.025em;line-height:1.25;gap:12px}.object-stage{inset:64px 14px 18px;transition:none}.tile:hover .object-stage{transform:none}.opening-copy{position:absolute;z-index:4;top:19%;left:33%;width:32%;bottom:15%;display:flex;flex-direction:column;align-items:flex-start;color:#2454eb;pointer-events:none;will-change:opacity,transform}.opening-copy h1{font-size:clamp(28px,3.5vw,58px);letter-spacing:-.045em;line-height:1.22;font-weight:620;margin:0;text-wrap:pretty}.opening-copy h1 br{display:block}.opening-copy em{font-style:normal}.opening-copy p{font-size:clamp(14px,1.15vw,19px);line-height:1.65;letter-spacing:-.02em;margin:26px 0}.opening-copy img{width:95px;height:40px;object-fit:contain;margin-top:auto}.opening-next{pointer-events:auto;background:transparent;border:0;color:inherit;font-size:13px;padding:18px 0 0}.opening-seal{position:absolute;z-index:5;left:calc(30% + 8px);top:calc(52% + 28px);transform:translate(-50%,-50%);width:56px;height:56px;display:grid;place-items:center;background:#2454eb;opacity:0;pointer-events:none}.opening-seal img{width:42px;filter:brightness(0) invert(1)}
 .service-guide,.section-width{width:min(1280px,calc(100% - 96px));margin:0 auto}.service-guide{padding:100px 0 60px}.guide-heading{margin-bottom:45px}.guide-heading h2{font-size:clamp(32px,3.4vw,52px);letter-spacing:-.04em;margin:0 0 14px}.guide-heading p{font-size:16px;color:#62645e}.service-details{display:grid;grid-template-columns:1fr 1fr;gap:0 64px}.service-detail{padding:34px 0 40px;border-top:1px solid #cecec6;scroll-margin-top:35px}.service-detail h2,.service-detail h3{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:24px;font-weight:600;letter-spacing:-.035em;margin:0 0 20px;min-height:42px}.service-detail .name-logo{height:27px;width:auto;max-width:100px}.textbook-brand-title img{width:86px;max-height:32px;object-fit:contain}.textbook-publisher-stack{display:flex;gap:14px;align-items:center}.textbook-publisher-stack svg{width:85px;height:24px}.textbook-publisher-stack img{width:55px;height:25px;object-fit:contain}.panel-description{font-size:16px;line-height:1.8;letter-spacing:-.02em;margin:0 0 16px}.panel-relation{font-size:13px;color:#68675f;margin:16px 0 24px}.panel-actions{display:flex;gap:22px;align-items:center;flex-wrap:wrap;margin-top:25px}.button,.product-inquiry{font:inherit;display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:13px 19px;font-size:14px;border:1px solid #bbbcb3;background:transparent;border-radius:3px;cursor:pointer}.button.dark{background:#242722;color:white;border-color:#242722}.product-inquiry{border-color:transparent;padding-inline:0}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .consult-section{padding:40px;background:#ecefe7;display:flex;align-items:center;justify-content:space-between;gap:30px}.consult-copy h2{font-size:27px;letter-spacing:-.035em;margin:0 0 14px}.consult-copy p{font-size:15px}.consult-action{display:flex;flex-direction:column;gap:14px}.consult-action>span{font-size:12px;color:#62645e}.questions-section{display:grid;grid-template-columns:1fr 2fr;gap:60px;padding:90px 0}.questions-intro h2{font-size:30px;line-height:1.35;margin:0}.questions details{padding:22px 0;border-bottom:1px solid #d9d9d1}.questions summary{display:flex;justify-content:space-between;gap:24px;cursor:pointer;font-size:16px;list-style:none}.questions summary>span{font-size:22px}.questions details p{font-size:15px;line-height:1.8;color:#62645e}.questions details a{text-decoration:underline}.codle-footer{background:#fff}
@@ -70,7 +70,7 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 @media(min-width:601px) and (prefers-reduced-motion:reduce){.opening-seal{display:grid}}
 
 /* Original Codle colours, on a central paper-coloured cell. */
-.opening-seal{background:#faf9f6;border:1px solid #e6e6df}
+.opening-seal{background:#f8faff;border:1px solid #e6e6df}
 .opening-brand{color:#202733}
 .drawn-codle .logo-line{stroke:#202733}
 .drawn-codle .logo-line.logo-drop{stroke:#3e88ff}
@@ -83,14 +83,14 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 @media(min-width:601px){
  .board{gap:0;overflow:visible;--paper-cover:1;outline:1px solid #deded7}
  .board .tile{min-height:0;box-shadow:inset -1px -1px 0 #20273312;will-change:auto}
- .board .tile::before{content:"";position:absolute;inset:0;z-index:1;background:#faf9f6;opacity:var(--paper-cover);pointer-events:none}
+ .board .tile::before{content:"";position:absolute;inset:0;z-index:1;background:#f8faff;opacity:var(--paper-cover);pointer-events:none}
  .board .tile::after{content:"";position:absolute;inset:0;z-index:4;box-shadow:inset -1px -1px 0 #20273310;pointer-events:none}
  .board .tile .object-stage{z-index:2;top:calc(50% + 23px)}
- .mosaic-core{grid-area:core;position:relative;min-width:0;min-height:0;overflow:hidden;background:#faf9f6;box-shadow:inset -1px -1px 0 #20273310;z-index:2}
+ .mosaic-core{grid-area:core;position:relative;min-width:0;min-height:0;overflow:hidden;background:#f8faff;box-shadow:inset -1px -1px 0 #20273310;z-index:2}
  .mosaic-core .opening-copy{max-width:none;bottom:auto}
  .mosaic-core .opening-copy h1{font-size:clamp(23px,2.3vw,38px);font-weight:540;line-height:1.4;letter-spacing:-.04em}
  .mosaic-core .opening-copy em{color:#307dfa}
- .opening-brand{will-change:width,height}
+ .opening-brand{will-change:transform,opacity}
 }
 @media(max-width:600px){.mosaic-core{position:absolute;inset:12% 0 5%;pointer-events:none}.mosaic-core .opening-copy{width:82%!important}.board .tile{min-height:0}}
 
@@ -110,7 +110,7 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 }
 
 /* Shared colour family with a distinct editorial still life for each service. */
-.board .tile.platform{background:#2853ed;color:#fff}
+.board .tile.platform{background:#b4c8e1;color:#25364f}
 .board .tile.contents{background:#f3d264;color:#40321b}
 .board .tile.textbook{background:#e9e5d9;color:#3c433c}
 .board .tile.aidt{background:#ccdfeb;color:#254454}
@@ -145,11 +145,13 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
  .mosaic-core .opening-copy .opening-context{margin:0;font-size:clamp(13px,1.05vw,16px);font-weight:400;letter-spacing:-.015em;line-height:1.5;color:#858780}
 }
 
-/* A small shared palette, rather than a different colour world in every tile. */
-.board .tile.contents{background:#f0eee7;color:#253144}
-.board .tile.textbook,.board .tile.aidt{background:#e3eafa;color:#253144}
-.board .tile.camp{background:#253144;color:#fffaf1}
-.board .tile.jitda{background:#d6e0f5;color:#253144}
+/* Reference colours paired with the native artwork: blue/yellow, yellow/orchid, multicolour/neutral. Cloud and Grey 200 come from the Dropbox palette. */
+:root,body{background:#f8faff}
+.board .tile.contents{background:#fad04a;color:#473400}
+.board .tile.textbook{background:#fa551e;color:#4d082a}
+.board .tile.aidt{background:#d3cec9;color:#1e1919}
+.board .tile.camp{background:#25364f;color:#f7f5f2}
+.board .tile.jitda{background:#c7aeed;color:#482750}
 
 .art-response{width:100%;height:100%;will-change:transform}
 .editorial-art .typed-code,.editorial-art .code-prompt{font-family:ui-monospace,Consolas,monospace}
@@ -162,7 +164,7 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 
 /* Mosaic refinement: legible navigation, service hierarchy and mobile layout. */
 .masthead{gap:24px}.masthead nav>a{display:inline-flex;align-items:center;min-height:44px;color:#4c5564}.masthead nav>a:hover{color:#2853ed}
-.masthead .nav-inquiry{min-height:42px;padding:10px 18px;border:1px solid #d4d8df;border-radius:24px;background:#faf9f6;font-size:13px;display:flex;gap:16px;align-items:center}
+.masthead .nav-inquiry{min-height:42px;padding:10px 18px;border:1px solid #d4d8df;border-radius:24px;background:#f8faff;font-size:13px;display:flex;gap:16px;align-items:center}
 .masthead .nav-inquiry:hover{background:#253144;color:white;border-color:#253144}
 .explore-link{position:absolute;z-index:10;bottom:34px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:24px;min-height:44px;font-size:12px;color:#596271;white-space:nowrap}
 .explore-link>span:last-child{display:grid;place-items:center;width:30px;height:30px;border:1px solid #d4d8df;border-radius:50%}
@@ -189,24 +191,24 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 /* Keep the copy hidden until the wordmark has finished drawing. */
 .opening-copy,.explore-link{opacity:0}
 
-/* Desktop art direction: warm paper, softened colour fields, consistent spacing. */
+/* Keep the artwork/background pairings consistent in the desktop layout. */
 @media(min-width:601px){
- :root,body{background:#f5f3ed}
- .mosaic-core,.opening-seal,.board .tile::before{background:#f5f3ed}
- .board{background:rgba(245,243,237,var(--grid-reveal))}
- .board .tile.platform{background:#e1e8f5;color:#253144}
- .board .tile.contents{background:#efd2bd;color:#493c35}
- .board .tile.textbook{background:#dfbfd2;color:#65314f}
- .board .tile.aidt{background:#dce6de;color:#293f3c}
- .board .tile.camp{background:#253955;color:#fffdf5}
- .board .tile.jitda{background:#f1ede2;color:#493b2e}
+ :root,body{background:#f8faff}
+ .mosaic-core,.opening-seal,.board .tile::before{background:#f8faff}
+ .board{background:rgba(248,250,255,var(--grid-reveal))}
+ .board .tile.platform{background:#b4c8e1;color:#25364f}
+ .board .tile.contents{background:#fad04a;color:#473400}
+ .board .tile.textbook{background:#fa551e;color:#4d082a}
+ .board .tile.aidt{background:#d3cec9;color:#1e1919}
+ .board .tile.camp{background:#25364f;color:#f7f5f2}
+ .board .tile.jitda{background:#c7aeed;color:#482750}
  .board .tile-label{left:24px;right:24px;top:22px;font-size:clamp(17px,1.45vw,24px);font-weight:580;letter-spacing:-.035em}
  .board .tile-arrow{border:0;flex-basis:24px;width:24px;height:24px;font-size:18px;opacity:.7}
  .board .tile-caption{left:24px;right:24px;bottom:22px;font-size:12px;letter-spacing:-.015em}
  .board.is-revealed .tile-caption{opacity:.7}
  .board .editorial-art{width:100%;height:100%;transform:scale(.92);transform-origin:center;overflow:visible}
  .board .tile.jitda .editorial-art{transform:scale(.85)}
- .masthead .nav-inquiry{background:#f5f3ed;border-color:#ccd1d8}
+ .masthead .nav-inquiry{background:#f8faff;border-color:#ccd1d8}
  .masthead .nav-inquiry:hover{background:#253144;color:#fff}
 }
 
@@ -214,17 +216,40 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 @media(min-width:601px){
  .board .tile.platform .editorial-art{transform:scale(1.04)}
  .board .tile.contents .editorial-art{transform:scale(1.08)}
- .board .tile.textbook .editorial-art{transform:scale(1.35)}
- .board .tile.aidt .editorial-art{transform:scale(.84)}
- .board .tile.camp .editorial-art{transform:scale(1.02)}
- .board .tile.jitda .editorial-art{transform:scale(.88)}
+ .board .tile.textbook .editorial-art{transform:scale(1.06)}
+ .board .tile.aidt .editorial-art{transform:scale(1)}
+ .board .tile.camp .editorial-art{transform:scale(1.08)}
+ .board .tile.jitda .editorial-art{transform:scale(.94)}
+}
+
+/* Optical balance follows each silhouette instead of repeating a centre point.
+   Offsets live inside the stage, keeping the opening's compositor poses intact. */
+.board .tile.platform .art-response{transform:translate(0,0)}
+.board .tile.contents .art-response{transform:translate(9%,8%)}
+.board .tile.textbook .art-response{transform:translate(8%,-7%)}
+.board .tile.aidt .art-response{transform:translate(-7%,7%)}
+.board .tile.camp .art-response{transform:translate(-5%,5%)}
+.board .tile.jitda .art-response{transform:translate(7%,-6%)}
+.board .tile.contents .editorial-art{transform:scale(.98);transform-origin:center}
+@media(min-width:601px){
+ .board .tile.platform .art-response{transform:translate(-2%,1%)}
+ .board .tile.contents .art-response{transform:translate(4%,6%)}
+ .board .tile.textbook .art-response{transform:translate(2%,0)}
+ .board .tile.aidt .art-response{transform:translate(-2%,2%)}
+ .board .tile.camp .art-response{transform:translate(-2%,2%)}
+ .board .tile.jitda .art-response{transform:translate(2%,-4%)}
+}
+@media(max-width:600px){
+ .board .tile.contents .art-response{transform:translate(2%,2%)}
+ .board .tile.contents .editorial-art{transform:scale(1.08)}
+ .board .tile.textbook .art-response{transform:translate(5%,-5%)}
 }
 
 /* Opening stays focused on the central brand and one wheel cue. */
 .scroll-cue{bottom:28px;min-height:48px;color:#77808d;pointer-events:none}
 .scroll-cue svg{display:block}
 @media(min-width:601px){
- .masthead{position:fixed;opacity:0;background:#f5f3ed}
+ .masthead{position:fixed;opacity:0;background:#f8faff}
  .service-detail,#service-guide,#questions{scroll-margin-top:94px}
 }
 @media(prefers-reduced-motion:reduce){.masthead{opacity:1}.scroll-cue{display:none}}
@@ -259,17 +284,14 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 /* Contents travel with their frame, with no independent fade or late pop-in. */
 .tile.platform .codle-panel,.tile.platform .codle-result{opacity:1;transform:none;transition:none}
 @media(prefers-reduced-motion:reduce){.tile.platform .editorial-art{transition:none!important}}
-/* A reversible cover reveal keeps the collection distinct from the platform grid. */
+/* One reversible playhead: simple covers spread into a fuller library. */
 @property --contents-progress{syntax:"<number>";inherits:true;initial-value:0}
-.tile.contents .editorial-art{--contents-progress:0;--fold-first:clamp(0,calc(var(--contents-progress)/.7),1);--fold-last:clamp(0,calc((var(--contents-progress) - .25)/.75),1);transition:--contents-progress 1250ms cubic-bezier(.55,0,.2,1)}
+.tile.contents .editorial-art{--contents-progress:0;transition:--contents-progress 1000ms cubic-bezier(.65,0,.22,1)}
 .tile.contents.art-active .editorial-art{--contents-progress:1}
-.content-fold{transform:translate(67px,102px) scale(1.5)}
-.tile.contents .content-fold{transform:translate(calc(67px - 55px*var(--contents-progress)),calc(102px + 18px*var(--contents-progress))) scale(calc(1.5 - .7*var(--contents-progress)))}
-.tile.contents .content-leaf-middle{transform:translateX(calc(124px*var(--fold-first)))}
-.tile.contents .content-leaf-last{transform:translateX(calc(124px*var(--fold-first) + 124px*var(--fold-last)))}
-.tile.contents .content-sheet-edges{opacity:calc(1 - var(--fold-first))}
-.game-ice-goal{opacity:0}
+.library-card{transform:translate(calc(104px + (var(--library-x) - 104px)*var(--contents-progress,0)),calc(56px + (var(--library-y) - 56px)*var(--contents-progress,0))) scale(calc(1.4 - .72*var(--contents-progress,0)));transform-origin:0 0;opacity:clamp(0,calc((var(--contents-progress,0) - .12 - var(--library-delay))*2.8),1);transition:none}
+.library-card-main{opacity:1}
 @media(prefers-reduced-motion:reduce){.tile.contents .editorial-art{transition:none!important}}
+
 .tile.art-active .motion-page-left{transform:none}
 .tile.art-active .motion-page-right{transform:none}
 .tile.art-active .motion-shape-a{transform:translateY(-4px)}
@@ -277,7 +299,7 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 .tile.art-active .motion-student-left{transform:translate(3px,1px) rotate(2deg)}
 .tile.art-active .motion-student-right{transform:translate(-3px,1px) rotate(-2deg)}
 .tile.art-active .motion-student-center{transform:translateY(2px)}
-.tile.art-active .motion-helmet{transform:translateY(-3px) rotate(-2deg)}
+.tile.art-active .motion-helmet{transform:none}
 @media(prefers-reduced-motion:reduce){
  .editorial-art [class*="motion-"]:not(.motion-tool),.tile.art-active .editorial-art [class*="motion-"]:not(.motion-tool){transform:none!important;transition:none!important;animation:none!important}
  .editorial-art .art-color,.editorial-art .art-surface,.editorial-art .art-glyph-fill{transition:none!important}
@@ -307,12 +329,12 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 
 /* A quieter service directory after the expressive mosaic. */
 .service-kicker{display:block;font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--service-accent);margin-bottom:14px}
-#service-platform{--service-accent:#5786bc}
-#service-contents{--service-accent:#975b4b}
-#service-textbook{--service-accent:#a34e7e}
-#service-aidt{--service-accent:#528477}
-#service-camp{--service-accent:#253955}
-#service-jitda{--service-accent:#8c7135}
+#service-platform{--service-accent:#3e88ff}
+#service-contents{--service-accent:#3e88ff}
+#service-textbook{--service-accent:#3e88ff}
+#service-aidt{--service-accent:#238e55}
+#service-camp{--service-accent:#21272a}
+#service-jitda{--service-accent:#21272a}
 @media(min-width:601px){
  .service-guide,.section-width{width:min(1160px,calc(100% - 112px))}
  .service-guide{padding:100px 0 24px}
@@ -342,7 +364,7 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
  .consult-action span{font-size:12px}
 }
 @media(min-width:601px){
- body .codle-footer{background:#f5f3ed;padding:56px 0 32px;font-size:13px}
+ body .codle-footer{background:#f8faff;padding:56px 0 32px;font-size:13px}
  body .codle-footer-inner{width:min(1160px,calc(100% - 112px));margin:0 auto}
  body .codle-footer-top{gap:40px;padding-bottom:36px}
  body .codle-footer-logo{width:100px;height:auto}
@@ -382,9 +404,9 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
 }
 
 @media(min-width:901px){
- .service-art.textbook .motion-page-right>.art-surface:first-child{fill:#e6d3df}
- .service-art.aidt .motion-shape-a:is(path){fill:#ddd1b4}
- .service-art.contents .motion-card-front>.art-surface{fill:#efdfc4}
+ .service-art.textbook .motion-page-right>.art-surface:first-child{fill:#cdddf7}
+ .service-art.aidt .motion-shape-a:is(path){fill:#f889aa}
+
 }
 
 /* Shared baselines and quiet rules make the six services easy to scan. */
@@ -424,4 +446,108 @@ dialog.inquiry-dialog{margin:auto;padding:0;border:1px solid #dce0e7;border-radi
  .board.is-revealed .guide-cue{visibility:visible}
  .guide-cue:hover{color:#253955}
  .guide-cue:focus-visible{outline:2px solid #5786bc;outline-offset:1px;border-radius:3px}
+}
+
+/* Entry uses a fixed grid and compositor layers instead of animating grid tracks. */
+@media(min-width:601px){
+ .board.intro-running .tile{transform-origin:0 0;will-change:transform,opacity}
+ .board.intro-running .tile-label{transform-origin:0 0;will-change:transform,opacity}
+ .board.intro-running .object-stage{will-change:transform,opacity}
+ .board.intro-running .mosaic-core{overflow:visible;background:transparent}
+ .board.intro-running .opening-composition,.board.intro-running .opening-brand,.board.intro-running .opening-copy{will-change:transform,opacity}
+}
+
+/* White pages on the blue tile; the directory keeps blue pages on white. */
+.tile.textbook .motion-page-left>.art-surface{fill:#ffffff}
+.tile.textbook .motion-page-right>.art-surface:first-child{fill:#cdddf7}
+
+/* Original activity glyphs are white on their native brand colours. */
+.tile.platform .art-glyph-fill,.service-art.platform .art-glyph-fill{fill:#ffffff}
+
+/* Reversible service scenes: flat shapes, translation and scale only. */
+@property --scene-progress{syntax:"<number>";inherits:true;initial-value:0}
+.tile:is(.textbook,.aidt,.camp,.jitda) .editorial-art{--scene-progress:0;transition:--scene-progress 950ms cubic-bezier(.65,0,.22,1)}
+.tile:is(.textbook,.aidt,.camp,.jitda).art-active .editorial-art{--scene-progress:1}
+/* Restrained reversible poses; each illustration keeps its identity throughout. */
+.cmass-leaf{transform:scaleX(calc(1 - 2*var(--scene-progress,0)));transform-origin:160px 136px}
+.learning-orbit{transform-origin:158px 124px}
+.learning-circle{transform-origin:94px 94px}
+.learning-square{transform-origin:214px 92px}
+.learning-triangle{transform-origin:166px 185.33px}
+.learning-orbit{animation:learning-cycle 5.4s cubic-bezier(.45,0,.25,1) infinite;animation-play-state:paused}
+.learning-circle,.learning-square,.learning-triangle{animation:learning-counter-cycle 5.4s cubic-bezier(.45,0,.25,1) infinite;animation-play-state:paused}
+.tile.aidt.art-active :is(.learning-orbit,.learning-circle,.learning-square,.learning-triangle){animation-play-state:running}
+@keyframes learning-cycle{0%,8%{transform:rotate(0)}32%,40%{transform:rotate(120deg)}64%,72%{transform:rotate(240deg)}100%{transform:rotate(360deg)}}
+@keyframes learning-counter-cycle{0%,8%{transform:rotate(0)}32%,40%{transform:rotate(-120deg)}64%,72%{transform:rotate(-240deg)}100%{transform:rotate(-360deg)}}
+.camp-student-left{transform:translate(calc(7px*var(--scene-progress,0)),calc(2px*var(--scene-progress,0))) rotate(calc(5deg*var(--scene-progress,0)));transform-origin:76px 184px}
+.camp-student-right{transform:translate(calc(-7px*var(--scene-progress,0)),calc(2px*var(--scene-progress,0))) rotate(calc(-5deg*var(--scene-progress,0)));transform-origin:244px 184px}
+.camp-student-center{transform:translateY(calc(5px*var(--scene-progress,0)))}
+.camp-shared-laptop{transform:translateY(calc(-3px*var(--scene-progress,0))) scale(calc(1 + .06*var(--scene-progress,0)));transform-origin:160px 190px}
+.camp-screen-work{opacity:clamp(0,calc((var(--scene-progress,0) - .35)*2),1);transform:translateY(calc(6px*(1 - var(--scene-progress,0))))}
+.tile.jitda .jitda-face,.service-art.jitda .jitda-face{opacity:1;transform:none;transition:none}
+.front-worker-head{transform:translate(calc(-18px*var(--scene-progress,0)),calc(-20px*var(--scene-progress,0))) scale(calc(1 - .14*var(--scene-progress,0)));transform-origin:160px 160px}
+.front-pick-reveal{opacity:clamp(0,calc((var(--scene-progress,0) - .2)*2),1)}
+.front-pick-swing{transform-origin:222px 176px;transform:rotate(16deg)}
+.front-worker-nod{transform-origin:160px 170px}
+.front-work-target{opacity:clamp(0,calc((var(--scene-progress,0) - .4)*2),1)}
+.front-impact{opacity:0;transform-origin:297px 230px}
+.tile.jitda.art-active .front-pick-swing{animation:front-pick-strike 1.65s cubic-bezier(.4,.04,.38,1) 700ms 3}
+.tile.jitda.art-active .front-worker-nod{animation:front-pick-nod 1.65s ease-in-out 700ms 3}
+.tile.jitda.art-active .front-impact{animation:front-pick-impact 1.65s linear 700ms 3}
+@keyframes front-pick-strike{0%,100%{transform:rotate(16deg)}20%{transform:rotate(5deg)}45%{transform:rotate(103deg)}52%{transform:rotate(96deg)}64%{transform:rotate(100deg)}}
+@keyframes front-pick-nod{0%,20%,100%{transform:translateY(0)}45%{transform:translateY(5px)}62%{transform:translateY(1px)}}
+@keyframes front-pick-impact{0%,43%,68%,100%{opacity:0;transform:scale(.65)}46%{opacity:1;transform:scale(1)}62%{opacity:0;transform:scale(1.15)}}
+/* Each strike completes one piece; the finished app remains until pointer exit. */
+.jitda-app-part{opacity:0}
+.tile.jitda.art-active .jitda-app-part{animation:jitda-app-build 280ms cubic-bezier(.2,.7,.2,1) both}
+.tile.jitda.art-active .app-preview{animation-delay:1440ms}
+.tile.jitda.art-active .app-copy{animation-delay:3090ms}
+.tile.jitda.art-active .app-action{animation-delay:4740ms}
+@keyframes jitda-app-build{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+.jitda-code{opacity:clamp(0,calc((var(--scene-progress,0) - .35)*2),1)}
+.planner-code-row{clip-path:inset(0 100% 0 0);transform-box:fill-box}
+.planner-code-cursor{opacity:0;transform:translate(102px,16px)}
+.tile.jitda.art-active .code-first{animation:code-type-first 3.8s steps(16,end) 450ms infinite}
+.tile.jitda.art-active .code-second{animation:code-type-second 3.8s steps(16,end) 450ms infinite}
+.tile.jitda.art-active .code-third{animation:code-type-third 3.8s steps(16,end) 450ms infinite}
+.tile.jitda.art-active .planner-code-cursor{opacity:1;animation:code-caret-travel 3.8s steps(16,end) 450ms infinite}
+.tile.jitda.art-active .planner-code-cursor rect{animation:code-caret-blink 700ms steps(2,end) infinite}
+@keyframes code-type-first{0%{clip-path:inset(0 100% 0 0)}25%,89%{clip-path:inset(0 0 0 0)}90%,100%{clip-path:inset(0 100% 0 0)}}
+@keyframes code-type-second{0%,27%{clip-path:inset(0 100% 0 0)}52%,89%{clip-path:inset(0 0 0 0)}90%,100%{clip-path:inset(0 100% 0 0)}}
+@keyframes code-type-third{0%,54%{clip-path:inset(0 100% 0 0)}76%,89%{clip-path:inset(0 0 0 0)}90%,100%{clip-path:inset(0 100% 0 0)}}
+@keyframes code-caret-travel{0%{transform:translate(102px,16px)}25%,26%{transform:translate(214px,16px)}27%{transform:translate(118px,30px)}52%,53%{transform:translate(222px,30px)}54%{transform:translate(118px,44px)}76%,89%{transform:translate(200px,44px)}90%,100%{transform:translate(102px,16px)}}
+@keyframes code-caret-blink{to{opacity:0}}
+@media(prefers-reduced-motion:reduce){
+ .tile:is(.textbook,.aidt,.camp,.jitda) .editorial-art{transition:none!important}
+ .tile :is(.learning-orbit,.learning-circle,.learning-square,.learning-triangle,.planner-code-row,.planner-code-cursor,.planner-code-cursor rect,.front-pick-swing,.front-worker-nod,.front-impact,.jitda-app-part){animation:none!important}
+ .tile.jitda.art-active .jitda-app-part{opacity:1}
+ .tile.jitda.art-active .planner-code-row{clip-path:none}
+ .tile.jitda.art-active .planner-code-cursor{opacity:0}
+}
+
+/* Match the supplied line drawing; lean gently toward the shared laptop. */
+.editorial-art .camp-line-team path{stroke:#fffaf1;stroke-width:3.5;stroke-opacity:1!important;fill:none}
+.editorial-art .camp-line-team .camp-line-screen{fill:#b4c8e1}
+.camp-line-left{transform-origin:154px 159px;transform:rotate(calc(3deg*var(--scene-progress,0)))}
+.camp-line-right{transform-origin:206px 159px;transform:rotate(calc(-3deg*var(--scene-progress,0)))}
+.camp-line-center{transform:translateY(calc(5px*var(--scene-progress,0)))}
+.tile.camp.art-active .camp-line-screen{fill:#d5e2ff}
+@media(prefers-reduced-motion:reduce){
+ .camp-line-left,.camp-line-right,.camp-line-center{transform:none!important}
+ .editorial-art .camp-line-screen{transition:none}
+}
+
+/* The logo itself invites entry; the arrow appears only during interaction. */
+@media(min-width:601px){
+ .guide-cue.core-login{inset:0;width:auto;height:auto;transform:none;padding:0;cursor:pointer;color:#3e88ff;text-decoration:none}
+ .guide-cue.core-login:focus-visible{outline:none}
+ .core-login .login-entry-icon{position:absolute;right:8px;top:42%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;opacity:0;transform:translate(-7px,-50%);transition:opacity 220ms ease,transform 320ms cubic-bezier(.2,.7,.2,1)}
+ .core-login:is(:hover,:focus-visible) .login-entry-icon{opacity:1;transform:translate(0,-50%)}
+ .board.is-revealed .mosaic-core .opening-composition{translate:0 0;scale:1;transition:translate 320ms cubic-bezier(.2,.7,.2,1),scale 320ms cubic-bezier(.2,.7,.2,1)}
+ .board.is-revealed .mosaic-core:has(.core-login:is(:hover,:focus-visible)) .opening-composition{translate:3px 0;scale:1.025}
+ .board.is-revealed .mosaic-core:has(.core-login:active) .opening-composition{translate:5px 0;scale:.99}
+}
+@media(prefers-reduced-motion:reduce){
+ .core-login .login-entry-icon,.board.is-revealed .mosaic-core .opening-composition{transition:none}
+ .board.is-revealed .mosaic-core:has(.core-login:is(:hover,:focus-visible,:active)) .opening-composition{translate:0 0;scale:1}
 }

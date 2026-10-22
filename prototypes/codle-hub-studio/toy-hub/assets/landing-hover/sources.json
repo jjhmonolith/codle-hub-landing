@@ -1,0 +1,86 @@
+{
+  "retrieved": "2026-10-22",
+  "generated": false,
+  "note": "Official landing images only. Video stills are extracted without repainting. Existing content-cover assets are extracted from the official content book linked by the content landing.",
+  "assets": [
+    {
+      "id": "platform",
+      "file": "platform-lesson.png",
+      "landing": "https://ai.codle.io/kr/contents",
+      "source": "https://ai.codle.io/content-slide-1-2.png",
+      "note": "Official Python lesson screenshot. Activity icons gather while the lesson expands to fill the tile."
+    },
+    {
+      "id": "contents",
+      "file": "content-library.jpg",
+      "landing": "https://ai.codle.io/kr/help/guide/getting-start",
+      "source": "https://ai.codle.io/help/uAgN9Ttv39062rXGOviIeVUo.jpg",
+      "note": "Actual content library screenshot published in the official Codle getting-started guide. Cropped only by CSS to fill the tile."
+    },
+    {
+      "id": "textbook",
+      "file": "cmass-activity.jpg",
+      "landing": "https://cmass-contents.codle.io/cmass-ai-basics/web-exhibition",
+      "source": "https://cmass-contents.codle.io/hj-test/web-exhibition/codle-river.png",
+      "companion": "../worlds/cmass-cover.png",
+      "companionSource": "https://cmass-contents.codle.io/web-exhibition/bookcover.png"
+    },
+    {
+      "id": "aidt",
+      "file": "aidt-practice.jpg",
+      "landing": "https://exhibition.codle.io/",
+      "source": "https://exhibition.codle.io/media/lesson-practice.mp4",
+      "frameSeconds": 5
+    },
+    {
+      "id": "camp",
+      "file": "camp-classroom.jpg",
+      "landing": "https://contents.codle.io/aicamp-landing",
+      "source": "https://contents.codle.io/aicamp-landing/hero/classroom-poster.jpg"
+    },
+    {
+      "id": "jitda",
+      "file": "jitda-hackathon.webp",
+      "landing": "https://landing.jitda.io/",
+      "source": "https://landing.jitda.io/cases/ai-donghaeng-260919/assets/scene-build-1-1280.webp"
+    }
+  ],
+  "heroCaptures": [
+    {
+      "id": "platform",
+      "file": "hero-platform.png",
+      "source": "https://ai.codle.io/kr",
+      "note": "Browser capture of the actual landing hero."
+    },
+    {
+      "id": "contents",
+      "file": "hero-contents.png",
+      "source": "https://ai.codle.io/kr/contents",
+      "note": "Browser capture of the actual landing hero."
+    },
+    {
+      "id": "textbook",
+      "file": "hero-textbook.png",
+      "source": "https://cmass-contents.codle.io/cmass-ai-basics/web-exhibition",
+      "note": "Browser capture of the actual landing hero."
+    },
+    {
+      "id": "aidt",
+      "file": "hero-aidt.png",
+      "source": "https://exhibition.codle.io/",
+      "note": "Browser capture of the actual landing hero."
+    },
+    {
+      "id": "camp",
+      "file": "hero-camp.png",
+      "source": "https://contents.codle.io/aicamp-landing",
+      "note": "Browser capture of the actual landing hero."
+    },
+    {
+      "id": "jitda",
+      "file": "hero-jitda.png",
+      "source": "https://landing.jitda.io/",
+      "note": "Browser capture of the actual landing hero; school tab selected for Jitda."
+    }
+  ]
+}

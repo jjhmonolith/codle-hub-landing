@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#f1f2f6">
+  <title>코들 × 짓다 — 새로운 배움의 조합</title>
+  <link rel="icon" href="assets/codle.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="hero-volume.css">
+</head>
+<body>
+<a href="#programs" class="skip">교육 프로그램 바로 보기</a>
+<header class="header">
+  <a class="brands" href="index.html" aria-label="코들·짓다 교육 허브 홈"><img src="assets/codle.svg" alt="코들"><span aria-hidden="true">×</span><img src="assets/jitda-logo.svg" alt="짓다"></a>
+  <nav aria-label="주요 메뉴"><a href="#programs" class="nav-programs">교육 프로그램</a><a href="https://codle.io/" target="_blank" rel="noopener noreferrer" class="nav-login">코들 입장 ↗</a><a href="index.html#consult-title" class="contact">도입 문의 <span aria-hidden="true">↗</span></a></nav>
+</header>
+<main>
+  <section class="hero" aria-labelledby="headline">
+    <div class="intro"><div><p class="eyebrow">A NEW WAY TO LEARN & CREATE</p><h1 id="headline">배움에, 새로운 가능성을.</h1></div><p class="intro-description">코들의 매일의 수업부터 짓다의 새로운 도전까지.<br>우리 학교에 맞는 AI 교육을 만나보세요.</p></div>
+    <div class="viewport" id="viewport" role="group" aria-label="마우스나 터치로 회전하는 입체 블록 장면">
+      <canvas id="scene" tabindex="0" aria-label="입체 블록. 드래그 또는 방향키로 회전하고, Escape 키로 시점을 초기화하세요."></canvas>
+      <div class="scene-top"><span class="scene-name"><span aria-hidden="true">✳</span> THE SHAPE OF POSSIBILITY</span><span class="scene-index" aria-hidden="true">01 — ∞</span></div>
+      <div class="loading" id="scene-status" role="status">새로운 조합을 준비하는 중</div>
+      <div class="scene-bottom"><p class="scene-caption">배우는 경험과<br>만드는 경험이 만나는 곳.</p><div class="scene-tools" id="scene-tools" hidden><button id="shuffle" type="button">새로운 조합 <span aria-hidden="true">↗</span></button><button id="pause" type="button" aria-pressed="false" aria-label="자동 움직임 멈추기">Ⅱ</button></div></div>
+    </div>
+    <div class="under-scene"><span><i aria-hidden="true"></i> <span class="desktop-hint">마우스로 반응하고, 드래그로 둘러보세요</span><span class="mobile-hint">가로로 드래그해 둘러보세요</span></span><a href="#programs">나에게 맞는 배움 찾기 <span aria-hidden="true">↓</span></a></div>
+  </section>
+  <section class="programs" id="programs" aria-labelledby="programs-title">
+    <div class="programs-heading"><p>EXPLORE THE POSSIBILITIES</p><h2 id="programs-title">어떤 배움을<br>시작해 볼까요?</h2><a href="index.html#offerings">교육 프로그램 전체 보기 ↗</a></div>
+    <div class="programs-list">
+      <a class="program" href="index.html#offerings"><div class="program-top"><img src="assets/codle.svg" alt="코들"><span>01 / LEARN</span></div><h3>우리 교실의 새로운 일상</h3><p>수업 플랫폼 · 오리지널 콘텐츠 · 교과서 · AI 집중캠프</p><span class="program-arrow" aria-hidden="true">↗</span></a>
+      <a class="program" href="https://landing.jitda.io/" target="_blank" rel="noopener noreferrer"><div class="program-top"><img src="assets/jitda-logo.svg" alt="짓다"><span>02 / CREATE</span></div><h3>아이디어가 작품이 되는 경험</h3><p>AI와 함께 팀의 아이디어를 웹앱으로 만들고 발표합니다.</p><span class="program-arrow" aria-hidden="true">↗</span><span class="sr-only">새 탭에서 열림</span></a>
+    </div>
+  </section>
+</main>
+<footer><span>코들 교육 허브 · 3D 히어로 시안</span><a href="index.html">기존 랜딩 보기 ↗</a></footer>
+<noscript><style>#scene-status{display:block!important}</style>3D 효과를 보려면 JavaScript를 켜주세요. 교육 프로그램 링크는 그대로 이용할 수 있습니다.</noscript>
+<script type="module">
+  import('./hero-volume.js').catch(error=>{
+    console.error(error);
+    document.getElementById('scene-status').textContent='3D 화면을 불러오지 못했어요. 아래에서 교육 프로그램을 살펴보세요.';
+    document.getElementById('scene-status').hidden=false;
+  });
+</script>
+</body>
+</html>

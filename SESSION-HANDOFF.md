@@ -1,3 +1,37 @@
+# 최신 인수인계 — 2026-10-22
+
+## 현재 작업물과 실행
+
+- 브랜치: `codex/mosaic-latest-20261022`
+- 현재 편집 대상: `prototypes/codle-hub-studio/toy-hub/product-mosaic.html`
+- 스타일 / 동작: 같은 폴더의 `google-labs.css`, `google-labs.js`
+- 프로젝트 루트에서 `python3 -m http.server 8878 --bind 127.0.0.1` 실행.
+- 열기: http://127.0.0.1:8878/prototypes/codle-hub-studio/toy-hub/product-mosaic.html#top
+- 설치/빌드 없이 실행하는 정적 HTML/CSS/JS. 실행 이미지와 폰트는 저장소에 포함.
+
+## 최신 사용자 결정 — 아래 과거 기록보다 우선
+
+사용자는 Google Labs(https://labs.google/)를 가장 적절한 레퍼런스로 선정했고, 모자이크를 도입부에 넣는 여러 실험 후 **그 시안은 버리고 Google Labs를 그대로 따라오라**고 요청했다. 현재는 전체 화면 배경 + 큰 중앙 제목 + 둥근 CTA + 자동 슬라이드/진행 막대, 다음 섹션은 기울어진 가로 카드 갤러리 구조다. 브랜드·문구·이미지·서비스 연결은 코들이다.
+
+현재 여섯 진입점: 수업 플랫폼, 오리지널 콘텐츠, 씨마스 인공지능 기초, 금성·YBM 정보 교육자료, AI 집중캠프, 짓다 AI 해커톤. 로그인은 코들 `https://codle.io/sign_in` 링크이며 허브 자체의 인증 세션 구현은 없다. 문의폼은 로컬 디자인 미리보기이며 입력이 실제 전송되지 않는다. 운영자 배너 업로드 관리 기능은 아직 없다.
+
+## 바로 다음 작업 (아직 구현하지 않음)
+
+마지막 디자인 요청: **“도입부 배경도 구글 랩처럼 움직이게 해봐 이미지 슬라이드만 바뀌는 거 말고”**.
+
+현재 배경은 정적 이미지이며 7초마다 슬라이드가 바뀐다. 사용자는 한 슬라이드 안에서도 배경 자체가 움직이는 표현을 원한다. 실제 Google Labs의 배경 움직임을 확인한 후 구현해야 한다. 이전 로고 드로잉·모자이크 펼침을 다시 복구하지 말 것. 사용자 요청에 따라 이 작업 전에 현재 상태를 커밋/푸시하여 컴퓨터를 옮긴다.
+
+## 보존 파일과 검증
+
+- `product-mosaic-motion-archive.html`: 폐기된 모자이크 모션 조합 시안.
+- `product-mosaic-before-labs.html`: 원래 제품 모자이크 시안.
+- `product-mosaic.js`, `product-mosaic.css`, `mosaic-service-art.js`: 이전 모자이크용. 현재 HTML에서는 로드하지 않는다.
+- 부모 폴더의 `index.html`, `index-mosaic.html`, `hub-*` 및 `hero-*`: 이전 방향 탐색 기록. 현재 편집 대상과 혼동하지 말 것.
+- 최신 시안 브라우저 확인: 이미지 로딩 실패 없음, 좁은 뷰포트 가로 넘침 없음, 카드 이동과 자동 슬라이드 전환, 상담창 열기/닫기 확인. `node --check`, `git diff --check` 통과.
+- 로컬 `output/`의 검수 캡처와 `videos/`의 별도 영상 작업은 이번 웹사이트 인수인계에 포함하지 않는다.
+
+---
+
 # Codle Hub Landing — 현재 작업 안내
 
 - 갱신일: 2026-10-01

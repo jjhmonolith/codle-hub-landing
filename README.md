@@ -1,5 +1,13 @@
 # 코들 허브 랜딩
 
+> **2026-10-22 현재 작업:** [Google Labs형 코들 허브](prototypes/codle-hub-studio/toy-hub/product-mosaic.html). 아래 내용은 이전 Studio 안내입니다. 최신 실행 방법·결정·다음 작업은 [SESSION-HANDOFF.md](SESSION-HANDOFF.md)를 먼저 읽어 주세요.
+
+```sh
+python3 -m http.server 8878 --bind 127.0.0.1
+```
+
+[현재 시안 열기](http://127.0.0.1:8878/prototypes/codle-hub-studio/toy-hub/product-mosaic.html#top)
+
 현재 메인 홈페이지는 [`prototypes/codle-hub-studio/`](prototypes/codle-hub-studio/)에 있습니다.
 
 다섯 교육 상품군을 직접 넘겨 살펴보는 반응형 랜딩 페이지입니다. 상품별 상세 링크·도입 문의·구매 안내를 제공하며, 문의폼은 실제 전송 없는 디자인 미리보기입니다.

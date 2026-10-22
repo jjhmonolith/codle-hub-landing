@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>코들 × 짓다 — 인터랙티브 히어로</title>
+<link rel="icon" href="assets/codle.svg" type="image/svg+xml">
+<link rel="stylesheet" href="hero-interactive.css"><script src="hero-interactive.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#programs">교육 프로그램 바로 보기</a>
+<header class="header">
+ <a class="brands" href="index.html" aria-label="코들·짓다 교육 허브 홈"><img src="assets/codle.svg" alt="코들"><span aria-hidden="true">×</span><img src="assets/jitda-logo.svg" alt="짓다"></a>
+ <nav aria-label="주요 메뉴"><a href="#programs">교육 프로그램</a><a href="https://codle.io/" target="_blank" rel="noopener noreferrer" class="enter">코들 입장 ↗</a><a href="index.html#consult-title" class="nav-cta">도입 문의 <span>↗</span></a></nav>
+</header>
+<main>
+ <section class="hero" aria-labelledby="headline">
+  <div class="hero-copy">
+   <p class="eyebrow"><i aria-hidden="true"></i> 우리 학교의 다음 배움</p>
+   <h1 id="headline">매일의 수업부터<span class="punct square" aria-hidden="true"></span><br>새로운 도전까지<span class="punct dot" aria-hidden="true"></span></h1>
+   <p class="subcopy">코들의 수업과 콘텐츠, 캠프부터 짓다 AI 해커톤까지.<br class="mobile-only"> 우리 학교에 맞는 배움의 방식을 만나보세요.</p>
+   <div class="actions"><a href="#programs" class="primary">교육 프로그램 둘러보기 <span aria-hidden="true">↘</span></a><a href="index.html#consult-title" class="text-link">도입 문의 ↗</a></div>
+  </div>
+  <div class="stage-shell">
+   <div class="stage" id="stage" aria-label="교육 프로그램을 선택하는 인터랙티브 그래픽">
+    <div class="thread" aria-hidden="true"><svg viewBox="0 0 1440 320" preserveAspectRatio="none"><path d="M-80 330C-30-110 280-100 326 228S692 308 816 180 1210-120 1490 290"/></svg></div>
+    <button class="piece platform" data-pick="platform" aria-label="코들 수업 플랫폼 선택"><span class="shape"><span class="c-shape"></span><span class="brand-plate"><img src="assets/codle.svg" alt=""><small>CLASSROOM</small></span><span class="code" aria-hidden="true">&lt;/&gt;</span><span class="piece-number">01</span></span></button>
+    <button class="piece content" data-pick="content" aria-label="오리지널 콘텐츠 선택"><span class="shape"><span class="coral-wedge"></span><span class="content-disc"><span class="disc-star" aria-hidden="true">✳</span></span><span class="mini-label">A NEW<br>PERSPECTIVE.</span><span class="piece-number">02</span></span></button>
+    <button class="piece textbook" data-pick="textbook" aria-label="코들 교과서 선택"><span class="shape"><span class="book-back"></span><span class="book-page left-page"><i></i><i></i><i></i><i></i></span><span class="book-page right-page"><i></i><i></i><i></i><i></i></span><span class="piece-number">03</span></span></button>
+    <button class="piece camp" data-pick="camp" aria-label="AI 집중캠프 선택"><span class="shape"><span class="mint-arch"></span><span class="stairs"><i></i><i></i><i></i></span><span class="camp-ball"></span><span class="piece-number">04</span></span></button>
+    <button class="piece jitda" data-pick="jitda" aria-label="짓다 AI 해커톤 선택"><span class="shape"><span class="jitda-plane"></span><span class="jitda-star" aria-hidden="true">✳</span><span class="brand-plate"><img src="assets/jitda-logo.svg" alt=""><small>MAKE IT YOURS.</small></span><span class="piece-number">05</span></span></button>
+   </div>
+  </div>
+  <div class="stage-foot"><span>도형을 눌러 배움의 시작을 골라보세요 <span aria-hidden="true">↗</span></span><button id="motion-toggle" type="button" aria-pressed="false">움직임 멈추기 <span aria-hidden="true">Ⅱ</span></button></div>
+ </section>
+ <section class="programs" id="programs" aria-label="교육 프로그램 탐색">
+  <div class="tabs" role="tablist" aria-label="교육 프로그램">
+   <button role="tab" id="tab-platform" aria-controls="panel-platform" aria-selected="true" data-tab="platform"><span>01</span>수업 플랫폼<i aria-hidden="true">↗</i></button>
+   <button role="tab" id="tab-content" aria-controls="panel-content" aria-selected="false" tabindex="-1" data-tab="content"><span>02</span>오리지널 콘텐츠<i aria-hidden="true">↗</i></button>
+   <button role="tab" id="tab-textbook" aria-controls="panel-textbook" aria-selected="false" tabindex="-1" data-tab="textbook"><span>03</span>코들 × 교과서<i aria-hidden="true">↗</i></button>
+   <button role="tab" id="tab-camp" aria-controls="panel-camp" aria-selected="false" tabindex="-1" data-tab="camp"><span>04</span>AI 집중캠프<i aria-hidden="true">↗</i></button>
+   <button role="tab" id="tab-jitda" aria-controls="panel-jitda" aria-selected="false" tabindex="-1" data-tab="jitda"><span>05</span>짓다 AI 해커톤<i aria-hidden="true">↗</i></button>
+  </div>
+  <div class="panel-wrap">
+   <article role="tabpanel" id="panel-platform" aria-labelledby="tab-platform" tabindex="0"><div><p class="panel-kicker">매일의 수업을 함께</p><h2>AI 수업 플랫폼, 코들</h2><p>수업을 준비하고, 학생들과 실습하는 공간.<br>학교의 일상에 코들을 더해보세요.</p></div><img class="panel-logo" src="assets/codle.svg" alt="코들"><a href="https://codle.io/" target="_blank" rel="noopener noreferrer" class="panel-link">코들 살펴보기 ↗</a></article>
+   <article role="tabpanel" id="panel-content" aria-labelledby="tab-content" tabindex="0" hidden><div><p class="panel-kicker">다음 수업의 새로운 발견</p><h2>코들 오리지널 콘텐츠</h2><p>학교의 수업에 맞는 교육 콘텐츠를 살펴보고,<br>새로운 배움의 주제를 만나보세요.</p></div><img class="panel-logo" src="assets/codle.svg" alt="코들"><a href="index.html#offerings" class="panel-link">교육 상품 전체 보기 ↗</a></article>
+   <article role="tabpanel" id="panel-textbook" aria-labelledby="tab-textbook" tabindex="0" hidden><div><p class="panel-kicker">교과서와 연결되는 배움</p><h2>코들 × 교과서</h2><p>교과서와 함께 활용하는 실습과 교육자료.<br>출판사별 구성과 이용 방식을 확인해보세요.</p></div><img class="panel-logo" src="assets/codle.svg" alt="코들"><a href="index.html#offerings" class="panel-link">교육 상품 전체 보기 ↗</a></article>
+   <article role="tabpanel" id="panel-camp" aria-labelledby="tab-camp" tabindex="0" hidden><div><p class="panel-kicker">한 번 더 깊이 경험하는 AI</p><h2>코들 AI 집중캠프</h2><p>학교에서 계획하는 특별한 교육 경험.<br>AI 집중캠프의 구성과 운영을 살펴보세요.</p></div><img class="panel-logo" src="assets/codle.svg" alt="코들"><a href="index.html#offerings" class="panel-link">교육 상품 전체 보기 ↗</a></article>
+   <article role="tabpanel" id="panel-jitda" aria-labelledby="tab-jitda" tabindex="0" hidden><div><p class="panel-kicker">아이디어를 직접 만드는 경험</p><h2>짓다 AI 해커톤</h2><p>팀으로 아이디어를 나누고 AI로 웹앱을 만들고 발표하며,<br>생각을 결과물로 이어가는 도전.</p></div><img class="panel-logo" src="assets/jitda-logo.svg" alt="짓다"><a href="index.html#offerings" class="panel-link">교육 상품 전체 보기 ↗</a></article>
+  </div>
+  <p id="selection-status" class="sr-only" role="status"></p>
+ </section>
+</main>
+<footer><span>인터랙티브 히어로 시안 · 기존 SVG 로고 원본 사용 · 그래픽은 제품 UI가 아닙니다.</span><a href="index.html">기존 랜딩 보기 ↗</a></footer>
+<noscript><style>.piece{pointer-events:none}.tabs,.stage-foot{display:none}[role=tabpanel][hidden]{display:flex!important}</style></noscript>
+</body>
+</html>

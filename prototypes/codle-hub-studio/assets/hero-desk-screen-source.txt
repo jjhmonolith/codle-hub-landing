@@ -1,0 +1,10 @@
+Screen asset: hero-sequence/python.jpg (existing, unmodified)
+Source: https://ai.codle.io/help/rQJRbiL6IIjBL04XjVRcEinOGHg.jpg
+Source provenance: official Codle public guide, downloaded 2026-10-12;
+see hero-sequence/SOURCES.md and videos/codle-hero-motion/assets/guide-reference/SOURCES.md.
+Subject: Codle Studio, 생활 속의 문제 해결 프로젝트, 오류도우미.
+This is an official guide capture, not a newly captured or verified-current signed-in session.
+
+Presentation: independent HTML image layer, perspectively mapped to the laptop display
+in hero-styleframe.html by hero-styleframe.js. Original screenshot is not redrawn or
+generatively edited. The desk photo and the prior motion prototype are unchanged.

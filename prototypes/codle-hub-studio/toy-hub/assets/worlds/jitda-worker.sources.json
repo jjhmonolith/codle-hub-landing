@@ -2,5 +2,12 @@
   "source": "https://jitda.io/participant/sign-in",
   "publicBundle": "https://dbl58za30prx0.cloudfront.net/assets/index-y0GA1Ed-.js",
   "component": "Official side-profile Jitda character Bje, used by the pickaxe-working O4 component",
-  "adaptation": "Original four SVG contours retained; modeled depth, articulated pickaxe and hands added locally. Public marketing UI texture retained. No signed-in session or student data used."
+  "adaptation": "Original four SVG contours retained; modeled depth, articulated pickaxe and hands added locally. Public marketing UI texture retained. No signed-in session or student data used.",
+  "flatMosaicMotion": {
+    "retrieved": "2026-10-22",
+    "css": "https://dbl58za30prx0.cloudfront.net/assets/index-Dd4-2s55.css",
+    "component": "O4 with Bje side-profile SVG",
+    "adaptation": "Original side-profile contours, pickaxe geometry, pivot, swing angles (38, 50, -108, -100 degrees), one-second easing and body bob retained. Flat ground colour adapted to tile; no shadow. Plays only on hover/focus, disabled for reduced motion.",
+    "status": "Historical side-profile digging reference. Active mosaic uses the original front-facing mark with a new front-facing pickaxe swing."
+  }
 }
