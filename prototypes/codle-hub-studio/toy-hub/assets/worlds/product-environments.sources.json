@@ -1,0 +1,42 @@
+{
+  "created": "2026-10-26",
+  "kind": "Original, illustrative 3D environments; not recordings of product interfaces.",
+  "implementation": "../../product-worlds.js",
+  "scenes": [
+    {
+      "product": "수업 플랫폼, 코들",
+      "environment": "Large continuous blue graphic folds (first-product art direction study)",
+      "motion": "Two broad surfaces bend slowly, with continuous lighting changes",
+      "artwork": "Procedural geometry; no bitmap artwork",
+      "artworkSource": "../../graphic-stage.js"
+    },
+    {
+      "product": "오리지널 콘텐츠",
+      "environment": "Landscape of books and paper",
+      "motion": "Pages turn subtly, paper waves pass, a paper plane travels through",
+      "artworkSource": "Existing official Codle covers; see content-thumbnails.sources.json"
+    },
+    {
+      "product": "씨마스 인공지능 기초",
+      "environment": "River-crossing exercise landscape",
+      "motion": "Water, ripples, boat and paddle",
+      "reference": "Existing river-crossing activity described in textbook-interaction.sources.json; newly modeled illustrative scenery"
+    },
+    {
+      "product": "금성·YBM 정보 교육자료",
+      "environment": "Modular computational landscape",
+      "motion": "Blocks assemble and carriers flow through connected paths",
+      "reference": "Original illustration of modular programming and information flow"
+    },
+    {
+      "product": "AI 집중캠프",
+      "environment": "Original classroom film",
+      "reference": "../films/sources.json"
+    },
+    {
+      "product": "짓다 AI 해커톤",
+      "environment": "Original cinematic brand film",
+      "reference": "../films/sources.json"
+    }
+  ]
+}

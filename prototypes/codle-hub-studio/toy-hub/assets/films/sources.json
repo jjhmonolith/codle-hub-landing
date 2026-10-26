@@ -1,0 +1,31 @@
+{
+  "retrieved": "2026-10-26",
+  "note": "Existing public Codle / Monolith promotional media cached for this local preview. Jitda uses its official brand film, not a product demonstration. The book animation uses the original cover and page 33; no video exists for that product.",
+  "items": [
+    {
+      "file": "platform.mp4",
+      "source": "https://ai.codle.io/motion1.mp4",
+      "bytes": 477651
+    },
+    {
+      "file": "contents.mp4",
+      "source": "https://ai.codle.io/motion5.mp4",
+      "bytes": 276475
+    },
+    {
+      "file": "classroom.mp4",
+      "source": "https://exhibition.codle.io/media/lesson-practice.mp4",
+      "bytes": 163790
+    },
+    {
+      "file": "camp.mp4",
+      "source": "https://contents.codle.io/aicamp-landing/hero/classroom.mp4",
+      "bytes": 2469509
+    },
+    {
+      "file": "jitda.webm",
+      "source": "https://landing.jitda.io/assets/monolith-bg.webm",
+      "bytes": 196120
+    }
+  ]
+}

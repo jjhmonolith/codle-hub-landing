@@ -1,0 +1,31 @@
+/* Every product owns a full-bleed moving environment. Typography stays in one place. */
+.gl-slide.has-scene>.gl-backdrop,.gl-slide.has-scene::before,.gl-slide.has-scene::after{display:none}
+.gl-slide.is-active{z-index:1}
+.gl-slide.is-leaving{z-index:0;pointer-events:none}
+.gl-slide.is-revealing{will-change:clip-path}
+.gl-scene{position:absolute;inset:0;overflow:hidden;pointer-events:none;background:#648ac6}
+.scene-paper{background:#9b86bc}.scene-river{background:#78b9aa}.scene-code{background:#c7976e}.scene-camp{background:#596467}.scene-jitda{background:#070e1a}
+.world-canvas,.scene-film,.scene-film-poster{position:absolute;inset:0;display:block;width:100%;height:100%}
+.scene-film,.scene-film-poster{object-fit:cover}
+.scene-film{opacity:0;transition:opacity .4s ease}.film-ready .scene-film{opacity:1}.film-ready .scene-film-poster{visibility:hidden}
+.has-scene .gl-shade{background:linear-gradient(180deg,#10243948 0%,#10243900 22%,#10243908 68%,#1024399c 100%),radial-gradient(ellipse at 50% 47%,#13253e80 0%,#13253e50 35%,#13253e00 75%)}
+.has-scene[data-slide="5"] .gl-shade{background:linear-gradient(180deg,#0002,transparent 55%,#0006)}
+.has-scene .gl-copy{justify-content:center;padding:110px 32px 145px}
+.has-scene .gl-copy h2{font-size:clamp(46px,5.8vw,88px);font-weight:450;line-height:1.14;text-wrap:balance;text-shadow:0 2px 30px #10243925}
+.has-scene .gl-copy p{font-size:clamp(18px,1.6vw,24px);margin:26px 0 34px;text-shadow:0 1px 16px #10243950}
+.has-scene .gl-copy>a{font-size:19px;min-height:62px;padding:19px 34px}
+.gl-controls{bottom:40px;padding:0;background:none;backdrop-filter:none}
+.gl-pause{left:calc(100% + 12px);background:transparent;color:#fff}
+@media(max-width:600px){
+ .has-scene .gl-copy{padding:100px 24px 140px}
+ .has-scene .gl-copy h2{font-size:clamp(36px,10vw,48px);max-width:340px}
+ .has-scene .gl-copy p{font-size:18px;max-width:310px;margin:24px 0 30px}
+ .has-scene .gl-copy>a{font-size:17px;min-height:57px;padding:17px 28px}
+ .gl-controls{gap:12px;bottom:35px}.gl-pause{left:calc(100% + 5px)}
+ .gl-progress button[aria-pressed=true]{width:70px}.gl-progress button[aria-pressed=true] span{width:60px}
+ .scene-camp .scene-film{object-position:53% center}.scene-jitda .scene-film{object-position:68% center}
+}
+@media(prefers-reduced-motion:reduce){.gl-slide.is-active,.gl-slide .gl-copy{animation:none!important;transition:none!important}}
+/* First-product art direction study: a large, continuous graphic with restrained motion. */
+.scene-paths{background:radial-gradient(ellipse at 66% 20%,#204aaf 0%,#173b91 38%,#0a2058 78%,#091a43 100%)}
+.has-scene[data-slide="0"] .gl-shade{background:linear-gradient(180deg,#071a3d35,transparent 24%,transparent 65%,#071a3d55)}
