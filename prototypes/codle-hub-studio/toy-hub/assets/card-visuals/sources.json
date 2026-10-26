@@ -1,0 +1,60 @@
+{
+  "retrieved": "2026-10-26",
+  "downloaded": {
+    "platform-cap.png": "https://ai.codle.io/main-img1.png",
+    "platform-computer.png": "https://ai.codle.io/main-img2.png",
+    "textbook-shape-1.png": "https://framerusercontent.com/images/0f09LEy6qZK1Y9gL9T6AG622ZZ8.png?width=1024",
+    "textbook-shape-2.png": "https://framerusercontent.com/images/m3YA9HpmQG8c9ThSe5XusCzYw.png?width=1024",
+    "textbook-shape-3.png": "https://framerusercontent.com/images/lZLqIoLGAjMHHOlhOwugYSASrjc.png?width=1024"
+  },
+  "note": "Unmodified official landing graphics; arranged and cropped in CSS.",
+  "reused": {
+    "../worlds/thumbnail-everyday-ai.webp": "Actual content cover, official contents brochure PDF; see ../worlds/content-thumbnails.sources.json.",
+    "../worlds/thumbnail-python-data.webp": "Actual content cover, official contents brochure PDF; see ../worlds/content-thumbnails.sources.json.",
+    "../worlds/cmass-cover.png": "Official CMASS AI Basics textbook cover; CSS crop only.",
+    "../landing-hover/camp-classroom.jpg": "https://contents.codle.io/aicamp-landing/hero/classroom-poster.jpg",
+    "../worlds/jitda-official-demo.png": "Official public Jitda marketing demo, not student work. Right preview pane shown via CSS crop.",
+    "../jitda-logo.svg": "Original public Jitda brand logo; mascot portion shown via CSS crop.",
+    "../worlds/codle-tools-ui.png": "Original Codle activity icon artwork, reused without pixel edits. Six icons are cropped through inline SVG viewports; coordinates match the existing intro and mosaic implementations."
+  },
+  "gamePreviews": {
+    "repository": "/Users/eomgyuhwan/Desktop/tm/cmass-course-maker",
+    "captured": "2026-10-26",
+    "captureSize": "1280x720",
+    "presentation": "Original React pages, temporarily scaled in the local preview server to fit the capture viewport. Source game files unchanged. Full screenshots preserved; SVG viewports crop only the gameplay areas in the hub.",
+    "content-water-jug.png": {
+      "source": "app/test/test-sa/u1/c2/s1/water-jug/page.tsx",
+      "state": "Filled the 5L jug, then poured into the 3L jug: 2L / 3L, two moves."
+    },
+    "content-four-queens.png": {
+      "source": "app/test/test-sa/u1/c2/s1/n-queen/page.tsx",
+      "state": "4x4 board with three valid placements: row1 col2, row2 col4, row3 col1. Original piece artwork unchanged."
+    },
+    "sourceCommit": "0430d9a",
+    "status": "Historical captures only; not used in the current card."
+  },
+  "activeContentPreview": {
+    "file": "content-lesson-four-queens.png",
+    "repository": "/Users/eomgyuhwan/Desktop/tm/cmass-course-maker",
+    "sourceCommit": "0430d9a",
+    "source": "app/cmass-ai-basics/u1/c2/s1/01-03/page.tsx",
+    "captured": "2026-10-26",
+    "captureSize": "1280x720",
+    "pageBounds": {
+      "x": 96,
+      "y": 20,
+      "width": 1088,
+      "height": 680
+    },
+    "note": "Entire original lesson page including unit heading, explanation of 4-queen and initial/goal state diagrams. Original source unchanged. Only exterior viewport whitespace removed with SVG clipping. Replaces isolated game previews following user clarification."
+  },
+  "hoverLesson": {
+    "asset": "lesson-piece.svg",
+    "source": "/Users/eomgyuhwan/Desktop/tm/cmass-course-maker/public/cmass/cmass-sa/rook.svg",
+    "note": "Exact original piece SVG. The captured lesson header, explanation and empty board are unchanged; the goal diagram reveals its four pieces in the same valid solution. Decorative preview only, not an embedded game."
+  },
+  "platformMosaicPreview": {
+    "source": "../../mosaic-service-art.js (platform classroom) and ../../product-mosaic.css (platform gather/unfold choreography)",
+    "note": "Reuses the earlier mosaic landing animation: activities gather into the left rail while the lesson/editor workspace opens. Current six official activity icons are preserved. Loops on hover and keyboard focus."
+  }
+}
