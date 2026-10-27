@@ -1,0 +1,49 @@
+/* Measured reference at 1280px: header 63, content 954; banner enlarged after user review,
+   recommendation 483 + login 470, cards 342 high, catalogue 3 columns. */
+body{background:#f7f8fa;color:#17191d;letter-spacing:-.035em}
+.gl-header,.gl-header.on-paper{position:absolute;height:63px;background:#fff;color:#17191d;padding:0 24px;border:0;gap:20px}.gl-brand{position:absolute;left:50%;transform:translateX(-50%);min-width:0}.gl-brand-mark{width:96px}.gl-brand span{display:none}.gl-header nav{font-size:15px;gap:0}.gl-header nav>*:not(:first-child){display:none}.gl-header .gl-login{min-width:0;border:2px solid #17191d;border-radius:24px;padding:7px 22px;font-size:15px;font-weight:700}.gl-login span{display:none}main{padding-top:63px}
+.gl-hero{height:clamp(460px,42vw,600px);min-height:0;max-height:none;border-radius:0;isolation:isolate}.gl-copy,.has-scene .gl-copy{align-items:center;justify-content:center;text-align:center;padding:30px 24px 55px}.gl-copy h2,.has-scene .gl-copy h2{font-size:52px;line-height:1.13;font-weight:650;letter-spacing:-.05em;max-width:900px}.gl-copy p,.has-scene .gl-copy p{font-size:19px;line-height:1.5;margin:17px 0 22px;max-width:900px}.gl-copy>a,.has-scene .gl-copy>a{font-size:14px;min-height:40px;padding:11px 25px;border-radius:0;background:#fff}.has-scene .gl-shade{background:linear-gradient(90deg,#10243935,#10243965 50%,#10243935)}.gl-controls{bottom:9px;left:50%;transform:translateX(-50%);gap:10px}.gl-arrow{width:26px;height:26px;font-size:20px;border-radius:0;border:0}.gl-progress button{height:26px;width:20px}.gl-progress span{width:16px;height:4px;border-radius:0;background:#fff5}.gl-progress button[aria-pressed=true]{width:36px;padding:0}.gl-progress button[aria-pressed=true] span{width:32px;height:4px}.gl-progress button[aria-pressed=true] i{background:#438bf5}.gl-pause{height:26px;left:calc(100% + 3px)}
+/* Labs-inspired service directory beneath the preserved banner. */
+.hub-shell{width:1200px;max-width:calc(100% - 64px);margin:0 auto;padding:0 0 110px}
+
+body{background:#f1efe9;color:#292d27}.gl-experiments{padding:80px 0 0;overflow:visible}.hub-section-heading{text-align:center;margin:0 0 56px}.hub-section-heading>p{font-size:11px;letter-spacing:.14em;font-weight:650;margin:0 0 24px;color:#71786c}.hub-section-heading h2{font-size:clamp(38px,4.4vw,62px);font-weight:450;letter-spacing:-.055em;line-height:1.17;margin:0 0 22px}.hub-section-heading>span{font-size:17px;color:#71786c;line-height:1.6}
+.gl-gallery{height:auto}.gl-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 24px;max-width:none;height:auto}.gl-card{position:relative;top:auto;left:auto;width:auto;min-width:0;height:auto;background:#fff;padding:18px 18px 24px;transform:none;opacity:1;border:0;border-radius:24px;overflow:hidden;transition:box-shadow .2s}.gl-card>a:first-child{height:auto;aspect-ratio:1.12;flex:none;overflow:hidden;border-radius:15px}.gl-card img{border-radius:0;object-fit:cover;transition:transform .35s}.gl-card[data-card="2"] img{object-fit:contain;padding:22px;background:#e7eee2}.gl-card h3{font-size:25px;font-weight:550;line-height:1.25;margin:25px 6px 12px;letter-spacing:-.04em;word-break:keep-all}.gl-card p{display:block;font-size:15px;line-height:1.65;color:#6c7267;margin:0 6px 18px;word-break:keep-all}.gl-card small{display:block;font-size:11px;color:#93998e;margin:0 6px 24px;line-height:1.6}.gl-card-link{font-size:13px;font-weight:550;color:#373e31;margin:auto 6px 0;padding:0;text-align:left;line-height:1.6}.gl-card-link::after{content:"";position:absolute;inset:0}.gl-card:hover{box-shadow:0 12px 32px #283b1910}.gl-card:hover img{transform:scale(1.035)}.gl-card:focus-within{outline:3px solid #4285f4;outline-offset:4px}.gl-about,.gl-connect{display:none}.codle-footer{background:#e9e8e1}
+@media(max-width:800px){.gl-header,.gl-header.on-paper{padding:0 16px}.gl-header nav{font-size:12px;display:flex}.gl-header .gl-login{font-size:12px;padding:7px 16px}.gl-brand-mark{width:78px}.gl-hero{height:380px}.gl-copy h2,.has-scene .gl-copy h2{font-size:38px}.gl-copy p,.has-scene .gl-copy p{font-size:15px;margin:14px 0 18px}.hub-shell{max-width:calc(100% - 32px);padding-bottom:64px}.gl-experiments{padding-top:52px}.hub-section-heading{margin-bottom:32px}.hub-section-heading h2{font-size:40px}.hub-section-heading>span{font-size:14px}.gl-track{gap:20px 14px}.gl-card{padding:12px 12px 20px;border-radius:18px}.gl-card h3{font-size:19px;margin:18px 2px 10px}.gl-card p{font-size:13px;margin:0 2px 14px}.gl-card small{font-size:10px;margin:0 2px 18px}.gl-card-link{font-size:12px;margin:auto 2px 0}}
+@media(max-width:600px){.gl-track{grid-template-columns:1fr}.gl-card{padding:18px 18px 24px}.gl-card>a:first-child{aspect-ratio:1.5}.gl-card h3{font-size:26px;margin-top:22px}.gl-card p{font-size:15px}.gl-card small{font-size:11px}.gl-card-link{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.gl-card,.gl-card img{transition:none}.gl-card:hover img{transform:none}}
+
+/* Consistent illustrated service family, with room to browse. */
+.hub-shell{width:1180px}.gl-experiments{padding-top:64px}.hub-section-heading{margin-bottom:40px}.hub-section-heading h2{font-size:46px;max-width:720px;margin:0 auto 18px}.gl-track{gap:28px 24px}.gl-card{padding:14px 14px 24px;border-radius:24px}.gl-card>a:first-child{height:auto;aspect-ratio:14/9;border-radius:16px}.gl-card img,.gl-card[data-card="2"] img{object-fit:cover;padding:0;background:none}.gl-card h3{font-size:24px;margin:23px 10px 12px}.gl-card p{font-size:15px;margin:0 10px 16px;line-height:1.6}.gl-card small{font-size:11px;margin:0 10px 23px}.gl-card-link{font-size:14px;margin:auto 10px 0;padding:10px 0 0}.gl-card-link:hover{color:#377cf3}
+@media(max-width:900px){.gl-track{grid-template-columns:repeat(2,minmax(0,1fr))}.hub-section-heading h2{font-size:38px}.gl-card h3{font-size:22px}}
+@media(max-width:600px){.hub-shell{max-width:calc(100% - 36px)}.gl-experiments{padding-top:44px}.hub-section-heading h2{font-size:32px}.gl-track{grid-template-columns:1fr;gap:22px}.gl-card{padding:14px 14px 24px}.gl-card>a:first-child{height:auto;aspect-ratio:14/9}.gl-card h3{font-size:25px}.gl-card small{display:block}}
+
+/* Original service artwork and genuine content previews, composed inside the existing frames. */
+.gl-card>a.card-visual{position:relative;display:block;isolation:isolate;aspect-ratio:16/10;background:#f5f7fa;border:1px solid #20252009}
+.gl-card .card-visual img{position:absolute;display:block;left:0;top:0;width:100%;height:100%;padding:0;background:none;object-fit:contain;object-position:center;transform:none;transition:none}
+.card-visual>img,.card-visual>span{pointer-events:none}
+.gl-card>a.card-visual--platform{background:radial-gradient(ellipse at 30% 20%,#f6f8ff 0,#e1eaff 65%,#ccdfff 100%)}
+/* Original Codle activity icons, cropped directly from the existing official artwork. */
+.card-visual--platform .visual-tool{position:absolute;display:block;width:22%;aspect-ratio:1;border-radius:23%;overflow:hidden;box-shadow:0 9px 13px #204f8520}
+.visual-tool svg{display:block;width:100%;height:100%;overflow:hidden}
+.visual-tool-python{left:10%;top:10%;transform:rotate(-8deg)}
+.visual-tool-ai{left:39%;top:7%;transform:rotate(5deg)}
+.visual-tool-entry{left:68%;top:12%;transform:rotate(9deg)}
+.visual-tool-quiz{left:10%;top:56%;transform:rotate(7deg)}
+.visual-tool-board{left:39%;top:53%;transform:rotate(-5deg)}
+.visual-tool-pdf{left:68%;top:56%;transform:rotate(-8deg)}
+/* A complete original lesson page: title, explanation, and teaching diagram together. */
+.gl-card>a.card-visual--contents{background:#fff}
+.visual-lesson{display:block;width:100%;height:100%;overflow:hidden}
+.gl-card>a.card-visual--cmass{background:#57c3c2}
+.gl-card .card-visual .visual-cover{object-fit:cover;object-position:center 28%}
+.gl-card>a.card-visual--textbook{background:radial-gradient(ellipse at 50% 30%,#fff 0,#f0eff7 100%)}
+.gl-card .card-visual .visual-shape{height:auto;filter:drop-shadow(0 16px 12px #32275f18)}
+.gl-card .card-visual .visual-shape-sphere{width:55%;left:3%;top:6%}
+.gl-card .card-visual .visual-shape-cylinder{width:54%;left:52%;top:13%}
+.gl-card .card-visual .visual-shape-pyramid{width:57%;left:22%;top:21%}
+.gl-card .card-visual .visual-classroom{object-fit:cover;object-position:50% 58%}
+.gl-card>a.card-visual--jitda{background:#ffdf62}
+.visual-demo{position:absolute;left:39%;top:10%;width:64%;height:91%;overflow:hidden;border:1px solid #59504420;border-radius:13px;box-shadow:0 12px 25px #87661026;transform:rotate(3deg)}
+.gl-card .card-visual .visual-demo img{left:-100%;width:200%;height:auto;max-width:none}
+.visual-mascot{position:absolute;left:3%;top:16%;width:43%;height:82%;overflow:hidden;filter:drop-shadow(0 10px 8px #87661018)}
+.gl-card .card-visual .visual-mascot img{width:337%;height:auto;max-width:none}

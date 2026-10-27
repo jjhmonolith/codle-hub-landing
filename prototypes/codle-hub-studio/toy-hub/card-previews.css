@@ -1,0 +1,54 @@
+/* Only the service artwork responds; the banner and directory layout stay still. */
+.card-visual { pointer-events: none; }
+/* Original mosaic landing: six activities gather into the lesson workspace. */
+@property --card-platform-progress {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+.platform-mosaic-preview {
+  display: block;
+  width: 100%;
+  height: 100%;
+  --gather: clamp(0, calc(var(--card-platform-progress) * 1.15), 1);
+  --unfold: clamp(0, calc((var(--card-platform-progress) - .12) / .88), 1);
+}
+.platform-mosaic-preview .mosaic-tool {
+  transform-box: view-box;
+  transform-origin: 44px 44px;
+  transform: translate(calc(var(--move-x) * var(--gather)), calc(var(--move-y) * var(--gather)))
+    rotate(calc(var(--rest-rotation) * (1 - var(--gather))))
+    scale(calc(1 - .78 * var(--gather)));
+}
+.platform-mosaic-preview .codle-classroom {
+  clip-path: inset(0 calc((1 - var(--unfold)) * 100%) 0 0);
+  transform: translateX(calc((1 - var(--gather)) * 56px));
+}
+.lesson-preview-sequence,
+.lesson-preview-piece,
+.lesson-preview-marker { opacity: 0; }
+.lesson-preview-piece,
+.lesson-preview-marker { transform-box: fill-box; transform-origin: center; }
+.lesson-preview-marker { transform-origin: left center; }
+.gl-card .card-visual .visual-book-page {
+  opacity: 0;
+  object-fit: cover;
+  object-position: center 24%;
+}
+.visual-cover { transform-origin: left center; backface-visibility: hidden; }
+.card-preview-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+}
+.gl-card.is-video-playing .card-preview-video { opacity: 1; }
+.visual-mascot { transform-origin: 50% 85%; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lesson-preview-sequence,
+  .card-preview-video { opacity: 0 !important; }
+}

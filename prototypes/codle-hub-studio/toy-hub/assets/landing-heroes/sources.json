@@ -1,0 +1,38 @@
+{
+  "captured": "2026-10-26",
+  "method": "Browser viewport captures of official landing pages. Original screenshots preserved; presentation cropped with CSS.",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "assets": [
+    {
+      "file": "platform.png",
+      "url": "https://ai.codle.io/kr"
+    },
+    {
+      "file": "contents.png",
+      "url": "https://ai.codle.io/kr/contents"
+    },
+    {
+      "file": "cmass.png",
+      "url": "https://cmass-contents.codle.io/cmass-ai-basics/web-exhibition"
+    },
+    {
+      "file": "textbook.png",
+      "url": "https://exhibition.codle.io/"
+    },
+    {
+      "file": "camp.png",
+      "url": "https://contents.codle.io/aicamp-landing"
+    },
+    {
+      "file": "jitda.png",
+      "url": "https://landing.jitda.io/"
+    }
+  ],
+  "notes": [
+    "Jitda school audience tab selected.",
+    "Cmass source page has missing logo images; original capture retained."
+  ]
+}
