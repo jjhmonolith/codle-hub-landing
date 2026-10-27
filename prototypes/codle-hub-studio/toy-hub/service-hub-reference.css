@@ -1,0 +1,54 @@
+/* Reference proportions: generous heading, quiet surfaces and large visuals. */
+.hub-header{height:90px}.hub-brand span{font-size:12px;color:#18191c;font-weight:650}
+.hub-content{padding:94px 6% 40px}
+.hub-title{font-size:clamp(33px,3.2vw,49px);font-weight:720;line-height:1.4;letter-spacing:-.055em}
+.hub-subtitle{margin:21px 0 47px;color:#25262b;font-size:13px;font-weight:550}
+.service-heading{display:none}
+.service-grid{gap:13px;grid-template-rows:repeat(3,245px)}
+.service-card,.service-card.featured,.service-card.compact{padding:26px 24px;border-radius:22px;background:#f5f5f7}
+.service-card:hover,.service-card.featured:hover{background:#efeff3;transform:translateY(-2px)}
+.service-card .card-type{font-size:11px;font-weight:550;color:#37393e;margin:0 0 11px;letter-spacing:-.03em}
+.service-card h3,.service-card:nth-child(1) h3,.service-card:nth-child(2) h3,.service-card:nth-child(5) h3{font-size:clamp(19px,1.65vw,26px);font-weight:650;line-height:1.5;letter-spacing:-.045em;max-width:100%;word-break:keep-all}
+.service-card .card-description{display:none}
+.service-card h3 br{display:initial}
+.service-card:nth-child(1){background:#f5f5f7}
+.service-card:nth-child(2){background:#f5f5f7}
+.service-card:nth-child(3){background:#edf3fc}
+.service-card:nth-child(4){background:#f5f5f7}
+.service-card:nth-child(5){background:#f5f5f7}
+.service-card:nth-child(6){background:#f5f5f7}
+.card-arrow{font-size:19px;right:21px;bottom:21px;color:#646872}
+.service-card .product-preview{position:absolute;left:11%;bottom:-6%;width:90%;height:66%;object-fit:cover;object-position:left top;border:7px solid white;border-radius:17px;box-shadow:0 7px 25px #242e5015;transform:rotate(-5deg);max-width:none;pointer-events:none}
+.service-card:nth-child(2) .content-art{width:72%;height:68%;right:6%;bottom:-13%;transform:rotate(-6deg);opacity:1}
+.content-art img{border:7px solid white;border-radius:16px;object-position:center}
+.service-card:nth-child(3) .books-art{height:115px;transform:rotate(-8deg);right:15%;bottom:-13px;gap:8px;opacity:1}
+.books-art img{width:77px;height:108px}.books-art img:nth-child(2){transform:translateY(-9px) rotate(12deg)}
+.service-card:nth-child(4) .tile-icon{height:90px;width:90px;right:calc(50% - 45px);bottom:13px;border-radius:25px;transform:rotate(-8deg);background:#e7e1f5}
+.service-card:nth-child(4) .tile-icon svg{width:52px;height:52px}
+.service-card .campaign-photo{position:absolute;inset:0;height:100%;width:100%;object-fit:cover;z-index:-2;pointer-events:none}
+.service-card.photo-card{color:white;background:#162a27}
+.service-card.photo-card::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#071a28b3,#071a2810 85%);z-index:-1}
+.service-card.photo-card .card-type,.service-card.photo-card .card-arrow{color:#fff}
+.service-card.photo-card h3{max-width:90%}
+.hub-help{margin-top:30px;padding-top:24px}.hub-panel .codle-footer{padding-top:12px}
+.billboard .ad-slide{padding-top:33px}.billboard .ad-copy{margin-top:60px}
+@media(max-width:1190px) and (min-width:681px){
+ .hub-content{padding-top:65px}.hub-title{font-size:32px}.hub-subtitle{font-size:11px;line-height:1.7;margin-bottom:35px}
+ .service-grid{grid-template-rows:repeat(3,205px);gap:11px}
+ .service-card,.service-card.featured,.service-card.compact{padding:21px 16px;border-radius:20px}
+ .service-card .card-type{font-size:9px;margin-bottom:10px}
+ .service-card h3,.service-card:nth-child(1) h3,.service-card:nth-child(2) h3,.service-card:nth-child(5) h3{font-size:18px;line-height:1.5}
+ .service-card:nth-child(3) .books-art{transform:scale(.8) rotate(-8deg);right:3px;bottom:-11px}
+ .service-card:nth-child(4) .tile-icon{width:66px;height:66px;right:calc(50% - 33px);bottom:18px;border-radius:18px}.service-card:nth-child(4) .tile-icon svg{width:37px;height:37px}
+ .card-arrow{right:15px;bottom:14px;font-size:16px}
+}
+@media(max-width:680px){
+ .hub-content{padding:65px 22px 30px}.hub-title{font-size:32px;line-height:1.4}.hub-subtitle{font-size:11px;line-height:1.7;margin:19px 0 35px}
+ .service-grid{grid-template-rows:220px 220px 190px 220px;gap:11px}
+ .service-card,.service-card.featured,.service-card.compact{padding:20px 16px;border-radius:20px}
+ .service-card .card-type{font-size:9px}.service-card h3,.service-card:nth-child(1) h3,.service-card:nth-child(2) h3,.service-card:nth-child(5) h3{font-size:18px;line-height:1.5}
+ .service-card:nth-child(2) .content-art{width:100%;height:55%;right:-8%;bottom:-10%}
+ .service-card:nth-child(3) .books-art{transform:scale(.7) rotate(-8deg);right:10px;bottom:-14px}
+ .service-card:nth-child(4) h3{max-width:62%}.service-card:nth-child(4) .tile-icon{right:26px;bottom:22px;width:83px;height:83px}.service-card:nth-child(4) .tile-icon svg{width:46px;height:46px}
+ .service-card.photo-card h3{max-width:100%}.service-card .product-preview{height:62%;left:15%;width:110%}
+}

@@ -1,0 +1,12 @@
+.connection-art{position:absolute;left:5%;right:5%;bottom:39px;height:65%;pointer-events:none;display:grid;place-items:center}
+.connection-art svg{height:100%;width:100%;overflow:visible;max-height:440px}
+.connection-art .connection-line{stroke:#619bfa;stroke-width:3;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0}
+.connection-art .tile-name{font-family:Pretendard,Arial,sans-serif;font-size:12px;font-weight:600;fill:#475568;letter-spacing:-.4px}
+.connection-art .tile-symbol{font-family:Pretendard,Arial,sans-serif;font-size:28px;font-weight:650;fill:white;letter-spacing:-1px}
+.connection-art.is-visible .connection-line{animation:connect-flow 1.8s cubic-bezier(.25,.5,.25,1) .35s both}
+.connection-art.is-visible .activity-tile{animation:connect-settle 1.4s cubic-bezier(.18,.7,.2,1) both}
+.connection-art.is-visible .activity-quiz{animation-delay:.15s}.connection-art.is-visible .activity-sheet{animation-delay:.3s}
+@keyframes connect-flow{from{stroke-dashoffset:1;opacity:.2}to{stroke-dashoffset:0;opacity:1}}
+@keyframes connect-settle{from{transform:translateY(19px);opacity:0}to{transform:translateY(0);opacity:1}}
+@media(max-width:680px){.connection-art{left:0;right:0;bottom:39px;height:65%}}
+@media(prefers-reduced-motion:reduce){.connection-art.is-visible .activity-tile,.connection-art.is-visible .connection-line{animation:none}}

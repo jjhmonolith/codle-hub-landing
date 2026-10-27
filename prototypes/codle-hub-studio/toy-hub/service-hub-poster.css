@@ -1,0 +1,68 @@
+/* The directory scrolls; one quiet campaign poster accompanies it. */
+.sample-campaign{display:flex;flex-direction:column;position:relative;isolation:isolate;overflow:hidden;background:#2563fa;color:#fff;width:100%;min-width:0;aspect-ratio:3/5;min-height:480px;border-radius:22px;padding:28px 25px;text-decoration:none}
+.campaign-topline{display:flex;justify-content:space-between;align-items:flex-start;font-size:10px;letter-spacing:.1em;line-height:1.35;font-weight:650}
+.campaign-spark{font-size:32px;line-height:1;color:#c7ff73}
+.sample-campaign h2{position:relative;z-index:1;font-size:clamp(30px,3.7vw,57px);font-weight:750;line-height:1.16;letter-spacing:-.065em;margin:36px 0 16px}
+.campaign-tagline{font-size:11px;letter-spacing:-.025em;margin:0;color:#dce8ff;position:relative;z-index:1}
+.campaign-graphic{position:relative;flex:1;min-height:125px;margin:8px -25px 0;display:grid;place-items:center}
+.campaign-graphic b{font-size:clamp(105px,12vw,185px);font-weight:850;letter-spacing:-.09em;line-height:1;color:#c7ff73;transform:rotate(-12deg);text-shadow:5px 9px 0 #164cc9;z-index:1;padding-right:10px}
+.campaign-orbit{position:absolute;width:140%;height:65%;border:1px solid #9dc5ff80;border-radius:50%;transform:rotate(-30deg)}
+.campaign-dot{position:absolute;width:29px;height:29px;background:#c7ff73;border-radius:50%;left:8%;bottom:18%;box-shadow:inset -6px -6px 0 #a3d75c}
+.campaign-plus{position:absolute;right:9%;top:13%;font-size:37px;font-weight:250;transform:rotate(15deg)}
+.campaign-bottomline{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:550;padding-top:19px;border-top:1px solid #ffffff40;margin-top:12px}.campaign-bottomline>span:last-child{font-size:23px}
+.campaign-detail{display:flex;justify-content:space-between;align-items:center;font-size:12px;padding:19px 2px 12px;font-weight:550}.campaign-detail span{font-size:18px}
+.campaign-sample-label{font-size:9px;color:#a0a5ad;margin:0 2px}
+@media(min-width:681px) and (max-width:1190px){.sample-campaign{padding:22px 18px}.sample-campaign h2{font-size:clamp(29px,3.5vw,43px);margin-top:29px}.campaign-topline{font-size:8px}.campaign-spark{font-size:26px}.campaign-tagline{font-size:9px}.campaign-bottomline{font-size:10px}.campaign-detail{font-size:10px}.campaign-graphic{margin-inline:-18px;min-height:110px}}
+@media(max-width:680px){.sample-campaign{padding:29px 27px}.sample-campaign h2{font-size:52px;margin-top:38px}.campaign-graphic b{font-size:170px}.campaign-graphic{min-height:170px}.campaign-tagline{font-size:12px}.campaign-detail{font-size:13px}}
+body>.hub-header{width:100%;height:90px;padding:0 32px}
+body>.hub-header nav{font-size:13px;gap:24px}
+.split-layout{grid-template-columns:minmax(0,1fr) 30%}
+.service-grid{grid-template-rows:repeat(3,330px);gap:16px}
+.service-card,.service-card.featured,.service-card.compact{padding:30px 25px;border-radius:24px}
+.service-card .card-type{font-size:12px;margin-bottom:15px}
+.service-card h3,.service-card:nth-child(1) h3,.service-card:nth-child(2) h3,.service-card:nth-child(5) h3{font-size:clamp(22px,1.9vw,29px);line-height:1.5}
+.service-card:nth-child(2) .content-art{height:65%;bottom:-8%;width:78%}
+.service-card:nth-child(3) .books-art{height:160px;bottom:-8px;right:12%;transform:rotate(-8deg)}
+.books-art img{height:148px;width:103px}
+.service-card:nth-child(4) .tile-icon{height:125px;width:125px;right:calc(50% - 62px);bottom:30px;border-radius:32px}
+.service-card:nth-child(4) .tile-icon svg{width:72px;height:72px}
+.hub-help{padding:35px 0 12px;margin-top:42px}.hub-help p,.hub-help button{font-size:13px}
+.split-layout .billboard{position:sticky;top:28px;height:auto;min-height:0;margin:40px 32px 40px 0;border-radius:0;background:transparent;color:#1c2027;overflow:visible;isolation:auto}
+.poster-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:17px;padding-inline:2px}
+.poster-heading h2{font-size:13px;font-weight:650;margin:0}.poster-heading>span{font-size:9px;letter-spacing:.13em;color:#90949b}
+.poster-frame{border:1px solid #e9ebef;border-radius:22px;overflow:hidden;background:#fff}
+.ad-poster{position:relative}
+.poster-visual{background:#f4f5f7;aspect-ratio:1;margin:0;overflow:hidden}
+.poster-visual img{display:block;height:100%;width:100%;object-fit:contain;object-position:center}
+.poster-copy{padding:25px 23px 22px}
+.poster-category{font-size:10px;font-weight:600;letter-spacing:.05em;color:#747b86;margin:0 0 12px}
+.poster-copy h3{font-size:clamp(21px,2vw,29px);font-weight:650;line-height:1.35;letter-spacing:-.045em;margin:0;word-break:keep-all}
+.poster-description{font-size:12px;line-height:1.8;color:#777e89;margin:15px 0 23px;word-break:keep-all}
+.poster-link{display:flex;align-items:center;justify-content:space-between;padding:14px 0 0;border-top:1px solid #eceef2;font-size:12px;font-weight:600}
+.poster-link span{font-size:20px;font-weight:400}
+.poster-controls{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-top:1px solid #eceef2;background:#fafafb}
+.poster-controls .ad-position{font-size:11px;color:#7c828d;letter-spacing:.09em;font-variant-numeric:tabular-nums}
+.poster-controls>div{display:flex;gap:8px}.poster-controls button{height:30px;width:30px;display:grid;place-items:center;border:1px solid #e1e4e9;border-radius:50%;background:#fff;font-size:20px;color:#626975;line-height:1}
+.poster-controls button:hover{background:#edf2fb;border-color:#c5d9ff}
+.poster-note{font-size:11px;color:#959ba5;line-height:1.7;margin:18px 2px 0}
+@media(min-width:1600px){.service-grid{grid-template-rows:repeat(3,370px)}}
+@media(min-width:681px) and (max-width:1190px){
+ .split-layout{grid-template-columns:minmax(0,1fr) 30%}
+ .service-grid{grid-template-rows:repeat(3,275px);gap:12px}
+ .service-card,.service-card.featured,.service-card.compact{padding:23px 16px;border-radius:21px}
+ .service-card .card-type{font-size:9px;margin-bottom:13px}
+ .service-card h3,.service-card:nth-child(1) h3,.service-card:nth-child(2) h3,.service-card:nth-child(5) h3{font-size:19px;line-height:1.5}
+ .service-card:nth-child(3) .books-art{transform:scale(.72) rotate(-8deg);right:0;bottom:-9px}
+ .service-card:nth-child(4) .tile-icon{width:85px;height:85px;right:calc(50% - 42px);bottom:30px;border-radius:22px}.service-card:nth-child(4) .tile-icon svg{width:49px;height:49px}
+ .split-layout .billboard{margin:30px 22px 30px 0;top:22px}.poster-heading>span{display:none}.poster-copy{padding:20px 17px}.poster-copy h3{font-size:20px}.poster-description{font-size:11px;margin:13px 0 19px}.poster-category{font-size:9px}.poster-link{font-size:11px}.poster-controls{padding:12px 16px}.poster-note{font-size:10px}.hub-help p,.hub-help button{font-size:10px}
+}
+@media(max-width:680px){
+ body>.hub-header{height:76px;padding:0 22px}body>.hub-header nav{font-size:11px;gap:16px}body>.hub-header nav button{display:block}body>.hub-header .hub-brand span{display:none}
+ .service-grid{grid-template-rows:270px 270px 230px 270px;gap:12px}
+ .service-card,.service-card.featured,.service-card.compact{padding:23px 16px;border-radius:21px}
+ .service-card .card-type{font-size:10px}.service-card h3,.service-card:nth-child(1) h3,.service-card:nth-child(2) h3,.service-card:nth-child(5) h3{font-size:19px;line-height:1.5}
+ .service-card:nth-child(3) .books-art{transform:scale(.75) rotate(-8deg);right:0;bottom:-5px}
+ .service-card:nth-child(4) .tile-icon{width:90px;height:90px;right:25px;bottom:30px;border-radius:23px}.service-card:nth-child(4) .tile-icon svg{width:52px;height:52px}
+ .split-layout .billboard{position:relative;top:auto;width:calc(100% - 44px);height:auto;min-height:0;margin:10px 22px 40px;order:1}
+ .poster-copy{padding:25px}.poster-copy h3{font-size:27px}.poster-description{font-size:13px}.poster-link{font-size:13px}.poster-note{font-size:11px}.hub-help p,.hub-help button{font-size:11px}
+}

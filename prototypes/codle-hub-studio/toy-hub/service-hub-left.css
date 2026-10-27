@@ -1,0 +1,50 @@
+/* Service directory refinements; campaign column is intentionally independent. */
+.hub-panel .hub-content{padding-top:88px;padding-bottom:44px}
+.hub-panel .hub-title{font-weight:680;letter-spacing:-.06em;line-height:1.35}
+.hub-panel .hub-subtitle{font-weight:400;color:#7b7e86;line-height:1.8;margin-top:22px;margin-bottom:48px}
+.hub-panel .service-card{transition:transform .25s ease,box-shadow .25s ease;background:#f5f5f7}
+.hub-panel .service-card:hover{transform:translateY(-3px);box-shadow:0 10px 30px #15263d09}
+.hub-panel .service-card .card-type{position:relative;z-index:2;font-size:12px;font-weight:550;color:#686c75;line-height:1.6;letter-spacing:-.025em;max-width:100%;margin-bottom:15px}
+.hub-panel .service-card h3{position:relative;z-index:2;font-size:clamp(22px,1.8vw,28px);font-weight:630;line-height:1.45;letter-spacing:-.045em;word-break:keep-all;max-width:100%;margin:0}
+.hub-panel .service-card:nth-child(3){background:#eef3fc}
+.hub-panel .service-card:nth-child(4){background:#f4f2f8}
+.hub-panel .service-card .card-arrow{right:18px;bottom:18px;width:31px;height:31px;display:grid;place-items:center;border-radius:50%;background:#ffffffc9;font-size:17px;color:#525b69;z-index:3}
+.hub-panel .service-card.photo-card{background:#142932}
+.hub-panel .service-card.photo-card::before{background:linear-gradient(180deg,#071a28b8,#071a2815 75%)}
+.hub-panel .service-card.photo-card .card-type{color:#ffffffe0}
+.hub-panel .service-card.photo-card .card-arrow{background:#ffffff26;color:#fff;backdrop-filter:blur(8px)}
+.hub-panel .service-card .product-preview{left:8%;width:105%;height:64%;bottom:-4%;border-width:6px;transform:rotate(-5deg);object-position:15% top}
+.hub-panel .service-card:nth-child(2) .content-art{width:80%;height:64%;right:4%;bottom:-9%;transform:rotate(-6deg)}
+.hub-panel .service-card:nth-child(3) .books-art{right:8%;bottom:-12px;gap:10px}
+.hub-panel .service-card:nth-child(4) .tile-icon{opacity:.95}
+.hub-panel .service-card .campaign-photo{transition:transform .55s ease;object-position:center}
+.hub-panel .service-card:hover .campaign-photo{transform:scale(1.025)}
+.hub-panel .hub-help p{color:#7b808b}.hub-panel .hub-help button{font-weight:600}
+@media(min-width:681px) and (max-width:1190px){
+ .hub-panel .hub-content{padding-top:65px}
+ .hub-panel .hub-subtitle{margin-bottom:38px;font-size:12px}
+ .hub-panel .service-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:"platform contents" "platform textbook" "resources resources" "camp hackathon";grid-template-rows:250px 250px 230px 290px;gap:14px}
+ .hub-panel .service-card{padding:24px 20px}
+ .hub-panel .service-card .card-type{font-size:11px;margin-bottom:14px}
+ .hub-panel .service-card h3{font-size:22px;line-height:1.45}
+ .hub-panel .service-card:nth-child(2) .content-art{width:112%;right:-12%;height:57%;bottom:-10%}
+ .hub-panel .service-card:nth-child(3) .books-art{transform:rotate(-7deg) scale(.85);right:5%;bottom:-13px}
+ .hub-panel .service-card:nth-child(4) h3{max-width:60%;font-size:25px}
+ .hub-panel .service-card:nth-child(4) .tile-icon{width:132px;height:132px;right:28px;bottom:25px;border-radius:32px}
+ .hub-panel .service-card:nth-child(4) .tile-icon svg{width:74px;height:74px}
+}
+@media(max-width:680px){
+ .hub-panel .hub-content{padding-top:55px}
+ .hub-panel .hub-title{font-size:30px}
+ .hub-panel .hub-subtitle{font-size:12px;margin-bottom:37px}
+ .hub-panel .service-grid{grid-template-rows:235px 235px 210px 260px;gap:12px}
+ .hub-panel .service-card{padding:22px 17px}
+ .hub-panel .service-card .card-type{font-size:10px;margin-bottom:13px}
+ .hub-panel .service-card h3{font-size:19px;line-height:1.5}
+ .hub-panel .service-card:nth-child(2) .content-art{width:112%;height:51%;right:-13%;bottom:-7%}
+ .hub-panel .service-card:nth-child(3) .books-art{transform:scale(.7) rotate(-7deg);right:-4px;bottom:-10px}
+ .hub-panel .service-card:nth-child(4) h3{max-width:61%;font-size:23px}
+ .hub-panel .service-card:nth-child(4) .tile-icon{width:90px;height:90px;right:25px;bottom:23px;border-radius:24px}
+ .hub-panel .service-card .card-arrow{right:13px;bottom:13px;width:28px;height:28px;font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){.hub-panel .service-card,.hub-panel .service-card .campaign-photo{transition:none}.hub-panel .service-card:hover,.hub-panel .service-card:hover .campaign-photo{transform:none}}

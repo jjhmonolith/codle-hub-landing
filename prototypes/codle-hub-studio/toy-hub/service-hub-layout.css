@@ -1,0 +1,118 @@
+/* Service directory beside the portrait campaign. */
+@media(min-width:681px){
+ .split-layout .billboard{top:24px;height:calc(100svh - 48px);min-height:0;margin:24px 24px 24px 0;border-radius:24px;isolation:isolate}
+ .split-layout .ad-slide>img,.split-layout .ad-slide>video{object-position:center top}
+}
+@media(max-width:680px){
+ .split-layout .billboard{width:calc(100% - 44px);margin:0 22px 22px;border-radius:22px}
+}
+.split-layout{grid-template-columns:minmax(0,1fr) 32%;min-height:100svh}
+.hub-header{height:82px;padding-inline:6%}
+.hub-content{max-width:1200px;padding:35px 6% 28px}
+.hub-eyebrow{display:none}
+.hub-title{font-size:clamp(27px,2.65vw,46px);line-height:1.28;font-weight:650;letter-spacing:-.055em}
+.hub-subtitle{font-size:13px;margin:14px 0 32px}
+.service-heading{margin-bottom:15px}
+.service-heading>span{display:none}
+.service-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.service-card,.service-card.featured,.service-card.compact{min-height:205px;padding:22px 19px;border-radius:19px}
+.service-card h3{font-size:20px;max-width:100%;line-height:1.32}
+.service-card .card-type{font-size:9px;margin-bottom:11px}
+.service-card .card-description{font-size:11px;max-width:100%;margin-top:10px;line-height:1.6}
+.card-arrow{right:17px;top:auto;bottom:18px;font-size:20px;z-index:2}
+.card-art{position:absolute;bottom:10px;right:30px;transform:scale(.72) rotate(-7deg);transform-origin:bottom right;opacity:.95}
+.platform-art{right:39px;bottom:12px;transform:scale(.68) rotate(-7deg)}
+.content-art{right:35px;bottom:12px;transform:scale(.75) rotate(-7deg)}
+.books-art{height:76px;right:37px;bottom:10px;transform:scale(.75) rotate(-7deg)}
+.books-art img{width:47px;height:68px}
+.tile-icon{height:51px;width:51px;border-radius:14px;right:41px;bottom:17px;transform:rotate(-8deg)}
+.tile-icon svg{width:29px;height:29px}
+.hub-help{margin-top:23px;padding-top:17px}
+.hub-panel .codle-footer{background:#fff;padding:18px 6% 24px}
+.hub-panel .codle-footer-bottom{border-top:1px solid #eceef2;padding-top:20px}
+.billboard{min-height:560px}
+.ad-slide{padding:36px 9% 32px}
+.ad-copy{margin-top:clamp(55px,9vh,95px)}
+.ad-copy h2{font-size:clamp(30px,3.35vw,59px);line-height:1.2;word-break:keep-all;letter-spacing:-.06em}
+.ad-copy .ad-kicker{font-size:11px;margin-bottom:20px}
+.ad-copy>p:last-child{font-size:12px;line-height:1.7;margin-top:22px;word-break:keep-all}
+.ad-slide::after{background:linear-gradient(180deg,#061c2aad,#091c2b20 63%,#061724dc)}
+.ad-label{font-size:9px}
+.ad-link{font-size:12px;margin-bottom:73px}
+.ad-controls{left:9%;right:9%;bottom:29px}
+.ad-progress{left:9%;right:9%;bottom:79px}
+@media(min-width:1400px) and (min-height:850px){.hub-content{padding-top:55px}.service-card,.service-card.featured,.service-card.compact{min-height:225px}.hub-subtitle{margin-bottom:40px}}
+@media(max-width:1190px){
+ .split-layout{grid-template-columns:minmax(0,1fr) 32%}
+ .hub-header{height:76px;padding-inline:6%}.hub-header nav{gap:15px;font-size:11px}.hub-brand img{width:76px}.hub-brand span{display:none}
+ .hub-content{padding:24px 6%}.hub-title{font-size:clamp(26px,3.25vw,37px)}.hub-subtitle{font-size:12px;margin:13px 0 27px}
+ .service-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .service-card,.service-card.featured,.service-card.compact{min-height:165px;padding:18px}
+ .service-card h3{font-size:18px;max-width:100%}.service-card h3 br{display:none}.service-card .card-description{font-size:10px;margin-top:8px}
+ .service-card .card-type{font-size:8px;margin-bottom:8px}
+ .platform-art{transform:scale(.48) rotate(-7deg);right:34px;bottom:10px}.content-art{transform:scale(.52) rotate(-7deg);right:32px;bottom:10px}
+ .books-art{transform:scale(.65) rotate(-7deg);right:35px;bottom:8px}.tile-icon{width:40px;height:40px;right:35px;bottom:13px;border-radius:11px}.tile-icon svg{width:25px;height:25px}
+ .card-arrow{font-size:16px;right:15px;bottom:13px}.hub-help{margin-top:20px}.hub-help p{max-width:none;font-size:10px}.hub-help button{font-size:10px}.hub-help button span{margin-left:6px}
+ .ad-slide{padding-top:31px}.ad-copy{margin-top:64px}.ad-copy h2{font-size:clamp(25px,3.4vw,39px)}.ad-copy>p:last-child{font-size:11px}.ad-copy .ad-kicker{font-size:10px}.ad-controls{gap:8px}.ad-controls button{height:29px;width:29px}.ad-controls .ad-pause{width:17px}.ad-link{font-size:10px}
+}
+@media(min-width:681px) and (max-width:850px){.service-card,.service-card.featured,.service-card.compact{min-height:153px;padding:16px}.service-card h3{font-size:16px}.hub-title{font-size:27px}.hub-subtitle{font-size:11px}.hub-brand img{width:71px}.hub-header nav{gap:12px;font-size:10px}.ad-slide{padding-inline:24px}.ad-copy h2{font-size:26px}.ad-copy>p:last-child br{display:none}.ad-copy>p:last-child{font-size:10px}.ad-label{font-size:8px;letter-spacing:.1em}.ad-controls,.ad-progress{left:24px;right:24px}.ad-copy .ad-kicker{font-size:9px}}
+@media(min-width:681px) and (max-width:760px){.split-layout{display:grid}.billboard{position:sticky;height:100svh;order:initial}.hub-header nav button{display:block}.hub-panel .codle-footer{display:block}.card-arrow{display:block}}
+@media(max-width:680px){
+ .split-layout{display:flex;flex-direction:column}.hub-header{height:76px;padding-inline:22px}.hub-brand span{display:block;font-size:10px}.hub-header nav{font-size:11px}.hub-header nav button{display:none}
+ .hub-content{padding:26px 22px 25px}.hub-title{font-size:30px}.hub-subtitle{font-size:11px;line-height:1.7;margin:15px 0 28px}.service-heading h2{font-size:12px}
+ .service-card,.service-card.featured,.service-card.compact{min-height:178px;padding:17px 15px}.service-card h3{font-size:17px}.service-card .card-description{font-size:10px}.service-grid{gap:11px}.card-arrow{display:block;right:13px}.card-art{opacity:.9}
+ .hub-help p{max-width:175px;line-height:1.6}.hub-panel .codle-footer{padding:8px 22px 24px}
+ .billboard{width:100%;height:680px;min-height:0;position:relative;order:1}.ad-slide{padding:30px}.ad-copy{margin-top:55px}.ad-copy h2{font-size:49px}.ad-copy>p:last-child{font-size:13px}.ad-copy .ad-kicker{font-size:12px}.ad-label{font-size:10px}.ad-link{font-size:13px}.ad-controls,.ad-progress{left:30px;right:30px}
+}
+
+/* Unequal tiles give the directory its rhythm: portrait, landscape and square. */
+.service-grid{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-areas:"platform contents contents" "platform textbook resources" "camp camp hackathon";grid-template-rows:repeat(3,150px);gap:14px}
+.service-card,.service-card.featured,.service-card.compact{min-height:0;padding:22px;border-radius:22px}
+.service-card:nth-child(1){grid-area:platform;background:#edf3ff}
+.service-card:nth-child(2){grid-area:contents;background:#f3f3f6}
+.service-card:nth-child(3){grid-area:textbook;background:#f5f6f8}
+.service-card:nth-child(4){grid-area:resources;background:#f0edf7}
+.service-card:nth-child(5){grid-area:camp;background:#edf5f0}
+.service-card:nth-child(6){grid-area:hackathon;background:#faf0e8}
+.service-card h3{font-size:20px}.service-card .card-type{font-size:9px;margin-bottom:9px}.service-card .card-description{font-size:11px;max-width:100%}
+.service-card:nth-child(1) h3{font-size:25px;max-width:180px}
+.service-card:nth-child(1) .card-description{max-width:170px;font-size:12px}
+.service-card:nth-child(1) .platform-art{transform:rotate(-7deg);right:30px;bottom:40px;width:190px;height:110px;padding:15px}
+.service-card:nth-child(1) .mini-course{margin-top:16px}
+.service-card:nth-child(2) h3,.service-card:nth-child(5) h3{font-size:24px;max-width:58%}
+.service-card:nth-child(2) .card-description,.service-card:nth-child(5) .card-description{max-width:52%}
+.service-card:nth-child(2) .content-art{width:220px;height:135px;transform:rotate(-8deg);right:32px;bottom:-17px}
+.service-card:nth-child(3) .books-art{transform:scale(.6) rotate(-7deg);bottom:9px;right:33px}
+.service-card:nth-child(4) .tile-icon{transform:rotate(-8deg) scale(.75);bottom:10px;right:34px}
+.service-card:nth-child(5) .tile-icon{width:90px;height:90px;right:63px;bottom:20px;transform:rotate(-9deg)}
+.service-card:nth-child(5) .tile-icon svg{height:52px;width:52px}
+.service-card:nth-child(6) .tile-icon{width:42px;height:42px;right:37px;bottom:13px}
+@media(min-width:1400px){.service-grid{grid-template-rows:repeat(3,145px)}.service-card:nth-child(1) .platform-art{right:36px;bottom:40px}.service-card:nth-child(3) .card-description,.service-card:nth-child(4) .card-description{max-width:70%}}
+@media(min-width:681px) and (max-width:1190px){
+ .service-grid{grid-template-rows:repeat(3,155px);gap:12px}
+ .service-card,.service-card.featured,.service-card.compact{padding:17px 15px;border-radius:19px}
+ .service-card h3{font-size:16px;line-height:1.35}.service-card h3 br{display:initial}.service-card .card-description{font-size:10px;margin-top:8px}.service-card .card-type{font-size:7px;letter-spacing:-.02em}
+ .service-card:nth-child(1) h3{font-size:21px}.service-card:nth-child(1) .card-description{font-size:10px;line-height:1.7}
+ .service-card:nth-child(1) .platform-art{transform:rotate(-8deg) scale(.65);right:16px;bottom:37px}
+ .service-card:nth-child(2) h3,.service-card:nth-child(5) h3{font-size:21px;max-width:75%}
+ .service-card:nth-child(2) .content-art{width:150px;height:95px;right:20px;bottom:-15px}
+ .service-card:nth-child(2) .card-description{max-width:60%}
+ .service-card:nth-child(5) .tile-icon{height:62px;width:62px;right:38px;bottom:25px}.service-card:nth-child(5) .tile-icon svg{width:37px;height:37px}
+ .service-card:nth-child(3) .books-art{transform:scale(.5) rotate(-7deg);right:27px;bottom:7px}
+ .service-card:nth-child(4) .tile-icon{right:27px;bottom:8px}
+ .service-card:nth-child(6) .tile-icon{height:35px;width:35px;right:28px;bottom:10px}
+}
+@media(max-width:680px){
+ .service-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:"platform contents" "platform textbook" "resources resources" "camp hackathon";grid-template-rows:145px 145px 130px 170px;gap:11px}
+ .service-card,.service-card.featured,.service-card.compact{padding:17px 15px;border-radius:19px}
+ .service-card h3{font-size:17px}.service-card .card-description{font-size:10px}
+ .service-card:nth-child(1) h3{font-size:22px}.service-card:nth-child(1) .card-description{font-size:11px}
+ .service-card:nth-child(1) .platform-art{transform:rotate(-8deg) scale(.68);right:16px;bottom:30px}
+ .service-card:nth-child(2) h3,.service-card:nth-child(5) h3{font-size:18px;max-width:100%}
+ .service-card:nth-child(2) .card-description,.service-card:nth-child(5) .card-description{max-width:100%}
+ .service-card:nth-child(2) .content-art{width:110px;height:70px;bottom:-15px;right:22px}
+ .service-card:nth-child(3) .books-art{bottom:5px;right:29px;transform:scale(.5) rotate(-7deg)}
+ .service-card:nth-child(4) h3{font-size:21px;max-width:65%}.service-card:nth-child(4) .tile-icon{width:68px;height:68px;right:35px;bottom:20px;transform:rotate(-8deg)}.service-card:nth-child(4) .tile-icon svg{width:39px;height:39px}
+ .service-card:nth-child(5) .tile-icon{width:40px;height:40px;right:32px;bottom:13px}.service-card:nth-child(5) .tile-icon svg{width:27px;height:27px}
+ .service-card:nth-child(6) .tile-icon{width:40px;height:40px;right:32px;bottom:13px}
+}
