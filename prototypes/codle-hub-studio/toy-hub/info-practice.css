@@ -1,0 +1,25 @@
+/* Official textbook covers connect to the real practice demonstration. */
+.info-scene{position:absolute;left:14px;right:-18px;bottom:-10px;height:170px;pointer-events:none}
+.info-practice{position:absolute;right:-35%;bottom:15px;width:100%;aspect-ratio:618/346;border:5px solid #fff;border-radius:9px;overflow:hidden;box-shadow:0 10px 24px #35314e20;transform:rotate(-5deg) scale(.88);transform-origin:right bottom;transition:transform .7s ease,right .7s ease}
+.info-practice video{display:block;width:100%;height:100%;object-fit:cover}
+.info-covers{position:absolute;left:12%;bottom:0;width:135px;height:152px;transition:transform .7s cubic-bezier(.22,.7,.2,1)}
+.info-covers img{position:absolute;width:96px;height:125px;object-fit:cover;border-radius:3px;box-shadow:0 7px 15px #27203a2b}
+.info-cover-kumsung{left:0;top:6px;transform:rotate(-12deg)}
+.info-cover-ybm{left:49px;top:20px;transform:rotate(7deg)}
+.info-service:is(:hover,:focus-within) .info-covers{transform:translateX(-55px) scale(.72);transform-origin:left bottom}
+.info-service:is(:hover,:focus-within) .info-practice{right:-1%;transform:rotate(0) scale(1)}
+@media(max-width:1190px){
+ .info-scene{left:18px;right:5px;height:116px;bottom:-7px}
+ .info-covers{left:43%;height:106px;width:120px}
+ .info-covers img{width:74px;height:96px}
+ .info-cover-ybm{left:40px;top:12px}
+ .info-practice{width:65%;right:-14%;bottom:9px;border-width:4px}
+ .info-service:is(:hover,:focus-within) .info-covers{transform:translateX(-145px) scale(.8)}
+ .info-service:is(:hover,:focus-within) .info-practice{right:3%;transform:rotate(0) scale(1)}
+}
+@media(prefers-reduced-motion:reduce){.info-covers,.info-practice{transition:none}}
+@media(max-width:1190px){
+ .hub-panel .info-service h3{max-width:45%;font-size:22px}
+ .info-practice{width:55%}
+ .info-service:is(:hover,:focus-within) .info-practice{right:1%}
+}

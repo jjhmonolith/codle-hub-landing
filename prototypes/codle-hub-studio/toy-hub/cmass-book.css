@@ -1,0 +1,52 @@
+/* A single textbook opens around its spine on hover. Interior is illustrative. */
+.cmass-book-stage{position:absolute;right:15%;bottom:-20px;width:142px;height:185px;perspective:850px;pointer-events:none}
+.cmass-book{position:relative;width:100%;height:100%;transform:rotate(-8deg);transform-style:preserve-3d;transition:transform .9s cubic-bezier(.22,.7,.2,1)}
+.cmass-page,.cmass-leaf,.cmass-cover{position:absolute;inset:0;border-radius:2px 7px 7px 2px;transform-origin:left center}
+.cmass-page{background:linear-gradient(90deg,#d9dedc,#fffdf8 10%);box-shadow:3px 3px 0 #d9ddd8,6px 6px 0 #f6f6ee,0 14px 24px #203a4426;padding:20px 15px}
+.book-page-heading{display:block;width:64%;height:6px;background:#64bdbc;margin-bottom:16px;border-radius:2px}
+.book-page-diagram{display:block;height:49px;border:1px solid #bcdad5;border-radius:5px;background:radial-gradient(circle at 28% 50%,#65c2bc 0 10px,transparent 11px),radial-gradient(circle at 73% 50%,#d5e9a5 0 10px,transparent 11px),linear-gradient(#eef6ed,#eef6ed)}
+.book-page-lines{display:block;margin-top:13px;height:37px;background:repeating-linear-gradient(transparent 0 7px,#dce2dc 7px 9px)}
+.cmass-leaf{background:#fffdf5;transform:rotateY(-1deg);transition:transform 1s cubic-bezier(.22,.7,.2,1);box-shadow:inset -1px 0 #ddd}
+.cmass-cover{transform:rotateY(-4deg);transform-style:preserve-3d;transition:transform 1s cubic-bezier(.22,.7,.2,1)}
+.cmass-cover img,.cmass-cover-inside{position:absolute;inset:0;width:100%;height:100%;border-radius:inherit;backface-visibility:hidden}
+.cmass-cover img{object-fit:cover;box-shadow:inset 3px 0 #0002}
+.cmass-cover-inside{background:linear-gradient(90deg,#d8eae4,#eff6ec 85%,#afcfc5);transform:rotateY(180deg)}
+.cmass-service:is(:hover,:focus-within) .cmass-book{transform:translateX(20px) rotate(-3deg)}
+.cmass-service:is(:hover,:focus-within) .cmass-cover{transform:rotateY(-148deg)}
+.cmass-service:is(:hover,:focus-within) .cmass-leaf{transform:rotateY(-132deg);transition-delay:.1s}
+@media(max-width:1190px){.cmass-book-stage{width:112px;height:146px;right:14%;bottom:-31px}.cmass-page{padding:16px 11px}.book-page-diagram{height:37px}.book-page-heading{margin-bottom:12px}}
+@media(prefers-reduced-motion:reduce){.cmass-book,.cmass-cover,.cmass-leaf{transition:none}}
+
+/* Authentic page 33 and the official river-crossing activity artwork. */
+.cmass-page{padding:15px 10px;overflow:hidden}
+.cmass-activity-label{display:block;font-size:6px;color:#64827c;letter-spacing:0;margin-bottom:4px}
+.cmass-activity-title{display:block;font-size:13px;color:#294a43;line-height:1.3;letter-spacing:-.04em;margin-bottom:11px}
+.cmass-activity-image{display:block;width:100%;height:auto;border-radius:3px}
+.cmass-page-detail{display:block;width:100%;height:52px;object-fit:cover;object-position:50% 45%;margin-top:10px;border-radius:2px}
+.cmass-leaf{transform-style:preserve-3d}
+.cmass-real-page{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit;transform:rotateY(180deg);backface-visibility:hidden}
+@media(max-width:1190px){.cmass-page{padding:12px 8px}.cmass-activity-title{font-size:12px;margin-bottom:9px}.cmass-page-detail{height:40px;margin-top:8px}}
+
+/* Demonstrate a valid first move with the original activity sprites. */
+.cmass-river-demo{display:block;width:100%;height:auto;border-radius:3px;overflow:hidden}
+.river-demo-caption{position:relative;height:24px;margin-top:10px;color:#42685d;font-size:8px;line-height:1.5;letter-spacing:-.03em}
+.river-demo-caption span{position:absolute;inset:0;opacity:0}
+.river-demo-caption .river-step-load{opacity:1}
+.cmass-service:is(:hover,:focus-within) .river-boat{animation:river-boat-trip 7s 1s infinite both}
+.cmass-service:is(:hover,:focus-within) .river-sheep{animation:river-sheep-trip 7s 1s infinite both}
+.cmass-service:is(:hover,:focus-within) .river-step-load{animation:river-label-load 7s 1s infinite both}
+.cmass-service:is(:hover,:focus-within) .river-step-cross{animation:river-label-cross 7s 1s infinite both}
+.cmass-service:is(:hover,:focus-within) .river-step-done{animation:river-label-done 7s 1s infinite both}
+@keyframes river-boat-trip{0%,25%{transform:translateX(0);opacity:1}62%,88%{transform:translateX(270px);opacity:1}94%{transform:translateX(270px);opacity:0}95%{transform:translateX(0);opacity:0}100%{transform:translateX(0);opacity:1}}
+@keyframes river-sheep-trip{0%,8%{transform:translate(0,0);opacity:1}25%{transform:translate(205px,30px);opacity:1}62%{transform:translate(475px,30px);opacity:1}74%,88%{transform:translate(560px,-20px);opacity:1}94%{transform:translate(560px,-20px);opacity:0}95%{transform:translate(0,0);opacity:0}100%{transform:translate(0,0);opacity:1}}
+@keyframes river-label-load{0%,25%{opacity:1}30%,94%{opacity:0}100%{opacity:1}}
+@keyframes river-label-cross{0%,25%{opacity:0}30%,64%{opacity:1}70%,100%{opacity:0}}
+@keyframes river-label-done{0%,68%{opacity:0}74%,88%{opacity:1}94%,100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.cmass-service .river-boat,.cmass-service .river-sheep,.cmass-service .river-demo-caption span{animation:none!important}.river-demo-caption .river-step-load{opacity:1}}
+
+/* Give the textbook and its activity more presence in the card. */
+.cmass-book-stage{width:164px;height:213px;right:12%;bottom:-32px}
+@media(max-width:1190px){
+ .cmass-book-stage{width:126px;height:164px;right:11%;bottom:-40px}
+ .cmass-service:is(:hover,:focus-within) .cmass-book{transform:translateX(10px) rotate(-3deg)}
+}

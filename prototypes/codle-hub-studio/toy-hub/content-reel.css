@@ -1,0 +1,71 @@
+/* A two-row library shelf; each lesson keeps its cover and title together. */
+.content-service{container-type:inline-size}
+.content-reel{position:absolute;left:24px;right:0;bottom:24px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;touch-action:pan-x pan-y;overscroll-behavior-x:contain;padding:2px 0}
+.content-reel::-webkit-scrollbar{display:none}
+.content-reel-track{display:flex;width:max-content}
+.content-reel-group{display:grid;grid-template-rows:repeat(2,80px);grid-auto-flow:column;gap:12px;padding-right:12px;flex:none}
+.content-lesson{display:flex;align-items:center;gap:14px;width:85cqw;max-width:360px;padding:10px;background:#fff;border-radius:12px}
+.content-reel img{display:block;flex:none;width:106px;height:60px;max-width:none;object-fit:cover;border-radius:7px;user-select:none}
+.content-lesson-title{font-size:17px;line-height:1.45;font-weight:550;letter-spacing:-.025em;color:#252a34;margin:0;white-space:normal;word-break:keep-all}
+.hub-panel .content-service .card-arrow{top:22px;bottom:auto;right:18px;width:25px;height:25px;font-size:14px}
+.hub-panel .content-service .card-type{padding-right:30px;margin-bottom:10px}
+@media(max-width:1190px){
+ .hub-panel .content-service h3{font-size:20px;line-height:1.35}
+ .content-reel{left:20px;bottom:20px}
+ .content-reel-group{grid-template-rows:repeat(2,58px);gap:10px;padding-right:10px}
+ .content-lesson{width:94cqw;padding:7px;gap:9px;border-radius:9px}
+ .content-reel img{width:62px;height:42px;border-radius:5px}
+ .content-lesson-title{font-size:14px;line-height:1.4}
+}
+@media(max-width:680px){
+ .content-reel{left:17px;bottom:17px}
+ .hub-panel .content-service .card-type{font-size:11px;margin-bottom:8px}
+ .hub-panel .content-service .card-arrow{top:20px;right:14px;width:23px;height:23px}
+}
+
+/* Cover grid keeps the library visual, without list rows. */
+.content-reel{bottom:22px}
+.content-reel-group{grid-template-rows:repeat(2,auto);gap:12px;padding-right:12px}
+.content-lesson{display:block;width:36cqw;max-width:172px;padding:0;background:none;border-radius:0}
+.content-reel img{width:100%;height:auto;aspect-ratio:279/148;border-radius:8px}
+.content-lesson-title{display:none}
+@media(max-width:1190px){
+ .content-reel{bottom:20px}
+ .content-reel-group{gap:9px;padding-right:9px}
+ .content-lesson{width:52cqw;max-width:none}
+ .content-reel img{height:auto;border-radius:6px}
+}
+
+/* Each row scrolls independently in the opposite direction. */
+.content-reel{overflow:hidden}
+.content-reel-track{display:flex;flex-direction:column;width:100%;gap:12px}
+.content-reel-row{display:flex;overflow-x:auto;scrollbar-width:none;overscroll-behavior-x:contain}
+.content-reel-row::-webkit-scrollbar{display:none}
+.content-reel-row .content-reel-group{display:flex;flex:none;gap:12px;padding-right:12px}
+.content-reel-row .content-lesson{flex:none}
+@media(max-width:1190px){.content-reel-track{gap:9px}.content-reel-row .content-reel-group{gap:9px;padding-right:9px}}
+
+.content-reel-row{overflow:hidden}
+.content-reel-row .content-reel-group{will-change:transform}
+
+/* Larger covers enter diagonally from the right edge. */
+.content-reel{left:20%;right:-18%;bottom:-12px;transform:rotate(-10deg);transform-origin:65% 50%;padding:10px 0}
+.content-reel-row .content-lesson{width:43cqw;max-width:205px}
+.content-reel-track{gap:14px}
+.content-reel-row .content-reel-group{gap:14px;padding-right:14px}
+.content-reel img{border-radius:10px;box-shadow:0 5px 12px #24374d12}
+@media(max-width:1190px){
+ .content-reel{left:18%;right:-24%;bottom:-6px;padding:8px 0;transform:rotate(-10deg)}
+ .content-reel-row .content-lesson{width:63cqw;max-width:none}
+ .content-reel-track{gap:10px}
+ .content-reel-row .content-reel-group{gap:10px;padding-right:10px}
+ .content-reel img{border-radius:7px}
+}
+
+/* Extend the larger shelf across the full lower edge. */
+.content-reel{left:-9%;right:-23%;bottom:-30px;transform-origin:50% 50%}
+.content-reel-row .content-lesson{width:50cqw;max-width:238px}
+@media(max-width:1190px){
+ .content-reel{left:-12%;right:-32%;bottom:-26px}
+ .content-reel-row .content-lesson{width:74cqw;max-width:none}
+}

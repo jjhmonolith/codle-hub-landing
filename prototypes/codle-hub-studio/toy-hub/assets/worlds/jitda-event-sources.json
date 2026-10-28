@@ -1,0 +1,11 @@
+{
+  "source": "https://landing.jitda.io/cases/daegu-univ-260917/",
+  "photo": "assets/scene-demo.jpg",
+  "work": "assets/work-tripace.jpg",
+  "note": "Official case photos preserve source face anonymization. Work preview is a screenshot, not a live app.",
+  "showcase": [
+    "assets/work-tripace.jpg",
+    "assets/work-modumoa.jpg",
+    "assets/work-duradar.jpg"
+  ]
+}

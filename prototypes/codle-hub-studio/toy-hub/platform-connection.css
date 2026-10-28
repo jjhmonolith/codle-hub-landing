@@ -1,12 +1,46 @@
-.connection-art{position:absolute;left:5%;right:5%;bottom:39px;height:65%;pointer-events:none;display:grid;place-items:center}
-.connection-art svg{height:100%;width:100%;overflow:visible;max-height:440px}
-.connection-art .connection-line{stroke:#619bfa;stroke-width:3;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0}
-.connection-art .tile-name{font-family:Pretendard,Arial,sans-serif;font-size:12px;font-weight:600;fill:#475568;letter-spacing:-.4px}
-.connection-art .tile-symbol{font-family:Pretendard,Arial,sans-serif;font-size:28px;font-weight:650;fill:white;letter-spacing:-1px}
-.connection-art.is-visible .connection-line{animation:connect-flow 1.8s cubic-bezier(.25,.5,.25,1) .35s both}
-.connection-art.is-visible .activity-tile{animation:connect-settle 1.4s cubic-bezier(.18,.7,.2,1) both}
-.connection-art.is-visible .activity-quiz{animation-delay:.15s}.connection-art.is-visible .activity-sheet{animation-delay:.3s}
-@keyframes connect-flow{from{stroke-dashoffset:1;opacity:.2}to{stroke-dashoffset:0;opacity:1}}
-@keyframes connect-settle{from{transform:translateY(19px);opacity:0}to{transform:translateY(0);opacity:1}}
-@media(max-width:680px){.connection-art{left:0;right:0;bottom:39px;height:65%}}
-@media(prefers-reduced-motion:reduce){.connection-art.is-visible .activity-tile,.connection-art.is-visible .connection-line{animation:none}}
+/* A lesson plan and five activities drift freely before gathering into a lesson. */
+.connection-art{position:absolute;left:3%;right:3%;top:153px;bottom:38px;pointer-events:none;display:grid;place-items:center}
+.connection-art>svg{width:100%;height:100%;max-height:460px;overflow:visible;font-family:Pretendard,Arial,sans-serif}
+.connection-art svg svg{overflow:hidden}
+.lesson-kicker{font-size:9px;font-weight:650;letter-spacing:1.5px;fill:#8a96ab}
+.lesson-title{font-size:20px;font-weight:700;letter-spacing:-.7px;fill:#202632}
+.lesson-count{font-size:11px;font-weight:650;fill:#4b7cda}
+.lesson-label{font-size:12px;font-weight:650;letter-spacing:-.4px;fill:#343d50}
+.lesson-detail{font-size:8px;fill:#949bad;letter-spacing:-.15px}
+.gather-icon{transform:var(--to);transform-origin:0 0}
+.icon-tile{filter:drop-shadow(0 8px 12px #263b6410)}
+/* A quiet drift, a staggered gathering, then a generous reading hold. */
+.connection-art.is-playing .lesson-panel{animation:lesson-shell 5s ease infinite both}
+.connection-art.is-playing .lesson-row{animation:lesson-labels 5s ease infinite both}
+@keyframes lesson-shell{0%,7%,97%,100%{opacity:0;transform:translateY(8px)}28%,85%{opacity:1;transform:translateY(0)}93%{opacity:0;transform:translateY(0)}}
+@keyframes lesson-labels{0%,25%,93%,100%{opacity:0}35%,85%{opacity:1}}
+.connection-art.is-paused *{animation-play-state:paused!important}
+@media(max-width:680px){.connection-art{top:145px;left:0;right:0;bottom:38px}}
+@media(prefers-reduced-motion:reduce){.connection-art *{animation:none!important}}
+.connection-art.is-playing .icon-0{animation:gather-0 5s infinite both}
+@keyframes gather-0{0%{transform:var(--from);opacity:1;animation-timing-function:ease-in-out}3%{transform:var(--drift);opacity:1;animation-timing-function:cubic-bezier(.4,0,.2,1)}26%,85%{transform:var(--to);opacity:1;animation-timing-function:ease}93%{transform:var(--to);opacity:0}94%{transform:var(--from);opacity:0}100%{transform:var(--from);opacity:1}}
+.connection-art.is-playing .icon-1{animation:gather-1 5s infinite both}
+@keyframes gather-1{0%{transform:var(--from);opacity:1;animation-timing-function:ease-in-out}5.5%{transform:var(--drift);opacity:1;animation-timing-function:cubic-bezier(.4,0,.2,1)}28.5%,85%{transform:var(--to);opacity:1;animation-timing-function:ease}93%{transform:var(--to);opacity:0}94%{transform:var(--from);opacity:0}100%{transform:var(--from);opacity:1}}
+.connection-art.is-playing .icon-2{animation:gather-2 5s infinite both}
+@keyframes gather-2{0%{transform:var(--from);opacity:1;animation-timing-function:ease-in-out}8%{transform:var(--drift);opacity:1;animation-timing-function:cubic-bezier(.4,0,.2,1)}31%,85%{transform:var(--to);opacity:1;animation-timing-function:ease}93%{transform:var(--to);opacity:0}94%{transform:var(--from);opacity:0}100%{transform:var(--from);opacity:1}}
+.connection-art.is-playing .icon-3{animation:gather-3 5s infinite both}
+@keyframes gather-3{0%{transform:var(--from);opacity:1;animation-timing-function:ease-in-out}10.5%{transform:var(--drift);opacity:1;animation-timing-function:cubic-bezier(.4,0,.2,1)}33.5%,85%{transform:var(--to);opacity:1;animation-timing-function:ease}93%{transform:var(--to);opacity:0}94%{transform:var(--from);opacity:0}100%{transform:var(--from);opacity:1}}
+.connection-art.is-playing .icon-4{animation:gather-4 5s infinite both}
+@keyframes gather-4{0%{transform:var(--from);opacity:1;animation-timing-function:ease-in-out}13%{transform:var(--drift);opacity:1;animation-timing-function:cubic-bezier(.4,0,.2,1)}36%,85%{transform:var(--to);opacity:1;animation-timing-function:ease}93%{transform:var(--to);opacity:0}94%{transform:var(--from);opacity:0}100%{transform:var(--from);opacity:1}}
+.connection-art.is-playing .icon-5{animation:gather-5 5s infinite both}
+@keyframes gather-5{0%{transform:var(--from);opacity:1;animation-timing-function:ease-in-out}15.5%{transform:var(--drift);opacity:1;animation-timing-function:cubic-bezier(.4,0,.2,1)}38.5%,85%{transform:var(--to);opacity:1;animation-timing-function:ease}93%{transform:var(--to);opacity:0}94%{transform:var(--from);opacity:0}100%{transform:var(--from);opacity:1}}
+
+/* The gathered state reads as a single lesson, with spacious activity cells. */
+.lesson-label{font-size:10px;font-weight:600;fill:#5c687c}
+.lesson-detail{font-size:10px;fill:#929bad}
+.connection-art.is-playing .icon-tile{animation:tile-integrate 5s ease infinite both}
+@keyframes tile-integrate{0%,9%,100%{opacity:1}37%,93%{opacity:0}94%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.connection-art .icon-tile{opacity:0}}
+
+/* Last icon lands at 38.5%; reveal the lesson only after it settles. */
+.connection-art.is-playing .lesson-notebook{animation:lesson-content-reveal 5s ease infinite both}
+@keyframes lesson-content-reveal{
+  0%,41%{opacity:0;transform:translateY(5px)}
+  47%,85%{opacity:1;transform:translateY(0)}
+  93%,100%{opacity:0;transform:translateY(0)}
+}

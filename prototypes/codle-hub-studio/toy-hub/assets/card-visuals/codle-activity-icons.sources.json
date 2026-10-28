@@ -1,0 +1,37 @@
+{
+  "source": "https://codle.io/sign_in",
+  "retrieved": "2026-10-27",
+  "notes": "Official activity icon SVG paths and sRGB colors preserved. Video uses brand.video #3239DE. Quiz paths are within its original 2,2–22,22 clip bounds.",
+  "icons": [
+    {
+      "icon": "video",
+      "module": 90975,
+      "bundle": "codle-chunk-6947.js",
+      "path_count": 1
+    },
+    {
+      "icon": "python",
+      "module": 41917,
+      "bundle": "codle-chunk-6947.js",
+      "path_count": 2
+    },
+    {
+      "icon": "quiz",
+      "module": 81264,
+      "bundle": "codle-chunk-6947.js",
+      "path_count": 3
+    },
+    {
+      "icon": "worksheet",
+      "module": 44175,
+      "bundle": "codle-chunk-6947.js",
+      "path_count": 3
+    },
+    {
+      "icon": "board",
+      "module": 9508,
+      "bundle": "codle-chunk-6947.js",
+      "path_count": 3
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+/* Codle's classroom tools and blue identity lead the service directory. */
+.hub-header{max-width:1060px;margin-inline:auto;padding-inline:40px}
+.hub-panel .hub-content{padding-top:64px}
+.hub-panel .hub-eyebrow{display:block;color:#62758f;font-size:13px;font-weight:600;letter-spacing:-.025em;margin-bottom:18px}
+.hub-panel .hub-title{font-size:clamp(30px,3.65vw,48px);font-weight:730;line-height:1.32;letter-spacing:-.055em;color:#202c40}
+.hub-title>span{color:#3e88ff}
+.hub-panel .hub-subtitle{font-size:15px;line-height:1.75;color:#748095;margin:22px 0 26px}
+.learning-path{display:flex;align-items:center;gap:16px;padding:0 0 32px;margin-bottom:30px;border-bottom:1px solid #e7edf5}
+.learning-path a{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:#455874;padding:8px 0}
+.learning-path a:hover{color:#2874e8}
+.learning-path img{width:30px;height:30px;object-fit:contain}
+.learning-path>span{color:#b4c4d8;font-size:16px}
+.hub-panel .service-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.hub-panel .service-heading h2{font-size:16px;color:#263950;font-weight:700}
+.hub-panel .service-heading>span{font-size:12px;color:#8591a3}
+.hub-panel .service-grid>.service-card{border-radius:18px;scroll-margin-top:24px}
+.hub-panel .service-grid>.platform-service{background:#eef5ff;border:1px solid #e0ecfc}
+.hub-panel .service-grid>.platform-service:hover{background:#eaf3ff}
+.hub-panel .service-grid>.platform-service .card-type{font-size:23px;font-weight:750;color:#347eea;display:flex;align-items:center;gap:10px;margin-bottom:17px}
+.platform-service .card-type>span{font-size:11px;font-weight:600;color:#6383ad;border-left:1px solid #c5d7ef;padding-left:10px}
+.hub-panel .service-grid>.platform-service h3{font-size:clamp(22px,2.3vw,30px);line-height:1.4;color:#233750}
+.hub-panel .platform-service .card-actions button{background:#3e88ff;color:#fff}
+.hub-panel .platform-service .card-actions a{color:#55708f}
+.hub-panel .service-grid>.cmass-service{background:#f2f6fb;border:1px solid #e5edf6}
+.hub-panel .service-grid>.info-service{background:#f5f7fa;border:1px solid #e6ebf1}
+@media(max-width:680px){
+ .hub-header{padding-inline:20px}
+ .hub-panel .hub-content{padding-top:38px}
+ .hub-panel .hub-title{font-size:30px}
+ .hub-panel .hub-subtitle{font-size:13px}
+ .learning-path{gap:9px;flex-wrap:wrap;margin-bottom:24px;padding-bottom:22px}
+ .learning-path a{font-size:11px;gap:5px}
+ .learning-path img{width:24px;height:24px}
+ .learning-path>span{font-size:12px}
+ .hub-panel .service-heading>span{display:none}
+ .hub-panel .service-grid>.platform-service .card-type{font-size:21px;gap:7px}
+ .platform-service .card-type>span{font-size:10px;padding-left:7px}
+ .hub-panel .service-grid>.platform-service h3{font-size:21px}
+}
+
+
+.hub-partners{margin-top:88px;padding:60px 0 44px;border-top:1px solid #e9edf3;text-align:center}
+.partners-eyebrow{font-size:12px;font-weight:600;color:#6a83a5;margin:0 0 16px}
+.hub-partners h2{font-size:30px;line-height:1.4;letter-spacing:-.045em;color:#26354b;margin:0;font-weight:700}
+.partners-mobile-break{display:none}
+.partners-description{font-size:14px;line-height:1.8;color:#7b8594;margin:18px 0 36px}
+.partner-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px 28px;list-style:none;padding:0;margin:0}
+.partner-grid li{height:92px;display:flex;justify-content:center;align-items:center;padding:18px}
+.partner-grid img{display:block;max-width:100%;width:auto;max-height:42px;height:auto;object-fit:contain}
+.partners-about{display:inline-flex;align-items:center;gap:16px;font-size:12px;color:#748297;margin-top:30px;padding:10px}
+.partners-about:hover{color:#3e88ff}
+@media(max-width:680px){
+ .hub-partners{margin-top:56px;padding-top:40px;padding-bottom:28px}
+ .hub-partners h2{font-size:25px}
+ .partners-mobile-break{display:block}
+ .partners-description{font-size:12px;margin-bottom:24px}
+ .partner-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 14px}
+ .partner-grid li{height:68px;padding:10px 4px}
+ .partner-grid img{max-height:32px}
+}
+@media(max-width:380px){.partner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* An editorial partner section, followed by a clear consultation invitation. */
+.hub-partners{display:grid;grid-template-columns:270px minmax(0,1fr);gap:48px;text-align:left;padding:56px 0 40px;margin-top:76px}
+.hub-partners h2{font-size:29px;line-height:1.45}
+.partners-description{font-size:13px;margin:20px 0;line-height:1.9}
+.partners-about{padding:8px 0;margin-top:10px;color:#47658a}
+.partner-group{padding:0 0 18px;margin-bottom:20px;border-bottom:1px solid #edf0f4}
+.partner-group:last-child{border:0;margin:0;padding:0}
+.partner-group-title{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.partner-group-title h3{font-size:12px;font-weight:700;color:#47658a;margin:0}
+.partner-group-title>span{font-size:11px;color:#98a2b0}
+.partner-group .partner-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 16px}
+.partner-group .partner-grid li{height:52px;padding:8px 6px;justify-content:flex-start}
+.partner-group .partner-grid img{max-height:30px;max-width:145px;width:100%;object-fit:contain;object-position:left center}
+.partner-group:last-child .partner-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.hub-panel .hub-help{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:34px 36px;margin:28px 0 24px;border:1px solid #dfeaff;border-radius:20px;background:#f0f6ff}
+.help-eyebrow{display:block;font-size:11px;color:#3e88ff;font-weight:650;margin-bottom:10px}
+.hub-help h2{font-size:23px;line-height:1.45;color:#253951;letter-spacing:-.04em;margin:0 0 10px}
+.hub-panel .hub-help p{font-size:12px;line-height:1.7;margin:0;color:#7a889a}
+.hub-panel .hub-help button{flex-shrink:0;border:0;border-radius:12px;padding:17px 22px;background:#3e88ff;color:#fff;font-size:14px;font-weight:650;display:flex;gap:24px;align-items:center}
+.hub-panel .hub-help button:hover{background:#2675ee}
+/* Photo-led floating promotion, with a quieter collapsed state. */
+.split-layout .billboard{background:white;color:#253951;border:1px solid #e3eaf4;box-shadow:0 10px 36px #203a6324}
+.campaign-toggle{color:#63748c;background:white}
+.campaign-toggle-label{color:#8794a6}
+.campaign-toggle-title{color:#3e78d5}
+.campaign-toggle:hover{background:#f4f7fc}
+.billboard .camp-poster{background:white;color:#253951;height:344px}
+.billboard .camp-poster-photo{order:-1;flex:none;height:142px;min-height:0;object-position:center 55%}
+.billboard .camp-poster-copy{padding:18px 20px 10px}
+.billboard .camp-poster-eyebrow{color:#74859d;font-size:10px;margin-bottom:8px}
+.billboard .camp-poster h2{font-size:25px;line-height:1.3;color:#253951;letter-spacing:-.045em}
+.billboard .camp-poster-action{background:white;padding:10px 18px 18px;margin-top:auto}
+.billboard .camp-poster-action button{background:#3e88ff;color:white}
+.billboard .camp-poster-action button:hover{background:#2675ee}
+.split-layout .billboard.is-collapsed{width:210px}
+#inquiry-dialog[data-dock] .inquiry-heading{background:#f2f7ff;border-bottom:1px solid #e3edfc}
+#inquiry-dialog[data-dock] .inquiry-heading h2{font-size:27px;letter-spacing:-.04em;color:#253951}
+#inquiry-dialog[data-dock] .inquiry-progress span{padding:11px 12px;border-radius:9px}
+#inquiry-dialog[data-dock] .inquiry-progress span.active{background:#3e88ff;color:white}
+#inquiry-dialog[data-dock] .question-description{font-size:12px;line-height:1.7}
+#inquiry-dialog[data-dock] .inquiry-field{margin-bottom:19px}
+#inquiry-dialog[data-dock] input:not([type=checkbox]),#inquiry-dialog[data-dock] select{min-height:48px;background:white}
+@media(max-width:800px){.hub-partners{grid-template-columns:1fr;gap:30px}.partners-description br{display:none}.partner-group .partner-grid img{max-width:145px}.hub-panel .hub-help{flex-direction:column;align-items:flex-start;padding:26px}.hub-help h2{font-size:21px}.hub-panel .hub-help button{width:100%;justify-content:space-between}}
+
+/* Full official partner collection, with larger marks and tighter spacing. */
+.hub-partners{display:block;margin-top:56px;padding:34px 0 20px}
+.partners-intro{display:grid;grid-template-columns:1fr auto;gap:10px 32px;margin-bottom:26px;align-items:end}
+.partners-intro .partners-eyebrow{grid-column:1/-1;margin:0}
+.partners-intro h2{font-size:28px}
+.partners-intro h2 br{display:none}
+.partners-intro .partners-description{grid-column:1;font-size:13px;margin:0;line-height:1.7}
+.partners-intro .partners-description br{display:none}
+.partners-intro .partners-about{grid-column:2;grid-row:2/4;margin:0;padding:6px 0}
+.partner-group{padding-bottom:16px;margin-bottom:18px}
+.partner-group-title{margin-bottom:8px}
+.partner-group .partner-grid,.partner-group:last-child .partner-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:4px 20px}
+.partner-group .partner-grid li{height:64px;padding:7px 0;justify-content:center}
+.partner-group .partner-grid img{width:auto;max-width:100%;max-height:44px;object-position:center}
+@media(max-width:800px){.partners-intro{display:block}.partners-intro h2{font-size:25px;margin:12px 0}.partners-intro .partners-about{margin-top:12px}.partner-group .partner-grid,.partner-group:last-child .partner-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px 16px}.partner-group .partner-grid img{max-height:38px}}
+@media(max-width:480px){.partner-group .partner-grid,.partner-group:last-child .partner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Two continuous school-logo rows; other partner groups stay still. */
+.school-logo-marquee{overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 24px,#000 calc(100% - 24px),transparent)}
+.school-logo-row{overflow:hidden;padding-block:4px}
+.school-logo-track{display:flex;width:max-content;animation:school-logo-scroll 65s linear infinite}
+.school-logo-row:nth-child(2) .school-logo-track{animation-direction:reverse;animation-duration:72s}
+.school-logo-set{list-style:none;margin:0;padding:0;display:flex;flex-shrink:0;align-items:center}
+.school-logo-set li{width:196px;height:66px;padding:10px 16px;display:flex;align-items:center;justify-content:center;flex:none}
+.school-logo-set img{max-width:100%;width:auto;height:auto;max-height:44px;object-fit:contain}
+.school-logo-marquee:hover .school-logo-track,.school-logo-marquee:focus-within .school-logo-track{animation-play-state:paused}
+@keyframes school-logo-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.school-logo-track{animation:none}.school-logo-row{overflow-x:auto}.school-logo-set[aria-hidden=true]{display:none}}
+
+.partner-single-marquee .school-logo-set li{width:210px}
+.partner-single-marquee .school-logo-track{animation-duration:38s}
+.partner-group:last-child .partner-single-marquee .school-logo-track{animation-duration:32s;animation-direction:reverse}
+
+/* Jitda's single-page inquiry structure, in Codle blue. */
+#inquiry-dialog[data-dock] .jitda-contact-form{display:flex;flex-direction:column;min-height:0;flex:1}
+#inquiry-dialog[data-dock] .jitda-contact-form[hidden]{display:none}
+#inquiry-dialog[data-dock] .inquiry-scroll{padding:24px 28px;overflow-y:auto;flex:1;min-height:0}
+.contact-fields{display:grid;grid-template-columns:1fr 1fr;gap:18px 14px}
+.contact-field{min-width:0}.contact-field.full{grid-column:1/-1}
+.contact-field label{display:block;font-size:12px;font-weight:650;color:#41516a;margin-bottom:8px}
+#inquiry-dialog[data-dock] .contact-field input,#inquiry-dialog[data-dock] .contact-field select,#inquiry-dialog[data-dock] .contact-field textarea{width:100%;box-sizing:border-box;font:inherit;font-size:13px;color:#33445e;background:white;border:1px solid #dfe5ed;border-radius:11px;padding:12px;min-height:46px}
+#inquiry-dialog[data-dock] .contact-field textarea{min-height:110px;resize:vertical;line-height:1.6}
+#inquiry-dialog[data-dock] .contact-field :is(input,select,textarea):focus{outline:2px solid #3e88ff22;border-color:#3e88ff}
+#inquiry-dialog[data-dock] .inquiry-submit-row{display:flex;flex-direction:column;align-items:stretch;gap:10px;padding:16px 28px 22px}
+#inquiry-dialog[data-dock] .inquiry-preview-note{text-align:center}
+#inquiry-dialog[data-dock] .inquiry-heading{padding:24px 28px 22px}
+#inquiry-review-details dd{white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:480px){.contact-fields{grid-template-columns:1fr}#inquiry-dialog[data-dock] .inquiry-scroll{padding:20px}}
+
+/* Opening the inquiry drawer leaves the centered page in place. */
+@media(min-width:1000px){
+ body.inquiry-drawer-open .split-layout{grid-template-columns:minmax(0,1fr)}
+ body.inquiry-drawer-open .hub-panel .hub-content{padding-inline:40px}
+}
+
+.inquiry-shade{position:fixed;inset:0;z-index:250;background:rgba(22,35,57,.2)}
+.inquiry-shade[hidden]{display:none}
+#inquiry-dialog::backdrop{background:rgba(22,35,57,.2)}
+
+.hub-faq{display:grid;grid-template-columns:240px minmax(0,1fr);gap:44px;padding:46px 0 38px;margin-top:32px;border-top:1px solid #e8edf3}
+.faq-intro>p{font-size:12px;color:#7287a3;margin:0 0 14px;font-weight:600}
+.faq-intro h2{font-size:29px;line-height:1.45;letter-spacing:-.04em;color:#26354b;margin:0}
+.faq-list details{border-bottom:1px solid #e8edf3}
+.faq-list summary{display:flex;justify-content:space-between;align-items:center;gap:20px;list-style:none;cursor:pointer;padding:21px 0;font-size:15px;line-height:1.6;font-weight:600;color:#34455e}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary>span{position:relative;width:16px;height:16px;flex:none}
+.faq-list summary>span::before,.faq-list summary>span::after{content:"";position:absolute;background:#7d90a9;top:7px;left:1px;width:14px;height:2px}
+.faq-list summary>span::after{transform:rotate(90deg)}
+.faq-list details[open] summary>span::after{display:none}
+.faq-list details[open] summary{color:#307ce8}
+.faq-list summary:focus-visible{outline:2px solid #3e88ff;outline-offset:4px;border-radius:4px}
+.faq-answer{padding:0 24px 22px 0;font-size:13px;line-height:1.9;color:#748195}
+.faq-answer p{margin:0 0 10px}.faq-answer p:last-child{margin-bottom:0}.faq-answer strong{font-weight:650;color:#435570}
+.faq-answer a,.faq-answer button{font:inherit;font-size:12px;color:#347eea;background:none;border:0;padding:0;text-decoration:none}
+.faq-links{display:flex;flex-wrap:wrap;gap:8px 20px}
+@media(max-width:800px){.hub-faq{grid-template-columns:1fr;gap:22px;padding:32px 0}.faq-intro h2{font-size:25px}.faq-intro h2 br{display:none}.faq-list summary{font-size:14px;padding:18px 0}.faq-answer{padding-right:0}}
+
+/* Give the desktop hub more room across the screen. */
+@media(min-width:1000px){
+ .hub-header{max-width:1280px;padding-inline:32px}
+ .hub-panel .hub-content{max-width:1280px;padding-inline:32px}
+ body.inquiry-drawer-open .hub-panel .hub-content{padding-inline:32px}
+}
+@media(min-width:1000px){.partner-group:last-child .partner-single-marquee .school-logo-set li{width:250px}}
+.hub-panel .hub-title + #services{margin-top:72px}
+@media(max-width:680px){.hub-panel .hub-title + #services{margin-top:44px}}
+
+.hub-partners .partners-intro{display:block;margin-bottom:30px}
+.hub-partners>.partners-about{display:flex;justify-content:flex-end;margin-top:20px;font-size:12px}
+
+/* One photographic campaign poster, with a compact corner collapse control. */
+.split-layout .billboard:not(.is-collapsed){border:0;background:#172b39;border-radius:20px;box-shadow:0 12px 40px #142c4933}
+.billboard:not(.is-collapsed) .campaign-toggle{position:absolute;top:12px;right:12px;width:36px;height:36px;min-height:36px;padding:0;justify-content:center;border-radius:50%;background:#10233066;color:white;z-index:3}
+.billboard:not(.is-collapsed) .campaign-toggle-title,.billboard:not(.is-collapsed) .campaign-toggle-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.billboard:not(.is-collapsed) .campaign-toggle:hover{background:#102330b3}
+.billboard .camp-poster{position:relative;isolation:isolate;height:400px;max-height:calc(100svh - 48px);background:#172b39;color:white;justify-content:space-between}
+.billboard .camp-poster::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#091e32b8 0%,#102b4340 54%,#071b2bd9 100%)}
+.billboard .camp-poster-photo{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:cover;object-position:48% center;z-index:-2}
+.billboard .camp-poster-copy{padding:28px 24px 0}
+.billboard .camp-poster-eyebrow{font-size:10px;color:#e0edfa;margin:0 32px 17px 0}
+.billboard .camp-poster h2{font-size:34px;line-height:1.19;letter-spacing:-.05em;color:white;font-weight:750;text-shadow:0 2px 14px #10203025}
+.billboard .camp-poster-action{background:transparent;padding:0 22px 22px}
+.billboard .camp-poster-action button{background:white;color:#203c61;border-radius:10px;min-height:48px;font-size:14px}
+.billboard .camp-poster-action button:hover{background:#e9f2ff}
+@media(max-width:680px){.billboard .camp-poster{height:350px}.billboard .camp-poster h2{font-size:29px}.billboard .camp-poster-copy{padding:25px 20px 0}}

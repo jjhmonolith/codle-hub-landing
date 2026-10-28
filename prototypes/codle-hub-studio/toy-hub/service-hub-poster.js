@@ -12,3 +12,20 @@
   document.querySelector('[data-ad-next]').addEventListener('click', () => show(active + 1));
   show(0);
 })();
+
+// The campaign floats independently of the centered service grid.
+(() => {
+  const billboard = document.querySelector('.billboard');
+  const toggle = document.querySelector('.campaign-toggle');
+  const poster = document.querySelector('#floating-campaign');
+  if (!billboard || !toggle || !poster) return;
+  function setExpanded(expanded) {
+    toggle.setAttribute('aria-expanded', String(expanded));
+    toggle.querySelector('.campaign-toggle-label').textContent = expanded ? '접기' : '펼치기';
+    toggle.querySelector('.campaign-toggle-icon').textContent = expanded ? '−' : '+';
+    poster.hidden = !expanded;
+    billboard.classList.toggle('is-collapsed', !expanded);
+  }
+  toggle.addEventListener('click', () => setExpanded(toggle.getAttribute('aria-expanded') !== 'true'));
+  if (window.matchMedia('(max-width: 680px)').matches) setExpanded(false);
+})();

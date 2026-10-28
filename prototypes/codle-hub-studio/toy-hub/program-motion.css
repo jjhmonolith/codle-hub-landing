@@ -1,0 +1,309 @@
+/* Product outcomes, large enough to read, with restrained supporting chrome. */
+.hub-panel .service-grid{grid-template-rows:365px 350px 250px}
+.hub-panel .service-grid>.jitda-service{background:#f5f3fa;color:#252431}
+.hub-panel .service-grid>.camp-service{background:#eef4ff;color:#252431}
+.hub-panel .program-motion::before,.hub-panel .program-motion::after{display:none}
+.hub-panel .program-motion .card-type{color:#788093}
+.hub-panel .service-grid>.program-motion h3{color:#282c36;font-size:24px;line-height:1.35;max-width:100%;text-shadow:none}
+.program-motion .card-actions{z-index:3}
+.program-motion .card-actions button{background:#3e88ff;color:white}
+.program-motion .card-actions a{color:#727e91;text-shadow:none}
+.result-demo{position:absolute;left:24px;right:24px;font-size:12px;color:#33415b}
+.jitda-result{top:126px}
+.request-line{display:flex;align-items:center;gap:9px;height:39px;padding:5px 10px;background:#e9e4f6;border-radius:12px;margin-bottom:10px}
+.mini-jitda{width:25px;height:28px;overflow:hidden;flex:none}
+.mini-jitda img{height:32px;width:auto;max-width:none;display:block}
+.request-text{flex:1;font-size:13px;font-weight:600;min-width:0;white-space:nowrap}
+.request-send{display:grid;place-items:center;border-radius:50%;background:#8970b9;color:white;width:23px;height:23px;font-size:17px;flex:none}
+.generated-app{height:117px;background:white;border-radius:14px;overflow:hidden;box-shadow:0 6px 18px #3d2d7610}
+.app-chrome{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 13px;font-size:11px;font-weight:650;color:#63718b}
+.demo-tag{font-size:9px;font-weight:500;color:#96a0b0;white-space:nowrap}
+.app-building{height:76px;display:flex;align-items:center;justify-content:center;gap:9px;color:#a0a5b2;font-size:12px}
+.build-dots{color:#9680c2;letter-spacing:3px}
+.app-finished{position:relative;padding:3px 14px 10px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.app-finished[hidden],.app-building[hidden]{display:none}
+.quiz-question{display:grid;gap:3px}.quiz-level{font-size:8px;letter-spacing:.09em;color:#9aa5b8}.quiz-question strong{font-size:25px;letter-spacing:-.05em;color:#2c3b56}
+.quiz-answers{display:flex;gap:7px}.quiz-answers button{width:42px;height:37px;border:0;border-radius:10px;background:#eef3fb;color:#6885b3;font:inherit;font-size:18px;font-weight:600;cursor:pointer}.quiz-answers button.is-correct{background:#3e88ff;color:white}.quiz-answers button.is-wrong{background:#fff0e9;color:#bf7352}
+.quiz-feedback{position:absolute;left:14px;right:14px;top:52px;margin:0;font-size:10px;color:#70819a}
+.camp-result{top:121px;border-radius:14px;background:white;box-shadow:0 6px 18px #335c9210;overflow:hidden}
+.maze-stage{padding:0 10px}.maze-stage svg{display:block;width:100%;height:94px}
+.run-bar{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:8px 13px 10px;font-size:10px;color:#6d7f98}
+.run-demo{background:#edf4ff;color:#3e7bda;border:0;border-radius:7px;padding:5px 9px;font:inherit;font-weight:650;cursor:pointer}
+.program-motion button:focus-visible{outline:2px solid #3e88ff;outline-offset:3px}
+.hub-panel .service-grid>.camp-service .card-actions{bottom:14px}
+@media(max-width:1190px){
+ .hub-panel .service-grid{grid-template-rows:375px 360px 300px}
+ .hub-panel .service-grid>.program-motion h3{font-size:22px}
+ .result-demo{left:14px;right:14px}
+ .request-text{font-size:10px}.request-line{gap:5px;padding:5px 7px}.request-send{width:19px;height:19px;font-size:14px}
+ .jitda-result{top:131px}.generated-app{height:128px}
+ .app-chrome{font-size:10px;padding:10px}.quiz-question strong{font-size:22px}.quiz-answers button{width:30px;height:33px;font-size:16px}.app-finished{padding-inline:10px;gap:5px}.quiz-feedback{left:10px;font-size:9px}
+ .camp-result{top:116px}.maze-stage svg{height:103px}.run-bar{font-size:9px;padding-inline:10px}
+ .hub-panel .service-grid>.camp-service .card-actions{bottom:18px}
+}
+
+/* Real camp footage provides a human counterpoint to the product demos. */
+.hub-panel .service-grid>.camp-service{background:#23364b;isolation:isolate}
+.camp-field-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 50%;z-index:0;pointer-events:none}
+.hub-panel .program-motion.camp-service::before{content:"";display:block;position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,#102335b3 0%,#10233526 53%,#102335ad 100%);pointer-events:none}
+.hub-panel .program-motion.camp-service .card-type{position:relative;z-index:2;color:#ffffffc9}
+.hub-panel .service-grid>.program-motion.camp-service h3{color:white;text-shadow:0 1px 8px #0002}
+.camp-service .card-actions button{background:white;color:#263a52}
+.camp-service .card-actions button:hover{background:#edf4ff}
+.camp-service .card-actions a{color:#fff;text-shadow:0 1px 6px #0005}
+
+/* A finished app at rest; books lead their cards instead of small UI thumbnails. */
+.hub-panel .service-grid>.jitda-service{background:#f3f0f9}
+.jitda-result{top:119px}
+.request-line{background:transparent;padding:0 2px;margin-bottom:8px;height:35px}
+.request-text{font-size:14px;font-weight:550}.mini-jitda{width:30px;height:33px}.mini-jitda img{height:38px}
+.generated-app{height:122px;border-radius:17px;background:#fff;box-shadow:0 9px 25px #67558b10}
+.generated-app .app-chrome{padding:12px 16px 8px;font-size:11px}
+.app-finished{padding:4px 16px 12px;align-items:center}
+.quiz-level{display:none}
+.quiz-question strong{display:flex;align-items:center;gap:7px;font-size:27px}
+.quiz-question strong span{display:grid;place-items:center;min-width:34px;height:42px;border-radius:9px;background:#f2edfc;color:#7861a8}
+.quiz-question strong .quiz-sum{background:#fff1ce;color:#a18035}
+.quiz-question strong i{font-style:normal;font-size:20px;color:#a8a0b7;font-weight:400}
+.quiz-answers button{width:42px;height:42px;background:#eef3fc;border-radius:12px}
+.quiz-feedback{top:58px;left:16px;font-size:11px}
+.app-building{height:92px}
+.hub-panel .service-grid>.cmass-service{background:#f0f5f1}
+.hub-panel .service-grid>.info-service{background:#f5f3ee}
+.hub-panel .service-grid>.cmass-service h3,.hub-panel .service-grid>.info-service h3{max-width:48%;font-size:19px}
+.cmass-book-stage{width:134px;height:174px;right:9%;bottom:67px;margin:0}
+.cmass-book{transform:rotate(-6deg)}
+.cmass-service:is(:hover,:focus-within) .cmass-book{transform:translateX(32px) rotate(0deg) scale(.92)}
+.info-scene{left:16px;right:12px;bottom:73px;height:160px;margin:0}
+.info-covers{left:51%;bottom:0;width:145px;height:151px;transform:rotate(-3deg);transform-origin:center bottom}
+.info-covers img{width:103px;height:134px}
+.info-cover-kumsung{top:0;left:0;transform:rotate(-9deg)}
+.info-cover-ybm{top:16px;left:49px;transform:rotate(8deg)}
+.info-practice{width:55%;right:-10%;bottom:4px;opacity:0;transform:translateY(12px) rotate(0deg) scale(.95);transition:opacity .5s ease,transform .7s ease,right .7s ease}
+.info-service:is(:hover,:focus-within) .info-practice{right:0;opacity:1;transform:translateY(0) rotate(0deg) scale(1)}
+.info-service:is(:hover,:focus-within) .info-covers{transform:translateX(20px) scale(.9);opacity:0}
+@media(max-width:1190px){
+ .request-text{font-size:11px}.mini-jitda{width:25px;height:28px}.mini-jitda img{height:32px}
+ .jitda-result{top:126px}.generated-app{height:132px}
+ .generated-app .app-chrome{padding:10px;font-size:10px}
+ .app-finished{display:block;padding:2px 10px 12px}
+ .quiz-question strong{justify-content:center;font-size:24px;gap:5px}
+ .quiz-question strong span{height:34px;min-width:29px}
+ .quiz-question strong i{font-size:17px}
+ .quiz-answers{justify-content:center;margin-top:8px}.quiz-answers button{height:29px;width:55px;font-size:16px;border-radius:8px}
+ .quiz-feedback{top:83px;left:10px;font-size:9px;text-align:center}
+ .hub-panel .service-grid>.cmass-service h3,.hub-panel .service-grid>.info-service h3{max-width:100%;font-size:17px}
+ .cmass-book-stage{width:96px;height:125px;right:12%;bottom:75px}
+ .cmass-service:is(:hover,:focus-within) .cmass-book{transform:translateX(8px) rotate(0deg)}
+ .info-scene{height:124px;left:12px;right:10px;bottom:79px}
+ .info-covers{left:22%;width:125px;height:117px;transform:rotate(-3deg)}
+ .info-covers img{width:78px;height:102px}.info-cover-ybm{left:40px;top:12px}
+ .info-practice{width:100%;right:0;bottom:4px}
+ .info-service:is(:hover,:focus-within) .info-covers{transform:translateX(-28px) scale(.7)}
+}
+
+@media(prefers-reduced-motion:reduce){.info-practice,.info-covers{transition:none}}
+
+/* One request, one quiet app preview. */
+.hub-panel .service-grid>.jitda-service{background:#f2f1f5}
+.jitda-result{top:124px;left:24px;right:24px}
+.jitda-result .request-line{height:29px;margin-bottom:12px;gap:9px}
+.jitda-result .request-text{font-size:13px;color:#625d6c;font-weight:500}
+.jitda-result .mini-jitda{width:24px;height:27px}
+.jitda-result .mini-jitda img{height:30px}
+.jitda-result .generated-app{height:125px;border-radius:15px;background:#fff;box-shadow:0 8px 22px #39304308;overflow:hidden}
+.jitda-result .app-finished{display:block;padding:15px 20px}
+.jitda-result .app-finished[hidden]{display:none}
+.timer-heading{display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:600;color:#787381;letter-spacing:.02em}
+.timer-status{font-size:9px;font-weight:400;color:#a6a1ad}
+.timer-face{text-align:center;font-size:47px;line-height:1.3;letter-spacing:-2px;font-weight:500;color:#524863;font-variant-numeric:tabular-nums}
+.timer-face>span{color:#bbb4c5;padding:0 3px}
+.timer-track{height:3px;width:64%;margin:5px auto 0;border-radius:3px;background:#efedf2;overflow:hidden}
+.timer-track>span{display:block;width:32%;height:100%;background:#b4a3cc;border-radius:3px}
+.jitda-result .app-building{height:125px;font-size:12px;color:#8c8498}
+@media(max-width:1190px){
+ .jitda-result{top:133px;left:18px;right:18px}
+ .jitda-result .request-text{font-size:12px}
+ .jitda-result .app-finished{padding:15px}
+}
+
+/* Show the official Jitda workspace rather than an invented standalone app. */
+.hub-panel .service-grid>.jitda-service{background:#f5f3ed}
+.jitda-workspace-demo{position:absolute;top:125px;left:24px;right:24px;bottom:77px;pointer-events:none}
+.jitda-flow-caption{display:flex;align-items:center;justify-content:space-between;padding:0 12px;margin:0 0 10px;font-size:12px;font-weight:500;color:#746f61}
+.jitda-flow-caption>span:nth-child(2){color:#aaa18c}
+.jitda-workspace-window{position:relative;height:calc(100% - 26px);border:1px solid #e4dfd4;border-radius:11px;overflow:hidden;background:#fff;box-shadow:0 5px 16px #4036220a}
+.jitda-workspace-window>img{display:block;width:100%;height:auto;border-radius:0}
+.jitda-preview-loading{position:absolute;top:21%;right:0;width:49%;bottom:0;display:grid;place-items:center;background:#fbf0d6;opacity:0;transition:opacity .5s ease;color:#897951;font-size:11px}
+.jitda-workspace-demo.is-building .jitda-preview-loading{opacity:1}
+.jitda-loading-dots{display:block;text-align:center;font-size:22px;letter-spacing:3px}
+@media(max-width:1190px){.jitda-workspace-demo{top:135px;left:18px;right:18px;bottom:78px}.jitda-flow-caption{font-size:10px;padding:0 4px}.jitda-workspace-window>img{height:100%;object-fit:cover;object-position:top center}}
+@media(prefers-reduced-motion:reduce){.jitda-preview-loading{transition:none}}
+
+/* Readable sequence: request, generation, then the official result preview. */
+.jitda-flow{position:absolute;top:128px;left:24px;right:24px;bottom:77px;pointer-events:none}
+.jitda-flow-steps{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:11px;color:#aaa59b;font-weight:500}
+.jitda-flow-steps i{font-style:normal;font-weight:400;color:#c5bfb4}
+.jitda-flow[data-step="request"] [data-stage="request"],.jitda-flow[data-step="build"] [data-stage="build"],.jitda-flow[data-step="result"] [data-stage="result"]{color:#4e493d;font-weight:700}
+.jitda-flow-stage{position:relative;height:calc(100% - 27px);overflow:hidden;border-radius:13px;background:#fff;box-shadow:0 4px 16px #40362208}
+.jitda-flow-stage>div{position:absolute;inset:0;opacity:0;transform:translateY(9px);transition:opacity .35s ease,transform .45s ease}
+.jitda-flow[data-step="request"] .jitda-flow-request,.jitda-flow[data-step="build"] .jitda-flow-build,.jitda-flow[data-step="result"] .jitda-flow-result{opacity:1;transform:translateY(0)}
+.jitda-flow-request{display:flex;align-items:center;gap:14px;padding:20px}
+.jitda-flow-avatar{display:block;width:37px;height:44px;overflow:hidden;flex-shrink:0}.jitda-flow-avatar img{height:47px;width:auto;max-width:none}
+.jitda-flow-request p{margin:0;font-size:18px;line-height:1.5;font-weight:500;letter-spacing:-.6px;color:#39382f}
+.jitda-flow-send{position:absolute;bottom:12px;right:13px;background:#f4cd4b;color:#534615;width:25px;height:25px;border-radius:50%;display:grid;place-items:center;font-size:17px}
+.jitda-flow-build{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+.jitda-build-mark{font-size:30px;line-height:20px;letter-spacing:5px;color:#c3a33e}
+.jitda-flow-build p{font-size:12px;color:#746b55;margin:0}
+.jitda-build-progress{height:3px;width:55%;background:#f2eee2;border-radius:4px;overflow:hidden}.jitda-build-progress span{display:block;height:100%;background:#e9c44c}
+.jitda-flow-result{overflow:hidden;background:#fbf0d6}
+.jitda-flow-result img{position:absolute;max-width:none;width:203%;height:auto;left:-103%;top:-41%;}
+@media(max-width:1190px){.jitda-flow{top:137px;left:18px;right:18px;bottom:78px}.jitda-flow-request{padding:14px;gap:9px}.jitda-flow-request p{font-size:15px}.jitda-flow-result img{top:-24%}}
+@media(prefers-reduced-motion:reduce){.jitda-flow-stage>div{transition:none}}
+
+.jitda-flow-result svg{display:block;width:100%;height:100%}
+
+.jitda-flow-result svg{width:auto;max-width:100%;height:100%;aspect-ratio:500 / 302;margin:auto;overflow:hidden}
+
+/* Jitda: the team's presentation and its real project share one card. */
+.hub-panel .service-grid>.jitda-service{background:#283d46;isolation:isolate}
+.jitda-event-photo{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:42% 55%}
+.hub-panel .program-motion.jitda-service::before{content:"";display:block;position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,#101c26d9 0%,#101c2677 32%,#101c2600 58%,#101c26c4 100%);pointer-events:none}
+.hub-panel .program-motion.jitda-service .card-type{position:relative;z-index:2;color:#ffffffc9}
+.hub-panel .service-grid>.program-motion.jitda-service h3{position:relative;z-index:2;color:#fff;text-shadow:0 1px 8px #0003;max-width:100%}
+.jitda-service .card-actions{z-index:4}
+.jitda-service .card-actions button{background:#ffe166;color:#393323}
+.jitda-service .card-actions button:hover{background:#ffeb91}
+.jitda-service .card-actions a{color:#fff;text-shadow:0 1px 5px #0008}
+.jitda-team-work{position:absolute;z-index:3;right:20px;bottom:77px;width:122px;border-radius:12px;background:#fff;padding:7px;box-shadow:0 8px 25px #0003;transform:rotate(4deg);transform-origin:bottom right;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
+.jitda-work-label{display:flex;flex-direction:column;gap:2px;padding:2px 3px 7px;color:#7a807e;font-size:8px}.jitda-work-label strong{font-size:11px;color:#344b53;letter-spacing:.04em}
+.jitda-work-crop{height:122px;border-radius:7px;overflow:hidden;background:#c6d9e0;position:relative}
+.jitda-work-crop img{position:absolute;width:200%;max-width:none;height:auto;left:-48%;top:0;transition:transform 1.8s ease}
+.jitda-service:is(:hover,:focus-within) .jitda-team-work{transform:rotate(0) scale(1.12)}
+.jitda-service:is(:hover,:focus-within) .jitda-work-crop img{transform:translateY(-25px)}
+@media(max-width:1190px){.jitda-team-work{right:16px;width:106px;bottom:78px}.jitda-work-crop{height:113px}}
+@media(prefers-reduced-motion:reduce){.jitda-team-work,.jitda-work-crop img{transition:none}.jitda-service:is(:hover,:focus-within) .jitda-team-work{transform:none}.jitda-service:is(:hover,:focus-within) .jitda-work-crop img{transform:none}}
+
+/* A bright project showcase distinguishes the hackathon from the classroom. */
+.hub-panel .service-grid>.jitda-service{background:#fff4cf}
+.hub-panel .program-motion.jitda-service::before{display:none}
+.hub-panel .program-motion.jitda-service .card-type{color:#8b7952}
+.hub-panel .service-grid>.program-motion.jitda-service h3{color:#373224;text-shadow:none}
+.jitda-service .card-actions button{background:#4b4130;color:#fff}
+.jitda-service .card-actions button:hover{background:#302a20}
+.jitda-service .card-actions a{color:#6f624b;text-shadow:none}
+.jitda-showcase-mascot{position:absolute;right:28px;top:40px;width:43px;height:51px;overflow:hidden;transform:rotate(9deg)}
+.jitda-showcase-mascot img{height:54px;max-width:none;width:auto}
+.jitda-showcase{position:absolute;left:20px;right:20px;top:142px;bottom:75px}
+.jitda-project{position:absolute;margin:0;width:43%;height:132px;background:white;padding:7px;border-radius:10px;box-shadow:0 7px 15px #77612719;overflow:hidden;transition:transform .5s ease}
+.jitda-project figcaption{font-size:10px;font-weight:700;line-height:1.35;padding:1px 2px 6px;color:#504933}
+.jitda-project figcaption span{display:block;font-size:8px;font-weight:400;color:#948b77}
+.jitda-project>img{width:100%;height:90px;object-fit:cover;object-position:top;border-radius:5px}
+.project-left{left:0;top:8px;transform:rotate(-9deg)}
+.project-right{right:0;top:8px;transform:rotate(9deg)}
+.project-center{left:27%;top:0;z-index:2;transform:translateY(2px)}
+.project-center>div{position:relative;height:90px;overflow:hidden;border-radius:5px;background:#a0b9bf}
+.project-center img{width:200%;max-width:none;position:absolute;left:-48%;top:0}
+.jitda-service:is(:hover,:focus-within) .project-left{transform:translateX(-8px) rotate(-12deg)}
+.jitda-service:is(:hover,:focus-within) .project-right{transform:translateX(8px) rotate(12deg)}
+.jitda-service:is(:hover,:focus-within) .project-center{transform:translateY(-7px)}
+@media(max-width:1190px){.jitda-showcase{left:15px;right:15px;top:151px}.jitda-project{height:133px}.jitda-showcase-mascot{right:18px;top:35px;width:32px;height:39px}.jitda-showcase-mascot img{height:41px}}
+@media(prefers-reduced-motion:reduce){.jitda-project{transition:none}}
+
+.project-right figcaption{text-align:right}
+
+/* Give each real project a readable, non-overlapping gallery frame. */
+.jitda-showcase{top:137px;left:24px;right:0;bottom:76px;display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;padding:0 24px 5px 0;pointer-events:auto;scrollbar-width:thin;scrollbar-color:#d7c58d transparent;align-items:stretch}
+.jitda-project{position:relative;inset:auto;flex:0 0 84%;width:auto;height:100%;padding:8px;transform:none!important;box-shadow:0 3px 10px #7761270e;scroll-snap-align:start;border-radius:10px}
+.jitda-project figcaption{display:flex;justify-content:space-between;align-items:center;font-size:12px;padding:0 3px 7px;text-align:left}
+.jitda-project figcaption span{font-size:10px}
+.jitda-project>img{height:calc(100% - 24px);object-fit:cover;object-position:top;width:100%}
+.project-center{order:-1}
+.project-center>div{height:calc(100% - 24px)}
+.project-center img{width:100%;height:100%;object-fit:cover;object-position:50% 35%;left:0;top:0;position:relative}
+@media(max-width:1190px){.jitda-showcase{top:143px;left:18px;right:0;bottom:78px;padding-right:18px}.jitda-project{height:100%;flex-basis:88%}.jitda-project figcaption{font-size:11px}.jitda-project figcaption span{font-size:9px}}
+
+.project-right{order:-2}.jitda-project>img{object-position:50% 38%}.project-center img{position:absolute;width:200%;height:auto;left:-48%;top:-25px}.jitda-showcase:focus-visible{outline:2px solid #a48c41;outline-offset:3px}
+
+/* One close presentation scene, without floating project cards. */
+.hub-panel .service-grid>.jitda-service{background:#263d49}
+.jitda-presentation-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:37% 57%;z-index:0}
+.hub-panel .program-motion.jitda-service::before{content:"";display:block;position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,#111f2bd9 0%,#111f2b80 26%,#111f2b05 48%,#111f2b12 66%,#111f2bd9 100%);pointer-events:none}
+.hub-panel .program-motion.jitda-service .card-type{color:#ffffffc9}
+.hub-panel .service-grid>.program-motion.jitda-service h3{color:white;text-shadow:0 1px 7px #0003}
+.jitda-service .card-actions button{background:#ffe166;color:#393323}
+.jitda-service .card-actions button:hover{background:#ffeb91}
+.jitda-service .card-actions a{color:#fff;text-shadow:0 1px 5px #0008}
+
+/* Larger lesson illustration; consistent right-hand textbook placement. */
+.platform-service .connection-art{left:0;right:0;top:141px;bottom:100px}
+.platform-service .connection-art>svg{width:108%;max-width:none;height:100%;max-height:410px}
+.hub-panel .service-grid>.cmass-service h3,.hub-panel .service-grid>.info-service h3{max-width:46%;font-size:18px;line-height:1.5}
+.cmass-book-stage{width:116px;height:151px;right:25px;bottom:68px}
+.cmass-book{transform:rotate(-5deg)}
+.cmass-service:is(:hover,:focus-within) .cmass-book{transform:translateX(24px) rotate(0) scale(.88)}
+.info-scene{left:16px;right:16px;bottom:68px;height:151px}
+.info-covers{left:auto;right:7px;bottom:0;width:143px;height:151px;transform:none}
+.info-covers img{width:96px;height:125px}
+.info-cover-kumsung{top:9px;left:0;transform:rotate(-7deg)}
+.info-cover-ybm{top:24px;left:46px;transform:rotate(5deg)}
+.info-practice{width:53%;right:0;bottom:8px}
+.info-service:is(:hover,:focus-within) .info-covers{transform:translateY(10px) scale(.95);opacity:0}
+@media(max-width:1190px){
+ .platform-service .connection-art>svg{width:106%;max-height:390px}
+ .hub-panel .service-grid>.cmass-service h3,.hub-panel .service-grid>.info-service h3{max-width:100%;font-size:17px}
+ .cmass-book-stage{width:99px;height:129px;right:29px;bottom:67px}
+ .info-scene{height:129px;bottom:67px;left:18px;right:22px}
+ .info-covers{width:129px;height:129px;right:0;left:auto}
+ .info-covers img{width:84px;height:109px}.info-cover-kumsung{top:0}.info-cover-ybm{top:15px;left:43px}
+ .info-practice{width:90%;bottom:0}
+}
+
+/* Keep the aligned covers prominent. */
+.cmass-book-stage{width:140px;height:182px;right:23px;bottom:62px}
+.info-scene{height:180px;bottom:62px;right:18px}
+.info-covers{width:166px;height:180px;right:0}
+.info-covers img{width:115px;height:150px}
+.info-cover-kumsung{top:8px;left:0}
+.info-cover-ybm{top:25px;left:50px}
+@media(max-width:1190px){
+ .cmass-book-stage{width:118px;height:154px;right:24px;bottom:65px}
+ .info-scene{height:154px;bottom:65px;right:22px}
+ .info-covers{width:147px;height:154px}
+ .info-covers img{width:100px;height:130px}
+ .info-cover-kumsung{top:3px;left:0}.info-cover-ybm{top:19px;left:46px}
+}
+
+/* Open within the right visual column, clear of the heading. */
+.hub-panel .service-grid>.cmass-service h3{max-width:40%}
+.cmass-service:is(:hover,:focus-within) .cmass-book{transform:translateX(12px) rotate(0) scale(.9)}
+.cmass-service:is(:hover,:focus-within) .cmass-cover{transform:rotateY(-110deg)}
+.cmass-service:is(:hover,:focus-within) .cmass-leaf{transform:rotateY(-105deg)}
+.info-practice{width:49%}
+@media(max-width:1190px){
+ .hub-panel .service-grid>.cmass-service h3{max-width:100%}
+ .cmass-service:is(:hover,:focus-within) .cmass-book{transform:translate(8px,12px) rotate(0) scale(.8)}
+ .info-practice{width:90%}
+}
+
+/* Reserve an inset for the full book silhouette, including rotation. */
+.cmass-book-stage{width:130px;height:169px;right:28px;bottom:67px}
+.cmass-service:is(:hover,:focus-within) .cmass-book{transform:translateX(5px) rotate(0) scale(.9)}
+.info-scene{height:163px;right:28px;bottom:67px}
+.info-covers{width:153px;height:163px;right:0}
+.info-covers img{width:105px;height:137px}
+.info-cover-kumsung{top:9px;left:0}
+.info-cover-ybm{top:24px;left:45px}
+@media(max-width:1190px){
+ .cmass-book-stage{width:118px;height:154px;right:28px;bottom:67px}
+ .cmass-service:is(:hover,:focus-within) .cmass-book{transform:translate(3px,12px) rotate(0) scale(.8)}
+ .info-scene{height:154px;right:28px;bottom:67px}
+ .info-covers{width:147px;height:154px}
+ .info-covers img{width:100px;height:130px}
+ .info-cover-kumsung{top:3px}.info-cover-ybm{top:19px;left:44px}
+}
+
+/* Lower the covers to leave clear breathing room above them. */
+.cmass-book-stage{bottom:45px}
+.info-scene{bottom:45px}
+@media(max-width:1190px){.cmass-book-stage,.info-scene{bottom:45px}}

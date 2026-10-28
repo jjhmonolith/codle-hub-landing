@@ -1,0 +1,4 @@
+Official Codle html_activity (교안) icon, module 75879. Original path geometry and colors retained.
+Source: https://codle.io/sign_in
+Bundle: codle-chunk-6947.js
+Retrieved 2026-10-27.
