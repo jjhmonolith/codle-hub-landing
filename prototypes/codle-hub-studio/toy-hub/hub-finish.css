@@ -1,0 +1,131 @@
+/* Finish the existing mosaic without changing service order or grid areas. */
+:root{--hub-ink:#202b3d;--hub-muted:#6f7b8e;--hub-blue:#397ee8}
+body{background:#fff;color:var(--hub-ink)}
+.hub-header{width:100%;max-width:1320px;height:88px;padding:0 40px;margin:auto;border-bottom:1px solid #eef0f4}
+.hub-header nav{gap:26px;font-size:12px}
+.hub-header nav a{color:#586477}
+.hub-header nav button{border-radius:22px;background:#eef4ff;color:#2869cf;padding:10px 17px}
+.hub-panel .hub-content{padding:40px 40px 48px;max-width:1320px}
+.hub-intro{margin-bottom:34px}
+.hub-kicker{margin:0 0 13px;font-size:12px;font-weight:650;color:#738095}
+.hub-panel .hub-title{font-size:clamp(30px,3.4vw,44px);line-height:1.3;letter-spacing:-.045em;margin:0;font-weight:750}
+.hub-title>span{color:#397ee8}
+.hub-intro-description{font-size:14px;line-height:1.7;color:#738095;margin:16px 0 0;word-break:keep-all}
+#services{gap:24px;grid-template-columns:minmax(0,1fr) 238px}
+.hub-panel .service-grid{grid-template-rows:280px 260px 260px;gap:16px}
+.hub-panel .service-grid>.service-card{border-radius:22px;padding:25px 24px;box-shadow:none;transition:box-shadow .22s ease}
+.hub-panel .service-grid>.service-card:hover{box-shadow:0 8px 24px #23395b0c}
+.hub-panel .service-grid>.service-card .card-type{font-size:12px;line-height:1.4;margin:0 0 12px;font-weight:600}
+.hub-panel .service-grid>.service-card h3{font-size:23px;line-height:1.4;letter-spacing:-.04em;max-width:100%;font-weight:700}
+.hub-panel .service-grid>.platform-service .card-type{font-size:24px;margin-bottom:18px}
+.hub-panel .service-grid>.platform-service h3{font-size:26px;line-height:1.4}
+.hub-panel .platform-service .connection-art{top:146px;bottom:84px;left:12px;right:12px}
+.hub-panel .platform-service .connection-art>svg{max-height:320px;width:100%;height:100%}
+.hub-panel .service-grid .card-actions{left:24px;right:24px;bottom:22px;min-height:36px;gap:12px;justify-content:space-between}
+.hub-panel .service-grid .card-actions button{font-size:12px;min-height:36px;padding:9px 15px;border-radius:18px;font-weight:650;box-shadow:none}
+.hub-panel .service-grid .card-actions a{font-size:11px;min-height:36px;font-weight:500}
+.hub-panel .service-grid>.program-motion .card-actions button{background:#fff;color:#253649}
+.hub-panel .service-grid>.program-motion .card-actions button:hover{background:#eaf1ff}
+.hub-panel .service-grid>.program-motion .card-actions a{color:#fff}
+.hub-panel .service-grid>.cmass-service h3,.hub-panel .service-grid>.info-service h3{font-size:20px;max-width:100%}
+.hub-panel .service-grid>.cmass-service,.hub-panel .service-grid>.info-service{background:#f5f6f9;border:1px solid #edf0f4}
+.cmass-book-stage{width:92px;height:120px;right:26px;bottom:61px}
+.info-scene{height:120px;right:26px;bottom:61px}
+.info-covers{width:120px;height:120px;right:0}
+.info-covers img{width:78px;height:102px}
+.info-cover-kumsung{top:0;left:0}.info-cover-ybm{top:12px;left:36px}
+#services>.camp-ad-card{height:280px;border-radius:22px;background:#203e37}
+.camp-ad-copy{padding:23px 20px 0}
+.camp-ad-copy h2{font-size:25px;line-height:1.35}
+.camp-ad-description{font-size:11px;line-height:1.7}
+.camp-ad-actions{left:20px;right:20px;bottom:21px;flex-wrap:wrap;gap:10px}
+.camp-ad-actions button{border-radius:18px;background:#e0f0d9;padding:10px 13px}
+.hub-partners{margin-top:64px;padding-top:40px}
+.hub-faq{margin-top:28px;padding-top:36px}
+.hub-panel .hub-help{border:1px solid #e8eef7;border-radius:22px;background:#f4f7fc;padding:30px;margin-top:32px}
+.hub-panel .codle-footer{background:#fff;border-top:1px solid #edf0f4;padding:28px 40px}
+@media(max-width:1100px){
+ #services{grid-template-columns:minmax(0,1fr)}
+ #services>.camp-ad-card{grid-column:1;grid-row:2;height:210px}
+ .camp-ad-copy{padding:26px}.camp-ad-copy h2{font-size:26px}
+ .camp-ad-photo{object-position:center 65%}
+ .camp-ad-actions{left:auto;right:26px;bottom:26px;flex-direction:column;align-items:flex-end}
+ .camp-ad-description{margin-top:9px}
+}
+@media(max-width:680px){
+ .hub-header{height:72px;padding-inline:20px}.hub-header nav{gap:16px}.header-section-link{display:none}
+ .hub-panel .hub-content{padding:28px 20px 32px}
+ .hub-intro{margin-bottom:26px}.hub-kicker{font-size:11px;margin-bottom:11px}
+ .hub-panel .hub-title{font-size:30px}.hub-intro-description{font-size:12px;margin-top:12px}
+ .hub-panel .service-grid{grid-template-rows:260px 240px 260px;gap:12px}
+ .hub-panel .service-grid>.service-card{padding:19px 16px;border-radius:18px}
+ .hub-panel .service-grid>.service-card .card-type{font-size:10px}
+ .hub-panel .service-grid>.service-card h3,.hub-panel .service-grid>.platform-service h3{font-size:19px}
+ .hub-panel .service-grid>.platform-service .card-type{font-size:21px;gap:6px}
+ .platform-service .card-type>span{font-size:9px;padding-left:6px}
+ .hub-panel .service-grid .card-actions{left:16px;right:16px;bottom:16px;flex-wrap:wrap;gap:4px}
+ .hub-panel .service-grid .card-actions button{font-size:10px;padding:8px 11px;min-height:32px}
+ .hub-panel .service-grid .card-actions a{font-size:9px;min-height:28px}
+ .cmass-book-stage{width:70px;height:91px;right:18px;bottom:79px}
+ .info-scene{height:100px;right:15px;bottom:78px}.info-covers{transform:scale(.8);transform-origin:right bottom}
+ .hub-panel .service-grid>.cmass-service h3,.hub-panel .service-grid>.info-service h3{font-size:16px}
+ #services>.camp-ad-card{height:230px;border-radius:18px}
+ .camp-ad-actions{left:24px;right:24px;bottom:20px;flex-direction:row;align-items:center}
+ .camp-ad-copy{padding:22px 24px}.camp-ad-copy h2{font-size:24px}
+ .hub-partners{margin-top:42px}.hub-panel .hub-help{padding:24px}.hub-panel .codle-footer{padding-inline:20px}
+}
+@media(prefers-reduced-motion:reduce){.hub-panel .service-grid>.service-card{transition:none}}
+
+@media(max-width:680px){.info-scene{height:80px;bottom:66px}.info-covers{transform:scale(.62);transform-origin:right bottom}.hub-panel .service-grid>.info-service h3{font-size:15px;line-height:1.4}}
+
+/* The portrait campaign shares the platform card's two-row height. */
+@media(min-width:1101px){
+ #services{--hub-top-row:280px;--hub-second-row:260px;--hub-row-gap:16px}
+ .hub-panel #services .service-grid{grid-template-rows:var(--hub-top-row) var(--hub-second-row) 260px;row-gap:var(--hub-row-gap)}
+ #services>.camp-ad-card{height:calc(var(--hub-top-row) + var(--hub-second-row) + var(--hub-row-gap));display:flex;flex-direction:column;background:#203e37}
+ .camp-ad-card::after{display:none}
+ .camp-ad-copy{order:1;padding:26px 22px 24px;flex:none}
+ .camp-ad-label{margin-bottom:23px}
+ .camp-ad-copy h2{font-size:27px;line-height:1.35;letter-spacing:-.045em}
+ .camp-ad-description{margin-top:14px;font-size:11px;line-height:1.7}
+ .camp-ad-photo{order:2;position:static;z-index:auto;display:block;width:100%;height:0;min-height:0;flex:1;object-fit:cover;object-position:65% 78%}
+ .camp-ad-actions{order:3;position:static;display:flex;flex-direction:column;align-items:stretch;gap:12px;padding:20px 22px 22px;flex:none}
+ .camp-ad-actions button{width:100%;justify-content:space-between;min-height:43px;border-radius:10px;padding:12px 15px;font-size:12px}
+ .camp-ad-actions a{align-self:center;font-size:11px;color:#d7e9df}
+}
+
+/* Campaign-only visual refinement; dimensions and service tiles stay intact. */
+@media(min-width:1101px){
+ #services>.camp-ad-card{background:#eff3e9;color:#253e35;border:1px solid #e0e7d8;box-shadow:0 8px 24px #263d3008}
+ .camp-ad-copy{padding:25px 21px 23px;position:relative;background:radial-gradient(ellipse at 100% 0%,#dce9b9 0%,transparent 70%)}
+ .camp-ad-label{color:#56705c;margin-bottom:24px;font-size:11px;letter-spacing:-.02em}
+ .camp-ad-label span{color:#75816c;border-color:#b9c8ad;font-size:8px}
+ .camp-ad-copy h2{font-size:29px;line-height:1.28;letter-spacing:-.055em;font-weight:800}
+ .camp-ad-copy h2 em{font-style:normal;color:#387650;background:linear-gradient(transparent 62%,#d6e8b4 62%);padding-right:3px}
+ .camp-ad-description{color:#6d7e68;font-size:11px;line-height:1.7;margin-top:16px}
+ .camp-ad-photo{width:calc(100% - 28px);margin:0 14px;border-radius:13px;object-position:65% 82%}
+ .camp-ad-actions{padding:19px 17px 20px;gap:11px}
+ .camp-ad-actions button{background:#294d3b;color:#fff;border-radius:12px;min-height:46px;padding:12px 15px;font-size:12px;box-shadow:0 4px 10px #294d3b15}
+ .camp-ad-actions button span{display:grid;place-items:center;width:23px;height:23px;border-radius:50%;background:#ffffff18;font-size:15px}
+ .camp-ad-actions button:hover{background:#1d3c2c}
+ .camp-ad-actions a{color:#65775d;font-size:10px;text-decoration:none}
+ .camp-ad-actions a:hover{text-decoration:underline}
+ .camp-ad-actions :focus-visible{outline-color:#294d3b}
+}
+
+.camp-ad-copy h2 em{font-style:normal}
+@media(max-width:1100px){.camp-ad-title-break{display:none}}
+
+/* A compact introduction connects the three services above the mosaic. */
+.hub-service-intro{display:flex;flex-wrap:wrap;gap:12px 26px;margin:22px 0 0;padding:0}
+.hub-service-intro>div{display:flex;align-items:center;gap:9px}
+.hub-service-intro>div+div{border-left:1px solid #e3e8f0;padding-left:26px}
+.hub-service-intro dt{font-size:13px;font-weight:700;color:#34445b}
+.hub-service-intro dd{margin:0;font-size:12px;color:#7c8798}
+@media(max-width:680px){
+ .hub-service-intro{gap:10px 18px;margin-top:20px}
+ .hub-service-intro>div{gap:7px}
+ .hub-service-intro>div+div{border-left:0;padding-left:0}
+ .hub-service-intro dt{font-size:12px}
+ .hub-service-intro dd{font-size:11px}
+}

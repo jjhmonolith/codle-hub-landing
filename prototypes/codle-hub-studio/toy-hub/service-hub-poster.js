@@ -13,19 +13,31 @@
   show(0);
 })();
 
-// The campaign floats independently of the centered service grid.
+// Desktop opens on request; mobile keeps the campaign in the service flow.
 (() => {
   const billboard = document.querySelector('.billboard');
   const toggle = document.querySelector('.campaign-toggle');
   const poster = document.querySelector('#floating-campaign');
   if (!billboard || !toggle || !poster) return;
-  function setExpanded(expanded) {
+  const mobile = window.matchMedia('(max-width: 680px)');
+  let desktopExpanded = false;
+  function render() {
+    const expanded = mobile.matches || desktopExpanded;
     toggle.setAttribute('aria-expanded', String(expanded));
+    toggle.setAttribute('aria-label', expanded ? 'AI 캠프 포스터 접기' : '우리 학교에서 AI 캠프 펼치기');
     toggle.querySelector('.campaign-toggle-label').textContent = expanded ? '접기' : '펼치기';
-    toggle.querySelector('.campaign-toggle-icon').textContent = expanded ? '−' : '+';
+    toggle.querySelector('.campaign-toggle-icon').textContent = expanded ? '−' : '↗';
     poster.hidden = !expanded;
     billboard.classList.toggle('is-collapsed', !expanded);
   }
-  toggle.addEventListener('click', () => setExpanded(toggle.getAttribute('aria-expanded') !== 'true'));
-  if (window.matchMedia('(max-width: 680px)').matches) setExpanded(false);
+  toggle.addEventListener('click', () => { desktopExpanded = !desktopExpanded; render(); });
+  billboard.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !mobile.matches && desktopExpanded) {
+      desktopExpanded = false;
+      render();
+      toggle.focus();
+    }
+  });
+  mobile.addEventListener('change', render);
+  render();
 })();

@@ -1,0 +1,35 @@
+/* Campaign occupies the upper-right tile of the service hub. */
+
+.camp-ad-card{grid-area:campaign;position:relative;isolation:isolate;overflow:hidden;border-radius:18px;background:#193b35;color:#fff;min-width:0}
+.camp-ad-card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,rgba(10,38,32,.94),rgba(10,38,32,.58) 65%,rgba(10,38,32,.25))}
+.camp-ad-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:65% 80%}
+.camp-ad-copy{padding:24px 24px 0}
+.camp-ad-label{display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:600;color:#d7e9df;margin:0 0 17px}
+.camp-ad-label span{font-size:9px;letter-spacing:.05em;border:1px solid #ffffff60;border-radius:4px;padding:2px 5px;color:#fff}
+.camp-ad-copy h2{font-size:clamp(24px,2.7vw,34px);line-height:1.28;letter-spacing:-.045em;font-weight:750;margin:0}
+.camp-ad-description{font-size:11px;color:#d7e9df;margin:10px 0 0}
+.camp-ad-actions{position:absolute;bottom:22px;left:24px;right:24px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.camp-ad-actions button{display:inline-flex;align-items:center;gap:16px;padding:11px 14px;border:0;border-radius:8px;background:#ddf6a2;color:#203829;font:inherit;font-size:11px;font-weight:750;cursor:pointer}
+.camp-ad-actions button:hover{background:#eaffc5}
+.camp-ad-actions a{color:#fff;font-size:10px;text-decoration:underline;text-underline-offset:3px}
+.camp-ad-actions :focus-visible{outline:2px solid white;outline-offset:4px}
+@media(max-width:680px){
+
+ .camp-ad-copy{padding:19px 16px 0}
+ .camp-ad-label{font-size:10px;margin-bottom:14px}
+ .camp-ad-copy h2{font-size:clamp(19px,4vw,25px)}
+ .camp-ad-description{font-size:10px;line-height:1.5;max-width:120px}
+ .camp-ad-actions{left:16px;right:16px;bottom:18px;flex-wrap:wrap;gap:9px}
+ .camp-ad-actions button{padding:9px 10px;font-size:10px;gap:8px}
+}
+@media(max-width:400px){.camp-ad-actions a{font-size:9px}.camp-ad-copy h2{font-size:19px}}
+
+/* Keep the original service grid intact; advertising is a separate sibling. */
+#services{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:24px;align-items:start}
+#services>.service-grid{grid-column:1;grid-row:1;min-width:0}
+#services>.camp-ad-card{grid-column:2;grid-row:1;height:300px}
+.hub-panel .hub-content{max-width:1320px}
+@media(max-width:999px){
+ #services{grid-template-columns:minmax(0,1fr);gap:24px}
+ #services>.camp-ad-card{grid-column:1;grid-row:2;width:100%;height:240px}
+}
