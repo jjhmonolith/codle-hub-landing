@@ -1,0 +1,38 @@
+/* Responsive refinements; desktop mosaic remains unchanged. */
+@media(max-width:680px){
+ .hub-panel .service-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:none;grid-template-rows:none;grid-auto-rows:auto;gap:16px}
+ .hub-panel .service-grid>.service-card{grid-area:auto;grid-column:auto;grid-row:auto;min-width:0;min-height:280px;padding:24px}
+ .hub-panel .service-grid>.platform-service{height:450px}
+ .hub-panel .service-grid>.cmass-service,.hub-panel .service-grid>.info-service{height:330px}
+ .hub-panel .service-grid>.service-card .card-type{font-size:12px;margin-bottom:12px}
+ .hub-panel .service-grid>.platform-service .card-type{font-size:24px}
+ .hub-panel .service-grid>.service-card h3{font-size:23px;line-height:1.4}
+ .hub-panel .service-grid>.cmass-service h3,.hub-panel .service-grid>.info-service h3,.hub-panel .service-grid>.info-service:is(:hover,:focus-within) h3{max-width:100%;font-size:21px}
+ .hub-panel .service-grid>.service-card .card-actions{left:24px;right:24px;bottom:20px;flex-wrap:nowrap;gap:8px}
+ .hub-panel .service-grid>.service-card .card-actions button{font-size:12px;min-height:40px;padding:10px 14px}
+ .hub-panel .service-grid>.service-card .card-actions a{font-size:13px;min-height:40px}
+ .hub-panel .platform-service .connection-art{top:146px;bottom:80px}
+ .hub-panel .cmass-book-stage{width:100px;height:130px;right:34px;bottom:76px}
+ .hub-panel .info-scene{width:152px;height:140px;right:24px;bottom:76px}
+ .hub-panel .info-covers{transform:scale(.88);transform-origin:right bottom}
+ .hub-panel .info-practice{width:220px;border-width:4px}
+ .hub-panel .hub-help h2{word-break:keep-all;font-size:20px;line-height:1.5}
+ .hub-partners .partners-intro h2{font-size:23px;line-height:1.5;word-break:keep-all}
+ .hub-header nav{gap:10px}
+ .hub-header nav button{padding:10px 12px}
+}
+@media(max-width:360px){
+ .hub-panel .service-grid>.service-card{padding:20px}
+ .hub-panel .service-grid>.service-card .card-actions{left:20px;right:20px}
+ .hub-panel .service-grid>.service-card .card-actions a{font-size:12px}
+ .hub-panel .service-grid>.service-card h3{font-size:21px}
+}
+
+@media(max-width:680px){.hub-panel .platform-service .connection-art{display:block}.hub-panel .platform-service .connection-art>svg{display:block;height:100%;min-height:0;max-height:100%}}
+@media(min-width:681px) and (max-width:900px){
+ .hub-panel .service-grid{grid-template-rows:280px 260px 330px}
+ .hub-panel .service-grid>.info-service:is(:hover,:focus-within) h3{max-width:100%}
+ .hub-panel .info-scene{bottom:76px}
+ .hub-panel .info-practice{width:220px}
+ .hub-panel .cmass-book-stage{bottom:76px;width:100px;height:130px}
+}
