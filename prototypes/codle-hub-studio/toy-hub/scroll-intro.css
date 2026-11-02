@@ -1,0 +1,38 @@
+.scroll-intro{height:220vh;position:relative;background:#fff}
+.scroll-intro-stage{position:sticky;top:0;height:100svh;overflow:hidden;background:#fff;isolation:isolate}
+.scroll-intro-image{position:absolute;inset:0;background:linear-gradient(120deg,#16428255,#07358c44),url('assets/films/camp-field-poster.jpg') center 48% / cover no-repeat;mask-image:url('assets/codle-drop-mask.svg');mask-position:center;mask-size:var(--mask-width,600vw) auto;mask-repeat:no-repeat;-webkit-mask-image:url('assets/codle-drop-mask.svg');-webkit-mask-position:center;-webkit-mask-size:var(--mask-width,600vw) auto;-webkit-mask-repeat:no-repeat}
+.scroll-intro-image::after{content:'';position:absolute;inset:0;background:#06264c;opacity:var(--shade,.3)}
+#scroll-intro-title{margin:0;font-size:clamp(30px,4.2vw,64px);font-weight:750;letter-spacing:-.055em;line-height:1.25}
+.intro-line{position:absolute;left:50%;top:50%;white-space:nowrap;color:var(--intro-color,#fff);transform:translate(-50%,-50%) translate(var(--line-x,0px),var(--line-y,0px)) scale(var(--line-scale,1));transform-origin:center}
+.intro-line-left{--line-y:-42px}
+.intro-line-right{--line-y:42px}
+.intro-scroll-cue{position:absolute;bottom:55px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:14px;color:var(--intro-color,#fff);font-size:13px;text-decoration:none;opacity:var(--cue-opacity,1)}
+.intro-scroll-cue span{font-size:25px}
+@media(max-width:680px){.scroll-intro{height:180vh}.intro-scroll-cue{bottom:32px}#scroll-intro-title{font-size:30px}}
+@media(prefers-reduced-motion:reduce){.scroll-intro{height:100svh}}
+
+.scroll-intro{height:420vh}
+.hub-header{position:sticky;top:0;z-index:100;background:#fff}
+.hub-header .hub-brand{opacity:var(--header-brand-opacity,1)}
+.scroll-intro-image,.intro-second-image,.intro-blue-mark{mask-position:var(--mask-x,50%) var(--mask-y,50%);-webkit-mask-position:var(--mask-x,50%) var(--mask-y,50%)}
+.intro-second-image,.intro-blue-mark{position:absolute;inset:0;mask-image:url('assets/codle-drop-mask.svg');mask-size:var(--mask-width) auto;mask-repeat:no-repeat;-webkit-mask-image:url('assets/codle-drop-mask.svg');-webkit-mask-size:var(--mask-width) auto;-webkit-mask-repeat:no-repeat;opacity:0}
+.intro-second-image{background:linear-gradient(120deg,#154da322,#1c61c522),url('assets/worlds/jitda-team-demo.jpg') center / cover no-repeat;opacity:var(--second-opacity,0)}
+.intro-blue-mark{background:#3e88ff;opacity:var(--blue-opacity,0)}
+.intro-line{opacity:var(--first-opacity,1);color:white!important}
+.intro-new-copy{position:absolute;inset:0;opacity:var(--new-opacity,0);color:#202b3d;font-size:clamp(20px,3.2vw,48px);font-weight:750;letter-spacing:-.055em;pointer-events:none}
+.intro-new-copy span{position:absolute;top:50%;transform:translate(-50%,-50%);white-space:nowrap}
+.intro-new-copy span:first-child{left:18%}.intro-new-copy span:last-child{left:82%}
+.intro-complete-logo{position:absolute;left:var(--logo-x,50%);top:var(--logo-y,50%);width:var(--logo-width,320px);height:auto;transform:translate(-50%,-50%);opacity:var(--logo-opacity,0)}
+@media(max-width:680px){.scroll-intro{height:340vh}.intro-new-copy{font-size:20px}}
+@media(prefers-reduced-motion:reduce){.scroll-intro{height:100svh}}
+
+/* The opening sequence plays above the existing landing layout. */
+.scroll-intro{display:none}
+html.intro-playing{overflow:hidden}
+.intro-playing .scroll-intro{display:block;position:fixed;inset:0;height:100dvh;z-index:200}
+.intro-playing .scroll-intro-stage{position:absolute;inset:0;height:100dvh}
+.intro-playing .hub-header{opacity:0;pointer-events:none}
+.intro-finished .hub-header{opacity:1;transition:opacity .35s ease}
+.intro-playing .intro-scroll-cue{opacity:1;color:#fff;mix-blend-mode:difference;font-size:12px;bottom:28px}
+.intro-playing .intro-scroll-cue span{display:none}
+@media(prefers-reduced-motion:reduce){.intro-playing .scroll-intro{display:none}.intro-playing .hub-header{opacity:1}.intro-finished .hub-header{transition:none}}

@@ -1,0 +1,135 @@
+/* Full-width service tiles with a single, whole-card destination. */
+.hub-header{max-width:none;padding-inline:32px}
+body .hub-panel .hub-content,body.inquiry-drawer-open .hub-panel .hub-content{max-width:none;width:100%;padding:40px 32px 56px}
+.hub-intro.story-hero{margin-bottom:32px}
+.hub-panel #services .service-grid{width:100%;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:none;grid-template-areas:none;grid-auto-rows:auto;gap:20px}
+.hub-panel #services .service-grid>.service-card{grid-area:auto;grid-column:auto;grid-row:auto;aspect-ratio:1;height:auto;min-height:0;min-width:0;padding:28px;overflow:hidden;cursor:pointer;isolation:isolate;border-radius:24px;transition:box-shadow .2s ease}
+.hub-panel #services .service-card:hover{box-shadow:inset 0 0 0 2px #5087f8,0 8px 24px #20324a12}
+.hub-panel #services .service-card:focus-within{outline:3px solid #397ee8;outline-offset:4px}
+.hub-panel #services .service-card h3,.hub-panel #services .info-service:is(:hover,:focus-within) h3{font-size:clamp(22px,1.8vw,30px);max-width:100%;line-height:1.4}
+.hub-panel #services .service-card .card-type{margin-bottom:12px}
+.service-card-link{position:absolute;inset:0;z-index:10;display:flex;align-items:flex-end;justify-content:space-between;padding:26px 28px;color:#344b68;font-size:14px;font-weight:650;text-decoration:none!important;outline:none}
+.service-card-link>span:first-child{align-self:flex-end;padding-block:10px}
+.service-link-arrow{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#fff;color:#344b68;font-size:23px;transition:background .2s,color .2s}
+.service-card-link:hover .service-link-arrow,.service-card-link:focus-visible .service-link-arrow{background:#397ee8;color:white}
+.program-motion .service-card-link{color:white;text-shadow:0 1px 4px #10203088}
+.hub-panel #services .service-card>.card-arrow{display:none}
+.hub-panel #services .platform-service .connection-art{display:block;top:142px;bottom:84px;left:24px;right:24px}
+.hub-panel #services .platform-service .connection-art>svg{height:100%;min-height:0;max-height:100%;display:block}
+.hub-panel #services .cmass-book-stage{width:27%;height:auto;aspect-ratio:100/130;right:40px;bottom:86px}
+.hub-panel #services .info-scene{width:42%;height:40%;right:28px;bottom:86px}
+.hub-panel #services .info-covers{width:148px;height:150px;transform:none;right:0}
+.hub-panel #services .info-practice{width:100%;min-width:220px;max-width:none;right:0;bottom:0}
+.hub-panel #services .program-motion::before{background:linear-gradient(90deg,#10203055,transparent 85%),linear-gradient(180deg,#10203055,transparent 60%,#102030aa)}
+.floating-inquiry{position:fixed;right:24px;top:50%;bottom:auto;transform:translateY(-50%);z-index:90;display:flex;align-items:center;gap:26px;border:0;border-radius:30px;padding:16px 22px;background:#2869e8;color:white;box-shadow:0 6px 24px #163c8133;font-size:15px;font-weight:700}
+.floating-inquiry:hover{background:#1c55c3}
+body.inquiry-drawer-open .floating-inquiry{visibility:hidden}
+@media(min-width:681px) and (max-width:1100px){.hub-panel #services .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){
+ .hub-header{padding-inline:20px}
+ body .hub-panel .hub-content,body.inquiry-drawer-open .hub-panel .hub-content{padding:28px 16px 90px}
+ .hub-panel #services .service-grid{grid-template-columns:minmax(0,1fr);gap:16px}
+ .hub-panel #services .service-grid>.service-card{padding:22px;border-radius:20px}
+ .hub-panel #services .service-card h3{font-size:21px}
+ .service-card-link{padding:18px 22px;font-size:13px}
+ .hub-panel #services .platform-service .connection-art{top:132px;bottom:74px}
+ .hub-panel #services .cmass-book-stage{bottom:74px;right:30px;width:25%}
+ .hub-panel #services .info-scene{bottom:74px;right:22px;height:36%}
+ .hub-panel #services .info-covers{transform:scale(.8);transform-origin:right bottom}
+ .hub-panel #services .info-practice{min-width:190px}
+ .floating-inquiry{right:12px;top:50%;bottom:auto;padding:14px 18px;font-size:14px}
+}
+
+/* Keep the inquiry form available beside the desktop content. */
+@media(min-width:1000px){
+ body{--inquiry-width:360px}
+ body .split-layout{display:block;margin-right:calc(var(--inquiry-width) + 32px);width:auto;transition:none}
+ body .hub-panel{width:100%;min-width:0}
+ body .hub-panel .hub-content{padding-right:24px}
+ .hub-panel #services .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #inquiry-dialog.is-persistent[open]{position:fixed;inset:88px 24px 24px auto;width:var(--inquiry-width);height:calc(100dvh - 112px);max-height:none;margin:0;padding:0;display:flex;transform:none;opacity:1;border:1px solid #e3eaf4;border-radius:20px;box-shadow:0 8px 32px #203a630a;z-index:50}
+ #inquiry-dialog.is-persistent .close-dialog,.floating-inquiry{display:none}
+ #inquiry-dialog.is-persistent .inquiry-heading{padding:22px 22px 18px}
+ #inquiry-dialog.is-persistent .inquiry-heading h2{font-size:24px}
+ #inquiry-dialog.is-persistent .inquiry-scroll{padding:20px 22px}
+ #inquiry-dialog.is-persistent .inquiry-submit-row{padding:14px 22px 18px}
+ #inquiry-dialog.is-persistent .contact-fields{gap:16px 12px}
+}
+@media(min-width:1600px){
+ body{--inquiry-width:390px}
+ .hub-panel #services .service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
+/* One featured square and four smaller service squares. */
+@media(min-width:1100px){
+ .hub-panel #services .service-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:stretch}
+ .hub-panel #services .service-grid>.platform-service{grid-column:1 / 3;grid-row:1 / 3;aspect-ratio:1}
+ .hub-panel #services .service-grid>.compact{padding:20px;aspect-ratio:1;border-radius:24px}
+ .hub-panel #services .compact h3,.hub-panel #services .info-service:is(:hover,:focus-within) h3{font-size:clamp(16px,1.25vw,23px);line-height:1.4;letter-spacing:-.04em}
+ .hub-panel #services .compact .card-type{font-size:11px;margin-bottom:9px}
+ .compact .service-card-link{padding:16px 18px;font-size:11px}
+ .compact .service-link-arrow{width:30px;height:30px;font-size:19px}
+ .compact .service-card-link>span:first-child{padding-block:7px}
+ .hub-panel #services .cmass-book-stage{width:28%;right:24px;bottom:48px}
+ .hub-panel #services .info-scene{width:36%;height:34%;right:20px;bottom:48px}
+ .hub-panel #services .info-covers{transform:scale(.48);transform-origin:right bottom}
+ .hub-panel #services .info-practice{min-width:0;width:145%;right:0}
+ .hub-panel #services .cmass-service{background:#f2f0fc}
+ .hub-panel #services .info-service{background:#edf5ef}
+}
+@media(min-width:1000px){
+ #inquiry-dialog.is-persistent[open]{background:#f0f5ff;border:0;border-radius:24px;box-shadow:none}
+ #inquiry-dialog.is-persistent .inquiry-heading{background:transparent;border:0;padding:26px 24px 16px}
+ #inquiry-dialog.is-persistent .inquiry-heading h2{font-size:25px;line-height:1.4;letter-spacing:-.045em;color:#273b59}
+ #inquiry-dialog.is-persistent .inquiry-heading p{line-height:1.65}
+ #inquiry-dialog.is-persistent .inquiry-eyebrow{color:#5485d5;font-size:10px;letter-spacing:.13em}
+ #inquiry-dialog.is-persistent .inquiry-scroll{padding:8px 24px 20px}
+ #inquiry-dialog.is-persistent .contact-field label{color:#50627d;font-size:12px}
+ #inquiry-dialog.is-persistent .contact-field :is(input,select,textarea){border:1px solid #e1e9f5;border-radius:12px;background:#fff;font-size:13px;box-shadow:none}
+ #inquiry-dialog.is-persistent .inquiry-submit-row{background:transparent;border:0;padding:12px 24px 24px}
+ #inquiry-dialog.is-persistent .inquiry-submit{border-radius:14px;min-height:48px;background:#427ff5}
+}
+
+@media(min-width:1000px){
+ #inquiry-dialog.is-persistent[open]{top:var(--inquiry-top,88px);height:calc(100dvh - var(--inquiry-top,88px) - 24px)}
+}
+
+@media(min-width:1000px){
+ .story-copy h1{font-size:clamp(40px,4vw,60px);line-height:1.22;letter-spacing:-.055em}
+}
+
+@media(min-width:1000px){
+ .hub-intro.story-hero{width:calc(100% + var(--inquiry-width) + 32px)}
+ .story-copy{max-width:none;width:100%}
+ .story-copy h1{font-size:clamp(32px,3.5vw,64px);white-space:nowrap;line-height:1.22}
+ .story-copy h1 br{display:none}
+}
+
+/* Blue, organic opening inspired by the rounded Codle identity. */
+.hub-intro.story-hero.droplet-hero{position:relative;display:grid;place-items:center;isolation:isolate;height:clamp(480px,44vw,660px);padding:50px 24px;margin-top:-20px;margin-bottom:52px;overflow:hidden;background:#f6faff;border-radius:32px}
+.droplet-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.droplet-hero .story-copy{width:100%;max-width:none;text-align:center;color:white}
+.droplet-hero .droplet-eyebrow{font-size:12px;letter-spacing:.2em;font-weight:650;color:#e4f2ff;margin:0 0 24px}
+.droplet-hero .story-copy h1{font-size:clamp(42px,5vw,76px);line-height:1.18;letter-spacing:-.055em;white-space:normal;color:white;font-weight:750}
+.droplet-hero .story-copy h1 br{display:block}
+.droplet-hero .story-copy h1 span{color:white}
+.droplet-caption{font-size:17px;letter-spacing:-.025em;color:#e8f3ff;margin:24px 0 32px}
+.droplet-explore{display:inline-flex;align-items:center;gap:30px;background:white;color:#2865d9;border-radius:40px;padding:16px 22px;font-size:14px;font-weight:650;text-decoration:none}
+.droplet-explore:hover{background:#e9f3ff}
+.droplet-explore:focus-visible{outline:3px solid #fff;outline-offset:5px}
+.water-bead{position:absolute;border-radius:58% 42% 52% 48%;pointer-events:none;background:linear-gradient(135deg,#b8e7ff,#579bff 65%,#3576ed);box-shadow:inset 8px 10px 18px #ffffff55}
+.bead-one{width:70px;height:84px;right:4%;top:5%;transform:rotate(28deg)}
+.bead-two{width:34px;height:42px;left:5%;bottom:5%;transform:rotate(-25deg)}
+@media(min-width:1000px){#inquiry-dialog.is-persistent[open]{height:max(480px,calc(100dvh - var(--inquiry-top,88px) - 24px))}}
+@media(max-width:680px){
+ .hub-intro.story-hero.droplet-hero{height:450px;padding:40px 18px;margin-top:0;margin-bottom:28px;border-radius:24px}
+ .droplet-hero .story-copy h1{font-size:38px}
+ .droplet-caption{font-size:13px;margin:20px 0 28px}
+ .droplet-hero .droplet-eyebrow{font-size:9px}
+ .bead-one{width:35px;height:43px}
+ .bead-two{width:20px;height:26px}
+}
+
+.hub-intro.story-hero.droplet-hero{grid-template-columns:minmax(0,1fr);grid-template-rows:1fr}
+.droplet-hero .story-copy{grid-area:1 / 1;justify-self:center}
+@media(min-width:1000px){#services{scroll-margin-top:88px}}
