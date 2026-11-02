@@ -9,8 +9,8 @@
 .hub-panel .service-grid>.service-card .card-actions a{font-size:11px;font-weight:500;line-height:18px;min-height:36px;text-shadow:none;letter-spacing:-.02em}
 .hub-panel .service-grid>.program-motion .card-type{color:#e1e8ef}
 .hub-panel .service-grid>.program-motion h3{color:#fff}
-.hub-panel .service-grid>.program-motion::before{content:"";display:block;position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(22,36,51,.68) 0%,rgba(22,36,51,.36) 34%,rgba(22,36,51,.08) 62%,rgba(22,36,51,.66) 100%)}
-.hub-panel .service-grid .jitda-presentation-photo,.hub-panel .service-grid .camp-field-video{filter:saturate(.76) contrast(.94) brightness(1.06)}
+.hub-panel .service-grid>.program-motion::before{content:"";display:block;position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(22,36,51,.58) 0%,rgba(22,36,51,.26) 34%,rgba(22,36,51,.02) 62%,rgba(22,36,51,.60) 100%)}
+.hub-panel .service-grid .jitda-presentation-photo,.hub-panel .service-grid .camp-field-video{filter:saturate(.88) contrast(.97) brightness(1.10)}
 @media(max-width:900px){
  .hub-panel .service-grid>.service-card h3{font-size:22px}
  .hub-panel .service-grid>.cmass-service h3,.hub-panel .service-grid>.info-service h3{font-size:19px}
@@ -27,7 +27,7 @@
 }
 /* Keep artwork in its own lane, without moving the cards. */
 .hub-panel .service-grid>.jitda-service{overflow:hidden}
-.hub-panel .service-grid>.jitda-service>.jitda-presentation-photo{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:40% 62%;margin:0;padding:0;border:0;border-radius:0;transform:scale(1.12);transform-origin:50% 65%}
+.hub-panel .service-grid>.jitda-service>.jitda-presentation-photo{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:46% 58%;margin:0;padding:0;border:0;border-radius:0;transform:scale(1.04);transform-origin:50% 65%}
 .hub-panel .service-grid>.cmass-service h3,.hub-panel .service-grid>.info-service h3{max-width:calc(100% - 174px);font-size:21px;line-height:1.45}
 .hub-panel .cmass-book-stage{right:26px;bottom:72px;width:120px;height:156px}
 .hub-panel .info-scene{left:auto;right:24px;bottom:72px;width:152px;height:150px}

@@ -1,9 +1,9 @@
 /* Responsive refinements; desktop mosaic remains unchanged. */
 @media(max-width:680px){
  .hub-panel .service-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:none;grid-template-rows:none;grid-auto-rows:auto;gap:16px}
- .hub-panel .service-grid>.service-card{grid-area:auto;grid-column:auto;grid-row:auto;min-width:0;min-height:280px;padding:24px}
- .hub-panel .service-grid>.platform-service{height:450px}
- .hub-panel .service-grid>.cmass-service,.hub-panel .service-grid>.info-service{height:330px}
+ .hub-panel .service-grid>.service-card{grid-area:auto;grid-column:auto;grid-row:auto;min-width:0;min-height:270px;padding:24px}
+ .hub-panel .service-grid>.platform-service{height:410px}
+ .hub-panel .service-grid>.cmass-service,.hub-panel .service-grid>.info-service{height:314px}
  .hub-panel .service-grid>.service-card .card-type{font-size:12px;margin-bottom:12px}
  .hub-panel .service-grid>.platform-service .card-type{font-size:24px}
  .hub-panel .service-grid>.service-card h3{font-size:23px;line-height:1.4}
@@ -11,7 +11,7 @@
  .hub-panel .service-grid>.service-card .card-actions{left:24px;right:24px;bottom:20px;flex-wrap:nowrap;gap:8px}
  .hub-panel .service-grid>.service-card .card-actions button{font-size:12px;min-height:40px;padding:10px 14px}
  .hub-panel .service-grid>.service-card .card-actions a{font-size:13px;min-height:40px}
- .hub-panel .platform-service .connection-art{top:146px;bottom:80px}
+ .hub-panel .platform-service .connection-art{top:136px;bottom:72px}
  .hub-panel .cmass-book-stage{width:100px;height:130px;right:34px;bottom:76px}
  .hub-panel .info-scene{width:152px;height:140px;right:24px;bottom:76px}
  .hub-panel .info-covers{transform:scale(.88);transform-origin:right bottom}
@@ -35,4 +35,14 @@
  .hub-panel .info-scene{bottom:76px}
  .hub-panel .info-practice{width:220px}
  .hub-panel .cmass-book-stage{bottom:76px;width:100px;height:130px}
+}
+
+/* Service names share a clear, consistent heading level. */
+.hub-panel .service-grid>.service-card .card-type{font-size:12px;font-weight:600;line-height:1.4;min-height:30px;margin-bottom:12px;letter-spacing:-.03em;color:#344b68}
+.hub-panel .service-grid>.platform-service .card-type{font-size:12px;font-weight:600;color:#344b68}
+.hub-panel .service-grid>.platform-service .card-type>span{font-size:12px;font-weight:600;line-height:1.4;color:#344b68}
+.hub-panel .service-grid>.program-motion .card-type{color:#fff;text-shadow:0 1px 5px #10203055}
+@media(max-width:680px){
+ .hub-panel .service-grid>.service-card .card-type,.hub-panel .service-grid>.platform-service .card-type>span{font-size:12px}
+ .hub-panel .service-grid>.platform-service .card-type{font-size:12px}
 }
