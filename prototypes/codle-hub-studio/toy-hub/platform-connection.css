@@ -44,3 +44,10 @@
   47%,85%{opacity:1;transform:translateY(0)}
   93%,100%{opacity:0;transform:translateY(0)}
 }
+
+/* Resting state: restore the separate tools instead of freezing mid-lesson. */
+.connection-art:not(.is-playing) .gather-icon{transform:var(--from);opacity:1}
+.connection-art:not(.is-playing) .icon-tile{opacity:1}
+.connection-art:not(.is-playing) .lesson-panel,
+.connection-art:not(.is-playing) .lesson-row,
+.connection-art:not(.is-playing) .lesson-notebook{opacity:0}

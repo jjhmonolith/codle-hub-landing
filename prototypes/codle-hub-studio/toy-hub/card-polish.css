@@ -25,3 +25,54 @@
  .hub-panel .service-grid>.service-card .card-actions button{font-size:10px;min-height:32px;padding:7px 11px}
  .hub-panel .service-grid>.service-card .card-actions a{font-size:9px;min-height:28px}
 }
+/* Keep artwork in its own lane, without moving the cards. */
+.hub-panel .service-grid>.jitda-service{overflow:hidden}
+.hub-panel .service-grid>.jitda-service>.jitda-presentation-photo{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:40% 62%;margin:0;padding:0;border:0;border-radius:0;transform:scale(1.12);transform-origin:50% 65%}
+.hub-panel .service-grid>.cmass-service h3,.hub-panel .service-grid>.info-service h3{max-width:calc(100% - 174px);font-size:21px;line-height:1.45}
+.hub-panel .cmass-book-stage{right:26px;bottom:72px;width:120px;height:156px}
+.hub-panel .info-scene{left:auto;right:24px;bottom:72px;width:152px;height:150px}
+.hub-panel .info-covers{left:auto;right:0;width:148px;height:150px;transform:none}
+.hub-panel .info-covers img{width:100px;height:131px}
+.hub-panel .info-cover-kumsung{left:0;top:0}
+.hub-panel .info-cover-ybm{left:44px;top:16px}
+.hub-panel .info-practice{width:100%;right:0;bottom:0}
+.hub-panel .info-service:is(:hover,:focus-within) .info-practice{right:0;transform:none}
+.hub-panel .platform-service .connection-art{top:164px;bottom:86px}
+.hub-partners .partner-group-title{margin-bottom:16px}
+.hub-partners .partner-group-title h3{font-size:17px;line-height:1.5;font-weight:700;color:#34445b}
+@media(max-width:900px){
+ .hub-panel .service-grid>.cmass-service h3,.hub-panel .service-grid>.info-service h3{max-width:100%;font-size:19px}
+ .hub-panel .cmass-book-stage{width:88px;height:114px;right:24px;bottom:66px}
+ .hub-panel .info-scene{width:112px;height:108px;right:22px;bottom:66px}
+ .hub-panel .info-covers{transform:scale(.74);transform-origin:right bottom}
+}
+@media(max-width:680px){
+ .hub-panel .service-grid>.cmass-service h3,.hub-panel .service-grid>.info-service h3{font-size:16px}
+ .hub-panel .platform-service .connection-art{top:145px;bottom:74px}
+ .hub-panel .cmass-book-stage{right:20px;bottom:60px;width:70px;height:91px}
+ .hub-panel .info-scene{right:16px;bottom:60px;width:92px;height:90px}
+ .hub-panel .info-covers{transform:scale(.60)}
+ .hub-partners .partner-group-title h3{font-size:16px}
+}
+
+/* Keep card shells stationary; inner artwork retains its interactions. */
+.hub-panel .service-grid>.service-card,
+.hub-panel .service-grid>.service-card:is(:hover,:focus-within,:active){transform:none;translate:none;scale:none;rotate:none}
+
+/* Give the practice preview its own readable size, independent of the covers. */
+.hub-panel .info-practice{width:250px;max-width:none;border-width:4px}
+.hub-panel .service-grid>.info-service:is(:hover,:focus-within) h3{max-width:calc(100% - 278px)}
+@media(max-width:900px){
+ .hub-panel .info-practice{width:180px}
+ .hub-panel .service-grid>.info-service:is(:hover,:focus-within) h3{max-width:calc(100% - 204px)}
+}
+@media(max-width:680px){
+ .hub-panel .info-practice{width:140px;border-width:3px}
+ .hub-panel .service-grid>.info-service:is(:hover,:focus-within) h3{max-width:calc(100% - 154px)}
+}
+/* Clear, underline-free detail links on every service card. */
+.hub-panel .service-grid>.service-card .card-actions a{font-size:14px;font-weight:650;color:#344b68;text-decoration:none;gap:8px}
+.hub-panel .service-grid>.service-card .card-actions a:is(:hover,:focus,:active){text-decoration:none}
+.hub-panel .service-grid>.program-motion .card-actions a{color:#fff;text-shadow:0 1px 4px #10203066}
+.hub-panel .service-grid>.service-card .card-actions a:focus-visible{outline:2px solid currentColor;outline-offset:4px;border-radius:4px}
+@media(max-width:680px){.hub-panel .service-grid>.service-card .card-actions a{font-size:12px;gap:5px}}

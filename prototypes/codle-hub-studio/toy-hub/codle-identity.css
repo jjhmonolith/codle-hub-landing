@@ -122,18 +122,18 @@
 @media(max-width:480px){.partner-group .partner-grid,.partner-group:last-child .partner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 /* Two continuous school-logo rows; other partner groups stay still. */
-.school-logo-marquee{overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 24px,#000 calc(100% - 24px),transparent)}
+.school-logo-marquee{container-type:inline-size;overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 24px,#000 calc(100% - 24px),transparent)}
 .school-logo-row{overflow:hidden;padding-block:4px}
 .school-logo-track{display:flex;width:max-content;animation:school-logo-scroll 65s linear infinite}
 .school-logo-row:nth-child(2) .school-logo-track{animation-direction:reverse;animation-duration:72s}
 .school-logo-set{list-style:none;margin:0;padding:0;display:flex;flex-shrink:0;align-items:center}
-.school-logo-set li{width:196px;height:66px;padding:10px 16px;display:flex;align-items:center;justify-content:center;flex:none}
+.school-logo-set li{width:196px;width:max(156px,20cqw);height:66px;padding:10px 16px;display:flex;align-items:center;justify-content:center;flex:none}
 .school-logo-set img{max-width:100%;width:auto;height:auto;max-height:44px;object-fit:contain}
 .school-logo-marquee:hover .school-logo-track,.school-logo-marquee:focus-within .school-logo-track{animation-play-state:paused}
 @keyframes school-logo-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.school-logo-track{animation:none}.school-logo-row{overflow-x:auto}.school-logo-set[aria-hidden=true]{display:none}}
 
-.partner-single-marquee .school-logo-set li{width:210px}
+
 .partner-single-marquee .school-logo-track{animation-duration:38s}
 .partner-group:last-child .partner-single-marquee .school-logo-track{animation-duration:32s;animation-direction:reverse}
 
@@ -187,7 +187,7 @@
  .hub-panel .hub-content{max-width:1280px;padding-inline:32px}
  body.inquiry-drawer-open .hub-panel .hub-content{padding-inline:32px}
 }
-@media(min-width:1000px){.partner-group:last-child .partner-single-marquee .school-logo-set li{width:250px}}
+
 .hub-panel .hub-title + #services{margin-top:72px}
 @media(max-width:680px){.hub-panel .hub-title + #services{margin-top:44px}}
 
