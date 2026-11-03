@@ -1,5 +1,5 @@
 
-.classroom-intro{position:relative;height:500svh;background:#fff;width:100%;margin:0;isolation:isolate;z-index:110}
+.classroom-intro{position:relative;height:565svh;background:#fff;width:100%;margin:0;isolation:isolate;z-index:110}
 .classroom-stage{position:sticky;top:0;height:100svh;width:100%;overflow:hidden;background:#fff}
 .classroom-film{position:absolute;inset:0;overflow:hidden;mask:url('assets/codle-drop-mask.svg') center / var(--film-mask,600vmax) auto no-repeat;-webkit-mask:url('assets/codle-drop-mask.svg') center / var(--film-mask,600vmax) auto no-repeat;opacity:var(--film-opacity,1)}
 .classroom-backdrop{position:absolute;inset:-30px;background:url('assets/films/classroom-v40-poster.jpg') center/cover;filter:blur(25px) brightness(.65)}
@@ -9,7 +9,7 @@
 .classroom-cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);margin:0;color:white;text-shadow:0 1px 8px #0008;font-size:14px;opacity:var(--film-cue,1);white-space:nowrap;pointer-events:none}
 .classroom-cue span{display:block;text-align:center;margin-top:12px;font-size:24px}
 html.film-intro-active .hub-header,html.film-intro-active #inquiry-dialog,html.film-intro-active .floating-inquiry{visibility:hidden!important;pointer-events:none!important}
-@media(max-width:700px){.classroom-intro{height:420svh}.classroom-skip{top:18px;right:18px}.classroom-cue{font-size:12px;bottom:40px}}
+@media(max-width:700px){.classroom-intro{height:485svh}.classroom-skip{top:18px;right:18px}.classroom-cue{font-size:12px;bottom:40px}}
 
 /* Edge-to-edge film with a quiet, readable opening message. */
 #classroom-video{object-fit:cover;object-position:55% center}

@@ -53,7 +53,11 @@
  video.addEventListener('loadedmetadata',()=>{video.pause();render()});video.addEventListener('canplay',seek);
  function playIdle(){if(!reduced.matches&&!document.hidden)loop.play().catch(()=>{});else loop.pause()}
  document.addEventListener('visibilitychange',()=>{if(document.hidden)loop.pause();else if(idle)playIdle()});
- function render(){queued=false;const headerH=header.getBoundingClientRect().height,box=section.getBoundingClientRect(),travel=Math.max(1,section.offsetHeight-stage.offsetHeight),p=clamp((headerH-box.top)/travel);
+ function render(){queued=false;const headerH=header.getBoundingClientRect().height,box=section.getBoundingClientRect(),travel=Math.max(1,section.offsetHeight-stage.offsetHeight);
+  // Give the fully revealed message a reading interval in both scroll directions.
+  const hold=innerHeight*.65,baseTravel=Math.max(1,travel-hold),distance=headerH-box.top;
+  const held=Math.max(0,Math.min(hold,distance-baseTravel*.87));
+  const p=clamp((distance-held)/baseTravel);
   const wantsIdle=p===0&&box.top>=headerH-1;
   if(wantsIdle){if(!idle){loop.currentTime=0;}idle=true;loop.style.opacity='1';playIdle();video.pause();}
   else {loop.style.opacity='0';if(idle){const half=(loop.duration||3.5)/2;scrollStart=Math.min(1.25,(loop.currentTime<=half?loop.currentTime:2*half-loop.currentTime)/1.4);idle=false;loop.pause();}
