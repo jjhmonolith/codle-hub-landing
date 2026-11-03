@@ -1,0 +1,22 @@
+/* Keep the committed service mosaic intact; scope the editorial layer below it. */
+.card-story-details{margin-top:110px;border-top:1px solid #edf0f4;color:#202b3d}
+.card-story-details .story-chapter{padding:100px 6%;margin:0;max-width:none;box-sizing:border-box}
+.card-story-details .story-lead{margin-bottom:65px}
+.card-story-details h2,.card-story-details h3,.card-story-details p,.card-story-details figure{margin-top:0}
+.card-story-details h2{font-size:clamp(36px,3.8vw,54px);line-height:1.35}
+.card-story-details h3{font-size:30px;line-height:1.4;margin-bottom:24px}
+.card-story-details .story-kicker{margin-bottom:24px;color:#3182f6}
+.card-story-details .story-pair{gap:55px}
+.card-story-details .story-pair p{margin-top:24px}
+.card-story-details .quiet-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;font-size:15px;font-weight:600;margin-top:28px}
+.card-story-details .quiet-actions a{text-decoration:none}
+.card-story-details .quiet-actions button{font:inherit;border:0;cursor:pointer}
+.card-story-details .story-after{gap:30px}
+.card-story-details .story-after .quiet-actions{margin-top:0}
+.card-story-details .story-jitda .story-image{height:500px}
+.card-story-details .story-camp .story-image{height:530px}
+.card-story-details img{display:block;max-width:100%}
+.card-story-details .story-interface img{max-width:none}
+.card-story-details .story-notes{margin:25px 0 0}
+@media(max-width:900px){.card-story-details .story-pair{gap:30px}.card-story-details .story-after .quiet-actions{margin-top:24px}.card-story-details .story-pair h3{font-size:26px}}
+@media(max-width:700px){.card-story-details{margin-top:65px}.card-story-details .story-chapter{padding:65px 0}.card-story-details .story-jitda{padding-left:18px;padding-right:18px;border-radius:24px}.card-story-details h2{font-size:32px}.card-story-details .story-lead{margin-bottom:40px}.card-story-details .story-pair{grid-template-columns:1fr}.card-story-details .story-jitda .story-image{height:300px}.card-story-details .story-camp .story-image{height:360px}.card-story-details .quiet-actions{font-size:14px}}

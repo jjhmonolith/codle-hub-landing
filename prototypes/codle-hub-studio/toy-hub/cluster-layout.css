@@ -1,0 +1,49 @@
+/* A large anchor with a loose cluster of square service tiles. */
+@media (min-width:1100px){
+ .service-opening,.service-brand-tile{display:none}
+ .hub-panel #services{min-height:0;display:block}
+ .hub-panel #services .service-grid{display:grid;grid-template-columns:repeat(100,minmax(0,1fr));grid-template-rows:repeat(100,minmax(0,1fr));gap:0;height:auto;aspect-ratio:2.04;align-items:start}
+ .hub-panel #services .service-grid>.service-card{height:auto;aspect-ratio:1;min-height:0;padding:26px;border-radius:26px;align-self:start}
+ .hub-panel #services .service-grid>.platform-service{grid-column:1/50;grid-row:1/101;padding:36px;border-radius:30px}
+ .hub-panel #services .service-grid>.jitda-service{grid-column:52/80;grid-row:1/60}
+ .hub-panel #services .service-grid>.camp-service{grid-column:82/101;grid-row:1/42;padding:20px}
+ .hub-panel #services .service-grid>.cmass-service{grid-column:53/74;grid-row:61/101;padding:20px}
+ .hub-panel #services .service-grid>.info-service{grid-column:76/97;grid-row:53/101;padding:20px}
+ .hub-panel #services .platform-service h3{font-size:clamp(30px,6.4cqw,48px);line-height:1.3}
+ .hub-panel #services .jitda-service h3{font-size:clamp(23px,6.7cqw,32px);line-height:1.3}
+ .hub-panel #services .camp-service h3{font-size:clamp(20px,8cqw,28px);line-height:1.35}
+ .hub-panel #services .cmass-service h3,.hub-panel #services .info-service h3,.hub-panel #services .info-service:is(:hover,:focus-within) h3{font-size:clamp(18px,7cqw,23px);line-height:1.35}
+ .hub-panel #services .service-card .card-type{font-size:12px;margin-bottom:18px}
+ .hub-panel #services .platform-service .card-type{font-size:15px;margin-bottom:24px}
+ .hub-panel #services .platform-service .connection-art{top:31%;bottom:12%;left:17%;right:17%}
+ .hub-panel #services .jitda-app-graphic{left:5%;width:90%;height:49%;bottom:13%}
+ .hub-panel #services .service-card-link{padding:20px 24px;font-size:12px}
+ .hub-panel #services .platform-service .service-card-link{padding:26px 36px;font-size:14px}
+ .hub-panel #services .service-link-arrow{width:36px;height:36px}
+ .hub-panel #services .platform-service .service-link-arrow{width:44px;height:44px}
+ .hub-panel #services .cmass-book-stage{display:block;width:29%;bottom:46px;right:18px}
+ .hub-panel #services .info-scene{display:block;width:42%;height:34%;right:18px;bottom:46px}
+ .hub-panel #services .info-covers{transform:scale(.55);transform-origin:right bottom}
+ .hub-panel #services .cmass-service .service-card-link,.hub-panel #services .info-service .service-card-link{padding:14px 20px}
+ .hub-panel #services .cmass-service .service-card-link>span:first-child,.hub-panel #services .info-service .service-card-link>span:first-child{font-size:11px}
+ #inquiry-dialog.is-persistent[open]{height:auto;bottom:auto;max-height:calc(100dvh - var(--inquiry-top,88px) - 24px)}
+ #inquiry-dialog.is-persistent .inquiry-heading{padding:22px 24px 14px}
+ #inquiry-dialog.is-persistent .contact-fields{gap:12px}
+ #inquiry-dialog.is-persistent .contact-field :is(input,select){min-height:40px;height:40px;padding:8px 12px}
+ #inquiry-dialog.is-persistent .contact-field textarea{min-height:80px;height:80px;padding:12px}
+ #inquiry-dialog.is-persistent .inquiry-scroll{padding:4px 24px 12px}
+ #inquiry-dialog.is-persistent .inquiry-submit-row{padding:8px 24px 22px}
+ .card-story-details{margin-top:90px}
+}
+@media(min-width:1100px) and (max-width:1500px){
+ .hub-panel #services .service-grid>.service-card{padding:16px;border-radius:20px}
+ .hub-panel #services .service-grid>.platform-service{padding:26px;border-radius:26px}
+ .hub-panel #services .service-card .card-type{font-size:10px;margin-bottom:10px}
+ .hub-panel #services .platform-service .card-type{font-size:13px}
+ .hub-panel #services .camp-service h3{font-size:18px}
+ .hub-panel #services .cmass-service h3,.hub-panel #services .info-service h3,.hub-panel #services .info-service:is(:hover,:focus-within) h3{font-size:16px}
+ .hub-panel #services .service-card-link{padding:12px 16px}
+ .hub-panel #services .compact .service-card-link>span:first-child{font-size:0}
+ .hub-panel #services .info-covers{transform:scale(.38)}
+ .hub-panel #services .cmass-book-stage,.hub-panel #services .info-scene{bottom:38px}
+}

@@ -1,0 +1,53 @@
+
+.classroom-intro{position:relative;height:500svh;background:#fff;width:100%;margin:0;isolation:isolate;z-index:110}
+.classroom-stage{position:sticky;top:0;height:100svh;width:100%;overflow:hidden;background:#fff}
+.classroom-film{position:absolute;inset:0;overflow:hidden;mask:url('assets/codle-drop-mask.svg') center / var(--film-mask,600vmax) auto no-repeat;-webkit-mask:url('assets/codle-drop-mask.svg') center / var(--film-mask,600vmax) auto no-repeat;opacity:var(--film-opacity,1)}
+.classroom-backdrop{position:absolute;inset:-30px;background:url('assets/films/classroom-v40-poster.jpg') center/cover;filter:blur(25px) brightness(.65)}
+#classroom-video{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;object-position:center;max-width:none}
+.classroom-whiteout{position:absolute;inset:0;background:white;opacity:var(--film-white,0);pointer-events:none}
+.classroom-skip{position:absolute;right:32px;top:26px;padding:10px 16px;border-radius:30px;background:#ffffffd9;color:#25344a;font-size:13px;text-decoration:none;z-index:2}
+.classroom-cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);margin:0;color:white;text-shadow:0 1px 8px #0008;font-size:14px;opacity:var(--film-cue,1);white-space:nowrap;pointer-events:none}
+.classroom-cue span{display:block;text-align:center;margin-top:12px;font-size:24px}
+html.film-intro-active .hub-header,html.film-intro-active #inquiry-dialog,html.film-intro-active .floating-inquiry{visibility:hidden!important;pointer-events:none!important}
+@media(max-width:700px){.classroom-intro{height:420svh}.classroom-skip{top:18px;right:18px}.classroom-cue{font-size:12px;bottom:40px}}
+
+/* Edge-to-edge film with a quiet, readable opening message. */
+#classroom-video{object-fit:cover;object-position:55% center}
+.classroom-backdrop{display:none}
+.classroom-headline{position:absolute;left:clamp(28px,6vw,120px);top:50%;transform:translateY(-50%);margin:0;color:#fff;font-size:clamp(36px,4vw,72px);font-weight:750;line-height:1.3;letter-spacing:-.05em;z-index:1;opacity:var(--film-copy,1);pointer-events:none;text-shadow:0 2px 24px #0003}
+.classroom-stage::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#07142170,transparent 65%);opacity:var(--film-copy,1);pointer-events:none}
+.classroom-cue{z-index:1}
+@media(max-width:700px){#classroom-video{object-position:62% center}.classroom-headline{top:24%;font-size:clamp(30px,7.5vw,44px);left:24px;right:20px}.classroom-stage::after{background:linear-gradient(180deg,#07142170,transparent 65%)}}
+
+/* Keep the global navigation visible throughout the film. */
+html.film-intro-active .hub-header,.hub-header{position:sticky;top:0;z-index:250;visibility:visible!important;pointer-events:auto!important;opacity:1!important;background:#fff}
+.classroom-stage{top:var(--film-header,90px);height:calc(100svh - var(--film-header,90px))}
+#classroom-idle{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:55% center;z-index:1;pointer-events:none}
+@media(max-width:700px){#classroom-idle{object-position:62% center}}
+
+#classroom-video{transform:scale(var(--film-scale,1));transform-origin:center}
+
+/* The final mark holds a deliberately framed learning portrait. */
+.classroom-drop-photo{position:absolute;width:var(--drop-size);height:calc(var(--drop-size)*1.125);left:50%;top:50%;transform:translate(-50%,-50%);mask:url('assets/codle-drop-mask.svg') center/100% 100% no-repeat;-webkit-mask:url('assets/codle-drop-mask.svg') center/100% 100% no-repeat;opacity:var(--drop-photo,0);pointer-events:none}
+.classroom-drop-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:73% center}
+.classroom-end-copy{position:absolute;inset:0;display:grid;grid-template-columns:1fr 24% 1fr;align-items:center;padding:0 4%;pointer-events:none;opacity:var(--end-copy,0);filter:blur(var(--end-blur,7px));transform:translateY(var(--end-y,18px))}
+.classroom-end-copy p{margin:0;text-align:center;color:#191f28;font-size:clamp(24px,3.1vw,66px);font-weight:750;line-height:1.3;letter-spacing:-.055em;word-break:keep-all}
+.classroom-end-copy p:last-child{grid-column:3}
+@media(max-width:700px){.classroom-end-copy{display:flex;flex-direction:column;justify-content:center;gap:calc(var(--drop-size)*1.125 + 64px);padding:0 16px}.classroom-end-copy p{font-size:clamp(23px,5.6vw,34px)}}
+@media(prefers-reduced-motion:reduce){.classroom-end-copy{filter:none;transform:none}}
+
+.classroom-end-copy{opacity:calc(var(--end-copy,0)*var(--end-exit,1));transform:translateY(calc(var(--end-y,18px) + var(--end-exit-y,0px)))}
+.classroom-drop-photo{opacity:calc(var(--drop-photo,0)*var(--end-exit,1));transform:translate(-50%,calc(-50% + var(--end-exit-y,0px)))}
+.hub-arriving{pointer-events:none;will-change:transform,opacity}
+html:not(.film-intro-active) #inquiry-dialog.is-persistent{opacity:var(--hub-arrival,1);translate:0 calc((1 - var(--hub-arrival,1))*24px)}
+
+html:not(.film-intro-active) #inquiry-dialog.is-persistent{z-index:220!important}
+
+
+/* Keep the inquiry baseline stable throughout the reversible handoff. */
+html:not(.film-intro-active) #inquiry-dialog.is-persistent{translate:none}
+
+/* Shrink the whole media frame: the mask can never outgrow its image. */
+.classroom-film{inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);mask:none;-webkit-mask:none;background:#fff;will-change:width,height,clip-path;backface-visibility:hidden}
+#classroom-video{transform:none;width:100%;height:100%}
+.classroom-drop-photo{background:white}

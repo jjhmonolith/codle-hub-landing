@@ -1,0 +1,36 @@
+
+.card-story-details .story-camp.camp-overview{display:block;padding:38px 28px 42px!important;background:#fff;min-height:calc(100dvh - 90px);overflow:hidden;scroll-margin-top:90px}
+.card-story-details .camp-service-label{color:#191f28;font-size:clamp(21px,1.5vw,28px);font-weight:700;letter-spacing:-.035em;margin:0 0 22px}
+.camp-photo-mosaic{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;height:clamp(350px,52dvh,620px);overflow:hidden;mask-image:linear-gradient(to bottom,transparent,#000 9%,#000 80%,transparent)}
+.camp-photo-column{display:flex;flex-direction:column;gap:16px;min-width:0}
+.camp-photo-column:nth-child(1){margin-top:100px}.camp-photo-column:nth-child(2){margin-top:44px}.camp-photo-column:nth-child(3){margin-top:-8px}.camp-photo-column:nth-child(4){margin-top:130px}
+.card-story-details .camp-photo-mosaic figure{margin:0;flex:none;overflow:hidden;border-radius:24px}
+.card-story-details .camp-photo{height:clamp(235px,32dvh,380px)}
+.card-story-details .camp-photo img{width:100%;height:100%;object-fit:cover;object-position:55% center}
+.card-story-details .camp-photo-column:nth-child(2) .camp-photo img{object-position:42% center}
+.card-story-details .camp-photo-column:nth-child(3) .camp-photo img{object-position:70% center}
+.camp-topic-word{height:clamp(130px,18dvh,200px);padding:26px 18px;box-sizing:border-box;flex:none;display:flex;flex-direction:column;justify-content:center;gap:8px;border-radius:24px;background:linear-gradient(135deg,#edf4fc,#f6f7fb);color:#5e7799}
+.camp-topic-word span{font-size:14px}.camp-topic-word strong{font-size:clamp(18px,1.6vw,28px);letter-spacing:-.04em}
+.card-story-details .camp-overview-copy{position:relative;margin-top:-20px;z-index:1}
+.card-story-details .camp-overview-copy h2{font-size:clamp(30px,2.6vw,48px);line-height:1.3;letter-spacing:-.05em;margin:0 0 18px;color:#191f28}
+.card-story-details .camp-overview-copy em{font-style:normal;color:#315a88}
+.camp-overview-bottom{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
+.card-story-details .camp-overview-bottom p{font-size:clamp(14px,1.05vw,18px);line-height:1.75;color:#6b7684;margin:0;word-break:keep-all}
+.card-story-details .camp-overview-bottom .quiet-actions{flex:none;margin:0}
+.card-story-details .camp-overview-bottom a{padding:13px 19px;border-radius:14px;background:#f2f4f6;color:#333d4b}
+@media(max-width:700px){.card-story-details .story-camp.camp-overview{padding:32px 16px!important}.camp-photo-mosaic{grid-template-columns:repeat(4,minmax(140px,1fr));width:640px;margin-left:-150px;height:400px;gap:12px}.camp-photo-column{gap:12px}.card-story-details .camp-photo{height:240px}.camp-overview-bottom{display:block}.card-story-details .camp-overview-bottom .quiet-actions{margin-top:20px}.card-story-details .camp-overview-copy h2{font-size:32px}}
+
+/* Four distinct framings: close practice, instructor, discussion, full class. */
+.camp-photo-mosaic{height:clamp(350px,50dvh,570px);gap:18px;mask-image:linear-gradient(to bottom,transparent,#000 5%,#000 88%,transparent)}
+.camp-photo-column:nth-child(1){margin-top:62px}
+.camp-photo-column:nth-child(2){margin-top:0}
+.camp-photo-column:nth-child(3){margin-top:84px}
+.camp-photo-column:nth-child(4){margin-top:30px}
+.card-story-details .camp-photo{height:clamp(270px,40dvh,440px)}
+.card-story-details .camp-photo-column:nth-child(1) img{object-position:60% 65%;transform:scale(1.3)}
+.card-story-details .camp-photo-column:nth-child(2) img{object-position:24% center;transform:scale(1.55);transform-origin:24% 45%}
+.card-story-details .camp-photo-column:nth-child(3) img{object-position:85% center;transform:scale(1.12);transform-origin:85% center}
+.card-story-details .camp-photo-column:nth-child(4) img{object-position:38% center}
+
+.card-story-details .camp-photo-column:nth-child(2) img{object-position:18% center;transform:none}
+.card-story-details .camp-overview-copy{margin-top:0}

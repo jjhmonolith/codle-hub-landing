@@ -4,7 +4,7 @@
   const backdrop = document.createElement('div');
   backdrop.className = 'inquiry-shade'; backdrop.hidden = true; backdrop.setAttribute('aria-hidden','true'); document.body.append(backdrop);
   const form = dialog.querySelector('form'), review = dialog.querySelector('#inquiry-review');
-  const media = matchMedia('(min-width:1000px)'), reduced = matchMedia('(prefers-reduced-motion:reduce)');
+  const reduced = matchMedia('(prefers-reduced-motion:reduce)');
   const fields = Object.fromEntries(['school','contact','phone','interest','audience','count','timing','message'].map(k => [k,dialog.querySelector('#inquiry-'+k)]));
   const serviceCopy = {
     general: ['CODLE · CONTACT', '코들 도입 문의', '대상·규모·일정을 알려주세요. 알맞은 도입 방법을 함께 찾아요.'],
@@ -36,7 +36,6 @@
     return Object.keys(invalid);
   }
   function close() {
-    if (media.matches) { form.hidden=false;review.hidden=true;return; }
     animation?.cancel();
     if (reduced.matches) {dialog.close();return;}
     animation=dialog.animate([{transform:'translateX(0)',opacity:1},{transform:'translateX(40px)',opacity:0}],{duration:180,easing:'ease-in'});
@@ -44,57 +43,27 @@
   }
   document.querySelectorAll('[data-inquiry]').forEach(button=>button.addEventListener('click',()=>{
     animation?.cancel();returnFocus=button;
-    if (media.matches) {
-      if(button.dataset.inquiry) fields.interest.value=button.dataset.inquiry;
-      syncServiceHeading();form.hidden=false;review.hidden=true;
-      fields.school.focus({preventScroll:true});return;
-    }
     fields.interest.value=button.dataset.inquiry||'general';
     syncServiceHeading();
     form.hidden=false;review.hidden=true;
     dialog.querySelectorAll('.field-error').forEach(e=>e.hidden=true);
     dialog.querySelector('#inquiry-validation').hidden=true;
     ['school','contact','phone'].forEach(k=>fields[k].removeAttribute('aria-invalid'));
-    dialog.classList.toggle('is-docked',media.matches);
-    document.body.classList.add(media.matches?'inquiry-drawer-open':'modal-open');
-    backdrop.hidden = !media.matches;
+    document.body.classList.add('modal-open');
     document.querySelector('.hub-header').inert = true;
     document.querySelector('.split-layout').inert = true;
-    if(!dialog.open) media.matches?dialog.show():dialog.showModal();
+    if(!dialog.open) dialog.showModal();
     dialog.querySelector('.inquiry-scroll').scrollTop=0;
     fields.school.focus({preventScroll:true});
     if(!reduced.matches) animation=dialog.animate([{transform:'translateX(100%)',opacity:0},{transform:'translateX(0)',opacity:1}],{duration:440,easing:'cubic-bezier(.23,1,.32,1)'});
   }));
   backdrop.addEventListener('click',close);
-  dialog.addEventListener('click',e=>{if(e.target===dialog&&!media.matches){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)close();}});
+  dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)close();}});
   dialog.querySelector('.close-dialog').addEventListener('click',close);
   dialog.querySelector('#inquiry-done').addEventListener('click',close);
   dialog.addEventListener('cancel',e=>{e.preventDefault();close();});
   dialog.addEventListener('keydown',e=>{if(e.key==='Escape'&&dialog.classList.contains('is-docked')){e.preventDefault();close();}});
   dialog.addEventListener('close',()=>{animation?.cancel();backdrop.hidden=true;document.querySelector('.hub-header').inert=false;document.querySelector('.split-layout').inert=false;document.body.classList.remove('inquiry-drawer-open','modal-open');returnFocus?.focus({preventScroll:true});});
-  function alignInquiryToCards() {
-    if (!media.matches) return;
-    const services = document.querySelector('#services');
-    const top = Math.max(88, services.getBoundingClientRect().top);
-    dialog.style.setProperty('--inquiry-top', top + 'px');
-  }
-  window.addEventListener('scroll', alignInquiryToCards, {passive:true});
-  window.addEventListener('resize', alignInquiryToCards);
-  new ResizeObserver(alignInquiryToCards).observe(document.querySelector('.hub-content'));
-  function syncPersistentInquiry() {
-    animation?.cancel();
-    if(dialog.open) dialog.close();
-    backdrop.hidden=true;
-    document.querySelector('.hub-header').inert=false;
-    document.querySelector('.split-layout').inert=false;
-    document.body.classList.remove('inquiry-drawer-open','modal-open');
-    dialog.classList.toggle('is-persistent',media.matches);
-    dialog.classList.remove('is-docked');
-    if(media.matches) dialog.setAttribute('open','');
-    alignInquiryToCards();
-  }
-  media.addEventListener('change',syncPersistentInquiry);
-  syncPersistentInquiry();
   form.addEventListener('submit',e=>{
     e.preventDefault();const invalid=errors();if(invalid.length){fields[invalid[0]].focus();return;}
     const labels={school:'기관·회사명',contact:'담당자명',phone:'연락처',interest:'관심 서비스',audience:'대상',count:'규모',timing:'희망 시기',message:'문의 내용'};

@@ -7,17 +7,23 @@
  const inertBefore=background.map(el=>el.inert);
  background.forEach(el=>el.inert=true);
  let progress=0,started=null,done=false,frame;
- function finish(){
+ function finish(skip=false){
   if(done)return;done=true;cancelAnimationFrame(frame);
   root.classList.remove('intro-playing');root.classList.add('intro-finished');
   background.forEach((el,i)=>el.inert=inertBefore[i]);
   root.style.setProperty('--header-brand-opacity','1');
-  const destination=location.hash && location.hash!=='#top' ? document.getElementById(location.hash.slice(1)) : null;
-  if(destination)destination.scrollIntoView({behavior:'instant'});
-  else window.scrollTo({top:0,behavior:'instant'});
+  // Skipping the intro opens the landing at its beginning, not an old anchor.
+  if(skip && location.hash)history.replaceState(history.state,'',location.pathname+location.search);
+  const destination=!skip && location.hash && location.hash!=='#top' ? document.getElementById(location.hash.slice(1)) : null;
+  const align=()=>{
+   if(destination)destination.scrollIntoView({behavior:'instant'});
+   else window.scrollTo({top:0,left:0,behavior:'instant'});
+  };
   window.dispatchEvent(new Event('resize'));
+  align();
+  requestAnimationFrame(align);
  }
- section.querySelector('.intro-scroll-cue').addEventListener('click',event=>{event.preventDefault();finish()});
+ section.querySelector('.intro-scroll-cue').addEventListener('click',event=>{event.preventDefault();event.stopPropagation();finish(true)});
  const clamp=v=>Math.max(0,Math.min(1,v));
  const ease=v=>{v=clamp(v);return v*v*(3-2*v)};
  const phase=(p,a,b)=>ease((p-a)/(b-a));

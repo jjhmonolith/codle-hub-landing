@@ -1,0 +1,109 @@
+/* Product stories: persistent inquiry rail is outside this section. */
+.demo-scroll-track{height:380dvh;position:relative}
+.card-story-details .codle-demo{position:sticky;top:90px;height:calc(100dvh - 90px);min-height:0;margin:0!important;padding:28px 0!important;box-sizing:border-box;display:grid;grid-template-columns:minmax(0,3fr) minmax(0,7fr);gap:28px;align-items:center;overflow:hidden;background:#f7f8fa;border-radius:24px}
+.demo-copy{position:relative;height:100%;min-width:0;padding-left:28px}
+.demo-copy>.story-kicker,.demo-copy>h2{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.demo-tabs{position:relative;height:100%;margin:0;border:0}
+.demo-tabs [role=tab]{position:absolute;top:19%;left:0;width:100%;padding:0;display:block;appearance:none;background:none;border:0;text-align:left;font:inherit;color:#191f28;cursor:pointer;transform:translateY(var(--copy-y,0px));opacity:var(--copy-opacity,1);transition:none}
+.demo-tabs [role=tab]:after,.demo-number,.demo-tab-arrow{display:none}
+.demo-tabs strong{display:block;font-size:clamp(25px,1.8vw,34px);line-height:1.45;font-weight:750;letter-spacing:-.055em;word-break:keep-all}
+.demo-tabs small{display:block;margin-top:22px;font-size:clamp(15px,1.1vw,19px);line-height:1.8;letter-spacing:-.025em;color:#6b7684;word-break:keep-all}
+.demo-tabs button:focus-visible{outline:2px solid #3182f6;outline-offset:8px;border-radius:5px}
+.demo-copy .quiet-actions{position:absolute;bottom:28px;left:28px;z-index:2;gap:8px}
+.demo-copy .quiet-actions button{display:none}
+.demo-showcase{position:relative;min-width:0;width:100%;padding:0;align-self:center}
+.demo-scene[hidden]{display:none}
+.demo-window{background:white;border:1px solid #e9edf2;border-radius:20px 0 0 20px;overflow:hidden;box-shadow:0 20px 60px -40px #263b5b55}
+.demo-window-bar{display:none}
+.demo-screen{position:relative;overflow:hidden;background:#fff;aspect-ratio:1.2;max-height:calc(100dvh - 180px)}
+.card-story-details .demo-screen img,.demo-screen video{display:block;width:100%;height:100%;max-width:none;object-fit:contain;animation:none;transform:none}
+[data-scene=practice] .demo-screen{aspect-ratio:1.5}
+.leaderboard-screen{display:flex;align-items:center;aspect-ratio:1.28}
+.leaderboard-shot{position:relative;width:145%;flex-shrink:0;aspect-ratio:2048/983;transform-origin:left center}
+.card-story-details .leaderboard-shot img{width:100%;height:100%}
+.privacy-mask{position:absolute;backdrop-filter:blur(7px);background:#fff9;border-radius:3px}
+.mask-top{left:51.8%;top:27.5%;width:4.3%;height:3.5%}.mask-bottom{left:74.5%;top:27.5%;width:4.3%;height:3.5%}.mask-names{left:4%;top:56%;width:6%;height:31%}
+.demo-caption,.demo-controls,.demo-focus,.demo-pointer{display:none}
+@media(min-width:1800px){.card-story-details .codle-demo{gap:44px}.demo-copy{padding-left:42px}.demo-copy .quiet-actions{left:42px}.demo-screen{max-height:calc(100dvh - 210px)}}
+@media(max-width:900px){.card-story-details .codle-demo{top:70px;height:calc(100dvh - 70px);padding:20px!important;grid-template-columns:1fr;grid-template-rows:32% 1fr;gap:16px;border-radius:16px}.demo-copy{padding:0}.demo-tabs [role=tab]{top:5%}.demo-tabs strong{font-size:23px}.demo-tabs small{font-size:14px;margin-top:12px}.demo-tabs [role=tab]:not([aria-selected=true]){visibility:hidden}.demo-copy .quiet-actions{display:none}.demo-screen{max-height:49dvh}.demo-window{border-radius:14px}.demo-showcase{max-width:650px;margin:auto}}
+
+.demo-copy .quiet-actions{display:none}
+
+/* Still captures: consistent framing, no playback or simulated interaction. */
+.demo-scroll-track{height:300dvh}
+.demo-window{border-radius:18px;border:1px solid #e5e9ef;box-shadow:0 16px 40px -28px #18334c44}
+.demo-screen,[data-scene=practice] .demo-screen,.leaderboard-screen{aspect-ratio:1.45;max-height:calc(100dvh - 210px)}
+[data-scene=course] .demo-screen img{object-fit:cover;object-position:center}
+.leaderboard-shot{width:100%}
+.demo-showcase{padding-right:18px;box-sizing:border-box}
+@media(max-width:900px){.demo-showcase{padding:0}.demo-screen,[data-scene=practice] .demo-screen,.leaderboard-screen{max-height:45dvh}}
+
+/* Open page composition; only the real product UI retains its own surfaces. */
+.card-story-details .codle-demo{background:transparent;border-radius:0;overflow:hidden}
+.demo-window{background:transparent;border:0;border-radius:0;box-shadow:none;overflow:visible}
+.demo-screen{background:transparent;border-radius:0}
+.leaderboard-screen{display:block;aspect-ratio:auto;max-height:none;overflow:visible}
+.leaderboard-shot{display:grid;gap:18px;aspect-ratio:auto;width:100%}
+.card-story-details .leaderboard-shot img{width:100%;height:auto;object-fit:contain}
+.card-story-details .leaderboard-shot img.results-capture{width:80%;margin-left:auto}
+
+[data-scene=course] .demo-screen{aspect-ratio:815/755;max-height:calc(100dvh - 160px)}
+[data-scene=course] .demo-screen img{object-fit:contain}
+
+/* Real course creation captures advance only with page scroll. */
+.demo-scroll-track{height:420dvh}
+.card-story-details .demo-screen img[hidden]{display:none!important}
+[data-scene=practice] .demo-screen{aspect-ratio:2048/983}
+.card-story-details .leaderboard-shot img.results-capture{width:100%;margin:0}
+.leaderboard-shot{gap:24px;max-height:calc(100dvh - 170px)}
+@media(max-width:900px){.leaderboard-shot{gap:12px;max-height:45dvh}[data-scene=course] .demo-screen{max-height:45dvh}}
+
+.leaderboard-shot{width:min(100%,calc((100dvh - 194px)*1.4));margin-inline:auto}
+.card-story-details .demo-screen img[data-course-frame="1"],.card-story-details .demo-screen img[data-course-frame="2"]{border-radius:18px}
+
+
+[data-scene=practice] .demo-screen{aspect-ratio:1440/900}
+/* Fixed service identity and scroll-linked reveals. No timed playback. */
+.demo-brand{position:absolute;top:32px;left:28px;display:flex;flex-direction:column;align-items:flex-start;gap:12px;z-index:3}
+.demo-brand>span{font-size:16px;line-height:1.4;font-weight:650;color:#3182f6;letter-spacing:-.025em}
+.card-story-details .demo-brand>img{display:block;width:124px;height:auto;max-height:none;object-fit:contain}
+.demo-tabs{position:absolute;top:166px;left:28px;right:0;bottom:0;height:auto;overflow:hidden}
+.demo-tabs [role=tab]{top:9%;will-change:transform,opacity}
+.demo-word{display:inline-block;will-change:filter,transform,opacity}
+.demo-showcase{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);height:100%;align-items:center;overflow:hidden}
+.demo-showcase>.demo-scene{grid-area:1/1;min-width:0;width:100%;align-self:center;will-change:transform,opacity;pointer-events:none}
+@media(min-width:1800px){.demo-brand{left:42px}.demo-tabs{left:42px}}
+@media(max-width:900px){.demo-brand{top:0;left:0;flex-direction:row;align-items:center;gap:12px}.card-story-details .demo-brand>img{width:90px}.demo-brand>span{font-size:13px}.demo-tabs{top:52px;left:0}.demo-tabs [role=tab]{top:0}.demo-showcase{width:100%;height:100%}}
+@media(prefers-reduced-motion:reduce){.demo-word{filter:none!important;transform:none!important;opacity:1!important}}
+
+/* Keep the next complete heading and description legible as a quiet preview. */
+.demo-tabs [role=tab]{top:5%}
+.demo-tabs small{margin-top:18px;line-height:1.65}
+.tool-scroll-screen{aspect-ratio:844/700!important;background:white;max-height:calc(100dvh - 160px);border-radius:20px;isolation:isolate}
+.tool-scroll-screen iframe{position:absolute;top:50%;left:50%;width:844px;height:700px;border:0;transform-origin:center;max-width:none;background:white;pointer-events:none}
+
+.tool-scroll-screen iframe{width:2048px;height:983px;transform-origin:top left}
+
+/* Service identity leads; feature copy follows with the next scroll beat. */
+.demo-scroll-track{height:465dvh}
+.demo-brand>span{font-size:clamp(21px,1.5vw,28px);font-weight:700}
+.card-story-details .demo-brand>img{width:clamp(164px,12vw,210px)}
+.demo-tabs{top:218px;scrollbar-width:none}
+.demo-showcase,.demo-tabs{opacity:0}
+.demo-showcase::-webkit-scrollbar,.demo-tabs::-webkit-scrollbar{display:none}
+@media(max-width:900px){.demo-brand>span{font-size:17px}.card-story-details .demo-brand>img{width:112px}.demo-tabs{top:62px}}
+
+/* Align feature copy nearer the middle of the product visual. */
+.demo-brand>span{color:#191f28}
+.demo-brand>span,.demo-brand>img{will-change:filter,opacity,transform}
+@media(min-width:901px){.demo-tabs [role=tab]{top:calc(5% + 32px)}}
+@media(prefers-reduced-motion:reduce){.demo-brand>span,.demo-brand>img{filter:none!important;transform:none!important;opacity:1!important}}
+
+/* A persistent product link, separate from the scroll-changing descriptions. */
+.card-story-details .codle-demo>.codle-detail-action{position:absolute;left:28px;bottom:24px;z-index:5;display:flex;margin:0;opacity:0}
+.card-story-details .codle-detail-action a{display:inline-flex;align-items:center;padding:13px 20px;border-radius:14px;background:#f2f4f6;color:#333d4b;font-size:15px;font-weight:650;text-decoration:none}
+.card-story-details .codle-detail-action a:hover{background:#e8edf3}
+.card-story-details .codle-detail-action a:focus-visible{outline:2px solid #3182f6;outline-offset:4px}
+@media(min-width:901px){.codle-demo .demo-tabs{bottom:80px}}
+@media(min-width:1800px){.card-story-details .codle-demo>.codle-detail-action{left:42px}}
+@media(max-width:900px){.card-story-details .codle-demo>.codle-detail-action{left:20px;bottom:12px}.card-story-details .codle-detail-action a{padding:10px 16px;font-size:14px}}

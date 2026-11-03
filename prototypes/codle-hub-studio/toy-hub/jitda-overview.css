@@ -1,0 +1,42 @@
+/* Jitda: three tangible outcomes, with existing product and event captures. */
+.card-story-details .story-jitda.jitda-overview{background:#fff;border-radius:0;padding:42px 28px!important;min-height:calc(100dvh - 90px);display:flex;flex-direction:column;justify-content:center;gap:30px;scroll-margin-top:90px}
+.jitda-overview-heading{display:flex;align-items:center;justify-content:space-between;gap:32px}
+.jitda-service-brand{display:flex;flex-direction:column;align-items:flex-start;gap:10px;flex:none}
+.jitda-service-brand>span{font-size:clamp(21px,1.5vw,28px);font-weight:700;color:#191f28;letter-spacing:-.025em}
+.card-story-details .jitda-service-brand>img{width:clamp(164px,12vw,210px);height:66px;object-fit:contain;object-position:left center}
+.card-story-details .jitda-overview-heading h2{font-size:clamp(24px,2.1vw,36px);font-weight:700;line-height:1.4;letter-spacing:-.045em;margin:0;color:#191f28}
+.jitda-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.jitda-feature{min-width:0}
+.card-story-details .jitda-feature-media{height:clamp(230px,38dvh,430px);margin:0 0 24px;overflow:hidden;border-radius:16px;background:#f7f8fa;display:flex;align-items:center;justify-content:center}
+.card-story-details .jitda-feature-media img{width:100%;height:100%;object-fit:cover}
+.card-story-details .jitda-ui{background:#faf7ee;padding:18px}
+.card-story-details .jitda-ui img{height:auto;object-fit:contain;border-radius:9px;box-shadow:0 12px 28px #473c1914}
+.card-story-details .jitda-result img{object-position:center top;width:165%;max-width:none;flex:none}
+.card-story-details .jitda-event img{object-position:53% center}
+.card-story-details .jitda-feature h3{font-size:clamp(19px,1.5vw,28px);line-height:1.45;letter-spacing:-.045em;color:#333d4b;margin:0 0 14px;font-weight:700}
+.card-story-details .jitda-feature p{font-size:clamp(14px,1vw,18px);line-height:1.75;letter-spacing:-.025em;color:#6b7684;margin:0;word-break:keep-all}
+.card-story-details .jitda-overview-actions{justify-content:flex-end;margin:0;gap:10px}
+.card-story-details .jitda-overview-actions a,.card-story-details .jitda-overview-actions button{padding:13px 19px;border-radius:13px;background:#f2f4f6;color:#333d4b}
+.card-story-details .jitda-overview-actions button{background:#3182f6;color:#fff}
+@media(max-width:1099px){.card-story-details .story-jitda.jitda-overview{padding:40px 16px!important}.jitda-feature-grid{gap:14px}.jitda-overview-heading{align-items:flex-start}.card-story-details .jitda-feature p br{display:none}}
+@media(max-width:700px){.jitda-feature-grid{grid-template-columns:1fr;gap:36px}.jitda-overview-heading{flex-direction:column;gap:24px}.card-story-details .jitda-feature-media{height:320px;margin-bottom:18px}.card-story-details .jitda-feature h3{font-size:23px}.card-story-details .jitda-feature p{font-size:16px}.card-story-details .jitda-overview-actions{justify-content:flex-start}.card-story-details .jitda-service-brand>img{width:150px;height:58px}}
+
+/* Each card is revealed by scroll distance, not a playback timer. */
+@media(min-width:1100px){
+ .jitda-scroll-track{position:relative;height:200dvh}
+ .card-story-details .jitda-scroll-track .jitda-overview{position:sticky;top:90px;height:calc(100dvh - 90px);min-height:0}
+}
+.jitda-motion-ready .jitda-feature{opacity:var(--card-reveal,0);transform:translateY(calc((1 - var(--card-reveal,0))*38px));will-change:opacity,transform}
+@media(prefers-reduced-motion:reduce){.jitda-motion-ready .jitda-feature{opacity:1;transform:none}.jitda-scroll-track{height:auto}}
+
+.card-story-details .jitda-service-brand>img{width:clamp(200px,14.5vw,252px);height:auto;max-height:none}
+@media(max-width:700px){.card-story-details .jitda-service-brand>img{width:180px;height:auto}}
+
+.card-story-details .jitda-service-brand>img{width:clamp(180px,12.5vw,220px);height:auto}
+.card-story-details .jitda-ui{padding:0;background:#faf7ee}
+.card-story-details .jitda-ui img{width:145%;max-width:none;flex:none;height:100%;object-fit:cover;object-position:48% center;border-radius:0;box-shadow:none}
+.card-story-details .jitda-result img{width:100%;height:100%;object-fit:cover;object-position:42% center}
+@media(max-width:700px){.card-story-details .jitda-service-brand>img{width:160px}}
+
+.card-story-details .jitda-build{padding:0;background:#f4f5f7}
+.card-story-details .jitda-build img{width:100%;height:100%;object-fit:cover;object-position:60% center;border-radius:0;box-shadow:none}

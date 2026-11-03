@@ -1,0 +1,9 @@
+.hub-panel #services .service-card .brand-card-label{display:flex;align-items:center;gap:12px;min-height:28px;margin-bottom:18px;line-height:1.2}
+.hub-panel #services .brand-card-label img{position:static;display:block;width:72px;height:28px;object-fit:contain;transform:none;filter:none;opacity:1}
+.hub-panel #services .brand-card-label span{font-size:12px;font-weight:550;color:#718096;border-left:1px solid #d8e0e9;padding-left:12px}
+.hub-panel #services .compact .publisher-label{gap:8px;min-height:21px;margin-bottom:13px}
+.hub-panel #services .publisher-label img{width:54px;height:21px;object-fit:contain}
+.hub-panel #services .publisher-label span{font-size:10px;padding-left:8px}
+.hub-panel #services .publisher-pair img:first-child{width:72px}
+.hub-panel #services .publisher-pair img+img{width:51px}
+@media(min-width:1100px) and (max-width:1500px){.hub-panel #services .brand-card-label img{width:60px;height:24px}.hub-panel #services .brand-card-label span{font-size:10px}.hub-panel #services .compact .publisher-label{flex-wrap:wrap;gap:4px;min-height:30px;margin-bottom:8px}.hub-panel #services .publisher-label img{width:45px;height:17px}.hub-panel #services .publisher-label span{font-size:9px;border:0;padding:0}.hub-panel #services .publisher-pair img:first-child{width:58px}.hub-panel #services .publisher-pair img+img{width:41px}}

@@ -1,0 +1,14 @@
+{
+  "source": "https://codle.io/sign_in",
+  "bundle": "https://d1l90e2r5vjt3.cloudfront.net/_next/static/chunks/6947.89d2146aaa888e8d.js",
+  "icons": {
+    "ai-html": 39927,
+    "ai-quiz": 63252,
+    "ai-socroom": 21328,
+    "codap": 63991,
+    "entry": 53033,
+    "makecode": 73579,
+    "scratch": 16783
+  },
+  "notes": "Original SVG geometry and literal colors retained; decorative clip identifiers omitted."
+}
