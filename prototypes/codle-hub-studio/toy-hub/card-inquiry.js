@@ -4,7 +4,7 @@
   const backdrop = document.createElement('div');
   backdrop.className = 'inquiry-shade'; backdrop.hidden = true; backdrop.setAttribute('aria-hidden','true'); document.body.append(backdrop);
   const form = dialog.querySelector('form'), review = dialog.querySelector('#inquiry-review');
-  const media = matchMedia('(min-width:1000px)'), reduced = matchMedia('(prefers-reduced-motion:reduce)');
+  const media = matchMedia('(min-width:1100px)'), reduced = matchMedia('(prefers-reduced-motion:reduce)');
   const fields = Object.fromEntries(['school','contact','phone','interest','audience','count','timing','message'].map(k => [k,dialog.querySelector('#inquiry-'+k)]));
   const serviceCopy = {
     general: ['CODLE · CONTACT', '코들 도입 문의', '대상·규모·일정을 알려주세요. 알맞은 도입 방법을 함께 찾아요.'],

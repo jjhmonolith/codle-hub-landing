@@ -64,7 +64,7 @@
    // Finish the camera move before the synthetic UI lettering fills the screen.
    targetTime=clamp(p/.72)*6.2;seek();}
   video.dataset.introMode=idle?'typing':'scroll';
-  const gather=ease((p-.50)/.28),full=Math.hypot(innerWidth,stage.clientHeight)*2.4,small=Math.min(innerWidth*.18,stage.clientHeight*.34);
+  const gather=ease((p-.50)/.28),full=Math.hypot(innerWidth,stage.clientHeight)*2.4,small=innerWidth<701?Math.min(innerWidth*.42,stage.clientHeight*.3):Math.min(innerWidth*.18,stage.clientHeight*.34);
   const photo=ease((p-.74)/.065),copy=ease((p-.80)/.065);
   stage.style.setProperty('--drop-size',small+'px');
   stage.style.setProperty('--drop-photo',photo);

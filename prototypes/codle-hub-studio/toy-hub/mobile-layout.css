@@ -1,0 +1,91 @@
+/* Mobile stories use normal document flow; desktop keeps its scroll stage. */
+.mobile-codle-stories{display:none}
+@media(max-width:1099px){
+ body .split-layout{width:100%;max-width:none;margin:0!important;display:block}
+ body .hub-panel .hub-content{padding:0 20px!important}
+ body .hub-header{height:72px;min-height:72px;padding:0 20px;box-sizing:border-box}
+ .hub-header .header-section-link{display:none}
+ body .floating-inquiry{position:fixed!important;top:auto!important;right:16px!important;bottom:calc(16px + env(safe-area-inset-bottom))!important;transform:none!important;z-index:260;min-height:48px;padding:13px 22px;box-shadow:0 4px 16px #192d481c}
+ body.modal-open .floating-inquiry{display:none!important}
+ body #inquiry-dialog[open]{position:fixed!important;inset:12px!important;margin:auto!important;width:min(540px,calc(100vw - 24px))!important;height:calc(100dvh - 24px)!important;max-height:calc(100dvh - 24px)!important;max-width:none;box-sizing:border-box;border-radius:22px;padding:0;overflow:hidden;opacity:1!important;visibility:visible!important;display:flex;flex-direction:column}
+ #inquiry-dialog .inquiry-heading{padding:24px 22px 20px;margin:0;flex-shrink:0}
+ #inquiry-dialog .inquiry-heading h2{font-size:25px;padding-right:35px}
+ #inquiry-dialog .close-dialog{display:grid!important;place-items:center;min-width:44px;min-height:44px}
+ #inquiry-dialog #school-inquiry-form{display:flex;flex-direction:column;min-height:0;flex:1}
+ #inquiry-dialog .inquiry-scroll{overflow:auto;overscroll-behavior:contain;min-height:0;flex:1;padding:0 22px 22px}
+ #inquiry-dialog .contact-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px}
+ #inquiry-dialog .contact-field :is(input,select,textarea){width:100%;min-width:0;box-sizing:border-box;font-size:16px;border-radius:12px;background:white;padding:12px;min-height:48px}
+ #inquiry-dialog .contact-field textarea{height:140px}
+ #inquiry-dialog .inquiry-submit-row{flex-shrink:0;padding:16px 22px max(16px,env(safe-area-inset-bottom));margin:0}
+ #inquiry-dialog[data-service="camp"] .inquiry-submit{background:#29466e;border-color:#29466e}
+ #inquiry-dialog::backdrop{background:#192d4866}
+ .demo-scroll-track{height:auto!important}
+ .card-story-details .codle-demo{display:none!important}
+ .mobile-codle-stories{display:block;padding:72px 0 24px}
+ .mobile-codle-brand{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:48px;font-size:22px;font-weight:700;color:#191f28}
+ .mobile-codle-brand img{width:156px;height:auto}
+ .mobile-codle-feature{margin-bottom:64px}
+ .mobile-codle-feature h3{font-size:28px;line-height:1.4;letter-spacing:-.045em;margin:0 0 18px;color:#191f28;word-break:keep-all}
+ .mobile-codle-feature p{font-size:17px;line-height:1.7;color:#6b7684;margin:0 0 22px;word-break:keep-all}
+ .mobile-codle-feature .feature-detail-action{margin:0 0 28px!important}
+ .mobile-codle-feature figure{margin:20px 0!important;width:100%}
+ .card-story-details .mobile-codle-feature figure img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;border-radius:12px}
+ .jitda-scroll-track{height:auto!important}
+ .card-story-details .story-jitda.jitda-overview,.card-story-details .story-camp.camp-overview{padding:60px 0!important;min-height:0;height:auto}
+ .jitda-feature-grid{grid-template-columns:1fr;gap:44px}
+ .jitda-motion-ready .jitda-feature{opacity:1;transform:none}
+ .card-story-details .jitda-feature-media{height:auto;aspect-ratio:4/3;margin-bottom:20px}
+ .card-story-details .jitda-feature h3{font-size:25px}
+ .card-story-details .jitda-feature p{font-size:17px}
+ .camp-photo-mosaic{grid-template-columns:repeat(2,minmax(0,1fr));height:auto;width:100%;margin:28px 0 0;gap:14px}
+ .camp-photo-column:nth-child(n){margin-top:0}
+ .card-story-details .camp-photo{height:auto;aspect-ratio:3/4;border-radius:20px;opacity:1!important;transform:none!important}
+ .card-story-details .camp-overview-copy{max-width:100%}
+ .hub-wide-content .codle-footer{padding:40px 24px 96px!important}
+ .hub-wide-content .hub-partners .partners-intro h2{font-size:32px}
+}
+@media(max-width:700px){
+ body .hub-panel .hub-content{padding:0 16px!important}
+ body .hub-header{padding:0 16px}
+ .hub-header nav{gap:10px}.hub-header .login-link{font-size:11px}.hub-header nav button{min-height:40px}
+ .classroom-intro{height:350svh}
+ .classroom-headline{font-size:34px;top:26%;left:24px}
+ .classroom-end-copy p{font-size:25px}
+ .brand-opening.type-opening{display:flex!important;flex-direction:column;justify-content:flex-start;align-items:center;height:310px!important;padding:38px 0 0;min-height:0;overflow:hidden}
+ .brand-opening.type-opening h2{width:100%;max-width:100%;font-size:clamp(23px,6.2vw,32px);text-align:center;white-space:normal;transform:none}
+ .opening-art.mascot-opening-art{position:relative;inset:auto;width:100%;height:205px;flex:none;overflow:hidden}
+ .mascot-opening-art img{height:240px;width:360px;max-width:none;transform:translateY(-12px)}
+ .hub-panel #services .service-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none!important;height:auto!important;aspect-ratio:auto!important;gap:14px}
+ .hub-panel #services .service-grid>.service-card{grid-column:1/-1!important;grid-row:auto!important;min-height:0!important;height:auto!important;aspect-ratio:1;padding:24px!important;border-radius:24px}
+ .hub-panel #services .service-grid>.camp-service{aspect-ratio:1.4}
+ .hub-panel #services .service-grid>.cmass-service,.hub-panel #services .service-grid>.info-service{grid-column:auto!important;aspect-ratio:.73;padding:16px!important}
+ .hub-panel #services .service-card h3{font-size:clamp(25px,7vw,32px)!important;line-height:1.35}
+ .hub-panel #services :is(.cmass-service,.info-service) h3{font-size:18px!important}
+ .hub-panel #services :is(.cmass-service,.info-service) .brand-card-label{flex-wrap:wrap;gap:6px;min-height:36px}
+ .hub-panel #services :is(.cmass-service,.info-service) .brand-card-label img{max-width:94px;max-height:21px}
+ .hub-panel #services :is(.cmass-service,.info-service) .brand-card-label span{display:none}
+ .hub-panel #services .unified-card-art{width:86%!important;height:53%!important;bottom:30px!important;left:7%!important;right:auto!important}
+ .hub-panel #services :is(.cmass-service,.info-service) .unified-card-art{height:44%!important;bottom:32px!important}
+ .jitda-overview-heading,.camp-overview-heading{flex-wrap:wrap;gap:16px!important}
+ .card-story-details .camp-service-label{font-size:30px}
+ .card-story-details .camp-overview-copy h2{font-size:28px}
+ .card-story-details .camp-overview-copy p{font-size:16px;line-height:1.75}
+ .hub-wide-content .hub-partners .partners-intro h2{font-size:30px}
+}
+@media(min-width:701px) and (max-width:1099px){
+ .brand-opening.type-opening h2{font-size:30px;white-space:normal;max-width:55%}
+ .jitda-feature-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+ .card-story-details .jitda-feature h3{font-size:22px}
+ .mobile-codle-feature{max-width:760px;margin:0 auto 72px}
+}
+@media(max-width:1099px){
+ .hub-panel #services .service-card h3{max-width:100%!important;width:100%!important}
+}
+@media(max-width:359px){
+ .hub-panel #services .service-card h3{font-size:22px!important;letter-spacing:-.05em}
+ .hub-panel #services .unified-card-art{height:43%!important;bottom:26px!important}
+}
+@media(min-width:701px) and (max-width:849px){
+ .hub-panel #services .service-card h3{font-size:26px!important;letter-spacing:-.05em}
+ .hub-panel #services .unified-card-art{height:42%!important;bottom:36px!important}
+}
