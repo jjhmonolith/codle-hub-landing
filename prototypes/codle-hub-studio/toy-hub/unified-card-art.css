@@ -35,3 +35,8 @@
 /* One arrow control geometry for every service tile. */
 .hub-panel #services .service-grid>.service-card .service-card-link{padding:20px!important;justify-content:flex-end;align-items:flex-end}
 .hub-panel #services .service-grid>.service-card .service-card-link>.service-link-arrow{width:40px!important;height:40px!important;min-width:40px;min-height:40px;flex:0 0 40px;box-sizing:border-box;padding:0!important;margin:0;display:grid;place-items:center;font-size:23px!important;line-height:1;font-weight:600;text-shadow:none;border-radius:50%}
+/* Approved studio-rendered artwork: each card uses one half of the original. */
+.hub-panel #services .premium-card-art{position:absolute;left:50%;bottom:5%;height:64%;aspect-ratio:1;width:auto;max-width:94%;transform:translateX(-50%);background-image:url('assets/unified-cards/premium-3d-pair.png');background-repeat:no-repeat;background-size:200% 100%;pointer-events:none;mask-image:radial-gradient(ellipse 69% 69% at center,#000 54%,transparent 73%)}
+.hub-panel #services .premium-card-art--codle{background-position:left center}
+.hub-panel #services .premium-card-art--jitda{background-position:right center}
+@media(max-width:700px){.hub-panel #services .premium-card-art{height:60%;bottom:7%;max-width:92%}}

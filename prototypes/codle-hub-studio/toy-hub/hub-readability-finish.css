@@ -1,0 +1,18 @@
+/* Readability finish for the Kakao title preview. */
+body .hub-panel #services .brand-card-label span{font-size:13px!important;color:#596b83!important}
+body .hub-panel #services .publisher-label span{font-size:12px!important}
+body #inquiry-dialog #inquiry-description{font-size:13px!important;color:#596b83!important}
+body #inquiry-dialog .contact-field label{font-size:13px!important;color:#4f617a!important}
+body #inquiry-dialog .contact-field :is(input,textarea)::placeholder{color:#718096!important;opacity:1}
+body #inquiry-dialog.is-persistent .contact-field :is(input,select,textarea){font-size:14px!important}
+body #inquiry-dialog .form-group-title{font-size:13px!important}
+@media(min-width:1100px) and (max-width:1500px){body .hub-panel #services .brand-card-label span{font-size:12px!important}body .hub-panel #services .publisher-label span{font-size:11px!important}}
+@media(min-width:1100px) and (max-height:850px){body #inquiry-dialog #inquiry-description{font-size:12px!important}body #inquiry-dialog .contact-field label{font-size:12px!important}body #inquiry-dialog.is-persistent .contact-field :is(input,select,textarea){font-size:13px!important}}@media(min-width:1100px) and (min-height:851px) and (max-height:1000px){
+ body #inquiry-dialog.is-persistent .inquiry-heading{padding:22px 28px 18px!important}
+ body #inquiry-dialog.is-persistent .inquiry-scroll{padding:14px 28px!important}
+ body #inquiry-dialog.is-persistent .contact-fields{gap:10px 12px!important}
+ body #inquiry-dialog.is-persistent .contact-field textarea{height:76px!important;min-height:76px!important}
+ body #inquiry-dialog.is-persistent .form-group-title.plan{padding-top:12px!important}
+ body #inquiry-dialog.is-persistent .inquiry-submit-row{padding:14px 28px 18px!important}
+}
+@media(min-width:901px){body .demo-scroll-track{height:400dvh}}

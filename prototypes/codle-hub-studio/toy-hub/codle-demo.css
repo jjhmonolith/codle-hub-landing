@@ -107,3 +107,21 @@
 @media(min-width:901px){.codle-demo .demo-tabs{bottom:80px}}
 @media(min-width:1800px){.card-story-details .codle-demo>.codle-detail-action{left:42px}}
 @media(max-width:900px){.card-story-details .codle-demo>.codle-detail-action{left:20px;bottom:12px}.card-story-details .codle-detail-action a{padding:10px 16px;font-size:14px}}
+
+/* Actual recorded lessons: retain the full activity frame. */
+.codle-demo .demo-screen.live-demo-screen{aspect-ratio:16/10!important;width:100%;max-height:calc(100dvh - 180px);display:flex;align-items:center;justify-content:center;overflow:hidden;background:#fff}
+.codle-demo .demo-screen.live-river{aspect-ratio:16/9!important}
+.codle-demo .live-demo-screen video{display:block;width:100%;height:100%;object-fit:contain;transform:none;border-radius:12px}
+.codle-demo .demo-playing .live-course video{animation:course-camera 5.8s ease-in-out infinite;transform-origin:50% 48%}
+@keyframes course-camera{0%,8%{transform:scale(1)}20%,82%{transform:scale(1.14)}100%{transform:scale(1)}}
+.codle-demo [data-scene=progress] .leaderboard-shot img{clip-path:inset(0 0 100% 0)}
+.codle-demo [data-scene=progress].demo-playing .leaderboard-shot img{animation:dashboard-reveal .8s cubic-bezier(.2,.7,.2,1) both}
+.codle-demo [data-scene=progress].demo-playing .leaderboard-shot .results-capture{animation-duration:1.5s;animation-delay:.3s}
+@keyframes dashboard-reveal{from{clip-path:inset(0 0 100% 0);opacity:.4}to{clip-path:inset(0);opacity:1}}
+@media(max-width:900px){.codle-demo .demo-screen.live-demo-screen{max-height:48dvh}}
+@media(prefers-reduced-motion:reduce){.codle-demo .demo-playing .live-course video{animation:none}.codle-demo [data-scene=progress] .leaderboard-shot img{clip-path:none!important;animation:none!important}}
+
+/* One continuous course-maker demonstration, including the actual activity list. */
+.codle-demo .demo-playing .live-course video{animation:none;transform-origin:50% 48%;will-change:transform}
+.codle-demo .live-course{position:relative}
+.codle-demo .live-course .course-tools-overlay{position:absolute;inset:0;margin:auto;width:100%;height:100%;max-height:none;aspect-ratio:auto!important;border-radius:18px;background:#fff;z-index:2;overflow:hidden;pointer-events:none}

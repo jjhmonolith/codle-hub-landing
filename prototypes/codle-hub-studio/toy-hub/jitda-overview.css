@@ -40,3 +40,16 @@
 
 .card-story-details .jitda-build{padding:0;background:#f4f5f7}
 .card-story-details .jitda-build img{width:100%;height:100%;object-fit:cover;object-position:60% center;border-radius:0;box-shadow:none}
+
+/* Actual product demos retain the complete UI and play while visible. */
+.card-story-details .jitda-feature-media video{display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:center top;border-radius:0;flex:none}
+.card-story-details .jitda-build:has(video){background:#f4f5f7;padding:0;box-sizing:border-box}
+.card-story-details .jitda-result:has(video){background:#f4f5f7;padding:0;box-sizing:border-box}
+
+/* Keep the full app preview visible, including its lower controls. */
+.card-story-details .jitda-result video{object-fit:contain;object-position:center center}
+.card-story-details .jitda-result:has(video){background:#f5f5ef}
+
+/* Preserve the real recording and complete app controls. */
+.card-story-details .jitda-build video{object-fit:contain;object-position:center}
+.card-story-details .jitda-build:has(video),.card-story-details .jitda-result:has(video){background:#f2f2eb}

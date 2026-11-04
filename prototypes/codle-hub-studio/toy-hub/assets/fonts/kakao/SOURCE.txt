@@ -1,0 +1,2 @@
+Kakao Big Sans Bold. Official distribution: https://www.kakaocorp.com/page/detail/11571
+Downloaded from official Kakao CDN. Released under SIL Open Font License (OFL) per the official distribution page.

@@ -14,7 +14,18 @@
  river.querySelector('.demo-screen').innerHTML='<img src="assets/codle-story-river-hd.png?v=58" alt="강 건너기 퍼즐에서 농부와 늑대, 양, 양배추를 옮기는 실제 실습 화면" width="3840" height="2160">';
  layers.splice(3,0,river);
  showcase.replaceChildren(...layers);
- const toolScreen=layers[1].querySelector('.demo-screen');toolScreen.classList.add('tool-scroll-screen');
+ const liveVideos=[];
+ for(const [index,kind,label] of [[0,'course','코스메이커에서 추가 버튼을 누르고 활동을 선택하는 실제 화면'],[2,'sherlock','AI 셜록 실제 교안 진행'],[3,'river','강 건너기 퍼즐 실제 풀이']]){
+  const screen=layers[index].querySelector('.demo-screen');
+  const poster=screen.querySelector('img')?.src;
+  const video=document.createElement('video');video.src=`assets/codle-live-${kind}.mp4`;video.muted=true;video.loop=true;video.playsInline=true;video.preload='auto';video.setAttribute('aria-label',label);if(poster)video.poster=poster;
+  screen.replaceChildren(video);screen.classList.add('live-demo-screen',`live-${kind}`);liveVideos.push({index,video,screen});
+ }
+ let onScreen=false;
+ const visibilityObserver=new IntersectionObserver(entries=>{onScreen=entries[0].isIntersecting;schedule()},{threshold:0});visibilityObserver.observe(root);
+ document.addEventListener('visibilitychange',schedule);
+
+ const toolScreen=document.createElement('div');toolScreen.className='demo-screen tool-scroll-screen course-tools-overlay';liveVideos[0].screen.append(toolScreen);liveVideos[0].video.loop=false;let courseStarted=null,courseActive=false;
  const toolFrame=document.createElement('iframe');toolFrame.src='assets/codle-tools-scroll.html';toolFrame.title='새 활동 도구 목록';toolFrame.tabIndex=-1;toolScreen.replaceChildren(toolFrame);
  const fitTools=()=>{const scale=Math.min(toolScreen.clientWidth/844,toolScreen.clientHeight/700);toolFrame.style.transform=`translate(${-422*scale}px,${-350*scale}px) scale(${scale})`};
  new ResizeObserver(fitTools).observe(toolScreen);toolFrame.addEventListener('load',()=>{fitTools();schedule()});
@@ -42,15 +53,27 @@
   detailAction.style.opacity=intro;detailAction.inert=intro<.1;
   const p=Math.max(0,displayPosition-.7),stage=Math.floor(p),blend=stage<5?ease((p-stage-.42)/.58):0;
   const selected=stage<3?0:stage<5?1:2;
-  const visualStage=stage<2?stage:stage-1,visualBlend=stage===1?0:blend;
+  const visualStage=stage<3?0:stage-1,visualBlend=stage<2?0:blend;const nextVisual=visualStage===0?2:visualStage+1;
   const toolList=toolFrame.contentDocument?.querySelector(".css-b0rdla")?.parentElement;
-  if(toolList)toolList.scrollTop=ease((p-1.12)/1.28)*(toolList.scrollHeight-toolList.clientHeight);
+  const courseVisible=onScreen&&!document.hidden&&intro>.7&&visualStage===0;
+  if(courseVisible&&!courseActive){courseStarted=now;liveVideos[0].video.currentTime=0;}
+  if(!courseVisible)courseStarted=null;courseActive=courseVisible;
+  const elapsed=courseStarted===null?0:(now-courseStarted)/1000;
+  const modalReveal=reduced.matches?1:ease((elapsed-2.35)/.35);
+  toolScreen.style.opacity=modalReveal;toolScreen.style.visibility=modalReveal>0?'visible':'hidden';liveVideos[0].video.style.opacity=1-modalReveal;
+  const zoom=1+.55*ease((elapsed-.2)/.65);liveVideos[0].video.style.transform=`scale(${zoom})`;
+  if(toolList)toolList.scrollTop=ease((elapsed-3.1)/3.4)*(toolList.scrollHeight-toolList.clientHeight);
   layers.forEach((layer,n)=>{
-   let opacity=n===visualStage?1-visualBlend:n===visualStage+1?visualBlend:0;
+   let opacity=n===visualStage?1-visualBlend:n===nextVisual?visualBlend:0;
    if(reduced.matches)opacity=n===visualStage?1:0;
    const y=reduced.matches?0:n===visualStage?-28*visualBlend:44*(1-visualBlend);
    layer.style.opacity=opacity;layer.style.transform=`translate3d(0,${y}px,0)`;layer.style.visibility=opacity>0?'visible':'hidden';
    layer.setAttribute('aria-hidden',String(n!==visualStage));layer.inert=n!==visualStage;
+   const playing=onScreen&&!document.hidden&&intro>.7&&opacity>.55;
+   layer.classList.toggle('demo-playing',playing);
+   const live=liveVideos.find(item=>item.index===n);
+   if(live){const canPlay=playing&&!reduced.matches&&(n!==0||live.video.currentTime<2.3);if(canPlay){if(live.video.paused)live.video.play().catch(()=>{});}else if(!live.video.paused)live.video.pause();}
+
   });
   const copyPosition=p<2.42?0:p<3?ease((p-2.42)/.58):p<4.42?1:p<5?1+ease((p-4.42)/.58):2;
   tabs.forEach((tab,n)=>{
@@ -62,7 +85,7 @@
    const start=[0,3,5][n];const reveal=reduced.matches?1:clamp((p-start+.24)/.48);
    words[n].forEach((word,j)=>{const f=ease(reveal*1.5-j/Math.max(1,words[n].length)*.45);word.style.filter=`blur(${(1-f)*4}px)`;word.style.opacity=.2+.8*f;word.style.transform=`translateY(${(1-f)*6}px)`});
   });
-  if(displayPosition!==target)schedule();
+  if(displayPosition!==target||(courseVisible&&elapsed<7))schedule();
  }
  function schedule(){if(!queued){queued=true;requestAnimationFrame(render)}}
  function jump(i){const top=innerWidth<=900?70:90;window.scrollTo({top:scrollY+wrap.getBoundingClientRect().top-top+(wrap.offsetHeight-root.offsetHeight)*([0,3,5][i]+.96)/6.7,behavior:reduced.matches?'instant':'smooth'})}
