@@ -20,9 +20,6 @@
    const images=[...scene.querySelectorAll('img')];
    const sourceVideo=scene.querySelector('video');
    if(sourceVideo){const figure=document.createElement('figure'),video=sourceVideo.cloneNode(true);video.removeAttribute('style');video.controls=true;video.autoplay=false;video.loop=false;video.preload='none';figure.append(video);article.append(figure)}
-   if(scene.querySelector('iframe')){
-    const img=document.createElement('img');img.src='assets/codle-story-tools-python-hd.png';img.alt='파이썬, 엔트리, 교안 등 새 활동 도구 선택 화면';images.push(img);
-   }
    images.forEach(source=>{const figure=document.createElement('figure'),img=source.cloneNode(true);img.removeAttribute('id');img.removeAttribute('style');img.removeAttribute('hidden');img.loading='lazy';figure.append(img);article.append(figure)});
   });
   mobile.append(article);

@@ -1,0 +1,183 @@
+/* Page shell. Hub layout and artwork live in landing-hub.css. */
+.brand-opening  {
+  isolation:isolate;
+  box-sizing:border-box
+}
+
+.brand-opening.type-opening h2  {
+  position:relative;
+  z-index:2;
+  margin:0;
+  color:#192d48;
+  line-height:1.25;
+  word-break:keep-all
+}
+
+.brand-opening.type-opening h2 span  {
+  color:#347cf4;
+  background:none;
+  padding-inline:0
+}
+
+.opening-art  {
+  pointer-events:none
+}
+
+.mascot-opening-art img  {
+  display:block;
+  object-fit:contain;
+  flex:none
+}
+
+/* A bounded desktop canvas with breathing room on both sides. */
+@media(min-width:1100px) {
+  body {
+    --hub-outer:max(32px,calc((100vw - 1920px)/2));
+    --hub-rail:390px
+  }
+
+  body .hub-header {
+    padding-inline:var(--hub-outer)
+  }
+
+  body .split-layout {
+    width:auto;
+    max-width:none;
+    margin-left:var(--hub-outer);
+    margin-right:calc(var(--hub-outer) + var(--hub-rail) + 32px)
+  }
+
+  body .hub-panel .hub-content,body.inquiry-drawer-open .hub-panel .hub-content {
+    padding-left:0;
+    padding-right:0
+  }
+
+}
+
+@media(min-width:1100px) and (max-width:1500px) {
+  body {
+    --hub-outer:32px;
+    --hub-rail:330px
+  }
+
+}
+
+/* Desktop detail chapters: one service per viewport below the header. */
+@media(min-width:1100px) {
+  .card-story-details .story-chapter {
+    min-height:calc(100dvh - 90px);
+    padding:32px 5%!important;
+    scroll-margin-top:90px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+
+  .card-story-details .story-lead {
+    margin:0 auto 24px
+  }
+
+  .card-story-details .story-kicker {
+    font-size:17px;
+    margin:0 0 12px
+  }
+
+  .card-story-details h2 {
+    font-size:clamp(32px,3vw,46px);
+    line-height:1.25;
+    margin-bottom:0
+  }
+
+  .card-story-details .story-lead>p:last-child:not(.story-kicker) {
+    font-size:18px;
+    line-height:1.55;
+    margin:16px 0 0
+  }
+
+  .card-story-details .story-pair {
+    gap:32px;
+    min-height:0
+  }
+
+  .card-story-details h3 {
+    font-size:26px;
+    line-height:1.35;
+    margin-bottom:16px
+  }
+
+  .card-story-details .story-pair p {
+    font-size:18px;
+    line-height:1.6;
+    margin:16px 0 0
+  }
+
+  .card-story-details .quiet-actions {
+    margin-top:20px;
+    gap:8px;
+    font-size:14px
+  }
+
+  .card-story-details .quiet-actions a,.card-story-details .quiet-actions button {
+    padding:12px 16px
+  }
+
+  .card-story-details figure {
+    margin:0
+  }
+
+  .card-story-details .story-interface {
+    padding:18px;
+    background:#f4f7fc
+  }
+
+  .card-story-details .story-interface img {
+    width:100%;
+    height:clamp(190px,calc(100dvh - 480px),340px);
+    object-fit:contain;
+    object-position:center;
+    box-shadow:none
+  }
+
+  .card-story-details .story-jitda .story-lead {
+    margin:0 0 20px
+  }
+
+  .card-story-details .story-jitda .story-image {
+    height:clamp(190px,calc(100dvh - 430px),470px);
+    flex:none
+  }
+
+  .card-story-details .story-jitda .story-image img {
+    object-position:center 42%
+  }
+
+  .card-story-details .story-after {
+    margin-top:20px;
+    gap:20px
+  }
+
+  .card-story-details .story-after>p {
+    font-size:18px;
+    line-height:1.6;
+    margin:0
+  }
+
+  .card-story-details .story-after .quiet-actions {
+    margin:0
+  }
+
+  .card-story-details .story-camp .story-image {
+    height:clamp(380px,calc(100dvh - 170px),650px)
+  }
+
+  .card-story-details .story-notes {
+    gap:8px;
+    margin-top:20px
+  }
+
+  .card-story-details .story-notes span {
+    padding:8px 12px;
+    font-size:13px
+  }
+
+}

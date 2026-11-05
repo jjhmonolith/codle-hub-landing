@@ -1,47 +1,205 @@
 /* Responsive finishing layer for the approved landing. */
-@media(max-width:1099px){
- body .hub-panel #services .premium-card-art--jitda::before{transform:translate(3%,5%) scale(1.08);transform-origin:center bottom}
- body .camp-scroll-track,body .jitda-scroll-track{height:auto!important}
- body .card-story-details :is(.story-jitda,.story-camp){position:relative!important;top:auto!important;height:auto!important;overflow:visible}
- body .mobile-codle-feature h3{font-family:KakaoBigSans,Pretendard,sans-serif}
- body .mobile-codle-feature figure video{display:block;width:100%;height:auto;border-radius:14px}
- body #inquiry-dialog .contact-field :is(input,select,textarea){font-size:16px!important;min-height:46px!important}
- body #inquiry-dialog .contact-field textarea{min-height:100px!important}
- body #inquiry-dialog .inquiry-heading{padding-right:60px!important}
- body .hub-panel #services :is(.cmass-service,.info-service) .unified-card-art{height:100%!important;max-height:100%;transform:translateY(4px) scale(1.02)!important}
-}
-@media(max-width:700px){
- body .hub-panel #services .service-grid>.platform-service{height:clamp(370px,108vw,440px)!important}
- body .hub-panel #services .service-grid>.jitda-service{height:350px!important}
- body .hub-panel #services .service-grid>.service-card{padding:22px!important;border-radius:24px!important}
- body .hub-panel #services .platform-service{--art-bleed:22px}
- body .hub-panel #services .platform-service h3{font-size:clamp(27px,7.4vw,32px)!important}
- body .hub-panel #services .brand-hub-card{padding:16px 8px!important;min-height:155px!important}
- body .hub-panel #services .brand-hub-card h2{font-size:clamp(19px,5.3vw,24px)!important;width:64%!important;max-width:64%!important;flex-basis:64%!important;word-break:keep-all}
- body .hub-panel #services .brand-hub-card .mascot-opening-art{width:38%!important}
- body .hub-panel #services :is(.cmass-service,.info-service){padding:16px!important;row-gap:12px!important}
- body .hub-panel #services :is(.cmass-service,.info-service) h3{font-size:clamp(16px,4.5vw,20px)!important;word-break:keep-all}
- body .hub-panel #services .publisher-pair{align-content:center}
- body .hub-panel #services .publisher-pair img:first-child{width:64px}
- body .hub-panel #services .publisher-pair img+img{width:44px}
- body .card-story-details .camp-overview-copy h2{font-size:28px;word-break:keep-all}
-}
-@media(min-width:701px) and (max-width:1099px){
- body .hub-panel #services .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-template-rows:auto!important}
- body .hub-panel #services .brand-hub-card{grid-column:1/-1!important;grid-row:1!important;height:190px!important}
- body .hub-panel #services .service-grid>.platform-service{grid-column:1!important;grid-row:2!important;height:460px!important}
- body .hub-panel #services .service-grid>.jitda-service{grid-column:2!important;grid-row:2!important;height:460px!important}
- body .hub-panel #services .service-grid>.camp-service{grid-column:1/-1!important;grid-row:3!important;height:300px!important}
- body .hub-panel #services .service-grid>.cmass-service{grid-column:1!important;grid-row:4!important;height:320px!important}
- body .hub-panel #services .service-grid>.info-service{grid-column:2!important;grid-row:4!important;height:320px!important}
- body .hub-panel #services .service-card h3{font-size:28px!important}
- body .hub-panel #services :is(.cmass-service,.info-service) h3{font-size:25px!important}
-}
-@media(max-width:380px){body .hub-header nav{gap:6px}body .hub-header .login-link{font-size:10px}body .hub-panel #services .service-grid>.cmass-service,body .hub-panel #services .service-grid>.info-service{height:260px!important}}
-@media(min-width:701px) and (max-width:1099px){body .hub-panel #services .brand-hub-card .mascot-opening-art img{width:100%!important;height:100%!important;object-fit:contain}}
+@media(max-width:1099px) {
+  body .hub-panel #services .premium-card-art--jitda::before {
+    transform:translate(3%,5%) scale(1.08);
+    transform-origin:center bottom
+  }
 
-@media(max-width:1099px){.mobile-codle-stories{scroll-margin-top:90px}}
+  body .camp-scroll-track,body .jitda-scroll-track {
+    height:auto!important
+  }
 
-/* Give the school AI introduction a stronger presence. */
-body .hub-panel #services .brand-hub-card h2{font-size:clamp(28px,5.65cqw,43px)!important;width:70%!important;max-width:70%!important;flex-basis:70%!important}
-@media(max-width:700px){body .hub-panel #services .brand-hub-card h2{font-size:clamp(22px,6vw,28px)!important;width:66%!important;max-width:66%!important;flex-basis:66%!important}}
+  body .card-story-details :is(.story-jitda,.story-camp) {
+    position:relative!important;
+    top:auto!important;
+    height:auto!important;
+    overflow:visible
+  }
+
+  body .mobile-codle-feature h3 {
+    font-family:KakaoBigSans,Pretendard,sans-serif
+  }
+
+  body .mobile-codle-feature figure video {
+    display:block;
+    width:100%;
+    height:auto;
+    border-radius:14px
+  }
+
+  body #inquiry-dialog .contact-field :is(input,select,textarea) {
+    font-size:16px!important;
+    min-height:46px!important
+  }
+
+  body #inquiry-dialog .contact-field textarea {
+    min-height:100px!important
+  }
+
+  body #inquiry-dialog .inquiry-heading {
+    padding-right:60px!important
+  }
+
+  body .hub-panel #services :is(.cmass-service,.info-service) .unified-card-art {
+    height:100%!important;
+    max-height:100%;
+    transform:translateY(4px) scale(1.02)!important
+  }
+
+}
+
+@media(max-width:700px) {
+  body .hub-panel #services .service-grid>.platform-service {
+    height:clamp(370px,108vw,440px)!important
+  }
+
+  body .hub-panel #services .service-grid>.jitda-service {
+    height:350px!important
+  }
+
+  body .hub-panel #services .service-grid>.service-card {
+    padding:22px!important;
+    border-radius:24px!important
+  }
+
+  body .hub-panel #services .platform-service {
+    --art-bleed:22px
+  }
+
+  body .hub-panel #services .platform-service h3 {
+    font-size:clamp(27px,7.4vw,32px)!important
+  }
+
+  body .hub-panel #services .brand-hub-card {
+    padding:16px 8px!important;
+    min-height:155px!important
+  }
+
+  body .hub-panel #services .brand-hub-card h2 {
+    word-break:keep-all
+  }
+
+  body .hub-panel #services .brand-hub-card .mascot-opening-art {
+    width:38%!important
+  }
+
+  body .hub-panel #services :is(.cmass-service,.info-service) {
+    padding:16px!important;
+    row-gap:12px!important
+  }
+
+  body .hub-panel #services :is(.cmass-service,.info-service) h3 {
+    font-size:clamp(16px,4.5vw,20px)!important;
+    word-break:keep-all
+  }
+
+  body .hub-panel #services .publisher-pair {
+    align-content:center
+  }
+
+  body .hub-panel #services .publisher-pair img:first-child {
+    width:64px
+  }
+
+  body .hub-panel #services .publisher-pair img+img {
+    width:44px
+  }
+
+  body .card-story-details .camp-overview-copy h2 {
+    font-size:28px;
+    word-break:keep-all
+  }
+
+}
+
+@media(min-width:701px) and (max-width:1099px) {
+  body .hub-panel #services .service-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    grid-template-rows:auto!important
+  }
+
+  body .hub-panel #services .brand-hub-card {
+    grid-column:1/-1!important;
+    grid-row:1!important;
+    height:190px!important
+  }
+
+  body .hub-panel #services .service-grid>.platform-service {
+    grid-column:1!important;
+    grid-row:2!important;
+    height:460px!important
+  }
+
+  body .hub-panel #services .service-grid>.jitda-service {
+    grid-column:2!important;
+    grid-row:2!important;
+    height:460px!important
+  }
+
+  body .hub-panel #services .service-grid>.camp-service {
+    grid-column:1/-1!important;
+    grid-row:3!important;
+    height:300px!important
+  }
+
+  body .hub-panel #services .service-grid>.cmass-service {
+    grid-column:1!important;
+    grid-row:4!important;
+    height:320px!important
+  }
+
+  body .hub-panel #services .service-grid>.info-service {
+    grid-column:2!important;
+    grid-row:4!important;
+    height:320px!important
+  }
+
+  body .hub-panel #services .service-card h3 {
+    font-size:28px!important
+  }
+
+  body .hub-panel #services :is(.cmass-service,.info-service) h3 {
+    font-size:25px!important
+  }
+
+}
+
+@media(max-width:380px) {
+  body .hub-header nav {
+    gap:6px
+  }
+
+  body .hub-header .login-link {
+    font-size:10px
+  }
+
+  body .hub-panel #services .service-grid>.cmass-service,body .hub-panel #services .service-grid>.info-service {
+    height:260px!important
+  }
+
+}
+
+@media(min-width:701px) and (max-width:1099px) {
+  body .hub-panel #services .brand-hub-card .mascot-opening-art img {
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain
+  }
+
+}
+
+@media(max-width:1099px) {
+  .mobile-codle-stories {
+    scroll-margin-top:90px
+  }
+
+}
+
+/* Mobile title sizing is configured here; desktop values are in landing-hub.css. */
+@media(max-width:700px) {
+  body .hub-panel #services {
+    --intro-title-size:clamp(22px,6vw,28px);
+    --intro-title-width:66%
+  }
+
+}

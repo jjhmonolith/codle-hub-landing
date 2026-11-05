@@ -7,18 +7,18 @@
   const media = matchMedia('(min-width:1100px)'), reduced = matchMedia('(prefers-reduced-motion:reduce)');
   const fields = Object.fromEntries(['school','contact','phone','interest','audience','count','timing','message'].map(k => [k,dialog.querySelector('#inquiry-'+k)]));
   const serviceCopy = {
-    general: ['CODLE · CONTACT', '코들 도입 문의', '대상·규모·일정을 알려주세요. 알맞은 도입 방법을 함께 찾아요.'],
-    subscription: ['CODLE · CLASSROOM', '코들 수업 플랫폼 문의', '수업 대상과 이용 규모를 알려주세요. 우리 학교에 맞는 활용 방법을 안내해 드려요.'],
-    hackathon: ['JITDA · HACKATHON', '짓다 AI 해커톤 문의', '참가 대상·팀 규모·희망 일정을 알려주세요. 우리 학교에 맞는 해커톤을 함께 준비해요.'],
-    camp: ['CODLE · AI CAMP', 'AI 집중캠프 문의', '참가 대상·인원·희망 일정을 알려주세요. 학교에 맞는 AI 실습 캠프를 함께 준비해요.'],
-    cmass: ['CODLE · CMASS', '씨마스 인공지능 기초 문의', '사용할 교과서와 학급 규모를 알려주세요. 수업에 맞는 실습 콘텐츠 이용을 안내해 드려요.'],
-    info: ['CODLE · TEXTBOOK', '정보 교육자료 문의', '교과서 출판사와 수업 대상을 알려주세요. 금성·YBM 정보 교육자료 활용을 안내해 드려요.']
+    general: '코들 도입 문의',
+    subscription: '코들 수업 플랫폼 문의',
+    hackathon: '짓다 AI 해커톤 문의',
+    camp: 'AI 집중캠프 문의',
+    cmass: '씨마스 인공지능 기초 문의',
+    info: '정보 교육자료 문의'
   };
   function syncServiceHeading() {
     dialog.dataset.service = fields.interest.value || "general";
     const copy = serviceCopy[fields.interest.value] || serviceCopy.general;
 
-    dialog.querySelector('#inquiry-title').textContent = copy[1];
+    dialog.querySelector('#inquiry-title').textContent = copy;
     dialog.querySelector('#inquiry-description').textContent = '평균 1영업일 이내 담당자가 회신드립니다.';
   }
   fields.interest.addEventListener('change', syncServiceHeading);
