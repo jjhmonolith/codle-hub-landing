@@ -1,72 +1,114 @@
-/* Alternate hub: six equal tiles, with consultation opened on demand. */
+/* Alternate hub: an asymmetric six-tile composition, with consultation opened on demand. */
 body.six-card-hub { --hub-outer:clamp(20px,4vw,80px); --hub-rail:0px; --tile-gap:18px; }
 body.six-card-hub .hub-header { height:80px; min-height:80px; padding:0 var(--hub-outer); }
 body.six-card-hub .split-layout { display:block; width:auto; max-width:none; margin:0 var(--hub-outer); padding:0; }
 body.six-card-hub .hub-panel { width:100%; max-width:none; }
 body.six-card-hub .hub-panel .hub-content { width:100%; max-width:none; padding:0; }
-body.six-card-hub .hub-panel #services { padding:18px 0 22px!important; }
+body.six-card-hub .hub-panel #services { padding:18px 0 42px!important; }
 body.six-card-hub .hub-panel #services .service-grid {
-  grid-template-columns:repeat(3,minmax(0,1fr))!important;
-  grid-template-rows:repeat(2,minmax(0,1fr))!important;
-  height:calc(100svh - 120px)!important;
-  min-height:560px; gap:var(--tile-gap)!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  grid-template-rows:minmax(0,.65fr) minmax(0,1fr) minmax(0,1.15fr)!important;
+  height:calc(100svh - 140px)!important;
+  min-height:0; gap:var(--tile-gap)!important;
 }
 body.six-card-hub .hub-panel #services .service-grid > :is(.service-card,.brand-hub-card) {
   grid-column:auto!important; grid-row:auto!important; height:auto!important; min-height:0!important;
-  padding:clamp(20px,1.8vw,34px)!important; border-radius:24px!important;
+  padding:var(--tile-pad,22px)!important; border-radius:24px!important;
   position:relative; overflow:hidden; container-type:inline-size;
 }
 body.six-card-hub .hub-panel #services .service-grid > .brand-hub-card {
   display:flex!important; flex-direction:column!important; align-items:flex-start!important; justify-content:flex-start!important;
-  background:#f6f8fc; border:1px solid #eaf0f8;
+  background:transparent; border:0;
 }
 body.six-card-hub .hub-panel #services .brand-hub-card h2 {
   width:100%!important; max-width:none!important; flex:none!important;
-  font-size:clamp(25px,7.5cqw,42px)!important; line-height:1.25;
+  font-size:clamp(25px,3vw,40px)!important; line-height:1.25;
 }
 body.six-card-hub .hub-panel #services .brand-hub-card .mascot-opening-art {
   top:auto!important; bottom:0!important; right:0!important; width:85%!important; height:67%!important;
 }
 body.six-card-hub .hub-panel #services .brand-hub-card .mascot-opening-art img { width:100%!important; height:100%!important; object-fit:contain; }
-body.six-card-hub .hub-panel #services .service-card { row-gap:12px; grid-template-rows:28px auto minmax(0,1fr); }
-body.six-card-hub .hub-panel #services .service-card h3 { font-size:clamp(22px,6.2cqw,36px)!important; line-height:1.27!important; }
+body.six-card-hub .hub-panel #services .service-card { row-gap:8px; grid-template-rows:24px auto 0px minmax(0,1fr); transition:grid-template-rows .45s cubic-bezier(.22,1,.36,1)!important; }
+body.six-card-hub .hub-panel #services .service-card h3 { font-size:var(--tile-title,clamp(20px,1.8vw,28px))!important; line-height:1.27!important; }
 body.six-card-hub .hub-panel #services .service-card .card-type { font-size:12px!important; height:28px; }
 body.six-card-hub .hub-panel #services .brand-card-label img { max-height:26px; width:auto; max-width:100px; object-fit:contain; }
 body.six-card-hub .hub-panel #services .publisher-pair img { max-width:95px; max-height:22px; }
 body.six-card-hub .hub-panel #services .service-card .premium-card-art,
 body.six-card-hub .hub-panel #services :is(.cmass-service,.info-service) .unified-card-art {
   transition:translate .45s cubic-bezier(.22,1,.36,1),scale .45s cubic-bezier(.22,1,.36,1);
-  transform:none!important; translate:0 0; scale:1; object-fit:contain; object-position:center bottom;
+  grid-row:4!important; transform:none!important; translate:0 0; scale:1; object-fit:contain; object-position:center bottom;
 }
 body.six-card-hub .hub-panel #services .premium-card-art--codle { --art-bleed:24px; }
+body.six-card-hub .hub-panel #services .codle-surface-art { height:auto; transform:none; transform-origin:center bottom; }
+body.six-card-hub .hub-panel #services .platform-service .premium-card-art { overflow:visible; }
 body.six-card-hub .hub-panel #services .jitda-rig { transform:none; object-position:center bottom; }
 body.six-card-hub .hub-panel #services .camp-service .camp-field-video { transition:scale .6s ease; }
-/* Two equal action panels slide apart beneath the moving artwork. */
+/* Reveal actions without moving the card, copy, or illustration. */
 .six-card-hub .tile-actions {
-  position:absolute; inset:auto 0 0; z-index:8; display:grid; grid-template-columns:1fr 1fr;
-  height:72px; visibility:hidden; opacity:0; pointer-events:none;
-  transition:opacity .22s ease,visibility .22s;
+  grid-row:3; align-self:start; height:48px; position:relative; z-index:8;
+  display:flex; align-items:center; gap:8px; min-height:0;
+  opacity:0; pointer-events:none; transform:none;
+  transition:opacity .2s ease;
 }
 .six-card-hub .tile-actions > :is(a,button) {
-  display:flex; align-items:center; justify-content:space-between; gap:8px; padding:0 20px;
-  border:0; border-top:1px solid #ffffffaa; border-radius:0; font:inherit; font-size:14px; font-weight:700;
-  text-decoration:none; cursor:pointer; color:#243b5a; background:#ffffffed;
-  transform:translate(-14px,100%); transition:transform .4s cubic-bezier(.22,1,.36,1),background .2s;
+  display:flex; align-items:center; justify-content:center; gap:12px; padding:0 20px; height:48px;
+  border:1px solid #d6e0ed; border-radius:12px; font:inherit; font-size:15px; font-weight:700;
+  white-space:nowrap; text-decoration:none; cursor:pointer; color:#243b5a; background:#ffffffed;
+  transition:background .2s;
 }
-.six-card-hub .tile-actions > button { color:#fff; background:#347cf4; transform:translate(14px,100%); }
+.six-card-hub .tile-actions > button { color:#fff; background:#347cf4; border-color:#347cf4; }
 .six-card-hub .tile-actions > a:hover { background:#eaf1ff; }
 .six-card-hub .tile-actions > button:hover { background:#2465d4; }
-.six-card-hub .tile-actions span { font-size:22px; }
-.six-card-hub .tile-actions > :focus-visible { outline:3px solid #162f50; outline-offset:-5px; }
-.six-card-hub #services .service-grid > :focus-within .tile-actions,
-.six-card-hub #services .service-grid > :hover .tile-actions { visibility:visible; opacity:1; pointer-events:auto; }
-.six-card-hub #services .service-grid > :is(:hover,:focus-within) .tile-actions > * { transform:translate(0,0); }
-/* Keep controls in the keyboard order, even while visually tucked away. */
-.six-card-hub #services .tile-actions:focus-within { visibility:visible; opacity:1; }
-@media(hover:hover) and (pointer:fine) {
-  .six-card-hub .tile-actions { visibility:visible; }
-  body.six-card-hub .hub-panel #services .service-card:is(:hover,:focus-within) :is(.premium-card-art,.unified-card-art) { translate:0 -48px; scale:.88; }
-  body.six-card-hub .hub-panel #services .camp-service:is(:hover,:focus-within) .camp-field-video { scale:1.05; }
+.six-card-hub .tile-actions span { font-size:20px; }
+.six-card-hub .tile-actions > :focus-visible { outline:3px solid #162f50; outline-offset:2px; }
+.six-card-hub #services .service-grid > :is(:hover,:focus-within) .tile-actions { opacity:1; pointer-events:auto; transform:none; }
+body.six-card-hub .hub-panel #services .service-card h3 { transition:translate .4s ease; }
+body.six-card-hub .hub-panel #services .camp-service .tile-actions { align-self:start; }
+@media(min-width:1001px) {
+  /* Square primary cards share a bottom baseline; the introduction belongs to Jitda. */
+  body.six-card-hub .hub-panel #services .service-grid {
+    grid-template-columns:repeat(2,minmax(0,min(calc((100% - 3 * var(--tile-gap)) / 4),calc((100svh - 140px - var(--tile-gap)) / 2)))) minmax(0,1.2fr) minmax(0,.8fr)!important;
+    grid-template-rows:128px minmax(0,1fr) 148px 148px!important;
+    container-type:inline-size;
+    gap:var(--tile-gap)!important;
+  }
+  body.six-card-hub .hub-panel #services .service-grid > .platform-service {
+    grid-column:1/3!important; grid-row:1/5!important;
+    align-self:end!important; aspect-ratio:1 / 1!important; height:auto!important;
+    width:100%; --tile-title:clamp(32px,7.2cqw,54px); --tile-pad:28px;
+  }
+  body.six-card-hub .hub-panel #services .platform-service .codle-surface-art { width:100%; left:0; right:0; }
+  body.six-card-hub .hub-panel #services .service-grid > .brand-hub-card {
+    grid-column:3!important; grid-row:1/5!important;
+    align-self:end!important; height:calc(100svh - 158px - min((100cqw - min((100cqw - var(--tile-gap)) / 2,100svh - 140px) - 2 * var(--tile-gap)) * .6,100svh - 286px))!important;
+    margin-bottom:calc(min((100cqw - min((100cqw - var(--tile-gap)) / 2,100svh - 140px) - 2 * var(--tile-gap)) * .6,100svh - 286px) + var(--tile-gap))!important;
+    justify-content:center!important; padding:8px 12px!important;
+  }
+  body.six-card-hub .hub-panel #services .brand-hub-card h2 { width:68%!important; font-size:clamp(27px,2.1vw,36px)!important; position:relative; z-index:1; }
+  body.six-card-hub .hub-panel #services .brand-hub-card .mascot-opening-art { width:62%!important; height:115%!important; translate:18px 40px; }
+  body.six-card-hub .hub-panel #services .service-grid > .jitda-service {
+    grid-column:3!important; grid-row:2/5!important; --tile-title:clamp(28px,3.2vw,44px);
+    align-self:end!important; justify-self:start; width:min(100%,calc(100svh - 286px)); aspect-ratio:1!important;
+  }
+  body.six-card-hub .hub-panel #services .service-grid > .camp-service { grid-column:4!important; grid-row:1/3!important; --tile-title:clamp(22px,2vw,30px); }
+  body.six-card-hub .hub-panel #services .service-grid > .cmass-service { grid-column:4!important; grid-row:3!important; }
+  body.six-card-hub .hub-panel #services .service-grid > .info-service { grid-column:4!important; grid-row:4!important; }
+  body.six-card-hub .hub-panel #services .jitda-service .premium-card-art { position:relative!important; grid-area:4/1/5/2!important; inset:auto!important; width:100%!important; height:100%!important; padding:0; z-index:0; }
+  body.six-card-hub .hub-panel #services .jitda-service :is(h3,.card-type,.tile-actions) { z-index:2; }
+  body.six-card-hub .hub-panel #services .jitda-service .premium-card-art { transition:translate .45s ease,height .45s cubic-bezier(.22,1,.36,1),margin-top .45s cubic-bezier(.22,1,.36,1); transform-origin:right bottom; }
+  body.six-card-hub .hub-panel #services :is(.cmass-service,.info-service) { --tile-pad:12px; --tile-title:19px; row-gap:4px; }
+  /* Compact textbook tiles keep the illustration beside the copy. */
+  body.six-card-hub .hub-panel #services :is(.cmass-service,.info-service) .unified-card-art {
+    position:absolute!important; grid-area:1/1/-1/-1!important; right:4px!important; bottom:0!important;
+    width:44%!important; height:70%!important; z-index:0;
+    transition:translate .4s ease,scale .4s ease;
+  }
+  body.six-card-hub .hub-panel #services :is(.cmass-service,.info-service) :is(.card-type,h3,.tile-actions) { position:relative; z-index:2; }
+  .six-card-hub :is(.cmass-service,.info-service) .tile-actions { gap:5px; }
+  .six-card-hub :is(.cmass-service,.info-service) .tile-actions > :is(a,button) { font-size:11px; padding:0 8px; gap:4px; }
+}
+@media(min-width:1001px) and (max-width:1450px) {
+  body.six-card-hub .hub-panel #services .service-grid > .camp-service { --tile-pad:10px; --tile-title:20px; row-gap:4px; }
 }
 body.six-card-hub #inquiry-dialog:not([open]) { display:none!important; }
 body.six-card-hub #inquiry-dialog[open] {
@@ -89,9 +131,10 @@ body.six-card-hub #inquiry-dialog .inquiry-review { overflow:auto; }
   body.six-card-hub .hub-panel #services .service-grid > :is(.service-card,.brand-hub-card) { aspect-ratio:1!important; min-height:320px!important; }
 }
 @media(hover:none),(pointer:coarse),(max-width:1000px) {
-  .six-card-hub .tile-actions { visibility:visible; opacity:1; pointer-events:auto; height:56px; }
+  .six-card-hub .tile-actions { opacity:1; pointer-events:auto; transform:none; }
+  body.six-card-hub .hub-panel #services .service-card { grid-template-rows:24px auto 44px minmax(0,1fr); }
   .six-card-hub .tile-actions > :is(a,button) { transform:none; font-size:13px; padding:0 14px; }
-  body.six-card-hub .hub-panel #services .service-grid > :is(.service-card,.brand-hub-card) { padding-bottom:70px!important; }
+  body.six-card-hub .hub-panel #services .service-grid > :is(.service-card,.brand-hub-card) { padding-bottom:20px!important; }
 }
 @media(max-width:600px) {
   body.six-card-hub { --hub-outer:16px; --tile-gap:14px; }
@@ -101,5 +144,32 @@ body.six-card-hub #inquiry-dialog .inquiry-review { overflow:auto; }
   body.six-card-hub #inquiry-dialog[open] { width:calc(100vw - 20px)!important; max-height:calc(100dvh - 20px)!important; border-radius:18px!important; }
 }
 @media(prefers-reduced-motion:reduce) {
-  .six-card-hub .tile-actions,.six-card-hub .tile-actions > *,body.six-card-hub .hub-panel #services :is(.premium-card-art,.unified-card-art,.camp-field-video) { transition:none!important; }
+  .six-card-hub .tile-actions,.six-card-hub .tile-actions > *,body.six-card-hub .hub-panel #services .service-card,body.six-card-hub .hub-panel #services h3,body.six-card-hub .hub-panel #services :is(.premium-card-art,.unified-card-art,.camp-field-video) { transition:none!important; }
 }
+
+/* Primary actions are sized to the two leading services. */
+body.six-card-hub .hub-panel #services :is(.platform-service,.jitda-service) .tile-actions { gap:10px; height:52px; }
+body.six-card-hub .hub-panel #services :is(.platform-service,.jitda-service) .tile-actions > :is(a,button) { height:52px; padding:0 clamp(12px,4cqw,22px); font-size:clamp(12px,3.3cqw,16px); border-radius:14px; }
+
+/* Give service headlines breathing room beneath each brand lockup. */
+body.six-card-hub .hub-panel #services .service-card h3 { margin-top:16px!important; }
+body.six-card-hub .hub-panel #services :is(.cmass-service,.info-service) h3 { margin-top:12px!important; }
+
+@media(min-width:1001px) {
+  body.six-card-hub .hub-panel #services :is(.cmass-service,.info-service) h3 { white-space:nowrap; font-size:clamp(13px,5.8cqw,19px)!important; }
+}
+
+/* Keep action rows comfortably separated from the headline. */
+body.six-card-hub .hub-panel #services .tile-actions { margin-top:16px; }
+body.six-card-hub .hub-panel #services :is(.cmass-service,.info-service) .tile-actions { margin-top:10px; }
+
+@media(min-width:1001px) {
+  body.six-card-hub .hub-panel #services .brand-hub-card .mascot-opening-art img { scale:1.2; transform-origin:center center; }
+}
+
+@media(min-width:1001px) {
+  body.six-card-hub .hub-panel #services .brand-hub-card h2 { translate:0 -10px; }
+}
+
+body.six-card-hub .mascot-hover-canvas { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; pointer-events:none; }
+@media(min-width:1001px) { body.six-card-hub .mascot-hover-canvas { scale:1.2; transform-origin:center center; } }
