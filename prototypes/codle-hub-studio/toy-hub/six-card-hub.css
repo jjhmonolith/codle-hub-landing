@@ -1,0 +1,105 @@
+/* Alternate hub: six equal tiles, with consultation opened on demand. */
+body.six-card-hub { --hub-outer:clamp(20px,4vw,80px); --hub-rail:0px; --tile-gap:18px; }
+body.six-card-hub .hub-header { height:80px; min-height:80px; padding:0 var(--hub-outer); }
+body.six-card-hub .split-layout { display:block; width:auto; max-width:none; margin:0 var(--hub-outer); padding:0; }
+body.six-card-hub .hub-panel { width:100%; max-width:none; }
+body.six-card-hub .hub-panel .hub-content { width:100%; max-width:none; padding:0; }
+body.six-card-hub .hub-panel #services { padding:18px 0 22px!important; }
+body.six-card-hub .hub-panel #services .service-grid {
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  grid-template-rows:repeat(2,minmax(0,1fr))!important;
+  height:calc(100svh - 120px)!important;
+  min-height:560px; gap:var(--tile-gap)!important;
+}
+body.six-card-hub .hub-panel #services .service-grid > :is(.service-card,.brand-hub-card) {
+  grid-column:auto!important; grid-row:auto!important; height:auto!important; min-height:0!important;
+  padding:clamp(20px,1.8vw,34px)!important; border-radius:24px!important;
+  position:relative; overflow:hidden; container-type:inline-size;
+}
+body.six-card-hub .hub-panel #services .service-grid > .brand-hub-card {
+  display:flex!important; flex-direction:column!important; align-items:flex-start!important; justify-content:flex-start!important;
+  background:#f6f8fc; border:1px solid #eaf0f8;
+}
+body.six-card-hub .hub-panel #services .brand-hub-card h2 {
+  width:100%!important; max-width:none!important; flex:none!important;
+  font-size:clamp(25px,7.5cqw,42px)!important; line-height:1.25;
+}
+body.six-card-hub .hub-panel #services .brand-hub-card .mascot-opening-art {
+  top:auto!important; bottom:0!important; right:0!important; width:85%!important; height:67%!important;
+}
+body.six-card-hub .hub-panel #services .brand-hub-card .mascot-opening-art img { width:100%!important; height:100%!important; object-fit:contain; }
+body.six-card-hub .hub-panel #services .service-card { row-gap:12px; grid-template-rows:28px auto minmax(0,1fr); }
+body.six-card-hub .hub-panel #services .service-card h3 { font-size:clamp(22px,6.2cqw,36px)!important; line-height:1.27!important; }
+body.six-card-hub .hub-panel #services .service-card .card-type { font-size:12px!important; height:28px; }
+body.six-card-hub .hub-panel #services .brand-card-label img { max-height:26px; width:auto; max-width:100px; object-fit:contain; }
+body.six-card-hub .hub-panel #services .publisher-pair img { max-width:95px; max-height:22px; }
+body.six-card-hub .hub-panel #services .service-card .premium-card-art,
+body.six-card-hub .hub-panel #services :is(.cmass-service,.info-service) .unified-card-art {
+  transition:translate .45s cubic-bezier(.22,1,.36,1),scale .45s cubic-bezier(.22,1,.36,1);
+  transform:none!important; translate:0 0; scale:1; object-fit:contain; object-position:center bottom;
+}
+body.six-card-hub .hub-panel #services .premium-card-art--codle { --art-bleed:24px; }
+body.six-card-hub .hub-panel #services .jitda-rig { transform:none; object-position:center bottom; }
+body.six-card-hub .hub-panel #services .camp-service .camp-field-video { transition:scale .6s ease; }
+/* Two equal action panels slide apart beneath the moving artwork. */
+.six-card-hub .tile-actions {
+  position:absolute; inset:auto 0 0; z-index:8; display:grid; grid-template-columns:1fr 1fr;
+  height:72px; visibility:hidden; opacity:0; pointer-events:none;
+  transition:opacity .22s ease,visibility .22s;
+}
+.six-card-hub .tile-actions > :is(a,button) {
+  display:flex; align-items:center; justify-content:space-between; gap:8px; padding:0 20px;
+  border:0; border-top:1px solid #ffffffaa; border-radius:0; font:inherit; font-size:14px; font-weight:700;
+  text-decoration:none; cursor:pointer; color:#243b5a; background:#ffffffed;
+  transform:translate(-14px,100%); transition:transform .4s cubic-bezier(.22,1,.36,1),background .2s;
+}
+.six-card-hub .tile-actions > button { color:#fff; background:#347cf4; transform:translate(14px,100%); }
+.six-card-hub .tile-actions > a:hover { background:#eaf1ff; }
+.six-card-hub .tile-actions > button:hover { background:#2465d4; }
+.six-card-hub .tile-actions span { font-size:22px; }
+.six-card-hub .tile-actions > :focus-visible { outline:3px solid #162f50; outline-offset:-5px; }
+.six-card-hub #services .service-grid > :focus-within .tile-actions,
+.six-card-hub #services .service-grid > :hover .tile-actions { visibility:visible; opacity:1; pointer-events:auto; }
+.six-card-hub #services .service-grid > :is(:hover,:focus-within) .tile-actions > * { transform:translate(0,0); }
+/* Keep controls in the keyboard order, even while visually tucked away. */
+.six-card-hub #services .tile-actions:focus-within { visibility:visible; opacity:1; }
+@media(hover:hover) and (pointer:fine) {
+  .six-card-hub .tile-actions { visibility:visible; }
+  body.six-card-hub .hub-panel #services .service-card:is(:hover,:focus-within) :is(.premium-card-art,.unified-card-art) { translate:0 -48px; scale:.88; }
+  body.six-card-hub .hub-panel #services .camp-service:is(:hover,:focus-within) .camp-field-video { scale:1.05; }
+}
+body.six-card-hub #inquiry-dialog:not([open]) { display:none!important; }
+body.six-card-hub #inquiry-dialog[open] {
+  position:fixed!important; inset:0!important; margin:auto!important;
+  width:min(560px,calc(100vw - 32px))!important; height:min(820px,calc(100dvh - 40px))!important;
+  max-height:calc(100dvh - 40px)!important; max-width:560px!important;
+  border:1px solid #e5ebf4!important; border-radius:24px!important;
+  display:flex!important; flex-direction:column; padding:0!important; box-shadow:0 24px 100px #17294440;
+}
+body.six-card-hub #inquiry-dialog::backdrop { background:#15243b66; backdrop-filter:blur(5px); }
+body.six-card-hub #inquiry-dialog .close-dialog { display:grid!important; place-items:center; flex:none; width:36px; height:36px; color:#263c5c; }
+body.six-card-hub #inquiry-dialog .inquiry-heading { display:flex!important; align-items:flex-start; justify-content:space-between; flex:none; }
+body.six-card-hub #school-inquiry-form { display:flex; flex-direction:column; flex:1; min-height:0; overflow:hidden; }
+body.six-card-hub #school-inquiry-form[hidden] { display:none; }
+body.six-card-hub #inquiry-dialog .inquiry-scroll { flex:1; min-height:0; overflow-y:auto; }
+body.six-card-hub #inquiry-dialog .inquiry-submit-row { flex:none; }
+body.six-card-hub #inquiry-dialog .inquiry-review { overflow:auto; }
+@media(max-width:1000px) {
+  body.six-card-hub .hub-panel #services .service-grid { grid-template-columns:repeat(2,minmax(0,1fr))!important; grid-template-rows:repeat(3,minmax(0,1fr))!important; height:auto!important; min-height:0; }
+  body.six-card-hub .hub-panel #services .service-grid > :is(.service-card,.brand-hub-card) { aspect-ratio:1!important; min-height:320px!important; }
+}
+@media(hover:none),(pointer:coarse),(max-width:1000px) {
+  .six-card-hub .tile-actions { visibility:visible; opacity:1; pointer-events:auto; height:56px; }
+  .six-card-hub .tile-actions > :is(a,button) { transform:none; font-size:13px; padding:0 14px; }
+  body.six-card-hub .hub-panel #services .service-grid > :is(.service-card,.brand-hub-card) { padding-bottom:70px!important; }
+}
+@media(max-width:600px) {
+  body.six-card-hub { --hub-outer:16px; --tile-gap:14px; }
+  body.six-card-hub .hub-header { height:68px; min-height:68px; }
+  body.six-card-hub .hub-panel #services .service-grid { grid-template-columns:1fr!important; grid-template-rows:none!important; }
+  body.six-card-hub .hub-panel #services .service-grid > :is(.service-card,.brand-hub-card) { min-height:340px!important; }
+  body.six-card-hub #inquiry-dialog[open] { width:calc(100vw - 20px)!important; max-height:calc(100dvh - 20px)!important; border-radius:18px!important; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .six-card-hub .tile-actions,.six-card-hub .tile-actions > *,body.six-card-hub .hub-panel #services :is(.premium-card-art,.unified-card-art,.camp-field-video) { transition:none!important; }
+}

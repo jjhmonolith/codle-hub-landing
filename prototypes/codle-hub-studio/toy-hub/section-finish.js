@@ -18,14 +18,14 @@
   document.documentElement.classList.toggle('inquiry-section-ended',end);if(dialog.classList.contains('is-persistent'))dialog.inert=end;
   let current='general';
   for(const [selector,key] of sections){if(document.querySelector(selector).getBoundingClientRect().top<=innerHeight*.45)current=key;}
-  if(current!==previous){previous=current;interest.value=current;interest.dispatchEvent(new Event('change',{bubbles:true}));}
-  if(current==='subscription'&&interest.value==='subscription')document.querySelector('#inquiry-title').textContent='코들 도입 문의';
+  if(!document.body.classList.contains('six-card-hub')&&current!==previous){previous=current;interest.value=current;interest.dispatchEvent(new Event('change',{bubbles:true}));}
+  if(!document.body.classList.contains('six-card-hub')&&current==='subscription'&&interest.value==='subscription')document.querySelector('#inquiry-title').textContent='코들 도입 문의';
  }
  function schedule(){if(!queued){queued=true;requestAnimationFrame(update)}}
  addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule);
  // Inquiry links in the full-width section return to the visible service form.
  document.querySelectorAll('[data-inquiry]').forEach(button=>button.addEventListener('click',()=>{
-  if(innerWidth>=1000&&document.documentElement.classList.contains('inquiry-section-ended'))document.querySelector('#story-camp').scrollIntoView({behavior:'smooth',block:'start'});
+  if(!document.body.classList.contains('six-card-hub')&&innerWidth>=1000&&document.documentElement.classList.contains('inquiry-section-ended'))document.querySelector('#story-camp').scrollIntoView({behavior:'smooth',block:'start'});
  }));
  const partners=document.querySelector('.hub-partners');
  const unique=new Map();partners.querySelectorAll('img').forEach(img=>unique.set(img.getAttribute('src'),img));
