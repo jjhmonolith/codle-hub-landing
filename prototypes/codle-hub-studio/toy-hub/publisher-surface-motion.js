@@ -23,10 +23,29 @@ const specs={
  ]}
 };
 async function load(file){const im=new Image();im.src=assets+file;await im.decode();return im}
-function texture(im,w,h,path,inverse=false){
+function texture(im,w,h,path,inverse=false,part=''){
  const c=document.createElement('canvas');c.width=w;c.height=h;const ctx=c.getContext('2d');
  ctx.drawImage(im,0,0,w,h);
  if(path){ctx.globalCompositeOperation=inverse?'destination-out':'destination-in';ctx.fill(new Path2D(path))}
+ // Polygon outlines alone include pixels from the adjoining interlocking block.
+ // Remove only the neighbouring block's colour; retain white highlights and the play icon.
+ if(['yellow','blue','green'].includes(part)){
+  const pixels=ctx.getImageData(0,0,w,h),data=pixels.data;
+  for(let i=0;i<data.length;i+=4){
+   const r=data[i],g=data[i+1],b=data[i+2];
+   const blue=b>r+12&&b>g+5,green=g>r+10&&g>b+3,yellow=r>b+20&&g>b+10;
+   if((part==='yellow'&&(blue||green))||(part==='blue'&&(green||yellow))||(part==='green'&&blue))data[i+3]=0;
+  }
+  ctx.putImageData(pixels,0,0);
+ }
+ if(part==='wall'){
+  // The source hammer occludes the wall. Continue the adjacent wall surface into
+  // that hidden area so lifting the hammer never exposes a transparent notch.
+  ctx.globalCompositeOperation='source-over';ctx.save();
+  ctx.clip(new Path2D('M450 704 H476 V818 L461 815 Q450 811 450 801 Z'));
+  ctx.drawImage(im,476,704,24,114,450,704,26,114);
+  ctx.restore();
+ }
  const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;return t;
 }
 export async function createArt(canvas,kind,card=canvas){
@@ -36,9 +55,9 @@ export async function createArt(canvas,kind,card=canvas){
  const camera=new THREE.OrthographicCamera(-s.w/2,s.w/2,s.h/2,-s.h/2,.1,5000);camera.position.z=2500;
  const scene=new THREE.Scene();
  function mesh(tex){return new THREE.Mesh(new THREE.PlaneGeometry(s.w,s.h,48,32),new THREE.MeshBasicMaterial({map:tex,transparent:true,depthTest:false,depthWrite:false}))}
- const base=mesh(texture(plate,s.w,s.h,s.plate?null:s.parts.map(p=>p[1]).join(' '),!s.plate));base.renderOrder=0;scene.add(base);
+ const base=mesh(texture(plate,s.w,s.h,s.plate?null:s.parts.map(p=>p[1]).join(' '),!s.plate,kind==='jitda'?'wall':''));base.renderOrder=0;scene.add(base);
  const parts=s.parts.map(([name,path,x,y,depth],i)=>{
-  const m=mesh(texture(im,s.w,s.h,path)),g=new THREE.Group();g.position.set(x-s.w/2,s.h/2-y,0);m.position.set(s.w/2-x,y-s.h/2,0);
+  const m=mesh(texture(im,s.w,s.h,path,false,kind==='info'?name:'')),g=new THREE.Group();g.position.set(x-s.w/2,s.h/2-y,0);m.position.set(s.w/2-x,y-s.h/2,0);
   // A shallow curved surface gives tiny head turns depth, while preserving the exact rest silhouette.
   const pos=m.geometry.attributes.position;
   for(let j=0;j<pos.count;j++){const dx=(pos.getX(j)+s.w/2-x)/220,dy=(s.h/2-pos.getY(j)-y)/220;pos.setZ(j,depth*Math.max(0,1-dx*dx-dy*dy))}

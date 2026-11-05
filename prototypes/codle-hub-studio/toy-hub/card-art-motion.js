@@ -14,7 +14,7 @@
   mountPlatformCard().catch(error => console.warn('Codle motion unavailable; retaining static art.', error));
 
   // The publisher rig owns these three cards. Keep their static art until ready.
-  import('./publisher-surface-motion.js?v=4').then(({mountPublisherCards})=>mountPublisherCards())
+  import('./publisher-surface-motion.js?v=5').then(({mountPublisherCards})=>mountPublisherCards())
     .catch(error=>console.warn('Publisher motion unavailable; using static art.',error));
 
 })();
