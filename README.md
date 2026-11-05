@@ -1,5 +1,13 @@
 # 코들 허브 랜딩
 
+## 배포 — 2026-11-04
+
+- 공개 주소: https://jjhmonolith.github.io/codle-hub-landing/
+- 배포 첫 화면: `prototypes/codle-hub-studio/toy-hub/single-line-intro-preview.html` (11월 3일 모바일 대응 포함).
+- `main`에 랜딩 소스가 반영되면 `.github/workflows/deploy-pages.yml`이 자동 배포합니다. Actions에서 수동 실행도 가능합니다.
+- 로컬 배포본 생성: `python3 scripts/build-pages.py`. `dist/`에서 정적 서버를 실행하면 배포와 같은 파일을 확인할 수 있습니다.
+- 문의폼은 내용 확인용이며 실제 접수·전송 기능은 연결되어 있지 않습니다.
+
 > **2026-10-22 현재 작업:** [Google Labs형 코들 허브](prototypes/codle-hub-studio/toy-hub/product-mosaic.html). 아래 내용은 이전 Studio 안내입니다. 최신 실행 방법·결정·다음 작업은 [SESSION-HANDOFF.md](SESSION-HANDOFF.md)를 먼저 읽어 주세요.
 
 ```sh
