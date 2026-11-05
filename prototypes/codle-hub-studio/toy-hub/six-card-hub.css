@@ -38,7 +38,7 @@ body.six-card-hub .hub-panel #services :is(.cmass-service,.info-service) .unifie
   transition:translate .45s cubic-bezier(.22,1,.36,1),scale .45s cubic-bezier(.22,1,.36,1);
   grid-row:4!important; transform:none!important; translate:0 0; scale:1; object-fit:contain; object-position:center bottom;
 }
-body.six-card-hub .hub-panel #services .premium-card-art--codle { --art-bleed:24px; }
+body.six-card-hub .hub-panel #services .premium-card-art--codle { --art-bleed:calc(var(--tile-pad, 28px) + 2px); }
 body.six-card-hub .hub-panel #services .codle-surface-art { height:auto; transform:none; transform-origin:center bottom; }
 body.six-card-hub .hub-panel #services .platform-service .premium-card-art { overflow:visible; }
 body.six-card-hub .hub-panel #services .jitda-rig { transform:none; object-position:center bottom; }
@@ -56,9 +56,9 @@ body.six-card-hub .hub-panel #services .camp-service .camp-field-video { transit
   white-space:nowrap; text-decoration:none; cursor:pointer; color:#243b5a; background:#ffffffed;
   transition:background .2s;
 }
-.six-card-hub .tile-actions > button { color:#fff; background:#347cf4; border-color:#347cf4; }
+.six-card-hub .tile-actions > button { color:#fff; background:#171717; border-color:#171717; }
 .six-card-hub .tile-actions > a:hover { background:#eaf1ff; }
-.six-card-hub .tile-actions > button:hover { background:#2465d4; }
+.six-card-hub .tile-actions > button:hover { background:#333; border-color:#333; }
 .six-card-hub .tile-actions span { font-size:20px; }
 .six-card-hub .tile-actions > :focus-visible { outline:3px solid #162f50; outline-offset:2px; }
 .six-card-hub #services .service-grid > :is(:hover,:focus-within) .tile-actions { opacity:1; pointer-events:auto; transform:none; }
@@ -99,8 +99,8 @@ body.six-card-hub .hub-panel #services .camp-service .tile-actions { align-self:
   body.six-card-hub .hub-panel #services :is(.cmass-service,.info-service) { --tile-pad:12px; --tile-title:19px; row-gap:4px; }
   /* Compact textbook tiles keep the illustration beside the copy. */
   body.six-card-hub .hub-panel #services :is(.cmass-service,.info-service) .unified-card-art {
-    position:absolute!important; grid-area:1/1/-1/-1!important; right:4px!important; bottom:0!important;
-    width:44%!important; height:70%!important; z-index:0;
+    position:absolute!important; grid-area:1/1/-1/-1!important; right:-20px!important; bottom:0!important;
+    width:50.6%!important; height:80.5%!important; z-index:0;
     transition:translate .4s ease,scale .4s ease;
   }
   body.six-card-hub .hub-panel #services :is(.cmass-service,.info-service) :is(.card-type,h3,.tile-actions) { position:relative; z-index:2; }
@@ -173,3 +173,70 @@ body.six-card-hub .hub-panel #services :is(.cmass-service,.info-service) .tile-a
 
 body.six-card-hub .mascot-hover-canvas { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; pointer-events:none; }
 @media(min-width:1001px) { body.six-card-hub .mascot-hover-canvas { scale:1.2; transform-origin:center center; } }
+
+/* A quiet studio card makes the mascot footage belong to the same surface. */
+body.six-card-hub .hub-panel #services .service-grid > .brand-hub-card {
+  background:#fafafa!important;
+  border:0!important;
+  box-shadow:none!important;
+  border-radius:24px!important;
+  isolation:isolate;
+}
+body.six-card-hub .hub-panel #services .brand-hub-card .mascot-opening-art {
+  mix-blend-mode:darken;
+}
+body.six-card-hub .hub-panel #services .brand-hub-card .mascot-opening-art :is(img,video) {
+  mix-blend-mode:normal!important;
+}
+@media(min-width:1001px) {
+  body.six-card-hub .hub-panel #services .service-grid > .brand-hub-card {
+    padding:20px 24px!important;
+  }
+}
+@media(min-width:1001px) {
+  body.six-card-hub .hub-panel #services .brand-hub-card h2 {
+    width:100%!important;
+  }
+}
+
+/* Editorial title: restrained first line, strong brand conclusion. */
+body.six-card-hub .hub-panel #services .brand-hub-card h2 {
+  font-family:Pretendard,Arial,sans-serif!important;
+  font-weight:550!important;
+  letter-spacing:-.045em!important;
+  line-height:1.22!important;
+}
+
+body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-question {
+  display:block; width:max-content; font-size:.60em; font-weight:500;
+  letter-spacing:-.035em; color:#5d6778; line-height:1.5; white-space:nowrap;
+  position:relative; padding:.65em .9em; background:#f2f4f7; border:0; border-radius:.75em .75em .75em .12em; box-shadow:none;
+}
+body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-question::before { content:''; position:absolute; left:-.22em; bottom:0; width:.45em; height:.48em; background:#f2f4f7; clip-path:polygon(100% 0,0 100%,100% 100%); }
+body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-answer {
+  display:table; width:max-content; position:relative;
+  font-size:.8em!important; font-weight:650!important; letter-spacing:-.035em!important;
+  margin-top:.65em!important; margin-left:3em; padding:.55em .85em!important;
+  border:0; border-radius:.6em;
+  line-height:1.25; color:#fff!important; background:#3478f6;
+}
+body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-answer::before { content:none; }
+body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-answer::after {
+  content:''; position:absolute; right:-.28em; top:48%;
+  width:.45em; height:.48em; background:#3478f6;
+  clip-path:polygon(0 0,0 100%,100% 50%);
+}
+
+/* Keep the compact textbook cards' icons proportional to their labels. */
+body.six-card-hub .hub-panel #services :is(.cmass-service,.info-service) .tile-actions span {
+  font-size:1.15em;
+  line-height:1;
+}
+body.six-card-hub .hub-panel #services :is(.cmass-service,.info-service) .brand-card-label img {
+  max-width:88px;
+  max-height:23px;
+}
+body.six-card-hub .hub-panel #services .info-service .publisher-pair img {
+  max-width:84px;
+  max-height:19px;
+}
