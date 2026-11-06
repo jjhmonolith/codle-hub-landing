@@ -1,5 +1,5 @@
 /* Jitda: three tangible outcomes, with existing product and event captures. */
-.card-story-details .story-jitda.jitda-overview{background:#fff;border-radius:0;padding:42px 28px!important;min-height:calc(100dvh - 90px);display:flex;flex-direction:column;justify-content:center;gap:30px;scroll-margin-top:90px}
+.card-story-details .story-jitda.jitda-overview{background:#fff;border-radius:0;padding:18px 28px 66px!important;min-height:calc(100dvh - 90px);display:flex;flex-direction:column;justify-content:center;gap:30px;scroll-margin-top:90px}
 .jitda-overview-heading{display:flex;align-items:center;justify-content:space-between;gap:32px}
 .jitda-service-brand{display:flex;flex-direction:column;align-items:flex-start;gap:10px;flex:none}
 .jitda-service-brand>span{font-size:clamp(21px,1.5vw,28px);font-weight:700;color:#191f28;letter-spacing:-.025em}

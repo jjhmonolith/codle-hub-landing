@@ -133,9 +133,13 @@
         const ratio =
           (mascot.naturalWidth || 1536) / (mascot.naturalHeight || 1024);
         const fitWidth = Math.min(imageBox.width, imageBox.height * ratio);
+        // Match the painted image, including its responsive object-position.
+        // The element box can be wider than the contained image itself.
+        const [objectX, objectY] = getComputedStyle(mascot).objectPosition
+          .split(" ").map((value) => parseFloat(value) / 100);
         const final = {
-          x: imageBox.x + (imageBox.width - fitWidth) / 2,
-          y: imageBox.y + (imageBox.height - fitWidth / ratio) / 2,
+          x: imageBox.x + (imageBox.width - fitWidth) * objectX,
+          y: imageBox.y + (imageBox.height - fitWidth / ratio) * objectY,
           w: fitWidth,
           h: fitWidth / ratio,
         };
