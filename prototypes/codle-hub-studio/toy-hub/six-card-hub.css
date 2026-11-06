@@ -268,7 +268,8 @@ body.six-card-hub .hub-panel #services .camp-service .tile-actions {
   body.six-card-hub .hub-panel #services .brand-hub-card .mascot-opening-art {
     width: 62% !important;
     height: calc(100% - 24px) !important;
-    bottom: 12px !important;
+    bottom: 4px !important;
+    right: 4px !important;
     translate: 0 0;
   }
   body.six-card-hub .hub-panel #services .service-grid > .jitda-service {
@@ -493,7 +494,8 @@ body.six-card-hub
     .mascot-opening-art
     img {
     scale: 1;
-    transform-origin: center center;
+    object-position: right bottom;
+    transform-origin: right bottom;
   }
 }
 
@@ -514,7 +516,8 @@ body.six-card-hub .mascot-hover-canvas {
 @media (min-width: 1001px) {
   body.six-card-hub .mascot-hover-canvas {
     scale: 1;
-    transform-origin: center center;
+    object-position: right bottom;
+    transform-origin: right bottom;
   }
 }
 
