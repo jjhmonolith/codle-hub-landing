@@ -270,7 +270,7 @@ body.six-card-hub .hub-panel #services .camp-service .tile-actions {
     height: calc(100% - 24px) !important;
     bottom: 4px !important;
     right: 4px !important;
-    translate: 0 0;
+    translate: 12px 8px;
   }
   body.six-card-hub .hub-panel #services .service-grid > .jitda-service {
     grid-column: 3 !important;
