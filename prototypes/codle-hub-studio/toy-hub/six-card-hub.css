@@ -674,3 +674,23 @@ body.six-card-hub #services .premium-card-art:has(.motion-rest)::before {
 body.six-card-hub #services .has-hover-art > .motion-rest {
   display: none;
 }
+
+/* Size the desktop stage from the square Codle card, not empty viewport height. */
+@media (min-width: 1400px) {
+  body.six-card-hub .hub-panel #services .service-grid {
+    --grid-width: min(calc(100vw - 2 * var(--hub-outer)), calc((100svh - 140px) * 2.2));
+    width: var(--grid-width);
+    margin-inline: auto;
+    --stage-size: min(calc(100svh - 140px), calc((var(--grid-width) - var(--tile-gap)) / 2));
+    --jitda-size: calc((var(--grid-width) - var(--stage-size) - 2 * var(--tile-gap)) * .6);
+    height: var(--stage-size) !important;
+    grid-template-columns: repeat(2, minmax(0, calc((var(--stage-size) - var(--tile-gap)) / 2))) minmax(0, 1.2fr) minmax(0, .8fr) !important;
+  }
+  body.six-card-hub .hub-panel #services .service-grid > .brand-hub-card {
+    height: calc(var(--stage-size) - var(--jitda-size) - var(--tile-gap)) !important;
+    margin-bottom: calc(var(--jitda-size) + var(--tile-gap)) !important;
+  }
+  body.six-card-hub .hub-panel #services .jitda-service h3 {
+    font-size: clamp(22px, 7cqw, 44px) !important;
+  }
+}
