@@ -1,7 +1,9 @@
 // Run with Playwright installed and the static preview server running.
 // LANDING_URL may point to a different preview server.
 const assert = require("node:assert/strict");
-const { chromium } = require("playwright");
+const engines = require("playwright");
+const browserName = process.env.BROWSER || "chromium";
+assert.ok(["chromium", "webkit", "firefox"].includes(browserName));
 const url =
   process.env.LANDING_URL ||
   "http://127.0.0.1:8766/prototypes/codle-hub-studio/toy-hub/publisher-kakao-font-preview.html";
@@ -98,7 +100,8 @@ async function checkLayout(browser, width, height = 900) {
 }
 
 (async () => {
-  const browser = await chromium.launch();
+  const browser = await engines[browserName].launch();
+  console.log(`Browser: ${browserName}`);
   try {
     for (const width of [320, 390, 700, 701, 768, 1024, 1280, 1399, 1440, 1920])
       await checkLayout(browser, width);
@@ -113,12 +116,13 @@ async function checkLayout(browser, width, height = 900) {
         .evaluate((node) => node.classList.contains("hub-entry-pending")),
       false,
     );
-    await page.reload({ waitUntil: "domcontentloaded" });
-    assert.equal(
-      await page
-        .locator("html")
-        .evaluate((node) => node.classList.contains("hub-entry-pending")),
-      true,
+    // Firefox's automation reload can report "navigate"; use the native reload API.
+    await Promise.all([
+      page.waitForNavigation({ waitUntil: "domcontentloaded" }),
+      page.evaluate(() => location.reload()),
+    ]);
+    await page.waitForFunction(() =>
+      document.documentElement.classList.contains("hub-entry-pending"),
     );
     await page.locator(".mondrian-entry__skip").waitFor();
     await page.locator(".mondrian-entry__skip").click();
