@@ -471,3 +471,38 @@
     height: 220px !important;
   }
 }
+
+/* Scale both live canvases and their loading posters within the available art row. */
+@media (max-width: 1399px), (min-width: 1400px) and (max-height: 800px) {
+  body.six-card-hub .hub-panel #services :is(.platform-service, .jitda-service) .premium-card-art {
+    position: relative !important;
+    grid-area: 4 / 1 !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+  }
+  body.six-card-hub .hub-panel #services :is(.platform-service, .jitda-service) .premium-card-art > :is(canvas, img) {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    transform: none !important;
+    scale: 1;
+  }
+}
+@media (max-width: 1399px), (min-width: 1400px) and (max-height: 800px) {
+  /* Codle's source includes empty space above the spheres; exclude it from sizing. */
+  body.six-card-hub .hub-panel #services .platform-service .premium-card-art > :is(canvas, img) {
+    top: auto !important;
+    height: 165% !important;
+    max-height: none;
+  }
+}
