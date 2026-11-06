@@ -412,3 +412,20 @@
     grid-column: 1 !important;
   }
 }
+
+/* Keep the conversation together inside a bounded, centered stage. */
+@media (min-width: 701px) and (max-width: 1399px) {
+  body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-question {
+    left: max(24px, calc(50% - 330px));
+    top: 66px;
+  }
+  body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-answer {
+    right: calc(50% + 24px);
+    top: 146px;
+  }
+  body.six-card-hub .hub-panel #services .brand-hub-card .mascot-opening-art {
+    inset: auto max(12px, calc(50% - 330px)) 16px auto !important;
+    width: clamp(300px, 28vw, 380px) !important;
+    height: 268px !important;
+  }
+}
