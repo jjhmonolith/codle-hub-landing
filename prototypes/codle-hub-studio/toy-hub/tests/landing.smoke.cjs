@@ -6,9 +6,9 @@ const url =
   process.env.LANDING_URL ||
   "http://127.0.0.1:8766/prototypes/codle-hub-studio/toy-hub/publisher-kakao-font-preview.html";
 
-async function checkLayout(browser, width) {
+async function checkLayout(browser, width, height = 900) {
   const page = await browser.newPage({
-    viewport: { width, height: 900 },
+    viewport: { width, height },
     reducedMotion: "reduce",
   });
   const errors = [];
@@ -29,7 +29,7 @@ async function checkLayout(browser, width) {
       await page.locator("#services .service-grid > section").count(),
       6,
     );
-    if (width < 1400) {
+    if (width < 1400 || height <= 800) {
       const clippedActions = await page.locator("#services .tile-actions").evaluateAll((rows) =>
         rows.filter((row) => {
           const card = row.closest(".service-card").getBoundingClientRect();
@@ -91,7 +91,7 @@ async function checkLayout(browser, width) {
       false,
     );
     assert.deepEqual(errors, []);
-    console.log(`PASS layout + inquiry: ${width}px`);
+    console.log(`PASS layout + inquiry: ${width}x${height}`);
   } finally {
     await page.close();
   }
@@ -102,6 +102,7 @@ async function checkLayout(browser, width) {
   try {
     for (const width of [320, 390, 700, 701, 768, 1024, 1280, 1399, 1440, 1920])
       await checkLayout(browser, width);
+    for (const height of [534, 800, 801]) await checkLayout(browser, 1440, height);
     const page = await browser.newPage({
       viewport: { width: 1440, height: 900 },
     });

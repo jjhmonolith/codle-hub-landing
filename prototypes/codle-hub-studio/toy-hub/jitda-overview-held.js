@@ -5,7 +5,7 @@
  section.classList.add('jitda-motion-ready');const heading=section.querySelector('.jitda-overview-heading');heading.removeAttribute('data-reveal');let queued=false;
  const ease=n=>{n=Math.max(0,Math.min(1,n));return n*n*(3-2*n)};
  function render(){queued=false;
-  const desktop=innerWidth>=1400,rect=track.getBoundingClientRect();
+  const desktop=innerWidth>=1400&&innerHeight>800,rect=track.getBoundingClientRect();
   const progress=(90-rect.top)/Math.max(1,track.offsetHeight-section.offsetHeight);
   const entry=reduced.matches?1:ease((innerHeight*.55-rect.top)/(innerHeight*.3));heading.style.opacity=entry;heading.style.filter=`blur(${(1-entry)*6}px)`;heading.style.transform=`translateY(${(1-entry)*22}px)`;
   cards.forEach((card,i)=>{

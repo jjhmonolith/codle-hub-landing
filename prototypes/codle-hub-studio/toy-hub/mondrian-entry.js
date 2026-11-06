@@ -8,6 +8,7 @@
   if (
     reduced.matches ||
     innerWidth < 1400 ||
+    innerHeight <= 800 ||
     (location.hash && !isReload && !replay)
   )
     return;

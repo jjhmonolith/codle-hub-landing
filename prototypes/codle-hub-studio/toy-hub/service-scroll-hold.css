@@ -1,5 +1,5 @@
 /* Give each service time to be read without intercepting scrolling. */
-@media(min-width:1400px) and (prefers-reduced-motion:no-preference){
+@media(min-width:1400px) and (min-height:801px) and (prefers-reduced-motion:no-preference){
  body .jitda-scroll-track{height:300dvh}
  body .camp-scroll-track{position:relative;height:200dvh}
  body .card-story-details .camp-scroll-track #story-camp{position:sticky;top:90px;height:calc(100dvh - 90px);min-height:0;box-sizing:border-box}

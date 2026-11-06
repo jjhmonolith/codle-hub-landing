@@ -1,6 +1,6 @@
 /* Mobile stories use normal document flow; desktop keeps its scroll stage. */
 .mobile-codle-stories{display:none}
-@media(max-width:1399px){
+@media(max-width:1399px), (min-width:1400px) and (max-height:800px){
  body .split-layout{width:100%;max-width:none;margin:0!important;display:block}
  body .hub-panel .hub-content{padding:0 20px!important}
  body .hub-header{height:72px;min-height:72px;padding:0 20px;box-sizing:border-box}
@@ -72,13 +72,13 @@
  .card-story-details .camp-overview-copy p{font-size:16px;line-height:1.75}
  .hub-wide-content .hub-partners .partners-intro h2{font-size:30px}
 }
-@media(min-width:701px) and (max-width:1399px){
+@media(min-width:701px) and (max-width:1399px), (min-width:1400px) and (max-height:800px){
  .brand-opening.type-opening h2{font-size:30px;white-space:normal;max-width:55%}
  .jitda-feature-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
  .card-story-details .jitda-feature h3{font-size:22px}
  .mobile-codle-feature{max-width:760px;margin:0 auto 72px}
 }
-@media(max-width:1399px){
+@media(max-width:1399px), (min-width:1400px) and (max-height:800px){
  .hub-panel #services .service-card h3{max-width:100%!important;width:100%!important}
 }
 @media(max-width:359px){
