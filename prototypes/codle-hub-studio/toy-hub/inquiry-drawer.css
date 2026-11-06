@@ -1,0 +1,113 @@
+/* Six-card inquiry drawer. Shared form fields remain in inquiry-refined-preview.css. */
+
+body.six-card-hub #inquiry-dialog:not([open]) {
+  display: none !important;
+}
+body.six-card-hub #inquiry-dialog[open] {
+  position: fixed !important;
+  display: flex !important;
+  flex-direction: column;
+  padding: 0 !important;
+}
+body.six-card-hub #inquiry-dialog .close-dialog {
+  display: grid !important;
+  place-items: center;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  color: #263c5c;
+}
+body.six-card-hub #inquiry-dialog .inquiry-heading {
+  display: flex !important;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex: none;
+}
+body.six-card-hub #school-inquiry-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+body.six-card-hub #school-inquiry-form[hidden] {
+  display: none;
+}
+body.six-card-hub #inquiry-dialog .inquiry-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+body.six-card-hub #inquiry-dialog .inquiry-submit-row {
+  flex: none;
+}
+body.six-card-hub #inquiry-dialog .inquiry-review {
+  overflow: auto;
+}
+@media (max-width: 600px) {
+  body.six-card-hub #inquiry-dialog[open] {
+    max-height: calc(100dvh - 20px) !important;
+    border-radius: 18px !important;
+  }
+}
+body.six-card-hub #inquiry-dialog[open] {
+  inset: 0 0 0 auto !important;
+  margin: 0 !important;
+  width: min(100vw, clamp(420px, 27vw, 540px)) !important;
+  max-width: 100vw !important;
+  height: 100dvh !important;
+  max-height: 100dvh !important;
+  border: 0 !important;
+  border-left: 1px solid #e5ebf4 !important;
+  border-radius: 0 !important;
+  box-shadow: -16px 0 64px #17294420;
+}
+body.six-card-hub #inquiry-dialog::backdrop {
+  background: #15243b30;
+  backdrop-filter: none;
+}
+@media (max-width: 600px) {
+  body.six-card-hub #inquiry-dialog[open] {
+    width: 100vw !important;
+  }
+}
+body.six-card-hub #inquiry-dialog .inquiry-scroll {
+  display: flex;
+  flex-direction: column;
+}
+/* Use spare drawer height for the message instead of an empty footer gap. */
+body.six-card-hub #inquiry-dialog .contact-fields {
+  flex: 1 0 auto;
+  grid-template-rows: repeat(7, max-content) minmax(140px, 1fr);
+  align-content: stretch;
+}
+body.six-card-hub #inquiry-dialog .contact-field:has(#inquiry-message) {
+  display: flex;
+  flex-direction: column;
+  min-height: 140px;
+  align-self: stretch !important;
+}
+body.six-card-hub #inquiry-dialog #inquiry-message {
+  flex: 1;
+  height: auto !important;
+  min-height: 110px !important;
+  resize: vertical;
+}
+
+body.six-card-hub #inquiry-dialog .form-group-title {
+  font-size: 17px;
+  line-height: 1.4;
+  font-weight: 750;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+body.six-card-hub #inquiry-dialog .form-group-title span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  padding: 0 6px;
+  font-size: 13px;
+  border-radius: 8px;
+}

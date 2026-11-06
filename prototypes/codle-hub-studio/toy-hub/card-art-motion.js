@@ -3,7 +3,7 @@
     const card = document.querySelector('.platform-service');
     const host = card?.querySelector('.premium-card-art');
     if (!host) return;
-    const {mountCodleSurface} = await import('./codle-surface-motion.js?v=8');
+    const {mountCodleSurface} = await import('./codle-surface-motion.js?v=9');
     const canvas = document.createElement('canvas');
     canvas.className = 'codle-surface-art';
     canvas.setAttribute('aria-hidden', 'true');

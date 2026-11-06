@@ -1,69 +1,60 @@
-# 현재 랜딩 수정 안내
+# 현재 랜딩 유지보수
 
-현재 기준 페이지는 `publisher-kakao-font-preview.html`이다. `single-line-intro-preview.html`과 `publisher-coherent-3d-preview.html`은 이전 비교 시안이다.
+활성 페이지는 `publisher-kakao-font-preview.html`, 작업 브랜치는 `codex/six-card-hover-hub`다. HTML의 `body.six-card-hub`가 새 카드 버전을 구분한다. 이전 비교 시안과 실험용 파일은 현재 페이지에서 로드하지 않으며, 이 페이지를 수정하기 위해 삭제할 필요가 없다.
 
-## 수정 위치
+## 수정 위치와 스타일 우선순위
 
-| 대상 | 파일 |
+| 대상 | 소유 파일 |
 | --- | --- |
-| 페이지 내용·리소스 로드 순서 | `publisher-kakao-font-preview.html` |
-| 공통 기반 스타일 | `landing-foundation.css` |
-| 데스크탑 전체 폭·상세 섹션 기본 타이포 | `landing-shell.css` |
-| 카드 배치·색·서체·최종 그래픽 | `landing-hub.css` |
-| 모바일·태블릿 배치 | `landing-responsive-finish.css` |
-| 문의 폼 모양·가독성 | `inquiry-refined-preview.css`, `hub-readability-finish.css` |
-| 문의 폼 상태·검증·서비스별 제목 | `card-inquiry-refined.js` |
-| 코들 상세 장면·텍스트 등장 | `codle-demo-refined.js`, `codle-demo.css` |
-| 모바일 코들 상세 구성 | `mobile-layout-refined.js`, `mobile-layout.css` |
-| 짓다 상세·영상 | `jitda-overview-held.js`, `jitda-overview.css` |
-| 짓다·캠프 스크롤 길이 | `service-scroll-hold.css`, `service-scroll-hold.js` |
+| 콘텐츠, 접근성 마크업, 리소스 순서 | `publisher-kakao-font-preview.html` |
+| 레거시 공통 기반 | `landing-foundation.css`, `landing-shell.css`, `landing-hub.css` |
+| 현재 카드 배치, 액션, 말풍선, 헤더 | `six-card-hub.css` |
+| 현재 문의 드로어 크기, 배경, 내부 배치 | `inquiry-drawer.css` |
+| 현재 휴대폰·태블릿 카드, 헤더, 말풍선, 문의폼 | `six-card-mobile.css` |
+| 공유 폼 필드 스타일 | `inquiry-refined-preview.css`, `hub-readability-finish.css` |
+| 문의 상태, 서비스 선택, 검증, 포커스 | `card-inquiry-refined.js` |
+| 도입 타임라인 / 도입 표현 | `mondrian-entry.js` / `mondrian-entry.css` |
+| 카드 캐릭터 영상 | `mascot-card-video.js` |
+| 카드 그래픽 초기화 / 표시 | `card-art-motion.js` / `card-art-motion.css` |
+| 코들 그래픽 / 짓다·교과서 그래픽 | `codle-surface-motion.js` / `publisher-surface-motion.js` |
+| 코들 상세 장면 | `codle-demo-refined.js`, `codle-demo.css` |
+| 모바일 상세 구성 | `mobile-layout-refined.js`, `mobile-layout.css` |
+| 짓다 / 캠프 상세 | `jitda-overview-held.js`, `jitda-overview.css`, `camp-overview.css` |
+| 상세 마무리 / 스크롤 구간 | `section-finish.js/css`, `service-scroll-hold.js/css` |
 
-`landing-foundation.css`는 기존 공통 스타일 28개를 순서대로 통합한 실제 소스다. 원래 파일명은 구간 주석으로 남겼다. 이전 파일을 수정해도 현재 페이지에 반영되지 않는다. 카드 수정은 이 기반 파일 뒤에 로드되는 `landing-hub.css`에서 한다. 기존 비교 시안이 쓰는 파일과 에셋은 삭제하지 않았다.
+기반 스타일 → 섹션 스타일 → 현재 카드 → 문의 드로어 → 도입 → 현재 모바일 순으로 로드한다. `landing-foundation.css`는 기존 28개 CSS를 통합한 파일이며 이전 원본 파일을 수정해도 현재 페이지에는 반영되지 않는다. 현재 버전 변경은 위 소유 파일에서 한다. 동일 선택자를 파일 끝에 계속 추가하지 말고 기존 선언을 수정한다. `!important`는 레거시 규칙을 덮는 용도이므로 계산된 스타일을 비교하지 않고 일괄 제거하지 않는다.
 
-소개 문구 크기·폭과 출판사 그래픽 위치는 `landing-hub.css`의 `--intro-title-size`, `--intro-title-width`, `--publisher-art-scale`, `--publisher-art-y`에서 조절한다. 모바일 문구 값은 `landing-responsive-finish.css`에 있다. HTML에 새 `<style>` 블록을 추가하거나 파일 끝에 동일 속성을 계속 덮어쓰지 말고 해당 규칙을 수정한다.
+스크립트의 `defer`와 로드 순서를 유지한다. 코들 상세 장면을 생성한 뒤 모바일 버전을 복제하고, 상세 영역을 구성한 뒤 스크롤 래퍼를 만든다. `mondrian-entry.js`는 DOM 생성 전에 도입 대기 클래스를 설정하므로 일반 `defer` 스크립트로 바꾸지 않는다. 수정 리소스의 `?v=`도 갱신한다.
 
-## 동작 연결
+## 화면 규칙
 
-- 코들 장면은 코스메이커 → AI 셜록 → 강 건너기 → 학습 결과의 4개다. `scenes` 설정의 `frame` 값은 모바일 구성에서도 사용한다.
-- 스크립트의 `defer`와 순서를 유지한다. 코들 장면을 만든 뒤 모바일 구성을 복제하고, 상세 영역을 정리한 뒤 캠프 스크롤 구간을 만든다.
-- 데스크탑 문의 폼은 고정 패널, 1100px 미만에서는 모달이다. 폼 제출은 로컬 미리보기이며 실제 전송 기능이 아니다.
-- CSS/JS를 바꾸면 해당 리소스의 `?v=`도 변경해 캐시된 이전 코드와 섞이지 않게 한다.
+- 데스크톱은 코들 > 짓다 > 캠프 > 교과서의 비대칭 배치를 유지한다. 코들·짓다는 정사각형이다.
+- 1099px 이하는 터치용 레이아웃, 600px 이하는 1열이다. 터치 화면에서는 액션이 항상 보인다. 데스크톱에서는 호버·키보드 포커스로 보인다.
+- 모바일·태블릿 말풍선 위치는 `six-card-mobile.css` 마지막의 대화 배치 규칙이 소유한다. 질문과 답변은 독립적으로 위치시키며 캐릭터·노트북과 겹치지 않는지 확인한다.
+- 새 버전 문의는 오른쪽에서 들어오는 네이티브 `dialog`다. 휴대폰에서는 전체 화면이며, 폼 본문만 스크롤되고 제출 영역은 유지된다.
+- 기존 비교 버전은 1100px 이상에서 고정 문의 패널이다. `card-inquiry-refined.js`는 두 버전을 함께 지원하므로 `isDocked()` 분기를 유지한다.
+- 문의 제출은 검토 화면으로 이동할 뿐 실제 전송하지 않는다. 닫으면 배경의 `inert`를 해제하고 원래 버튼으로 포커스를 돌린다.
 
-## 확인 기준
+## 그래픽과 도입
 
-데스크탑 1920×1080·1366×768, 태블릿 768×1024, 모바일 390×844에서 카드와 폼을 확인한다. 코들 네 장면, 짓다·캠프 머무름, 모바일 문의 열기·서비스 선택·닫기, 가로 넘침과 콘솔 오류도 확인한다. 스크롤 전환 상태나 모달 상태에서만 쓰는 CSS는 첫 화면에 없다는 이유로 삭제하지 않는다.
+카드 모션은 Three.js 기반이다. `assets/unified-cards/*-motion-rest.png`는 현재 모션의 정지 상태를 캡처한 초기 이미지다. 모션 캔버스가 준비된 뒤 교체하므로 새로고침 때 다른 이미지가 보이지 않는다. 그래픽 또는 마스크를 바꾸면 정지 이미지도 함께 갱신한다. 이전 시안 에셋과 혼동하지 않는다.
 
-## 카드 아트 모션
+- `mondrian-entry.js`의 `timing` 객체가 전체 속도, 영상 속도, 타이핑 지연, 카드 진입·인계 시점을 관리한다. 타임라인 값은 전체 속도로 나누기 전의 밀리초다.
+- 영상은 `codle-mascot-user-selected-60.mp4`, 정지 화면은 `codle-mascot-user-selected-end.png`다. 사용자 원본 `codle-mascot-user-selected.mp4`도 보존한다.
+- 새로고침은 해시가 있어도 도입부터 시작한다. 일반 섹션 링크 진입은 도입을 생략하고, `?intro=replay`는 재생을 요청한다. 1000px 이하와 동작 줄이기 설정에서는 도입을 생략한다.
+- 영상 종료 뒤 짧은 정지를 두고 이동한다. 실제 카드가 그려진 다음 도입 복제본을 숨긴다. 질문을 글자 단위로 쪼개면 인계 순간 자간이 달라지므로 문장 전체로 유지한다.
+- 건너뛰기·Escape·화면 크기 변경·시간 초과는 같은 `finish()` 정리 경로를 사용한다.
 
-`card-art-motion.js`와 `card-art-motion.css`가 현재 페이지의 네 그래픽에 부분 모션을 연결한다. 원본 PNG를 SVG 마스크·클립으로 나눠 표시하며, 별도의 대용량 동영상은 로드하지 않는다. 짓다의 오른쪽 정렬과 기존 카드 크기는 유지한다. 씨마스의 수면은 배가 지나간 자리가 남지 않도록 연속된 벡터 수면으로 구성하고, 대기 위치는 강의 왼쪽이다.
+## 검증
 
-- 코들: 구슬별 미세 회전과 알파 마스크 안의 반사광, 약 3.4초.
-- 짓다: 설계도 캐릭터 고개, 양쪽 캐릭터와 망치, 약 3초.
-- 씨마스: 왼쪽에서 오른쪽으로 이동, 약 4.2초. 포인터가 나가면 출발점으로 복귀.
-- 금성·YBM: 아래부터 0.3초 간격으로 들렸다 맞물리는 블록.
+Playwright가 설치된 환경에서 정적 서버를 띄운 뒤 실행한다:
 
-마우스 진입에서만 한 번 재생하며, 실행 중 재진입해도 처음으로 튀지 않는다. 터치 환경과 동작 줄이기 설정에서는 재생하지 않는다. 이미지가 바뀌면 `scene()`의 좌표와 마스크도 함께 조정해야 한다.
+```sh
+node prototypes/codle-hub-studio/toy-hub/tests/landing.smoke.cjs
+```
 
-## 6개 카드 비교 버전
+기본 URL은 `http://127.0.0.1:8766/prototypes/codle-hub-studio/toy-hub/publisher-kakao-font-preview.html`이다. 다른 서버는 `LANDING_URL` 환경 변수로 지정한다. Playwright를 별도 경로에 설치했다면 해당 `node_modules`를 `NODE_PATH`로 지정할 수 있다.
 
-- 기존 고정 문의 패널 버전: `codex/fix-card-motion-masks`, 커밋 `38973c0`.
-- 새 카드 호버 버전: `codex/six-card-hover-hub`.
-- 같은 `publisher-kakao-font-preview.html`을 사용하며, 새 버전은 `body.six-card-hub`와 `six-card-hub.css`로 구분한다.
-- 데스크톱은 왼쪽 큰 정사각형 코들, 가운데 정사각형 짓다, 오른쪽 좁은 열의 캠프·교과서 두 카드로 중요도를 표현한 비대칭 그리드로 첫 화면을 채운다. 하단 42px 여백을 확보하고, 높이가 부족한 화면에서는 코들 정사각형을 가용 높이까지만 줄인다. 1000px 이하에서는 2열, 600px 이하에서는 1열로 표시한다.
-- 제목과 이미지 사이의 두 액션은 호버·키보드 포커스에 나타나며, 터치 환경과 1000px 이하에서는 항상 표시한다.
-- 문의는 서비스가 선택된 모달로만 열리고, 닫으면 누른 버튼으로 포커스가 돌아간다. 기존 페이지의 고정 패널 동작은 유지한다.
-- 폼 제출은 기존처럼 검토 화면만 표시하며 실제 전송하지 않는다.
+테스트는 320·390·768·1024·1440·1920px의 가로 넘침, 카드 개수, 서비스별 문의, 필수값 검증, 검토·수정, Escape·포커스 복귀, 도입 새로고침·건너뛰기를 확인한다. 그래픽이 준비될 때까지 기다리며 폼을 외부로 전송하지 않는다. 추가로 실제 화면에서 카드·말풍선·영상 인계, 스크롤 상세와 짓다·캠프를 확인한다.
 
-
-## 캐릭터 채팅 도입과 카드 전환
-
-- 도입 전 기준 커밋: `425cf8f`. 활성 페이지는 `publisher-kakao-font-preview.html`.
-- `mondrian-entry.js/css`: 캐릭터 영상 옆에 질문 말풍선과 ‘코들에서!’ 답변을 표시한 뒤, 실제 카드 위치로 이동하며 카드 색면을 펼친다.
-- 매번 새로고침하면 재생한다. 1000px 이하·동작 줄이기·해시 링크 진입은 바로 본문을 표시한다. 건너뛰기·Escape·크기 변경으로 종료할 수 있다.
-- 영상은 사용자가 선택한 `codle-mascot-user-selected.mp4`를 보존하고, 페이지에서는 60fps 버전과 해당 마지막 프레임 PNG를 사용한다.
-- 영상 재생 속도는 2.2배, 전체 모션 배율은 1.69배. 타이핑 시작은 0.25초 늦췄으며 문장 끝에는 느낌표를 사용한다.
-- 영상 종료 후 짧은 멈춤을 두고 이동한다. 실제 카드가 렌더링된 뒤 도입 복제본을 숨겨 전환 중 빈 프레임을 방지한다.
-- `mascot-card-video.js`: 카드에 마우스를 올리면 영상을 한 번 재생하고 마지막 디코딩 프레임을 유지한다.
-- 도입 질문은 실제 카드와 동일하게 문장 전체를 렌더링하여 전환 시 띄어쓰기와 자간이 바뀌지 않도록 한다.
-- 카드 문의 버튼은 검정색. 코들 이미지 영역은 카드 내부 여백을 넘어 확장해 가장자리 틈을 없앴다.
-- 교과서 카드 두 개는 작은 화살표와 출판사 로고를 사용하며, 3D 이미지를 15% 키우고 오른쪽으로 이동했다.
+리팩토링 시 레거시 기반 전체를 한 번에 재작성하지 않는다. 활성 파일부터 정리하고 대표 폭의 계산된 위치·크기·스타일을 변경 전후 비교한다.

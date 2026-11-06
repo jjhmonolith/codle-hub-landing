@@ -4,7 +4,7 @@ function showStatus(message) {
  if (controls) controls.status.textContent = message;
 }
 const reduced=matchMedia('(prefers-reduced-motion:reduce)');
-const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:!controls,preserveDrawingBuffer:Boolean(controls)});
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:!controls,preserveDrawingBuffer:true});
 renderer.setSize(960,720,false);renderer.setClearColor('#edf4ff',controls ? 1 : 0);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.autoClear=false;
 const camera=new THREE.OrthographicCamera(-724,724,543,-543,.1,4000);camera.position.z=2000;
 const loader=new THREE.TextureLoader();

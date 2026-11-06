@@ -1,0 +1,363 @@
+/* Touch layout: natural scrolling, readable copy and permanently available actions. */
+@media (max-width: 1099px) {
+  body.six-card-hub {
+    --hub-outer: 20px;
+    --tile-gap: 16px;
+  }
+  body.six-card-hub .split-layout {
+    margin: 0 !important;
+  }
+  body.six-card-hub .hub-panel .hub-content {
+    padding: 0 var(--hub-outer) !important;
+  }
+  body.six-card-hub .hub-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    height: 68px;
+    min-height: 68px;
+    gap: 12px;
+    padding: 0 var(--hub-outer);
+  }
+  body.six-card-hub .hub-brand {
+    display: flex;
+    flex: 0 0 auto;
+    min-width: 0;
+    gap: 10px;
+  }
+  body.six-card-hub .hub-brand img {
+    display: block;
+    width: 82px;
+    height: auto;
+    max-width: none;
+  }
+  body.six-card-hub .hub-brand > span {
+    display: none;
+  }
+  body.six-card-hub .hub-header nav {
+    gap: 16px;
+    font-size: 13px;
+    margin-left: auto;
+    flex: none;
+  }
+  body.six-card-hub .hub-header nav .header-section-link {
+    display: none;
+  }
+  body.six-card-hub .hub-header nav button[data-inquiry] {
+    display: block;
+    min-height: 44px;
+    font-size: 13px;
+  }
+  body.six-card-hub .hub-header nav .login-link {
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 13px;
+    gap: 8px;
+  }
+  body.six-card-hub .skip-link:not(:focus-visible) {
+    position: fixed;
+    top: -100px;
+    left: 0;
+    transform: none;
+  }
+  body.six-card-hub .hub-panel #services {
+    padding: 16px 0 24px !important;
+  }
+  body.six-card-hub .hub-panel #services .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: none !important;
+    grid-auto-rows: auto;
+    height: auto !important;
+  }
+  body.six-card-hub
+    .hub-panel
+    #services
+    .service-grid
+    > :is(.service-card, .brand-hub-card) {
+    grid-area: auto !important;
+    width: 100% !important;
+    align-self: stretch !important;
+    margin: 0 !important;
+    --tile-pad: 22px;
+    aspect-ratio: auto !important;
+    min-height: 380px !important;
+  }
+  body.six-card-hub .hub-panel #services .service-card {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 28px auto 56px minmax(120px, 1fr) !important;
+    row-gap: 12px;
+  }
+  body.six-card-hub .hub-panel #services .service-card h3 {
+    font-size: 28px !important;
+    line-height: 1.3 !important;
+    margin: 6px 0 0 !important;
+    white-space: normal;
+  }
+  body.six-card-hub .hub-panel #services .tile-actions {
+    height: 44px !important;
+    margin: 0 !important;
+    gap: 8px !important;
+    opacity: 1;
+    pointer-events: auto;
+    align-self: center;
+  }
+  body.six-card-hub .hub-panel #services .tile-actions > :is(a, button) {
+    height: 44px !important;
+    padding: 0 12px !important;
+    font-size: 13px !important;
+    gap: 8px;
+    border-radius: 12px;
+  }
+  body.six-card-hub .hub-panel #services .tile-actions span {
+    font-size: 16px;
+  }
+  body.six-card-hub .hub-panel #services .jitda-service .premium-card-art {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    grid-area: 4/1 !important;
+    padding: 0;
+  }
+  body.six-card-hub .hub-panel #services .jitda-rig {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: none;
+  }
+  body.six-card-hub
+    .hub-panel
+    #services
+    :is(.cmass-service, .info-service)
+    .unified-card-art {
+    position: relative !important;
+    grid-area: 4/1 !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: 150px !important;
+    object-fit: contain;
+    justify-self: end;
+  }
+  body.six-card-hub .hub-panel #services .service-grid > .brand-hub-card {
+    min-height: 300px !important;
+    grid-column: 1/-1 !important;
+    height: 300px !important;
+    padding: 24px !important;
+  }
+  body.six-card-hub .hub-panel #services .brand-hub-card h2 {
+    font-size: 32px !important;
+    text-align: left;
+    z-index: 2;
+  }
+  body.six-card-hub .hub-panel #services .brand-hub-card .mascot-opening-art {
+    position: absolute !important;
+    inset: auto 0 0 auto !important;
+    width: 55% !important;
+    height: 90% !important;
+    translate: 0 0;
+  }
+  body.six-card-hub
+    .hub-panel
+    #services
+    .brand-hub-card
+    .mascot-opening-art
+    :is(img, video) {
+    transform: none !important;
+    scale: 1 !important;
+    object-fit: contain;
+  }
+  body.six-card-hub .mobile-codle-stories {
+    padding-top: 40px;
+  }
+  body.six-card-hub .card-story-details {
+    margin-top: 16px !important;
+  }
+  body.six-card-hub [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  body.six-card-hub #inquiry-dialog .inquiry-heading h2 {
+    font-size: 22px !important;
+    line-height: 1.35;
+    word-break: keep-all;
+    padding-right: 8px;
+  }
+  body.six-card-hub
+    #inquiry-dialog
+    .contact-field
+    :is(input, select, textarea) {
+    font-size: 16px !important;
+  }
+  body.six-card-hub #inquiry-dialog .inquiry-submit-row {
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+  }
+}
+@media (max-width: 600px) {
+  body.six-card-hub {
+    --hub-outer: 16px;
+    --tile-gap: 16px;
+  }
+  body.six-card-hub .hub-panel #services .service-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  body.six-card-hub .hub-panel #services .service-grid > .service-card {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+  body.six-card-hub
+    .hub-panel
+    #services
+    .service-grid
+    > :is(.platform-service, .jitda-service) {
+    aspect-ratio: 1 !important;
+    min-height: 360px !important;
+  }
+  body.six-card-hub .hub-panel #services .service-grid > .brand-hub-card {
+    height: 270px !important;
+    min-height: 0 !important;
+  }
+  body.six-card-hub .hub-panel #services .brand-hub-card h2 {
+    font-size: 29px !important;
+  }
+  body.six-card-hub .hub-panel #services .brand-hub-card .mascot-opening-art {
+    width: 75% !important;
+    height: 74% !important;
+    right: -10px !important;
+    bottom: -8px !important;
+  }
+  body.six-card-hub .hub-panel #services .service-grid > .camp-service {
+    aspect-ratio: auto !important;
+    min-height: 310px !important;
+    grid-template-rows: 28px auto 1fr !important;
+  }
+  body.six-card-hub .hub-panel #services .camp-service .tile-actions {
+    align-self: end;
+  }
+  body.six-card-hub
+    .hub-panel
+    #services
+    .service-grid
+    > :is(.cmass-service, .info-service) {
+    aspect-ratio: auto !important;
+    min-height: 300px !important;
+    grid-template-rows: 24px auto 52px 130px !important;
+    row-gap: 8px;
+  }
+  body.six-card-hub .hub-panel #services :is(.cmass-service, .info-service) h3 {
+    font-size: 23px !important;
+  }
+  body.six-card-hub
+    .hub-panel
+    #services
+    :is(.cmass-service, .info-service)
+    .unified-card-art {
+    height: 140px !important;
+    width: 65% !important;
+    margin-top: -8px;
+  }
+  body.six-card-hub #inquiry-dialog[open] {
+    width: 100vw !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    inset: 0 !important;
+    border-radius: 0 !important;
+  }
+  body.six-card-hub #inquiry-dialog .inquiry-heading {
+    padding: 22px 20px 18px;
+  }
+  body.six-card-hub #inquiry-dialog .inquiry-scroll {
+    padding: 0 20px 20px;
+  }
+}
+@media (max-width: 360px) {
+  body.six-card-hub .hub-header nav {
+    gap: 10px;
+  }
+  body.six-card-hub .hub-brand img {
+    width: 72px;
+  }
+  body.six-card-hub .hub-header nav .login-link {
+    padding: 10px;
+    font-size: 12px;
+  }
+  body.six-card-hub .hub-panel #services .service-card h3 {
+    font-size: 25px !important;
+  }
+  body.six-card-hub .hub-panel #services .brand-hub-card h2 {
+    font-size: 25px !important;
+  }
+  body.six-card-hub .hub-panel #services .tile-actions > :is(a, button) {
+    font-size: 12px !important;
+    padding: 0 10px !important;
+  }
+}
+
+@media (max-width: 1099px) {
+  body.six-card-hub #inquiry-dialog .form-group-title {
+    font-size: 17px !important;
+  }
+  body.six-card-hub #inquiry-dialog .contact-field > label {
+    font-size: 14px !important;
+  }
+  body.six-card-hub #inquiry-dialog .inquiry-heading > div {
+    min-width: 0;
+    flex: 1;
+  }
+  body.six-card-hub #inquiry-dialog .inquiry-heading {
+    gap: 12px;
+  }
+  body.six-card-hub #inquiry-dialog .inquiry-submit {
+    font-size: 17px !important;
+    min-height: 52px;
+  }
+}
+@media (max-width: 1099px) {
+  body.six-card-hub .hub-header {
+    background: #fff !important;
+  }
+  body.six-card-hub #services {
+    scroll-margin-top: 68px;
+  }
+}
+/* Anchor the reply beside the speaker, rather than indenting it from the question. */
+@media (max-width: 1099px) {
+  body.six-card-hub .hub-panel #services .brand-hub-card h2 {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100%;
+    margin: 0;
+    translate: none;
+    pointer-events: none;
+  }
+  body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-question {
+    position: absolute;
+    left: clamp(24px, 6cqw, 60px);
+    top: 64px;
+    max-width: calc(100% - 48px);
+  }
+  body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-answer {
+    position: absolute;
+    right: 43%;
+    top: 142px;
+    margin: 0 !important;
+  }
+}
+@media (max-width: 600px) {
+  body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-question {
+    left: 22px;
+    top: 34px;
+  }
+  body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-answer {
+    right: 50%;
+    top: 114px;
+    font-size: 22px !important;
+  }
+}
+@media (max-width: 360px) {
+  body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-answer {
+    font-size: 20px !important;
+  }
+}

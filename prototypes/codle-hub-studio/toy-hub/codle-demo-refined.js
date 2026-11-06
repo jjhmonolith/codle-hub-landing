@@ -134,9 +134,9 @@
   if(displayPosition===null||reduced.matches||box.bottom<top||box.top>innerHeight)displayPosition=target;
   else displayPosition+=(target-displayPosition)*(1-Math.exp(-dt/65));
   if(Math.abs(target-displayPosition)<.0005)displayPosition=target;
-  // Reveal the brand after the hub clears; reveal the demo only after pinning.
-  const intro=reduced.matches?1:ease((displayPosition-.48)/.36);
-  const entry=reduced.matches?1:clamp((top+68-box.top)/400);
+  // Reveal while entering the viewport, before the section pins.
+  const entry=reduced.matches?1:clamp((innerHeight-box.top)/Math.min(360,innerHeight*.4));
+  const intro=reduced.matches?1:ease((entry-.12)/.88);
   brand.style.opacity=1;brand.style.transform="none";
   brandParts.forEach((part,i)=>{const f=reduced.matches?1:ease((entry-i*.18)/.82);part.style.filter=`blur(${(1-f)*7}px)`;part.style.opacity=f;part.style.transform=`translateY(${(1-f)*16}px)`});
   tabList.style.opacity=intro;
