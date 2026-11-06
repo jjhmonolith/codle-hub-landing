@@ -12,7 +12,7 @@ if OUTPUT.exists():
     shutil.rmtree(OUTPUT)
 OUTPUT.mkdir()
 
-shutil.copy2(SOURCE / "single-line-intro-preview.html", OUTPUT / "index.html")
+shutil.copy2(SOURCE / "publisher-kakao-font-preview.html", OUTPUT / "index.html")
 for pattern in ("*.css", "*.js"):
     for source in SOURCE.glob(pattern):
         shutil.copy2(source, OUTPUT / source.name)
