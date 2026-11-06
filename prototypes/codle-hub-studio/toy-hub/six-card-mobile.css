@@ -1,5 +1,5 @@
 /* Touch layout: natural scrolling, readable copy and permanently available actions. */
-@media (max-width: 1099px) {
+@media (max-width: 1399px) {
   body.six-card-hub {
     --hub-outer: 20px;
     --tile-gap: 16px;
@@ -152,8 +152,8 @@
   }
   body.six-card-hub .hub-panel #services .brand-hub-card .mascot-opening-art {
     position: absolute !important;
-    inset: auto 0 0 auto !important;
-    width: 55% !important;
+    inset: auto 12px 12px auto !important;
+    width: 48% !important;
     height: 90% !important;
     translate: 0 0;
   }
@@ -194,7 +194,7 @@
     padding-bottom: max(16px, env(safe-area-inset-bottom));
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   body.six-card-hub {
     --hub-outer: 16px;
     --tile-gap: 16px;
@@ -224,8 +224,8 @@
   body.six-card-hub .hub-panel #services .brand-hub-card .mascot-opening-art {
     width: 75% !important;
     height: 74% !important;
-    right: -10px !important;
-    bottom: -8px !important;
+    right: 0 !important;
+    bottom: 4px !important;
   }
   body.six-card-hub .hub-panel #services .service-grid > .camp-service {
     aspect-ratio: auto !important;
@@ -294,7 +294,7 @@
   }
 }
 
-@media (max-width: 1099px) {
+@media (max-width: 1399px) {
   body.six-card-hub #inquiry-dialog .form-group-title {
     font-size: 17px !important;
   }
@@ -313,7 +313,7 @@
     min-height: 52px;
   }
 }
-@media (max-width: 1099px) {
+@media (max-width: 1399px) {
   body.six-card-hub .hub-header {
     background: #fff !important;
   }
@@ -322,7 +322,7 @@
   }
 }
 /* Anchor the reply beside the speaker, rather than indenting it from the question. */
-@media (max-width: 1099px) {
+@media (max-width: 1399px) {
   body.six-card-hub .hub-panel #services .brand-hub-card h2 {
     position: absolute !important;
     inset: 0 !important;
@@ -340,12 +340,12 @@
   }
   body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-answer {
     position: absolute;
-    right: 43%;
+    right: 54%;
     top: 142px;
     margin: 0 !important;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-question {
     left: 22px;
     top: 34px;
@@ -359,5 +359,56 @@
 @media (max-width: 360px) {
   body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-answer {
     font-size: 20px !important;
+  }
+}
+
+/* Intermediate screens need room for the copy and actions, not narrow desktop rails. */
+@media (min-width: 701px) and (max-width: 1399px) {
+  body.six-card-hub .hub-panel #services .service-grid > :is(.platform-service, .jitda-service) {
+    aspect-ratio: 1 !important;
+    min-height: 390px !important;
+  }
+  body.six-card-hub .hub-panel #services .service-grid > .camp-service {
+    grid-column: 1 / -1 !important;
+    min-height: 300px !important;
+    grid-template-rows: 28px auto 1fr !important;
+  }
+  body.six-card-hub .hub-panel #services .camp-service .tile-actions {
+    align-self: end;
+  }
+  body.six-card-hub .hub-panel #services .service-grid > :is(.cmass-service, .info-service) {
+    min-height: 340px !important;
+  }
+}
+@media (max-width: 1399px) {
+  body.six-card-hub .hub-panel #services .service-card {
+    transition: none !important;
+  }
+  body.six-card-hub .hub-panel #services .brand-hub-card .mascot-opening-art :is(img, video) {
+    object-position: right bottom;
+  }
+  body.six-card-hub .mobile-codle-feature video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  body.six-card-hub .card-story-details :is(.jitda-overview, .camp-overview) {
+    scroll-margin-top: 84px;
+  }
+}
+@media (max-width: 700px) {
+  body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-question {
+    max-width: calc(100% - 44px);
+    white-space: normal;
+    line-height: 1.45;
+  }
+}
+@media (max-width: 360px) {
+  body.six-card-hub #inquiry-dialog .contact-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body.six-card-hub #inquiry-dialog .contact-field {
+    grid-column: 1 !important;
   }
 }

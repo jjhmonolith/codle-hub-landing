@@ -25,6 +25,6 @@
   mobile.append(article);
  });
  desktop.after(mobile);
- const syncAnchor=()=>{desktop.id=innerWidth<1100?'story-codle-desktop':'story-codle';mobile.id=innerWidth<1100?'story-codle':'story-codle-mobile'};
+ const syncAnchor=()=>{desktop.id=innerWidth<1400?'story-codle-desktop':'story-codle';mobile.id=innerWidth<1400?'story-codle':'story-codle-mobile'};
  syncAnchor();addEventListener('resize',syncAnchor);
 })();

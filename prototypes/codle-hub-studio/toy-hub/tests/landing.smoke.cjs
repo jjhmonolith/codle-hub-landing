@@ -29,6 +29,18 @@ async function checkLayout(browser, width) {
       await page.locator("#services .service-grid > section").count(),
       6,
     );
+    if (width < 1400) {
+      const clippedActions = await page.locator("#services .tile-actions").evaluateAll((rows) =>
+        rows.filter((row) => {
+          const card = row.closest(".service-card").getBoundingClientRect();
+          return [...row.children].some((button) => {
+            const box = button.getBoundingClientRect();
+            return box.left < card.left || box.right > card.right || box.bottom > card.bottom;
+          });
+        }).length,
+      );
+      assert.equal(clippedActions, 0, `${width}px: clipped card actions`);
+    }
     for (const service of [
       "subscription",
       "hackathon",
@@ -48,6 +60,7 @@ async function checkLayout(browser, width) {
       );
       await page.keyboard.press("Escape");
       assert.equal(await dialog.evaluate((node) => node.open), false);
+      await page.waitForFunction(() => !document.querySelector(".hub-header").inert);
       assert.equal(
         await trigger.evaluate((node) => document.activeElement === node),
         true,
@@ -87,7 +100,7 @@ async function checkLayout(browser, width) {
 (async () => {
   const browser = await chromium.launch();
   try {
-    for (const width of [320, 390, 768, 1024, 1440, 1920])
+    for (const width of [320, 390, 700, 701, 768, 1024, 1280, 1399, 1440, 1920])
       await checkLayout(browser, width);
     const page = await browser.newPage({
       viewport: { width: 1440, height: 900 },

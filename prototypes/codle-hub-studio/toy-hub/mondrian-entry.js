@@ -7,7 +7,7 @@
   const replay = new URLSearchParams(location.search).get("intro") === "replay";
   if (
     reduced.matches ||
-    innerWidth <= 1000 ||
+    innerWidth < 1400 ||
     (location.hash && !isReload && !replay)
   )
     return;
