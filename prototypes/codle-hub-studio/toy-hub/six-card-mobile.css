@@ -506,3 +506,17 @@
     max-height: none;
   }
 }
+@media (max-width: 1399px), (min-width: 1400px) and (max-height: 800px) {
+  /* Full-bleed spheres: retain their proportions and crop below the card when short. */
+  body.six-card-hub .hub-panel #services .platform-service .premium-card-art {
+    width: calc(100% + 2 * var(--tile-pad)) !important;
+    height: calc(100% + var(--tile-pad)) !important;
+    margin-left: calc(-1 * var(--tile-pad)) !important;
+  }
+  body.six-card-hub .hub-panel #services .platform-service .premium-card-art > :is(canvas, img) {
+    top: auto !important;
+    bottom: min(0px, calc(100% - 48cqw)) !important;
+    height: auto !important;
+    object-fit: initial;
+  }
+}
