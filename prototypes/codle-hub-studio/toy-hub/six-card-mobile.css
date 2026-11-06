@@ -520,3 +520,58 @@
     object-fit: initial;
   }
 }
+
+/* Use measured free space for the visible part of each 3D asset. */
+@media (max-width: 1399px), (min-width: 1400px) and (max-height: 800px) {
+  body.six-card-hub .hub-panel #services .has-fitted-art.jitda-service .premium-card-art,
+  body.six-card-hub .hub-panel #services .has-fitted-art:is(.cmass-service, .info-service) .unified-card-art {
+    position: absolute !important;
+    grid-area: auto !important;
+    inset: auto !important;
+    left: var(--fitted-art-left) !important;
+    top: var(--fitted-art-top) !important;
+    width: var(--fitted-art-width) !important;
+    height: var(--fitted-art-height) !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    transform: none !important;
+    object-fit: contain;
+    overflow: visible;
+    pointer-events: none;
+  }
+}
+
+/* Size the conversation from its own card, including short/wide windows. */
+@media (max-width: 1399px), (min-width: 1400px) and (max-height: 800px) {
+  body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-question {
+    left: 6%;
+    top: 18%;
+    max-width: 86%;
+    font-size: var(--conversation-font, 18px) !important;
+    padding: .7em .95em;
+  }
+  body.six-card-hub .hub-panel #services .brand-hub-card h2 .hub-answer {
+    left: 17%;
+    right: auto;
+    top: 47%;
+    font-size: calc(var(--conversation-font, 18px) * 1.35) !important;
+  }
+  body.six-card-hub .hub-panel #services .brand-hub-card .mascot-opening-art {
+    inset: auto 2% 3% auto !important;
+    width: 54% !important;
+    height: 76% !important;
+    translate: none !important;
+  }
+  body.six-card-hub .hub-panel #services .brand-hub-card[data-conversation-layout="stacked"] h2 .hub-question {
+    top: 10%;
+  }
+  body.six-card-hub .hub-panel #services .brand-hub-card[data-conversation-layout="stacked"] h2 .hub-answer {
+    left: 9%;
+    top: 37%;
+  }
+  body.six-card-hub .hub-panel #services .brand-hub-card[data-conversation-layout="stacked"] .mascot-opening-art {
+    width: 76% !important;
+    height: 65% !important;
+  }
+}
